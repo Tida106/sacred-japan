@@ -85,6 +85,10 @@
 }
 </script>
 
+<!-- ── GOOGLE ADSENSE ── -->
+<!-- AdSense: Replace the comment below with your AdSense script tag after approval -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Zen+Brush&display=swap" rel="stylesheet">
 <style>
@@ -1094,6 +1098,104 @@ main { padding: 0 56px 80px; position: relative; z-index: 1; }
 }
 
 
+/* ── ACCESS INFO ── */
+.spot-access {
+  padding: 12px 20px 16px;
+  border-top: 1px solid var(--border);
+  background: rgba(60,40,20,0.025);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.spot-access-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 12px;
+  color: var(--enshu);
+  line-height: 1.5;
+}
+.spot-access-icon {
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── AMAZON AFFILIATE ── */
+.amazon-section { margin-bottom: 72px; }
+.amazon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border-strong);
+  border: 1px solid var(--border-strong);
+  margin-top: 28px;
+}
+.amazon-card {
+  background: var(--washi);
+  padding: 24px 22px;
+  transition: background 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.amazon-card:hover { background: #efe8d8; }
+.amazon-card-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+.amazon-card-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--sumi);
+  margin-bottom: 2px;
+}
+.amazon-card-title-en {
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--enshu);
+  margin-bottom: 6px;
+}
+.amazon-card-body {
+  font-size: 15px;
+  color: var(--sumi-light);
+  line-height: 1.75;
+  flex: 1;
+}
+.amazon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border: 1px solid var(--kin);
+  color: var(--kin);
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.25s;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+.amazon-btn:hover {
+  background: var(--kin);
+  color: #fff;
+}
+.amazon-note {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(60,40,20,0.03);
+  border-left: 2px solid var(--border-strong);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 11px;
+  color: var(--enshu);
+  line-height: 1.7;
+}
+
 /* ── PRIVACY / CONTACT ── */
 .page-section {
   max-width: 800px;
@@ -1527,6 +1629,11 @@ footer {
           <span class="spot-loc">Fushimi, Kyoto</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Fushimi Inari Station (JR Nara Line) — 1 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>Open 24 hours</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+        </div>
     </div>
 
     <div class="spot-card" style="cursor:pointer;" onclick="window.open('https://www.shokoku-ji.jp/kinkakuji/', '_blank')" data-type="temple" data-region="kansai">
@@ -1549,6 +1656,11 @@ footer {
           <span class="spot-loc">Kita, Kyoto</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Kinkakuji-michi bus stop (Kyoto City Bus) — 3 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>9:00–17:00 (last entry 16:40)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>¥500</div>
+        </div>
     </div>
 
     <div class="spot-card" style="cursor:pointer;" onclick="window.open('https://www.itsukushimajinja.jp', '_blank')" data-type="shrine" data-region="chugoku">
@@ -1571,6 +1683,11 @@ footer {
           <span class="spot-loc">Miyajima, Hiroshima</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Miyajimaguchi Station (JR) → ferry 10 min</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>Open 24 hours (main gate 6:30–18:00 seasonal)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free (ferry ¥200)</div>
+        </div>
     </div>
 
     <div class="spot-card" style="cursor:pointer;" onclick="window.open('https://www.senso-ji.jp', '_blank')" data-type="temple" data-region="kanto">
@@ -1593,6 +1710,11 @@ footer {
           <span class="spot-loc">Asakusa, Tokyo</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Asakusa Station (Tokyo Metro / Tobu) — 5 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>Open 24 hours (main hall 6:00–17:00)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+        </div>
     </div>
 
     <div class="spot-card" style="cursor:pointer;" onclick="window.open('https://www.meijijingu.or.jp', '_blank')" data-type="shrine" data-region="kanto">
@@ -1615,6 +1737,11 @@ footer {
           <span class="spot-loc">Shibuya, Tokyo</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Harajuku Station (JR Yamanote) — 5 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>Sunrise–Sunset (seasonal)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+        </div>
     </div>
 
     <div class="spot-card" style="cursor:pointer;" onclick="window.open('https://www.todaiji.or.jp', '_blank')" data-type="temple" data-region="kansai">
@@ -1637,6 +1764,11 @@ footer {
           <span class="spot-loc">Nara Park, Nara</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Kintetsu Nara Station — 25 min walk / city bus available</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>7:30–17:30 (Apr–Oct); 8:00–16:30 (Nov–Mar)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>¥600 (Daibutsu-den)</div>
+        </div>
     </div>
 
     <div class="spot-card" style="cursor:pointer;" onclick="window.open('https://suwataisha.or.jp', '_blank')" data-type="shrine" data-region="chubu">
@@ -1659,6 +1791,11 @@ footer {
           <span class="spot-loc">Lake Suwa, Nagano</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Chino Station (JR Chuo Line) — bus + 10 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>Open 24 hours (varies by sub-shrine)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+        </div>
     </div>
 
     <div class="spot-card" style="cursor:pointer;" onclick="window.open('https://www.dazaifutenmangu.or.jp', '_blank')" data-type="shrine" data-region="kyushu">
@@ -1681,6 +1818,11 @@ footer {
           <span class="spot-loc">Dazaifu, Fukuoka</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Dazaifu Station (Nishitetsu) — 5 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>6:30–19:00 (extended on festivals)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+        </div>
     </div>
 
     <div class="spot-card" style="cursor:pointer;" onclick="window.open('https://www.yamaderakankou.com', '_blank')" data-type="temple" data-region="tohoku">
@@ -1703,6 +1845,11 @@ footer {
           <span class="spot-loc">Yamadera, Yamagata</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Yamadera Station (JR Senzan Line) — 10 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>8:00–17:00</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>¥300</div>
+        </div>
     </div>
 
 
@@ -1727,6 +1874,11 @@ footer {
           <span class="spot-loc">Nara, Nara</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Kintetsu Nara Station — 20 min walk through Nara Park</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>Open 24 hours (lantern lighting at dusk)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+        </div>
     </div>
 
     <!-- 11. 平等院鳳凰堂 -->
@@ -1750,6 +1902,11 @@ footer {
           <span class="spot-loc">Uji, Kyoto</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Uji Station (JR Nara Line) — 10 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>8:30–17:30 (last entry 17:15)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>¥700</div>
+        </div>
     </div>
 
     <!-- 12. 日光東照宮 -->
@@ -1773,6 +1930,11 @@ footer {
           <span class="spot-loc">Nikko, Tochigi</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Nikko Station (Tobu Nikko Line) — bus 5 min</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>8:00–17:00 (Apr–Oct); 8:00–16:00 (Nov–Mar)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>¥1,300 (combined ticket)</div>
+        </div>
     </div>
 
     <!-- 13. 鶴岡八幡宮 -->
@@ -1796,6 +1958,11 @@ footer {
           <span class="spot-loc">Kamakura, Kanagawa</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Kamakura Station (JR Yokosuka Line) — 10 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>5:00–21:00 (shrine grounds)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+        </div>
     </div>
 
     <!-- 14. 清水寺 -->
@@ -1819,6 +1986,11 @@ footer {
           <span class="spot-loc">Higashiyama, Kyoto</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Gojo-zaka bus stop (Kyoto City Bus) — 10 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>6:00–18:00 (extended until 21:30 in spring/autumn)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>¥400</div>
+        </div>
     </div>
 
     <!-- 15. 出雲大社 -->
@@ -1842,6 +2014,11 @@ footer {
           <span class="spot-loc">Taisha, Shimane</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Izumo Taisha-mae Station (Ichibata Railway) — 7 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>Open 24 hours (inner shrine 8:00–18:00 seasonal)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+        </div>
     </div>
 
     <!-- 16. 高野山 金剛峯寺 -->
@@ -1865,6 +2042,11 @@ footer {
           <span class="spot-loc">Koya, Wakayama</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Koyasan Station (Nankai Koya Line) → cable car → bus</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>8:30–17:00</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>¥500 (main hall)</div>
+        </div>
     </div>
 
     <!-- 17. 住吉大社 -->
@@ -1888,6 +2070,11 @@ footer {
           <span class="spot-loc">Sumiyoshi, Osaka</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Sumiyoshi Taisha Station (Nankai Main Line) — 3 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>6:00–17:00 (Apr–Sep); 6:30–17:00 (Oct–Mar)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+        </div>
     </div>
 
     <!-- 18. 中尊寺 金色堂 -->
@@ -1911,6 +2098,11 @@ footer {
           <span class="spot-loc">Hiraizumi, Iwate</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Hiraizumi Station (JR Tohoku Line) — 10 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>8:30–17:00 (Mar–Nov); 8:30–16:30 (Dec–Feb)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>¥800</div>
+        </div>
     </div>
 
     <!-- 19. 霧島神宮 -->
@@ -1934,6 +2126,11 @@ footer {
           <span class="spot-loc">Kirishima, Kagoshima</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Kirishima Jingu Station (JR Nippo Line) — taxi 20 min</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>Open 24 hours (office 8:30–17:30)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+        </div>
     </div>
 
     <!-- 20. 金刀比羅宮 -->
@@ -1957,6 +2154,11 @@ footer {
           <span class="spot-loc">Kotohira, Kagawa</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Kotohira Station (JR Dosan Line / Kotoden) — 20 min walk</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>Open 24 hours (inner shrine 8:00–17:00)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free (inner shrine ¥800)</div>
+        </div>
     </div>
 
     <!-- 21. 善光寺 -->
@@ -1980,6 +2182,11 @@ footer {
           <span class="spot-loc">Nagano, Nagano</span>
         </div>
       </div>
+        <div class="spot-access">
+          <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Nagano Station (JR Hokuriku Shinkansen) — bus 10 min</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🕐</span>5:30–16:30 (Inner Garan 5:30–16:00)</div>
+          <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free (some inner halls ¥500)</div>
+        </div>
     </div>
 
   </div>
@@ -2195,6 +2402,51 @@ footer {
       </div>
     </div>
 
+  </div>
+
+  <!-- AMAZON AFFILIATE -->
+  <div class="wa-divider">
+    <div class="wa-divider-line"></div>
+    <div class="wa-divider-mark">おすすめ商品 — RECOMMENDED ITEMS</div>
+    <div class="wa-divider-line"></div>
+  </div>
+
+  <div class="section-head">
+    <div class="section-head-left">
+      <span class="section-h2">Sacred Essentials</span>
+      <span class="section-h2-jp">参拝の持ち物・神棚グッズ</span>
+    </div>
+  </div>
+
+  <div class="amazon-section">
+    <div class="amazon-grid">
+
+      <div class="amazon-card">
+        <div class="amazon-card-icon">📖</div>
+        <div class="amazon-card-title">御朱印帳</div>
+        <div class="amazon-card-title-en">Goshuin-cho Stamp Book</div>
+        <p class="amazon-card-body">A beautifully crafted accordion-fold book for collecting hand-brushed calligraphy seals at shrines and temples. An essential companion for any pilgrimage — choose from traditional brocade or washi paper covers.</p>
+        <a class="amazon-btn" href="https://www.amazon.co.jp/s?k=%E5%BE%A1%E6%9C%B1%E5%8D%B0%E5%B8%B3&tag=YOURTAG-22" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
+
+      <div class="amazon-card">
+        <div class="amazon-card-icon">🏮</div>
+        <div class="amazon-card-title">神棚セット</div>
+        <div class="amazon-card-title-en">Kamidana Home Shrine Set</div>
+        <p class="amazon-card-body">A complete kamidana set including the shrine box, offering stands, sakaki vases, and candle holders. Ready to install in your home for daily practice — made from natural hinoki cypress wood.</p>
+        <a class="amazon-btn" href="https://www.amazon.co.jp/s?k=%E7%A5%9E%E6%A3%9A+%E3%82%BB%E3%83%83%E3%83%88&tag=YOURTAG-22" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
+
+      <div class="amazon-card">
+        <div class="amazon-card-icon">🕯️</div>
+        <div class="amazon-card-title">お守り・お供え用品</div>
+        <div class="amazon-card-title-en">Offerings &amp; Ritual Items</div>
+        <p class="amazon-card-body">Traditional offering supplies for your home shrine: white candles, small sake cups, water vessels, and sacred sakaki branches. Begin or deepen your daily kamidana practice with authentic materials.</p>
+        <a class="amazon-btn" href="https://www.amazon.co.jp/s?k=%E7%A5%9E%E6%A3%9A+%E3%81%8A%E4%BE%9B%E3%81%88+%E7%82%B9%E7%81%AB%E5%85%B7&tag=YOURTAG-22" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
+
+    </div>
+    <p class="amazon-note">当サイトはAmazonアソシエイト・プログラムの参加者です。上記リンクからご購入いただいた場合、当サイトは紹介料を受け取ることがあります（お客様のご負担は一切ありません）。<br>Sacred Japan participates in the Amazon Associates Program. Purchases made through these links may earn us a small referral fee at no extra cost to you.</p>
   </div>
 
   <!-- GOSHUIN -->
@@ -2427,7 +2679,7 @@ footer {
   <ul class="footer-links">
     <li><a href="#" onclick="showMain();return false;">Home</a></li>
     <li><a href="#privacy" onclick="showPage('privacy');return false;">Privacy Policy</a></li>
-    <li><a href="#" href="#contact" onclick="showPage('contact');return false;">Contact</a></li>
+    <li><a href="#contact" onclick="showPage('contact');return false;">Contact</a></li>
   </ul>
   <div class="footer-copy">© 2026 Sacred Japan</div>
 </footer>
