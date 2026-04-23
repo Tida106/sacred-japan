@@ -3536,8 +3536,8 @@ function submitContact(e) {
     alert('Please enter a valid email address.');
     return;
   }
-  // Send via Formspree — replace YOUR_FORM_ID with actual ID from formspree.io
-  var FORMSPREE_ID = 'YOUR_FORM_ID';
+  // Send via Formspree — replace mgorpgpk with actual ID from formspree.io
+  var FORMSPREE_ID = 'mgorpgpk';
   fetch('https://formspree.io/f/' + FORMSPREE_ID, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
