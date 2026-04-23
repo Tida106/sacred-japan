@@ -28,6 +28,8 @@
 
 <!-- ── TWITTER CARD ── -->
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@sacredjapan">
+<meta name="twitter:creator" content="@sacredjapan">
 <meta name="twitter:title" content="Sacred Japan — Shrine &amp; Temple Guide">
 <meta name="twitter:description" content="Discover Japan's most sacred shrines and temples. Your complete English guide to Japan's spiritual sites.">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=1200&q=80&fit=crop">
@@ -1761,6 +1763,69 @@ footer {
 }
 
 
+
+
+/* ── SEASON BADGE ── */
+.spot-season {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+.season-spring { background: rgba(255,183,197,0.3); color: #9b2335; border: 1px solid rgba(155,35,53,0.2); }
+.season-summer { background: rgba(74,94,58,0.12); color: #2d5016; border: 1px solid rgba(74,94,58,0.25); }
+.season-autumn { background: rgba(184,134,11,0.15); color: #7a5500; border: 1px solid rgba(184,134,11,0.3); }
+.season-winter { background: rgba(26,42,74,0.1); color: #1a2a4a; border: 1px solid rgba(26,42,74,0.2); }
+.season-allyear { background: rgba(60,40,20,0.07); color: var(--enshu); border: 1px solid var(--border-strong); }
+
+/* ── SEARCH BOX ── */
+.search-bar {
+  padding: 0 56px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.search-input {
+  flex: 1;
+  max-width: 360px;
+  padding: 10px 18px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  color: var(--sumi);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.search-input:focus { border-color: var(--beni); }
+.search-input::placeholder { color: var(--enshu); }
+.search-clear {
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+  color: var(--enshu);
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  display: none;
+}
+.search-count {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 11px;
+  color: var(--enshu);
+  letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+  .search-bar { padding: 0 16px 16px; }
+  .search-input { max-width: 100%; }
+}
+
 /* ── READING PROGRESS BAR ── */
 .reading-progress {
   position: fixed;
@@ -2031,6 +2096,13 @@ footer {
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   ── END ADSENSE UNIT ── -->
 
+
+<div class="search-bar">
+  <input class="search-input" type="text" id="spotSearch" placeholder="Search shrines & temples… 神社・寺院を検索" oninput="searchSpots(this.value)">
+  <button class="search-clear" id="searchClear" onclick="clearSearch()">✕ Clear</button>
+  <span class="search-count" id="searchCount"></span>
+</div>
+
 <main>
 
   <!-- SPOTS -->
@@ -2062,6 +2134,7 @@ footer {
             <span class="spot-tag">Power Spot</span>
           </div>
           <span class="spot-loc">Fushimi, Kyoto</span>
+          <span class="spot-season season-spring">🌸 Spring</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2095,6 +2168,7 @@ footer {
             <span class="spot-tag">Zen</span>
           </div>
           <span class="spot-loc">Kita, Kyoto</span>
+          <span class="spot-season season-autumn">🍁 Autumn</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2128,6 +2202,7 @@ footer {
             <span class="spot-tag">Iconic</span>
           </div>
           <span class="spot-loc">Miyajima, Hiroshima</span>
+          <span class="spot-season season-autumn">🍁 Autumn</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2161,6 +2236,7 @@ footer {
             <span class="spot-tag">History</span>
           </div>
           <span class="spot-loc">Asakusa, Tokyo</span>
+          <span class="spot-season season-spring">🌸 Spring</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2194,6 +2270,7 @@ footer {
             <span class="spot-tag">Power Spot</span>
           </div>
           <span class="spot-loc">Shibuya, Tokyo</span>
+          <span class="spot-season season-spring">🌸 Spring</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2227,6 +2304,7 @@ footer {
             <span class="spot-tag">History</span>
           </div>
           <span class="spot-loc">Nara Park, Nara</span>
+          <span class="spot-season season-spring">🌸 Spring</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2260,6 +2338,7 @@ footer {
             <span class="spot-tag">Power Spot</span>
           </div>
           <span class="spot-loc">Lake Suwa, Nagano</span>
+          <span class="spot-season season-winter">❄️ Winter</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2293,6 +2372,7 @@ footer {
             <span class="spot-tag">History</span>
           </div>
           <span class="spot-loc">Dazaifu, Fukuoka</span>
+          <span class="spot-season season-spring">🌸 Spring</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2326,6 +2406,7 @@ footer {
             <span class="spot-tag">Zen</span>
           </div>
           <span class="spot-loc">Yamadera, Yamagata</span>
+          <span class="spot-season season-autumn">🍁 Autumn</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2361,6 +2442,7 @@ footer {
             <span class="spot-tag">Lanterns</span>
           </div>
           <span class="spot-loc">Nara, Nara</span>
+          <span class="spot-season season-allyear">✨ All Year</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2395,6 +2477,7 @@ footer {
             <span class="spot-tag">Heian Era</span>
           </div>
           <span class="spot-loc">Uji, Kyoto</span>
+          <span class="spot-season season-spring">🌸 Spring</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2429,6 +2512,7 @@ footer {
             <span class="spot-tag">Edo Era</span>
           </div>
           <span class="spot-loc">Nikko, Tochigi</span>
+          <span class="spot-season season-autumn">🍁 Autumn</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2463,6 +2547,7 @@ footer {
             <span class="spot-tag">Cherry Blossoms</span>
           </div>
           <span class="spot-loc">Kamakura, Kanagawa</span>
+          <span class="spot-season season-spring">🌸 Spring</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2497,6 +2582,7 @@ footer {
             <span class="spot-tag">Iconic Views</span>
           </div>
           <span class="spot-loc">Higashiyama, Kyoto</span>
+          <span class="spot-season season-autumn">🍁 Autumn</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2531,6 +2617,7 @@ footer {
             <span class="spot-tag">Ancient</span>
           </div>
           <span class="spot-loc">Taisha, Shimane</span>
+          <span class="spot-season season-allyear">✨ All Year</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2565,6 +2652,7 @@ footer {
             <span class="spot-tag">Shukubo Stay</span>
           </div>
           <span class="spot-loc">Koya, Wakayama</span>
+          <span class="spot-season season-autumn">🍁 Autumn</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2599,6 +2687,7 @@ footer {
             <span class="spot-tag">Architecture</span>
           </div>
           <span class="spot-loc">Sumiyoshi, Osaka</span>
+          <span class="spot-season season-spring">🌸 Spring</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2633,6 +2722,7 @@ footer {
             <span class="spot-tag">Gold Hall</span>
           </div>
           <span class="spot-loc">Hiraizumi, Iwate</span>
+          <span class="spot-season season-summer">🌿 Summer</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2667,6 +2757,7 @@ footer {
             <span class="spot-tag">Nature</span>
           </div>
           <span class="spot-loc">Kirishima, Kagoshima</span>
+          <span class="spot-season season-spring">🌸 Spring</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2701,6 +2792,7 @@ footer {
             <span class="spot-tag">Sea Deity</span>
           </div>
           <span class="spot-loc">Kotohira, Kagawa</span>
+          <span class="spot-season season-allyear">✨ All Year</span>
         </div>
       </div>
         <div class="spot-access">
@@ -2735,6 +2827,7 @@ footer {
             <span class="spot-tag">All-Welcome</span>
           </div>
           <span class="spot-loc">Nagano, Nagano</span>
+          <span class="spot-season season-winter">❄️ Winter</span>
         </div>
       </div>
         <div class="spot-access">
@@ -3520,6 +3613,36 @@ function trackEvent(action, category, label) {
   if (typeof gtag !== 'undefined') {
     gtag('event', action, { event_category: category, event_label: label });
   }
+}
+
+
+function searchSpots(val) {
+  var clear = document.getElementById('searchClear');
+  var count = document.getElementById('searchCount');
+  var q = val.trim().toLowerCase();
+  clear.style.display = q ? 'inline' : 'none';
+  var cards = document.querySelectorAll('.spot-card');
+  var visible = 0;
+  cards.forEach(function(card) {
+    var nameJp = card.querySelector('.spot-name-jp') ? card.querySelector('.spot-name-jp').textContent.toLowerCase() : '';
+    var nameEn = card.querySelector('.spot-name-en') ? card.querySelector('.spot-name-en').textContent.toLowerCase() : '';
+    var loc = card.querySelector('.spot-loc') ? card.querySelector('.spot-loc').textContent.toLowerCase() : '';
+    var desc = card.querySelector('.spot-desc') ? card.querySelector('.spot-desc').textContent.toLowerCase() : '';
+    var match = !q || nameJp.includes(q) || nameEn.includes(q) || loc.includes(q) || desc.includes(q);
+    card.style.display = match ? '' : 'none';
+    if (match) visible++;
+  });
+  count.textContent = q ? visible + ' results' : '';
+  // Reset filter buttons
+  if (q) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  }
+}
+
+function clearSearch() {
+  document.getElementById('spotSearch').value = '';
+  searchSpots('');
+  document.getElementById('searchCount').textContent = '';
 }
 
 function submitContact(e) {
