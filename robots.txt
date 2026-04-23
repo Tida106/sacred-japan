@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://sacred-japan.net/sitemap.xml
+
+# Crawl-delay (optional, be gentle on server)
+Crawl-delay: 1

@@ -1,39 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main page -->
   <url>
     <loc>https://sacred-japan.net/</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Shrines & Temples section -->
   <url>
     <loc>https://sacred-japan.net/#spots</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Seasonal Guide -->
+  <url>
+    <loc>https://sacred-japan.net/#seasons</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Visitor Etiquette -->
   <url>
     <loc>https://sacred-japan.net/#etiquette</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Japan Travel Tips -->
+  <url>
+    <loc>https://sacred-japan.net/#tips</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Goshuin Guide -->
   <url>
     <loc>https://sacred-japan.net/#goshuin</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Kamidana Guide -->
   <url>
-    <loc>https://sacred-japan.net/#about</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://sacred-japan.net/#kamidana</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://sacred-japan.net/#about</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Privacy Policy -->
   <url>
     <loc>https://sacred-japan.net/#privacy</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://sacred-japan.net/#contact</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
