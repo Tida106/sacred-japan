@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://sacred-japan.net/">
 <meta property="og:title" content="Sacred Japan — Shrine &amp; Temple Guide">
 <meta property="og:description" content="21 must-visit shrines &amp; temples in Japan. Goshuin stamp collecting, visitor etiquette, best seasons, and practical travel tips for every sacred site.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=1200&h=630&q=85&fit=crop&crop=center">
+<meta property="og:image" content="https://sacred-japan.net/ogp.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Sacred Japan">
@@ -32,7 +32,7 @@
 <meta name="twitter:creator" content="@sacredjapan">
 <meta name="twitter:title" content="Sacred Japan — Shrine &amp; Temple Guide">
 <meta name="twitter:description" content="Discover Japan's most sacred shrines and temples. Your complete English guide to Japan's spiritual sites.">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=1200&h=630&q=85&fit=crop&crop=center">
+<meta name="twitter:image" content="https://sacred-japan.net/ogp.png">
 
 <!-- ── STRUCTURED DATA (JSON-LD) ── -->
 <script type="application/ld+json">
@@ -134,6 +134,30 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Spring (March–May) for cherry blossoms, and autumn (September–November) for crimson maple leaves are the most popular seasons. Early morning visits avoid crowds. New Year (Hatsumode) in January is culturally unmissable but extremely busy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to travel Japan visiting shrines and temples?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Budget travellers can manage on ¥5,000–8,000 per day. Temple admissions are typically ¥500–1,000, while most shrines are free. A 7-day JR Pass costs approximately ¥50,000 and covers unlimited bullet train travel. A one-week shrine and temple tour costs approximately ¥100,000–150,000 all-in excluding international flights."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a visa to visit Japan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Citizens of over 60 countries including the US, UK, Australia, and most of Europe can enter Japan visa-free for up to 90 days. You need a valid passport, return ticket, and proof of sufficient funds. Japan introduced a ¥1,000 departure tax in 2024. Register via the Visit Japan Web system before flying for faster immigration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best Japan itinerary for visiting shrines and temples?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A classic 5-day route covers Tokyo (Meiji Jingu, Senso-ji), Nikko (Tosho-gu), and Kyoto (Fushimi Inari, Kinkaku-ji, Kiyomizudera) with a Nara day trip. For 7 days, add Koyasan overnight temple stay. For 10 days, extend to Tohoku for Yamadera and Chusonji, or Kyushu for Kirishima Jingu."
       }
     }
   ]
@@ -1847,6 +1871,120 @@ footer {
 }
 
 
+
+
+/* ── VIATOR TOURS ── */
+.viator-section {
+  margin-bottom: 72px;
+}
+.viator-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border-strong);
+  border: 1px solid var(--border-strong);
+  margin-top: 28px;
+}
+.viator-card {
+  background: var(--washi);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.viator-card-icon { font-size: 28px; }
+.viator-card-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--sumi);
+}
+.viator-card-body {
+  font-size: 15px;
+  color: var(--enshu);
+  line-height: 1.7;
+  flex: 1;
+}
+.viator-btn {
+  display: inline-block;
+  padding: 9px 18px;
+  background: var(--beni);
+  color: #fff;
+  text-decoration: none;
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background 0.2s;
+  text-align: center;
+}
+.viator-btn:hover { background: var(--beni-light); }
+.viator-note {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 10px;
+  color: var(--enshu);
+  letter-spacing: 1px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+@media (max-width: 768px) {
+  .viator-grid { grid-template-columns: 1fr; }
+}
+
+/* ── STICKY CTA BAR ── */
+.sticky-cta {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--sumi);
+  color: var(--washi);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 190;
+  border-radius: 3px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  white-space: nowrap;
+}
+.sticky-cta.visible { opacity: 1; pointer-events: auto; }
+.sticky-cta-text { letter-spacing: 0.5px; }
+.sticky-cta-btn {
+  background: var(--kin);
+  color: #fff;
+  border: none;
+  padding: 7px 16px;
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 2px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s;
+}
+.sticky-cta-btn:hover { background: var(--kin-light); }
+.sticky-cta-close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 4px;
+  line-height: 1;
+}
+@media (max-width: 600px) {
+  .sticky-cta { bottom: 70px; padding: 10px 14px; font-size: 13px; }
+}
+
 /* ── COOKIE BANNER ── */
 .cookie-banner {
   position: fixed;
@@ -1995,6 +2133,8 @@ footer {
     <li><a href="#etiquette" onclick="smoothTo('etiquette')">Etiquette</a></li>
     <li><a href="#goshuin" onclick="smoothTo('goshuin')">Goshuin</a></li>
     <li><a href="#tips" onclick="smoothTo('tips')">Tips</a></li>
+    <li><a href="#planning" onclick="smoothTo('planning')">Plan</a></li>
+    <li><a href="#" onclick="smoothTo('viator');return false;" style="color:var(--beni);">Book Tours</a></li>
     <li><a href="#about" onclick="smoothTo('about')">About</a></li>
     <li><a href="#contact" onclick="showPage('contact');return false;">Contact</a></li>
   </ul>
@@ -2017,6 +2157,7 @@ footer {
     <li><a href="#etiquette" onclick="smoothTo('etiquette');toggleMobileMenu()">Etiquette</a></li>
     <li><a href="#goshuin" onclick="smoothTo('goshuin');toggleMobileMenu()">Goshuin</a></li>
     <li><a href="#tips" onclick="smoothTo('tips');toggleMobileMenu()">Tips</a></li>
+    <li><a href="#planning" onclick="smoothTo('planning');toggleMobileMenu()">Plan</a></li>
     <li><a href="#about" onclick="smoothTo('about');toggleMobileMenu()">About</a></li>
     <li><a href="#contact" onclick="showPage('contact');toggleMobileMenu();return false;">Contact</a></li>
   </ul>
@@ -3248,6 +3389,169 @@ footer {
     </div>
   </div>
 
+
+
+  <!-- TRAVEL PLANNING GUIDE -->
+  <div class="wa-divider">
+    <div class="wa-divider-line"></div>
+    <div class="wa-divider-mark">旅の計画 — JAPAN TRAVEL PLANNING</div>
+    <div class="wa-divider-line"></div>
+  </div>
+
+  <div class="section-head" id="planning">
+    <div class="section-head-left">
+      <span class="section-h2">Japan Travel Planning Guide</span>
+      <span class="section-h2-jp">日本旅行の計画ガイド</span>
+    </div>
+  </div>
+
+  <div class="etiquette-section" style="margin-bottom:0;">
+    <div class="etiquette-grid">
+
+      <div class="etiquette-card">
+        <div class="etiquette-num">Getting There</div>
+        <div class="etiquette-title">How to Get to Japan</div>
+        <span class="etiquette-title-jp">日本へのアクセス</span>
+        <p class="etiquette-body">Japan is served by three major international airports: Tokyo Narita (NRT), Tokyo Haneda (HND), and Osaka Kansai (KIX). Direct flights operate from most major cities — London Heathrow to Tokyo is approximately 12 hours, Los Angeles to Tokyo around 11 hours. Budget airlines including ANA, JAL, and Zipair offer competitive fares. Book at least 3 months ahead for cherry blossom and autumn foliage seasons.</p>
+      </div>
+
+      <div class="etiquette-card">
+        <div class="etiquette-num">Visa & Entry</div>
+        <div class="etiquette-title">Japan Visa Requirements</div>
+        <span class="etiquette-title-jp">ビザ・入国手続き</span>
+        <p class="etiquette-body">Citizens of over 60 countries — including the US, UK, Australia, Canada, and most of Europe — can enter Japan visa-free for up to 90 days for tourism. You will need a valid passport, a return ticket, and proof of sufficient funds. From 2024, Japan has introduced a tourist tax of ¥1,000 per person per departure. Register your arrival via the Visit Japan Web system before flying for faster immigration clearance.</p>
+      </div>
+
+      <div class="etiquette-card">
+        <div class="etiquette-num">Best Time to Visit</div>
+        <div class="etiquette-title">When to Visit Japan's Sacred Sites</div>
+        <span class="etiquette-title-jp">参拝の季節</span>
+        <p class="etiquette-body">Spring (late March–May) and autumn (October–November) are the most popular seasons — cherry blossoms and crimson maple leaves frame Japan's shrines at their most photogenic. Summer (June–August) brings lush greenery and vivid festivals but high humidity. Winter is the least crowded season — Koyasan in snow and Nikko under frost are unforgettably serene. Avoid Golden Week (late April–early May) and Obon (mid-August) when domestic travel peaks.</p>
+      </div>
+
+      <div class="etiquette-card">
+        <div class="etiquette-num">Getting Around</div>
+        <div class="etiquette-title">Transport in Japan</div>
+        <span class="etiquette-title-jp">国内の移動手段</span>
+        <p class="etiquette-body">The Japan Rail Pass (JR Pass) offers unlimited shinkansen and express train travel — the 7-day pass costs approximately ¥50,000 and pays for itself in two bullet train journeys. Purchase before arriving in Japan. For local travel, load a Suica or Pasmo IC card (available at airport vending machines) with ¥3,000–5,000. Taxis are expensive — use trains and buses instead. IC cards also work at convenience stores, restaurants, and vending machines nationwide.</p>
+      </div>
+
+      <div class="etiquette-card">
+        <div class="etiquette-num">Budget Guide</div>
+        <div class="etiquette-title">Japan Travel Budget</div>
+        <span class="etiquette-title-jp">旅行予算の目安</span>
+        <p class="etiquette-body">Japan is more affordable than many travellers expect. Budget travellers staying in hostels and eating at convenience stores and ramen shops can manage on ¥5,000–8,000/day (approx. £25–40). Mid-range travellers in business hotels with restaurant meals should budget ¥15,000–25,000/day. Temple admissions typically cost ¥500–1,000. Most shrines are free to enter. Goshuin stamps cost ¥300–500 each. A week touring shrines and temples with the JR Pass costs approximately ¥100,000–150,000 all-in excluding flights.</p>
+      </div>
+
+      <div class="etiquette-card">
+        <div class="etiquette-num">Staying Connected</div>
+        <div class="etiquette-title">Internet & Communication</div>
+        <span class="etiquette-title-jp">通信・インターネット</span>
+        <p class="etiquette-body">A pocket WiFi router or eSIM is essential for navigating Japan. Pocket WiFi devices rent for approximately ¥300–600/day from airport counters or online (collect on arrival). eSIMs from IIJmio or Mobal offer 15-day unlimited data plans from around ¥2,000. Download Google Maps offline for each region before you travel — mobile coverage in mountain shrines like Koyasan and Yamadera can be patchy. Google Translate's camera mode is invaluable for reading shrine signs and menus.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Japan Itinerary Section -->
+  <div class="section-head" style="margin-top:48px;" id="itinerary">
+    <div class="section-head-left">
+      <span class="section-h2">Sample Japan Shrine Itineraries</span>
+      <span class="section-h2-jp">モデルコース</span>
+    </div>
+  </div>
+
+  <div class="etiquette-section" style="margin-bottom:72px;">
+    <div class="etiquette-grid">
+
+      <div class="etiquette-card">
+        <div class="etiquette-num">5 Days — Golden Route</div>
+        <div class="etiquette-title">Tokyo & Kyoto Highlights</div>
+        <span class="etiquette-title-jp">定番ゴールデンルート</span>
+        <p class="etiquette-body">Day 1: Tokyo — Meiji Jingu in the morning, Senso-ji Asakusa in the afternoon. Day 2: Nikko — Tosho-gu and cedar forests (day trip from Tokyo). Day 3: Shinkansen to Kyoto — Fushimi Inari at sunset. Day 4: Kyoto — Kinkaku-ji, Kiyomizudera, goshuin collecting. Day 5: Nara day trip — Todai-ji Great Buddha, Kasuga Taisha lanterns, sacred deer. Return to Tokyo or fly home from Osaka Kansai airport.</p>
+      </div>
+
+      <div class="etiquette-card">
+        <div class="etiquette-num">7 Days — Deep Kansai</div>
+        <div class="etiquette-title">Kyoto, Nara & Koyasan</div>
+        <span class="etiquette-title-jp">関西の聖地をめぐる</span>
+        <p class="etiquette-body">Days 1–3: Kyoto — Fushimi Inari, Kinkaku-ji, Kiyomizudera, Byodo-in (Uji), Sumiyoshi Taisha, extensive goshuin collecting. Day 4: Nara — Todai-ji, Kasuga Taisha, Horyu-ji. Day 5: Koyasan — mountain monastery overnight temple stay (shukubo). Day 6: Koyasan Okunoin cemetery at dawn, descend via cable car, afternoon at Osaka Sumiyoshi Taisha. Day 7: Osaka exploration before flying home.</p>
+      </div>
+
+      <div class="etiquette-card">
+        <div class="etiquette-num">10 Days — Off the Beaten Path</div>
+        <div class="etiquette-title">Tohoku & Mountain Shrines</div>
+        <span class="etiquette-title-jp">東北・山岳霊場の旅</span>
+        <p class="etiquette-body">Days 1–2: Tokyo — Meiji Jingu, Senso-ji, Tsurugaoka Hachimangu (Kamakura). Day 3: Nikko. Days 4–5: Tohoku — Yamadera cliff temple, Chusonji Konjikido golden hall in Hiraizumi. Day 6: Suwa Taisha at Lake Suwa (Nagano). Day 7: Zenkoji Temple (Nagano). Days 8–9: Kyoto — Fushimi Inari, Kinkaku-ji, Kiyomizudera. Day 10: Nara fly-out. A journey through Japan's lesser-known but most atmospheric sacred landscapes.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VIATOR TOURS -->
+  <div id="viator"></div>
+  <div class="wa-divider">
+    <div class="wa-divider-line"></div>
+    <div class="wa-divider-mark">体験予約 — BOOK JAPAN EXPERIENCES</div>
+    <div class="wa-divider-line"></div>
+  </div>
+
+  <div class="section-head">
+    <div class="section-head-left">
+      <span class="section-h2">Guided Tours & Experiences</span>
+      <span class="section-h2-jp">ガイドツアー・体験予約</span>
+    </div>
+  </div>
+
+  <div class="viator-section">
+    <div class="viator-grid">
+
+      <div class="viator-card">
+        <div class="viator-card-icon">⛩</div>
+        <div class="viator-card-title">Fushimi Inari Night Walk</div>
+        <p class="viator-card-body">Experience the thousand torii gates of Fushimi Inari after dark, when crowds fade and lanterns cast a golden glow through the sacred forest. Guided tours include shrine etiquette, history, and hidden viewpoints unknown to most visitors.</p>
+        <a class="viator-btn" href="https://www.viator.com/Kyoto/d332-ttd?pid=P00056924&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_fushimi')">Book in Kyoto →</a>
+      </div>
+
+      <div class="viator-card">
+        <div class="viator-card-icon">🦌</div>
+        <div class="viator-card-title">Nara Sacred Deer & Temples</div>
+        <p class="viator-card-body">Walk among Japan's sacred deer to Todai-ji's Great Buddha and Kasuga Taisha's lantern-lined pathways. Expert guides bring the myths and history of Japan's ancient capital to life in a full-day Nara experience.</p>
+        <a class="viator-btn" href="https://www.viator.com/Nara/d5374-ttd?pid=P00056924&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_nara')">Book in Nara →</a>
+      </div>
+
+      <div class="viator-card">
+        <div class="viator-card-icon">🏔</div>
+        <div class="viator-card-title">Koyasan Temple Stay</div>
+        <p class="viator-card-body">Spend a night at a shukubo temple lodging on sacred Mount Koya. Wake before dawn for morning prayers with Buddhist monks, enjoy shojin-ryori vegetarian cuisine, and walk the mystical Okunoin cemetery at night.</p>
+        <a class="viator-btn" href="https://www.viator.com/Koyasan/d22463-ttd?pid=P00056924&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_koyasan')">Book Koyasan →</a>
+      </div>
+
+      <div class="viator-card">
+        <div class="viator-card-icon">📖</div>
+        <div class="viator-card-title">Goshuin Stamp Tour</div>
+        <p class="viator-card-body">Join a guided goshuin-collecting tour of Kyoto's most beautiful shrines and temples. Your guide will explain the significance of each seal, help you communicate with priests, and ensure you collect the most beautiful and unique goshuin.</p>
+        <a class="viator-btn" href="https://www.viator.com/Kyoto/d332-ttd?pid=P00056924&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_goshuin')">Book in Kyoto →</a>
+      </div>
+
+      <div class="viator-card">
+        <div class="viator-card-icon">🌸</div>
+        <div class="viator-card-title">Cherry Blossom Shrine Walk</div>
+        <p class="viator-card-body">Time your visit to experience Japan's sacred sites at their most breathtaking — framed by clouds of pink cherry blossoms. Guided spring tours visit the best hanami spots at Meiji Jingu, Tsurugaoka Hachimangu, and Kyoto's hidden shrines.</p>
+        <a class="viator-btn" href="https://www.viator.com/Tokyo/d334-ttd?pid=P00056924&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_sakura')">Book in Tokyo →</a>
+      </div>
+
+      <div class="viator-card">
+        <div class="viator-card-icon">🏯</div>
+        <div class="viator-card-title">Nikko UNESCO Day Trip</div>
+        <p class="viator-card-body">Take a guided day trip from Tokyo to the spectacular mountain shrines of Nikko — Tosho-gu, Futarasan, and Rinnoji. Expert guides decode the symbolism of the elaborate carvings and lacquerwork that make Nikko Japan's most ornate sacred site.</p>
+        <a class="viator-btn" href="https://www.viator.com/Nikko/d5309-ttd?pid=P00056924&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_nikko')">Book Nikko →</a>
+      </div>
+
+    </div>
+    <p class="viator-note">Sacred Japan participates in the Viator affiliate program. Booking through these links supports the site at no extra cost to you. Tour availability and prices vary by season.</p>
+  </div>
+
   <div class="amazon-section">
     <div class="amazon-grid">
 
@@ -3354,7 +3658,18 @@ footer {
     </div>
 
     <!-- 中段：中身の意味 -->
-    <div class="goshuin-meaning-grid">
+    <div 
+      <!-- GOSHUIN AMAZON CTA -->
+      <div style="margin:32px 0;padding:24px 28px;background:rgba(155,35,53,0.05);border:1px solid rgba(155,35,53,0.2);border-radius:2px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+        <div>
+          <div style="font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:3px;color:var(--beni);margin-bottom:6px;">御朱印帳を手に入れよう</div>
+          <div style="font-family:'Shippori Mincho',serif;font-size:18px;color:var(--sumi);">Ready to start your goshuin collection?</div>
+          <div style="font-size:14px;color:var(--enshu);margin-top:4px;">Purchase a goshuin-cho before your first shrine visit.</div>
+        </div>
+        <a href="https://www.amazon.co.jp/s?k=%E5%BE%A1%E6%9C%B1%E5%8D%B0%E5%B8%B3+%E5%A4%A7%E5%88%A4&tag=sacredjapan-22" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','amazon_goshuin_inline')" style="padding:12px 24px;background:var(--beni);color:#fff;text-decoration:none;font-family:'EB Garamond',serif;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;white-space:nowrap;">View on Amazon →</a>
+      </div>
+
+      class="goshuin-meaning-grid">
       <div class="goshuin-meaning-card">
         <div class="goshuin-meaning-num">一</div>
         <div class="goshuin-meaning-title">The Red Stamp</div>
@@ -3582,6 +3897,7 @@ footer {
     <li><a href="#spots" onclick="smoothTo('spots')">Shrines &amp; Temples</a></li>
     <li><a href="#tips" onclick="smoothTo('tips')">Travel Tips</a></li>
     <li><a href="#goshuin" onclick="smoothTo('goshuin')">Goshuin</a></li>
+    <li><a href="#" onclick="smoothTo('viator');return false();">Book Tours</a></li>
     <li><a href="https://sacred-japan.net/sitemap.xml" target="_blank" rel="noopener">Sitemap</a></li>
     <li><a href="#privacy" onclick="showPage('privacy');return false;">Privacy Policy</a></li>
     <li><a href="#contact" onclick="showPage('contact');return false;">Contact</a></li>
@@ -3726,6 +4042,16 @@ function trackEvent(action, category, label) {
     if (b) b.classList.add('visible');
   }, 1500);
 })();
+
+
+// Sticky CTA
+var stickyCTAShown = false;
+setTimeout(function() {
+  if (!stickyCTAShown && !sessionStorage.getItem('ctaClosed')) {
+    var el = document.getElementById('stickyCta');
+    if (el) { el.classList.add('visible'); stickyCTAShown = true; }
+  }
+}, 30000);
 
 function cookieChoice(accepted) {
   localStorage.setItem('cookieConsent', accepted ? 'accepted' : 'declined');
@@ -3886,6 +4212,15 @@ window.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <span class="sticky-cta-text">🎌 Plan your Japan pilgrimage</span>
+  <a class="sticky-cta-btn" href="https://www.viator.com/Japan/d334-ttd?pid=P00056924&mcid=42383&medium=link&medium_version=selector&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_sticky')">Book Tours →</a>
+  <a class="sticky-cta-btn" href="https://www.amazon.co.jp/s?k=%E5%BE%A1%E6%9C%B1%E5%8D%B0%E5%B8%B3&tag=sacredjapan-22" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','amazon_sticky')">御朱印帳 →</a>
+  <button class="sticky-cta-close" onclick="document.getElementById('stickyCta').style.display='none'">×</button>
+</div>
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
