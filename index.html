@@ -824,7 +824,20 @@ main { padding: 0 56px 80px; position: relative; z-index: 1; }
   background: var(--washi);
   padding: 28px 24px;
   transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
 }
+.etiquette-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  pointer-events: none;
+}
+.etiquette-card > * { position: relative; z-index: 1; }
 
 .etiquette-card:hover { background: var(--washi-dark); }
 
@@ -3543,7 +3556,7 @@ footer {
   <!-- What are the items -->
   <div class="etiquette-section" style="margin-bottom:48px;">
     <div class="etiquette-grid">
-      <div class="etiquette-card">
+      <div class="etiquette-card" style="--card-bg: url('/images/omamori.png');">
         <div class="etiquette-num">お守り — Omamori</div>
         <div class="etiquette-title">Protective Charms</div>
         <span class="etiquette-title-jp">お守り</span>
