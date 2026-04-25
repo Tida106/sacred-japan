@@ -4786,32 +4786,7 @@ function shareSpot(el, platform) {
 }
 
 
-// BGM
-var bgmPlaying = false;
-var bgmLoaded = false;
-function toggleBGM() {
-  var btn = document.getElementById('bgmBtn');
-  var frame = document.getElementById('bgmFrame');
-  if (!bgmPlaying) {
-    if (!bgmLoaded) {
-      frame.src = 'https://www.youtube.com/embed/vYpmbQyCAh4?autoplay=1&loop=1&playlist=vYpmbQyCAh4&controls=0&mute=0';
-      bgmLoaded = true;
-    } else {
-      frame.src = frame.src.replace('autoplay=0','autoplay=1');
-    }
-    btn.innerHTML = '■';
-    btn.classList.add('playing');
-    btn.title = 'Stop music';
-    bgmPlaying = true;
-  } else {
-    frame.src = '';
-    bgmLoaded = false;
-    btn.innerHTML = '♪';
-    btn.classList.remove('playing');
-    btn.title = 'Play Sacred Japan BGM';
-    bgmPlaying = false;
-  }
-}
+
 
 function toggleMobileMenu() {
   var btn = document.getElementById('navHamburger');
@@ -4854,14 +4829,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-<!-- BGM BUTTON -->
-<button class="bgm-btn" id="bgmBtn" onclick="toggleBGM()" title="Sacred Japan BGM" aria-label="Play background music">♪</button>
-<div class="bgm-tooltip">Sacred Japan BGM</div>
-<iframe id="bgmFrame" width="0" height="0"
-  src=""
-  allow="autoplay"
-  frameborder="0"
-  style="position:absolute;width:0;height:0;pointer-events:none;"></iframe>
+
 
 <!-- STICKY CTA -->
 <!-- REPLACE: スティッキーCTA内のP00298374→正式ViatorPID / aid=1610684→正式Booking.com AID -->
