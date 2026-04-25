@@ -4877,7 +4877,7 @@ document.querySelectorAll('.spot-card').forEach(function(card) {
   btn.rel = 'noopener sponsored';
   btn.textContent = 'Book a Tour →';
   btn.style.cssText = 'display:inline-block;margin-top:12px;padding:8px 16px;background:var(--beni);color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
-  btn.onclick = function() { trackEvent('click','affiliate','viator_spot_' + query); };
+  btn.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','viator_spot_' + query); };
   shareBar.parentNode.insertBefore(btn, shareBar);
 });
 </script>
