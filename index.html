@@ -2418,17 +2418,56 @@ footer {
   <div class="wa-divider-line"></div>
 </div>
 
+<div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:24px;flex-wrap:wrap;">
+  <svg width="240" height="340" viewBox="0 0 300 420" style="flex-shrink:0;">
+    <path id="map-hokkaido" fill="#D3D1C7" stroke="#fff" stroke-width="1.2" d="M170,15 L210,10 L245,20 L255,38 L245,55 L220,62 L192,58 L170,45 L160,30 Z"/>
+    <text x="210" y="38" text-anchor="middle" font-size="8" fill="#5F5E5A">北海道</text>
+    <path class="map-region" id="map-tohoku" data-region="tohoku" fill="#9FE1CB" stroke="#fff" stroke-width="1.2" d="M185,65 L210,62 L222,78 L222,108 L215,130 L202,142 L188,140 L176,128 L174,100 L178,75 Z"/>
+    <text x="200" y="105" text-anchor="middle" font-size="9" fill="#085041" font-weight="500" style="pointer-events:none;">東北</text>
+    <path class="map-region" id="map-kanto" data-region="kanto" fill="#B5D4F4" stroke="#fff" stroke-width="1.2" d="M175,142 L205,140 L220,155 L222,175 L210,190 L190,195 L170,188 L162,170 L165,150 Z"/>
+    <text x="193" y="170" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="500" style="pointer-events:none;">関東</text>
+    <path class="map-region" id="map-chubu" data-region="chubu" fill="#FAC775" stroke="#fff" stroke-width="1.2" d="M118,165 L165,158 L168,178 L160,198 L140,210 L115,212 L98,200 L95,182 L105,168 Z"/>
+    <text x="133" y="190" text-anchor="middle" font-size="9" fill="#633806" font-weight="500" style="pointer-events:none;">中部</text>
+    <path class="map-region" id="map-kansai" data-region="kansai" fill="#F5C4B3" stroke="#fff" stroke-width="1.2" d="M80,195 L115,192 L132,205 L130,228 L115,242 L92,245 L72,235 L68,215 Z"/>
+    <text x="100" y="222" text-anchor="middle" font-size="9" fill="#712B13" font-weight="500" style="pointer-events:none;">関西</text>
+    <path class="map-region" id="map-chugoku" data-region="chugoku" fill="#C0DD97" stroke="#fff" stroke-width="1.2" d="M32,220 L72,215 L85,228 L88,248 L72,258 L48,260 L25,250 L18,235 Z"/>
+    <text x="55" y="240" text-anchor="middle" font-size="9" fill="#27500A" font-weight="500" style="pointer-events:none;">中国</text>
+    <path class="map-region" id="map-shikoku" data-region="shikoku" fill="#CECBF6" stroke="#fff" stroke-width="1.2" d="M68,265 L105,260 L118,270 L115,288 L95,295 L68,292 L52,280 L55,267 Z"/>
+    <text x="86" y="280" text-anchor="middle" font-size="9" fill="#3C3489" font-weight="500" style="pointer-events:none;">四国</text>
+    <path class="map-region" id="map-kyushu" data-region="kyushu" fill="#F0997B" stroke="#fff" stroke-width="1.2" d="M15,258 L48,252 L60,265 L58,295 L45,318 L25,325 L8,310 L5,285 Z"/>
+    <text x="33" y="290" text-anchor="middle" font-size="9" fill="#4A1B0C" font-weight="500" style="pointer-events:none;">九州</text>
+    <ellipse cx="22" cy="380" rx="16" ry="8" fill="#F0997B" stroke="#fff" stroke-width="1"/>
+    <text x="22" y="383" text-anchor="middle" font-size="7" fill="#4A1B0C" style="pointer-events:none;">沖縄</text>
+    <line x1="22" y1="335" x2="22" y2="370" stroke="#D3D1C7" stroke-width="0.8" stroke-dasharray="3,2"/>
+    <text x="272" y="22" font-size="11" fill="#888780" font-weight="500">N</text>
+    <line x1="277" y1="25" x2="277" y2="40" stroke="#888780" stroke-width="1"/>
+    <polygon points="277,25 274,33 277,31 280,33" fill="#888780"/>
+  </svg>
+  <div style="padding-top:8px;">
+    <div style="font-size:11px;letter-spacing:2px;color:var(--beni);margin-bottom:12px;">FILTER BY REGION</div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <div class="map-leg" data-region="tohoku" style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;padding:3px 8px;border-radius:4px;color:var(--enshu);"><span style="width:10px;height:10px;border-radius:2px;background:#9FE1CB;flex-shrink:0;display:inline-block;"></span>Tohoku 東北 — Northeast</div>
+      <div class="map-leg" data-region="kanto" style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;padding:3px 8px;border-radius:4px;color:var(--enshu);"><span style="width:10px;height:10px;border-radius:2px;background:#B5D4F4;flex-shrink:0;display:inline-block;"></span>Kanto 関東 — East (Tokyo)</div>
+      <div class="map-leg" data-region="chubu" style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;padding:3px 8px;border-radius:4px;color:var(--enshu);"><span style="width:10px;height:10px;border-radius:2px;background:#FAC775;flex-shrink:0;display:inline-block;"></span>Chubu 中部 — Central</div>
+      <div class="map-leg" data-region="kansai" style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;padding:3px 8px;border-radius:4px;color:var(--enshu);"><span style="width:10px;height:10px;border-radius:2px;background:#F5C4B3;flex-shrink:0;display:inline-block;"></span>Kansai 関西 — West (Kyoto)</div>
+      <div class="map-leg" data-region="chugoku" style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;padding:3px 8px;border-radius:4px;color:var(--enshu);"><span style="width:10px;height:10px;border-radius:2px;background:#C0DD97;flex-shrink:0;display:inline-block;"></span>Chugoku 中国 — W. Honshu</div>
+      <div class="map-leg" data-region="shikoku" style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;padding:3px 8px;border-radius:4px;color:var(--enshu);"><span style="width:10px;height:10px;border-radius:2px;background:#CECBF6;flex-shrink:0;display:inline-block;"></span>Shikoku 四国 — S. Island</div>
+      <div class="map-leg" data-region="kyushu" style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;padding:3px 8px;border-radius:4px;color:var(--enshu);"><span style="width:10px;height:10px;border-radius:2px;background:#F0997B;flex-shrink:0;display:inline-block;"></span>Kyushu 九州 — SW Island</div>
+    </div>
+  </div>
+</div>
+
 <div class="filter-bar">
   <button class="filter-btn active" onclick="filterCards('all',this)">All Japan 全国</button>
   <button class="filter-btn" onclick="filterCards('shrine',this)">Shrines 神社</button>
   <button class="filter-btn" onclick="filterCards('temple',this)">Temples 寺院</button>
-  <button class="filter-btn" onclick="filterCards('kanto',this)">Kanto 関東</button>
-  <button class="filter-btn" onclick="filterCards('kansai',this)">Kansai 関西</button>
-  <button class="filter-btn" onclick="filterCards('chubu',this)">Chubu 中部</button>
-  <button class="filter-btn" onclick="filterCards('chugoku',this)">Chugoku 中国</button>
-  <button class="filter-btn" onclick="filterCards('shikoku',this)">Shikoku 四国</button>
-  <button class="filter-btn" onclick="filterCards('kyushu',this)">Kyushu 九州</button>
-  <button class="filter-btn" onclick="filterCards('tohoku',this)">Tohoku 東北</button>
+  <button class="filter-btn" onclick="filterCards('kanto',this)">Kanto 関東 — East</button>
+  <button class="filter-btn" onclick="filterCards('kansai',this)">Kansai 関西 — West</button>
+  <button class="filter-btn" onclick="filterCards('chubu',this)">Chubu 中部 — Central</button>
+  <button class="filter-btn" onclick="filterCards('chugoku',this)">Chugoku 中国 — W. Honshu</button>
+  <button class="filter-btn" onclick="filterCards('shikoku',this)">Shikoku 四国 — S. Island</button>
+  <button class="filter-btn" onclick="filterCards('kyushu',this)">Kyushu 九州 — SW Island</button>
+  <button class="filter-btn" onclick="filterCards('tohoku',this)">Tohoku 東北 — Northeast</button>
 </div>
 
   <!-- ── ADSENSE UNIT ── INSERT YOUR AD CODE HERE AFTER APPROVAL ──
@@ -4873,6 +4912,26 @@ window.addEventListener('DOMContentLoaded', function() {
   if (hash === 'privacy' || hash === 'contact') {
     renderPage(hash);
   }
+});
+</script>
+<script>
+document.querySelectorAll('.map-region, .map-leg').forEach(function(el) {
+  el.style.cursor = 'pointer';
+  el.addEventListener('click', function() {
+    var region = this.getAttribute('data-region');
+    var btn = Array.from(document.querySelectorAll('.filter-btn')).find(function(b) {
+      return b.getAttribute('onclick') && b.getAttribute('onclick').indexOf("'" + region + "'") !== -1;
+    });
+    if (btn) {
+      btn.click();
+      document.querySelectorAll('.map-region').forEach(function(r) { r.style.opacity = '0.5'; r.style.strokeWidth = '1.2'; });
+      document.querySelectorAll('.map-leg').forEach(function(l) { l.style.fontWeight = ''; l.style.background = ''; });
+      document.getElementById('map-' + region).style.opacity = '1';
+      document.getElementById('map-' + region).style.strokeWidth = '2.5';
+      document.getElementById('map-' + region).style.stroke = '#2c2c2a';
+      document.querySelectorAll('.map-leg[data-region="' + region + '"]').forEach(function(l) { l.style.fontWeight = '500'; l.style.background = 'rgba(0,0,0,0.05)'; });
+    }
+  });
 });
 </script>
 <script>
