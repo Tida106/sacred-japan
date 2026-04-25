@@ -2464,6 +2464,41 @@ footer {
   <div class="spots-grid" id="spotsGrid">
   <div id="noResults" style="display:none;grid-column:1/-1;padding:48px;text-align:center;font-family:'EB Garamond',serif;font-size:20px;color:var(--enshu);">No spots found — try a different search 🔍</div>
 
+    <div class="spot-card" style="cursor:pointer;" role="button" tabindex="0" onclick="trackEvent('click','spot','isejingu');window.open('https://www.isejingu.or.jp', '_blank', 'noopener')" onkeydown="if(event.key==='Enter'||event.key===' ')window.open('https://www.isejingu.or.jp', '_blank', 'noopener')" data-type="shrine" data-region="chubu">
+      <div class="spot-thumb" style="padding:0;overflow:hidden;">
+        <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=600&q=80&fit=crop" alt="Ise Jingu — Japan's most sacred Shinto shrine in Mie Prefecture" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform 0.4s ease;" loading="lazy" class="spot-photo">
+        <div class="spot-badges">
+          <span class="spot-badge badge-shrine">神社</span>
+          <span class="spot-badge badge-region">三重</span>
+        </div>
+      </div>
+      <div class="spot-body">
+        <div class="spot-name-jp">伊勢神宮</div>
+        <div class="spot-name-en">Ise Jingu — Grand Shrine of Ise</div>
+        <p class="spot-desc">Japan's most sacred Shinto sanctuary, Ise Jingu is not a single shrine but a complex of over 125 shrines spread across ancient forests in Mie Prefecture. At its heart are the Naiku (Inner Shrine), dedicated to Amaterasu — the sun goddess and ancestor of the Imperial family — and the Geku (Outer Shrine), dedicated to Toyouke, deity of food and industry. The main sanctuaries are rebuilt entirely from scratch every 20 years in a ritual called Shikinen Sengu, a tradition unbroken for over 1,300 years. Visiting Ise is considered the spiritual pilgrimage of a lifetime in Japan — "once in a lifetime, go to Ise" is a saying that still rings true today.</p>
+        <div class="spot-foot">
+          <div class="spot-tags">
+            <span class="spot-tag">Most Sacred</span>
+            <span class="spot-tag">Power Spot</span>
+            <span class="spot-tag">Pilgrimage</span>
+          </div>
+          <span class="spot-loc">Ise, Mie</span>
+          <span class="spot-season season-spring">🌸 Spring</span>
+        </div>
+      </div>
+      <div class="spot-access">
+        <div class="spot-access-row"><span class="spot-access-icon">🚉</span>Iseshi Station (Kintetsu/JR) — 15 min walk to Geku</div>
+        <div class="spot-access-row"><span class="spot-access-icon">🕐</span>5:00–18:00 (seasonal variation)</div>
+        <div class="spot-access-row"><span class="spot-access-icon">🎟</span>Free admission</div>
+      </div>
+      <div class="share-bar">
+        <a class="share-btn share-btn-x" href="#" onclick="shareSpot(this,'x');return false;">✕ X</a>
+        <a class="share-btn share-btn-fb" href="#" onclick="shareSpot(this,'fb');return false;">f Facebook</a>
+        <a class="share-btn share-btn-line" href="#" onclick="shareSpot(this,'line');return false;">LINE</a>
+        <a class="share-btn share-btn-pin" href="#" onclick="shareSpot(this,'pin');return false;">📌 Pin</a>
+      </div>
+    </div>
+
     <div class="spot-card" style="cursor:pointer;" role="button" tabindex="0" onclick="trackEvent('click','spot','inari.jp');window.open('https://inari.jp', '_blank', 'noopener')" onkeydown="if(event.key==='Enter'||event.key===' ')window.open('https://inari.jp', '_blank', 'noopener')" data-type="shrine" data-region="kansai">
       <div class="spot-thumb" style="padding:0;overflow:hidden;">
         <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=600&q=80&fit=crop" alt="Fushimi Inari Taisha — thousands of vermillion torii gates, Kyoto Japan" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform 0.4s ease;" loading="lazy" class="spot-photo">
