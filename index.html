@@ -361,17 +361,18 @@ nav {
 }
 
 .nav-links {
-  display: flex; gap: 32px; list-style: none;
+  display: flex; gap: 18px; list-style: none; flex-wrap: nowrap; align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--enshu);
-  font-size: 17px;
-  letter-spacing: 1.5px;
+  font-size: 13px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   transition: color 0.2s;
   font-family: 'EB Garamond', serif;
+  white-space: nowrap;
 }
 
 .nav-links a:hover { color: var(--sumi); }
