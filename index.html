@@ -361,17 +361,18 @@ nav {
 }
 
 .nav-links {
-  display: flex; gap: 32px; list-style: none;
+  display: flex; gap: 18px; list-style: none; flex-wrap: nowrap; align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--enshu);
-  font-size: 17px;
-  letter-spacing: 1.5px;
+  font-size: 13px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   transition: color 0.2s;
   font-family: 'EB Garamond', serif;
+  white-space: nowrap;
 }
 
 .nav-links a:hover { color: var(--sumi); }
@@ -402,7 +403,7 @@ nav {
 /* ── HERO ── */
 .hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 60vh;
   display: flex; align-items: center;
   padding: 80px 56px;
   overflow: hidden;
@@ -512,10 +513,14 @@ nav {
 }
 
 .hero-stats {
-  position: absolute;
-  right: 56px; bottom: 56px;
-  display: flex; flex-direction: column; gap: 24px;
+  position: relative;
+  right: auto; bottom: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   z-index: 1;
+  margin-left: auto;
+  padding-left: 60px;
 }
 
 .hero-stat { text-align: right; }
@@ -2378,10 +2383,10 @@ footer {
 </section>
 
 <!-- SITE NAV MAP -->
-<nav id="siteNavMap" style="background:var(--washi);border-top:2px solid var(--kin);border-bottom:2px solid var(--kin);padding:28px 24px;margin:0;">
+<div id="siteNavMap" style="background:var(--washi);border-top:2px solid var(--kin);border-bottom:2px solid var(--kin);padding:28px 24px;margin:0;">
   <div style="max-width:960px;margin:0 auto;">
     <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 16px 0;text-align:center;">Contents 目次</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;">
       <a onclick="smoothTo('spots')" href="#spots" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:15px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🏯 Must-Visit Spots</a>
       <a onclick="smoothTo('seasons')" href="#seasons" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:15px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🌸 Seasonal Guide</a>
       <a onclick="smoothTo('etiquette')" href="#etiquette" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:15px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🙏 Visitor Etiquette</a>
@@ -2396,7 +2401,7 @@ footer {
       <a onclick="smoothTo('goshuin')" href="#goshuin" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:15px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">📖 Goshuin Guide</a>
     </div>
   </div>
-</nav>
+</div>
 
 <!-- FILTER -->
 <div class="wa-divider">
@@ -3223,33 +3228,45 @@ footer {
 
   <div class="season-section">
     <div class="season-grid">
-      <div class="season-card">
+      <div class="season-card" style="background-image:url('https://images.unsplash.com/photo-1522383225653-ed111181a951?w=400&q=50');background-size:cover;background-position:center;position:relative;">
+        <div style="position:absolute;inset:0;background:rgba(253,235,240,0.72);"></div>
+        <div style="position:relative;z-index:1;">
         <div class="season-num">01</div>
         <div class="season-name-en">Spring</div>
         <span class="season-name-jp">春 — March to May</span>
         <div class="season-accent spring-accent"></div>
         <p class="season-tip">Cherry blossoms transform shrine gardens into pale pink dreamscapes. Book accommodation many months ahead for Kyoto and Nara.</p>
+        </div>
       </div>
-      <div class="season-card">
+      <div class="season-card" style="background-image:url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=400&q=50');background-size:cover;background-position:center;position:relative;">
+        <div style="position:absolute;inset:0;background:rgba(225,245,230,0.72);"></div>
+        <div style="position:relative;z-index:1;">
         <div class="season-num">02</div>
         <div class="season-name-en">Summer</div>
         <span class="season-name-jp">夏 — June to August</span>
         <div class="season-accent summer-accent"></div>
         <p class="season-tip">Vibrant summer festivals and Obon ceremonies light up temple grounds at dusk. Gion Matsuri in Kyoto is unmissable.</p>
+        </div>
       </div>
-      <div class="season-card">
+      <div class="season-card" style="background-image:url('https://images.unsplash.com/photo-1570459027562-4a916cc6113f?w=400&q=50');background-size:cover;background-position:center;position:relative;">
+        <div style="position:absolute;inset:0;background:rgba(253,238,218,0.72);"></div>
+        <div style="position:relative;z-index:1;">
         <div class="season-num">03</div>
         <div class="season-name-en">Autumn</div>
         <span class="season-name-jp">秋 — September to November</span>
         <div class="season-accent autumn-accent"></div>
         <p class="season-tip">Crimson maple leaves against ancient stone and vermillion pillars — Japan's most celebrated and perhaps finest season.</p>
+        </div>
       </div>
-      <div class="season-card">
+      <div class="season-card" style="background-image:url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=400&q=50');background-size:cover;background-position:center;position:relative;">
+        <div style="position:absolute;inset:0;background:rgba(225,235,248,0.72);"></div>
+        <div style="position:relative;z-index:1;">
         <div class="season-num">04</div>
         <div class="season-name-en">Winter</div>
         <span class="season-name-jp">冬 — December to February</span>
         <div class="season-accent winter-accent"></div>
         <p class="season-tip">Hatsumode (New Year's first visit) is among Japan's most cherished traditions. Snow-dusted temples offer rare, breathtaking stillness.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -3264,23 +3281,32 @@ footer {
 
   <div class="etiquette-section">
     <div class="etiquette-grid">
-      <div class="etiquette-card">
+      <div class="etiquette-card" style="background-image:url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=60');background-size:cover;background-position:center;position:relative;">
+        <div style="position:absolute;inset:0;background:rgba(253,240,243,0.90);"></div>
+        <div style="position:relative;z-index:1;">
         <div class="etiquette-num">01 — Purification</div>
         <div class="etiquette-title">Temizuya — Hand Washing</div>
         <span class="etiquette-title-jp">手水舎で清める</span>
         <p class="etiquette-body">Rinse both hands at the stone basin before entering the shrine grounds. Left hand first, then right, then rinse the ladle handle.</p>
+        </div>
       </div>
-      <div class="etiquette-card">
+      <div class="etiquette-card" style="background-image:url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=60');background-size:cover;background-position:center;position:relative;">
+        <div style="position:absolute;inset:0;background:rgba(253,240,243,0.90);"></div>
+        <div style="position:relative;z-index:1;">
         <div class="etiquette-num">02 — Prayer</div>
         <div class="etiquette-title">The 2–2–1 Method</div>
         <span class="etiquette-title-jp">二礼二拍手一礼</span>
         <p class="etiquette-body">At shrines: bow twice, clap twice, offer a silent prayer, then bow once more. At temples, join palms quietly — no clapping.</p>
+        </div>
       </div>
-      <div class="etiquette-card">
+      <div class="etiquette-card" style="background-image:url('https://images.unsplash.com/photo-1611604548018-d56bbd85d681?w=600&q=60');background-size:cover;background-position:center;position:relative;">
+        <div style="position:absolute;inset:0;background:rgba(253,240,243,0.90);"></div>
+        <div style="position:relative;z-index:1;">
         <div class="etiquette-num">03 — Goshuin</div>
         <div class="etiquette-title">Collect Ink Stamps</div>
         <span class="etiquette-title-jp">御朱印帳を持参して</span>
         <p class="etiquette-body">Bring a goshuin-cho stamp book and collect hand-brushed calligraphy seals at each site — a treasured, living record of your journey.</p>
+        </div>
       </div>
       <div class="etiquette-card">
         <div class="etiquette-num">04 — Dress</div>
@@ -3294,19 +3320,26 @@ footer {
         <span class="etiquette-title-jp">静粛に、撮影マナーを</span>
         <p class="etiquette-body">Keep voices low. Some inner sanctums forbid photography — look for signs and always seek permission before raising your camera.</p>
       </div>
-      <div class="etiquette-card">
+      <div class="etiquette-card" style="background-image:url('https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=600&q=60');background-size:cover;background-position:center;position:relative;">
+        <div style="position:absolute;inset:0;background:rgba(253,240,243,0.90);"></div>
+        <div style="position:relative;z-index:1;">
         <div class="etiquette-num">06 — Omamori</div>
         <div class="etiquette-title">Charms &amp; Fortune Slips</div>
         <span class="etiquette-title-jp">お守り・おみくじ</span>
         <p class="etiquette-body">Purchase a protective omamori charm or try your luck with an omikuji fortune slip. A delightful ritual for visitors of all ages.</p>
+        </div>
       </div>
     </div>
   </div>
 
+
+
+
+
   <!-- VIDEO -->
-  <div style="max-width:720px;margin:0 auto 56px;padding:0 8px;">
-    <div style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin-bottom:12px;text-align:center;">Watch — Shrine Etiquette in Action</div>
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;border:1px solid var(--border-strong);">
+  <div style="max-width:720px;margin:0 auto 56px;padding:0 16px;">
+    <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin-bottom:12px;text-align:center;">Watch — Shrine Etiquette in Action</p>
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:6px;border:1px solid var(--border-strong);">
       <iframe
         src="https://www.youtube.com/embed/VSzFaspeLc8"
         title="How to pray at a Japanese shrine"
@@ -3318,9 +3351,6 @@ footer {
       </iframe>
     </div>
   </div>
-
-
-
 
   <!-- TRAVEL TIPS -->
   <div class="wa-divider">
@@ -3374,6 +3404,8 @@ footer {
         <span class="etiquette-title-jp">撮影マナー</span>
         <p class="etiquette-body">Golden hour (30 min after sunrise, before sunset) makes shrine photography magical. Always check for no-photo signs in inner sanctums. Ask permission before photographing priests or ceremonies — most are gracious.</p>
       </div>
+    </div>
+  </div>
 
   <!-- KAMIDANA -->
   <div class="section-head">
@@ -3492,6 +3524,9 @@ footer {
         <span class="kamidana-daily-jp">毎月1日・15日に榊を換える</span>
         <p class="kamidana-daily-body">On the 1st and 15th of each month, replace the sakaki branches and refresh all offerings. A deeper cleaning of the shelf is done at New Year.</p>
       </div>
+    </div>
+
+  </div>
 
   <!-- AMAZON AFFILIATE -->
   <div class="wa-divider">
@@ -3565,6 +3600,8 @@ footer {
         <span class="etiquette-title-jp">神水・清め塩</span>
         <p class="etiquette-body">Many shrines sell bottled sacred water drawn from the shrine's own spring or well, believed to carry the blessings of the resident deity. Sacred salt (kiyome-shio) for purification is another common offering — sprinkled at home to cleanse negative energy. Kiyomizudera's Otowa waterfall water is among Japan's most famous, with visitors queuing to drink from three streams said to grant longevity, love, and academic success. Zenkoji Temple in Nagano also offers highly prized sacred water from its ancient spring.</p>
       </div>
+    </div>
+  </div>
 
   <!-- Spot-specific offerings -->
   <div class="section-head">
@@ -3768,6 +3805,9 @@ footer {
         <p class="etiquette-body">A pocket WiFi router or eSIM is essential for navigating Japan. Pocket WiFi devices rent for approximately ¥300–600/day from airport counters or online (collect on arrival). eSIMs from IIJmio or Mobal offer 15-day unlimited data plans from around ¥2,000. Download Google Maps offline for each region before you travel — mobile coverage in mountain shrines like Koyasan and Yamadera can be patchy. Google Translate's camera mode is invaluable for reading shrine signs and menus.</p>
       </div>
 
+    </div>
+  </div>
+
   <!-- Japan Itinerary Section -->
   <div class="section-head" style="margin-top:48px;" id="itinerary">
     <div class="section-head-left">
@@ -3799,6 +3839,9 @@ footer {
         <span class="etiquette-title-jp">東北・山岳霊場の旅</span>
         <p class="etiquette-body">Days 1–2: Tokyo — Meiji Jingu, Senso-ji, Tsurugaoka Hachimangu (Kamakura). Day 3: Nikko. Days 4–5: Tohoku — Yamadera cliff temple, Chusonji Konjikido golden hall in Hiraizumi. Day 6: Suwa Taisha at Lake Suwa (Nagano). Day 7: Zenkoji Temple (Nagano). Days 8–9: Kyoto — Fushimi Inari, Kinkaku-ji, Kiyomizudera. Day 10: Nara fly-out. A journey through Japan's lesser-known but most atmospheric sacred landscapes.</p>
       </div>
+
+    </div>
+  </div>
 
 
 
@@ -4059,6 +4102,9 @@ footer {
         </p>
       </div>
 
+    </div>
+  </div>
+
   <!-- VIATOR TOURS -->
   <div id="viator"></div>
   <div class="wa-divider">
@@ -4239,7 +4285,8 @@ footer {
     </div>
 
     <!-- 中段：中身の意味 -->
-    <!-- GOSHUIN AMAZON CTA -->
+    <div 
+      <!-- GOSHUIN AMAZON CTA -->
       <div style="margin:32px 0;padding:24px 28px;background:rgba(155,35,53,0.05);border:1px solid rgba(155,35,53,0.2);border-radius:2px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
         <div>
           <div style="font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:3px;color:var(--beni);margin-bottom:6px;">御朱印帳を手に入れよう</div>
@@ -4249,7 +4296,7 @@ footer {
         <a href="https://www.amazon.co.jp/s?k=%E5%BE%A1%E6%9C%B1%E5%8D%B0%E5%B8%B3+%E5%A4%A7%E5%88%A4&tag=sacredjapan-22" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','amazon_goshuin_inline')" style="padding:12px 24px;background:var(--beni);color:#fff;text-decoration:none;font-family:'EB Garamond',serif;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;white-space:nowrap;">View on Amazon →</a>
       </div>
 
-    <div class="goshuin-meaning-grid">
+      class="goshuin-meaning-grid">
       <div class="goshuin-meaning-card">
         <div class="goshuin-meaning-num">一</div>
         <div class="goshuin-meaning-title">The Red Stamp</div>
@@ -4299,6 +4346,9 @@ footer {
         <span class="goshuin-step-jp">初穂料をお納めする</span>
         <p class="goshuin-step-body">The suggested offering (初穂料) is typically ¥300–¥500. Have coins ready in advance. Place the money respectfully in the tray — it is a sacred offering, not a transaction.</p>
       </div>
+    </div>
+
+  </div>
 
   <!-- BANNER -->
   <div class="banner">
@@ -4341,6 +4391,8 @@ footer {
         <div style="display:flex;gap:16px;align-items:flex-start;">
           <span style="font-size:22px;line-height:1;">📖</span>
           <div><div style="font-family:'Shippori Mincho',serif;font-size:15px;color:var(--sumi);margin-bottom:4px;">Goshuin Guide</div><p style="font-size:15px;color:var(--sumi-light);line-height:1.7;margin:0;">Everything you need to know about collecting sacred shrine stamps on your journey.</p></div>
+        </div>
+      </div>
     </div>
     <div style="background:var(--washi-dark);padding:32px 44px;grid-column:1/-1;border-top:1px solid var(--border-strong);">
       <p style="font-size:15px;color:var(--enshu);line-height:1.8;text-align:center;margin:0;">Sacred Japan is an independent guide maintained with love for Japan's spiritual heritage. All content is original and written in English for international visitors. For enquiries: <a href="mailto:hello.sacredjapan@gmail.com" style="color:var(--beni);">hello.sacredjapan@gmail.com</a></p>
@@ -4780,32 +4832,7 @@ function shareSpot(el, platform) {
 }
 
 
-// BGM
-var bgmPlaying = false;
-var bgmLoaded = false;
-function toggleBGM() {
-  var btn = document.getElementById('bgmBtn');
-  var frame = document.getElementById('bgmFrame');
-  if (!bgmPlaying) {
-    if (!bgmLoaded) {
-      frame.src = 'https://www.youtube.com/embed/vYpmbQyCAh4?autoplay=1&loop=1&playlist=vYpmbQyCAh4&controls=0&mute=0';
-      bgmLoaded = true;
-    } else {
-      frame.src = frame.src.replace('autoplay=0','autoplay=1');
-    }
-    btn.innerHTML = '■';
-    btn.classList.add('playing');
-    btn.title = 'Stop music';
-    bgmPlaying = true;
-  } else {
-    frame.src = '';
-    bgmLoaded = false;
-    btn.innerHTML = '♪';
-    btn.classList.remove('playing');
-    btn.title = 'Play Sacred Japan BGM';
-    bgmPlaying = false;
-  }
-}
+
 
 function toggleMobileMenu() {
   var btn = document.getElementById('navHamburger');
@@ -4843,6 +4870,7 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
 
 
 
