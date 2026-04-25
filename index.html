@@ -403,7 +403,7 @@ nav {
 /* ── HERO ── */
 .hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 60vh;
   display: flex; align-items: center;
   padding: 80px 56px;
   overflow: hidden;
@@ -513,10 +513,14 @@ nav {
 }
 
 .hero-stats {
-  position: absolute;
-  right: 56px; bottom: 56px;
-  display: flex; flex-direction: column; gap: 24px;
+  position: relative;
+  right: auto; bottom: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   z-index: 1;
+  margin-left: auto;
+  padding-left: 60px;
 }
 
 .hero-stat { text-align: right; }
