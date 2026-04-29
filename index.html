@@ -4967,17 +4967,9 @@ document.querySelectorAll('.spot-card').forEach(function(card) {
     btnB.href = bookingUrl;
     btnB.target = '_blank';
     btnB.rel = 'noopener sponsored';
-    btnB.textContent = 'Search on Expedia →';
-  var btnC = document.createElement('a');
-  btnC.href = 'https://www.agoda.com/search?city=' + locQuery + '&cid=1963662';
-  btnC.target = '_blank';
-  btnC.rel = 'noopener sponsored';
-  btnC.textContent = 'Search on Agoda →';
-  btnC.style.cssText = 'display:inline-block;margin-top:8px;margin-left:8px;padding:8px 16px;background:#e40000;color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
-  btnC.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','agoda_spot_' + locQuery); };
-  shareBar.parentNode.insertBefore(btnC, shareBar);
+    btnB.textContent = 'Find Hotels →';
     btnB.style.cssText = 'display:inline-block;margin-top:8px;margin-left:8px;padding:8px 16px;background:#00355f;color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
-    btnB.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','booking_spot_' + locQuery); };
+    btnB.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','expedia_spot_' + locQuery); };
     shareBar.parentNode.insertBefore(btnB, shareBar);
   }
 });
@@ -4993,7 +4985,7 @@ document.querySelectorAll('.spot-card').forEach(function(card) {
 <!-- REPLACE: スティッキーCTA内のP00298374→正式ViatorPID / aid=1610684→正式Booking.com AID -->
 <div class="sticky-cta" id="stickyCta">
   <span class="sticky-cta-text">🎌 Plan your Japan pilgrimage</span>
-  <a class="sticky-cta-btn" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DJapan&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','booking_sticky')" style="background:#00355f;">Hotels →</a>
+  <a class="sticky-cta-btn" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DJapan&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','booking_sticky')" style="background:#00355f;">Find Hotels →</a>
   <a class="sticky-cta-btn" href="https://www.viator.com/Japan/d334-ttd?pid=P00298374&mcid=42383&medium=link&medium_version=selector&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_sticky')">Book Tours →</a>
   <button class="sticky-cta-close" onclick="document.getElementById('stickyCta').style.display='none'">×</button>
 </div>
