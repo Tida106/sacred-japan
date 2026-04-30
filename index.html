@@ -585,6 +585,24 @@ nav {
   border-color: var(--sumi);
 }
 
+/* 地方別ボタンカラー */
+.filter-btn[data-region="kanto"].active,
+.filter-btn[data-region="kanto"]:hover  { background:#e8928a; border-color:#e8928a; color:#fff; }
+.filter-btn[data-region="kansai"].active,
+.filter-btn[data-region="kansai"]:hover { background:#8b5fa8; border-color:#8b5fa8; color:#fff; }
+.filter-btn[data-region="chubu"].active,
+.filter-btn[data-region="chubu"]:hover  { background:#c9a84c; border-color:#c9a84c; color:#fff; }
+.filter-btn[data-region="chugoku"].active,
+.filter-btn[data-region="chugoku"]:hover{ background:#6a9e6a; border-color:#6a9e6a; color:#fff; }
+.filter-btn[data-region="shikoku"].active,
+.filter-btn[data-region="shikoku"]:hover{ background:#a393c8; border-color:#a393c8; color:#fff; }
+.filter-btn[data-region="kyushu"].active,
+.filter-btn[data-region="kyushu"]:hover { background:#e07840; border-color:#e07840; color:#fff; }
+.filter-btn[data-region="tohoku"].active,
+.filter-btn[data-region="tohoku"]:hover { background:#3a9e7e; border-color:#3a9e7e; color:#fff; }
+.filter-btn[data-region="hokkaido"].active,
+.filter-btn[data-region="hokkaido"]:hover{ background:#5bacd4; border-color:#5bacd4; color:#fff; }
+
 /* ── MAIN ── */
 main { padding: 0 56px 80px; position: relative; z-index: 1; }
 
@@ -2426,15 +2444,15 @@ footer {
 
 <div class="filter-bar">
   <button class="filter-btn active" onclick="filterCards('all',this)">All Japan 全国</button>
-  <button class="filter-btn" onclick="filterCards('shrine',this)">Shrines 神社</button>
-  <button class="filter-btn" onclick="filterCards('temple',this)">Temples 寺院</button>
-  <button class="filter-btn" onclick="filterCards('kanto',this)">Kanto 関東 — East</button>
-  <button class="filter-btn" onclick="filterCards('kansai',this)">Kansai 関西 — West</button>
-  <button class="filter-btn" onclick="filterCards('chubu',this)">Chubu 中部 — Central</button>
-  <button class="filter-btn" onclick="filterCards('chugoku',this)">Chugoku 中国 — W. Honshu</button>
-  <button class="filter-btn" onclick="filterCards('shikoku',this)">Shikoku 四国 — S. Island</button>
-  <button class="filter-btn" onclick="filterCards('kyushu',this)">Kyushu 九州 — SW Island</button>
-  <button class="filter-btn" onclick="filterCards('tohoku',this)">Tohoku 東北 — Northeast</button>
+  <button class="filter-btn" data-region="shrine" onclick="filterCards('shrine',this)">Shrines 神社</button>
+  <button class="filter-btn" data-region="temple" onclick="filterCards('temple',this)">Temples 寺院</button>
+  <button class="filter-btn" data-region="kanto" onclick="filterCards('kanto',this)">Kanto 関東 — East</button>
+  <button class="filter-btn" data-region="kansai" onclick="filterCards('kansai',this)">Kansai 関西 — West</button>
+  <button class="filter-btn" data-region="chubu" onclick="filterCards('chubu',this)">Chubu 中部 — Central</button>
+  <button class="filter-btn" data-region="chugoku" onclick="filterCards('chugoku',this)">Chugoku 中国 — W. Honshu</button>
+  <button class="filter-btn" data-region="shikoku" onclick="filterCards('shikoku',this)">Shikoku 四国 — S. Island</button>
+  <button class="filter-btn" data-region="kyushu" onclick="filterCards('kyushu',this)">Kyushu 九州 — SW Island</button>
+  <button class="filter-btn" data-region="tohoku" onclick="filterCards('tohoku',this)">Tohoku 東北 — Northeast</button>
 </div>
 
 
