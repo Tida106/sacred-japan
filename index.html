@@ -598,6 +598,7 @@ button.filter-btn[data-region="tohoku"]        { background:#3a9e7e !important; 
 button.filter-btn[data-region="hokkaido"]      { background:#5bacd4 !important; border-color:#5bacd4 !important; color:#fff !important; }
 
 button.filter-btn[data-region].active          { opacity:0.75 !important; }
+button.filter-btn[data-region]:hover           { filter: brightness(1.25) !important; box-shadow: 0 0 10px rgba(255,255,180,0.7) !important; }
 
 /* ── MAIN ── */
 main { padding: 0 56px 80px; position: relative; z-index: 1; }
@@ -2442,6 +2443,8 @@ footer {
   <button class="filter-btn active" onclick="filterCards('all',this)">All Japan 全国</button>
   <button class="filter-btn" data-region="shrine" onclick="filterCards('shrine',this)">Shrines 神社</button>
   <button class="filter-btn" data-region="temple" onclick="filterCards('temple',this)">Temples 寺院</button>
+</div>
+<div class="filter-bar filter-bar-regions">
   <button class="filter-btn" data-region="kanto" onclick="filterCards('kanto',this)">Kanto 関東 — East</button>
   <button class="filter-btn" data-region="kansai" onclick="filterCards('kansai',this)">Kansai 関西 — West</button>
   <button class="filter-btn" data-region="chubu" onclick="filterCards('chubu',this)">Chubu 中部 — Central</button>
