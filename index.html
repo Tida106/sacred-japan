@@ -577,7 +577,7 @@ nav {
   border-radius: 2px;
 }
 
-.filter-btn:hover { border-color:#f5d020; color:#333; background:#f5d020; }
+.filter-btn:hover { border-color: var(--sumi); color: var(--sumi); }
 
 .filter-btn.active {
   background: var(--sumi);
@@ -597,8 +597,7 @@ button.filter-btn[data-region="kyushu"]        { background:#e07840 !important; 
 button.filter-btn[data-region="tohoku"]        { background:#3a9e7e !important; border-color:#3a9e7e !important; color:#fff !important; }
 button.filter-btn[data-region="hokkaido"]      { background:#5bacd4 !important; border-color:#5bacd4 !important; color:#fff !important; }
 
-button.filter-btn[data-region]:hover,
-button.filter-btn[data-region].active          { background:#f5d020 !important; border-color:#f5d020 !important; color:#333 !important; }
+button.filter-btn[data-region].active          { opacity:0.75 !important; }
 
 /* ── MAIN ── */
 main { padding: 0 56px 80px; position: relative; z-index: 1; }
