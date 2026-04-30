@@ -577,7 +577,7 @@ nav {
   border-radius: 2px;
 }
 
-.filter-btn:hover { border-color: var(--sumi); color: var(--sumi); }
+.filter-btn:hover { border-color:#c9a84c; color:#c9a84c; }
 
 .filter-btn.active {
   background: var(--sumi);
@@ -587,21 +587,28 @@ nav {
 
 /* 地方別ボタンカラー */
 button.filter-btn[data-region="kanto"].active,
-button.filter-btn[data-region="kanto"]:hover  { background:#e8928a !important; border-color:#e8928a !important; color:#fff !important; }
+button.filter-btn[data-region="kanto"]:hover  { background:#c9a84c !important; border-color:#c9a84c !important; color:#fff !important; }
 button.filter-btn[data-region="kansai"].active,
-button.filter-btn[data-region="kansai"]:hover { background:#8b5fa8 !important; border-color:#8b5fa8 !important; color:#fff !important; }
+button.filter-btn[data-region="kansai"]:hover { background:#c9a84c !important; border-color:#c9a84c !important; color:#fff !important; }
 button.filter-btn[data-region="chubu"].active,
 button.filter-btn[data-region="chubu"]:hover  { background:#c9a84c !important; border-color:#c9a84c !important; color:#fff !important; }
 button.filter-btn[data-region="chugoku"].active,
-button.filter-btn[data-region="chugoku"]:hover{ background:#6a9e6a !important; border-color:#6a9e6a !important; color:#fff !important; }
+button.filter-btn[data-region="chugoku"]:hover{ background:#c9a84c !important; border-color:#c9a84c !important; color:#fff !important; }
 button.filter-btn[data-region="shikoku"].active,
-button.filter-btn[data-region="shikoku"]:hover{ background:#a393c8 !important; border-color:#a393c8 !important; color:#fff !important; }
+button.filter-btn[data-region="shikoku"]:hover{ background:#c9a84c !important; border-color:#c9a84c !important; color:#fff !important; }
 button.filter-btn[data-region="kyushu"].active,
-button.filter-btn[data-region="kyushu"]:hover { background:#e07840 !important; border-color:#e07840 !important; color:#fff !important; }
+button.filter-btn[data-region="kyushu"]:hover { background:#c9a84c !important; border-color:#c9a84c !important; color:#fff !important; }
 button.filter-btn[data-region="tohoku"].active,
-button.filter-btn[data-region="tohoku"]:hover { background:#3a9e7e !important; border-color:#3a9e7e !important; color:#fff !important; }
+button.filter-btn[data-region="tohoku"]:hover { background:#c9a84c !important; border-color:#c9a84c !important; color:#fff !important; }
 button.filter-btn[data-region="hokkaido"].active,
-button.filter-btn[data-region="hokkaido"]:hover{ background:#5bacd4 !important; border-color:#5bacd4 !important; color:#fff !important; }
+button.filter-btn[data-region="hokkaido"]:hover{ background:#c9a84c !important; border-color:#c9a84c !important; color:#fff !important; }
+button.filter-btn[data-region="shrine"],
+button.filter-btn[data-region="shrine"].active { background:#c0392b !important; border-color:#c0392b !important; color:#fff !important; }
+button.filter-btn[data-region="temple"],
+button.filter-btn[data-region="temple"].active { background:#8e9eab !important; border-color:#8e9eab !important; color:#fff !important; }
+button.filter-btn[data-region="shrine"]:hover { background:#a93226 !important; border-color:#a93226 !important; color:#fff !important; }
+button.filter-btn[data-region="temple"]:hover { background:#6b7d87 !important; border-color:#6b7d87 !important; color:#fff !important; }
+button.filter-btn:not([data-region]):hover { background:#c9a84c !important; border-color:#c9a84c !important; color:#fff !important; }
 
 /* ── MAIN ── */
 main { padding: 0 56px 80px; position: relative; z-index: 1; }
