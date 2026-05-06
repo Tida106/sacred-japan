@@ -91,6 +91,28 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Major Traditional Festivals of Japan",
+  "description": "9 must-experience traditional festivals (matsuri) at Japan's most sacred shrines and historic cities.",
+  "url": "https://sacred-japan.net/#festivals",
+  "numberOfItems": 9,
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"item":{"@type":"Festival","name":"Gion Matsuri","alternateName":"祇園祭","startDate":"2026-07-01","endDate":"2026-07-31","location":{"@type":"Place","name":"Yasaka Shrine","address":{"@type":"PostalAddress","addressLocality":"Kyoto","addressCountry":"JP"}},"description":"Kyoto's grandest festival, held throughout July at Yasaka Shrine — the centrepiece is the Yamaboko Junko parade of towering wooden floats on July 17 and 24."}},
+    {"@type":"ListItem","position":2,"item":{"@type":"Festival","name":"Sanja Matsuri","alternateName":"三社祭","startDate":"2026-05-15","endDate":"2026-05-17","location":{"@type":"Place","name":"Asakusa Shrine","address":{"@type":"PostalAddress","addressLocality":"Tokyo","addressCountry":"JP"}},"description":"Tokyo's wildest festival — three days of mikoshi portable shrines hauled through Asakusa by tens of thousands of carriers in mid-May."}},
+    {"@type":"ListItem","position":3,"item":{"@type":"Festival","name":"Tenjin Matsuri","alternateName":"天神祭","startDate":"2026-07-24","endDate":"2026-07-25","location":{"@type":"Place","name":"Osaka Tenmangu Shrine","address":{"@type":"PostalAddress","addressLocality":"Osaka","addressCountry":"JP"}},"description":"One of Japan's three greatest festivals — a thousand-year-old river procession of boats and fireworks honouring the deity of scholarship."}},
+    {"@type":"ListItem","position":4,"item":{"@type":"Festival","name":"Kanda Matsuri","alternateName":"神田祭","startDate":"2027-05-08","endDate":"2027-05-15","location":{"@type":"Place","name":"Kanda Myojin Shrine","address":{"@type":"PostalAddress","addressLocality":"Tokyo","addressCountry":"JP"}},"description":"Held in odd-numbered years in mid-May — 200 mikoshi parade through Tokyo's old downtown around Kanda Myojin in a festival dating to the Edo period."}},
+    {"@type":"ListItem","position":5,"item":{"@type":"Festival","name":"Aoi Matsuri","alternateName":"葵祭","startDate":"2026-05-15","endDate":"2026-05-15","location":{"@type":"Place","name":"Kamigamo & Shimogamo Shrines","address":{"@type":"PostalAddress","addressLocality":"Kyoto","addressCountry":"JP"}},"description":"Kyoto's most elegant festival — a Heian-era imperial procession of 500 people in 8th-century court costume on May 15 each year."}},
+    {"@type":"ListItem","position":6,"item":{"@type":"Festival","name":"Jidai Matsuri","alternateName":"時代祭","startDate":"2026-10-22","endDate":"2026-10-22","location":{"@type":"Place","name":"Heian Jingu","address":{"@type":"PostalAddress","addressLocality":"Kyoto","addressCountry":"JP"}},"description":"The Festival of the Ages — 2,000 marchers in costumes spanning 1,200 years of Japanese history parade from the Imperial Palace to Heian Jingu on October 22."}},
+    {"@type":"ListItem","position":7,"item":{"@type":"Festival","name":"Aomori Nebuta Matsuri","alternateName":"青森ねぶた祭","startDate":"2026-08-02","endDate":"2026-08-07","location":{"@type":"Place","name":"Aomori City","address":{"@type":"PostalAddress","addressLocality":"Aomori","addressCountry":"JP"}},"description":"Japan's most spectacular summer festival — gigantic illuminated warrior floats parade through Aomori for six nights in early August."}},
+    {"@type":"ListItem","position":8,"item":{"@type":"Festival","name":"Awa Odori","alternateName":"阿波踊り","startDate":"2026-08-12","endDate":"2026-08-15","location":{"@type":"Place","name":"Tokushima City","address":{"@type":"PostalAddress","addressLocality":"Tokushima","addressCountry":"JP"}},"description":"Japan's largest dance festival — 100,000 dancers fill Tokushima's streets for four nights of synchronised choreography during Obon."}},
+    {"@type":"ListItem","position":9,"item":{"@type":"Festival","name":"Yosakoi Matsuri","alternateName":"よさこい祭り","startDate":"2026-08-09","endDate":"2026-08-12","location":{"@type":"Place","name":"Kochi City","address":{"@type":"PostalAddress","addressLocality":"Kochi","addressCountry":"JP"}},"description":"A modern Shikoku festival — 20,000 dancers in elaborate costumes perform high-energy routines with naruko clappers across Kochi's streets in early August."}}
+  ]
+}
+</script>
+
 
 <script type="application/ld+json">
 {
@@ -758,6 +780,173 @@ main { padding: 0 56px 80px; position: relative; z-index: 1; }
   letter-spacing: 1px;
   white-space: nowrap;
   margin-left: 8px;
+}
+
+/* ── FESTIVALS ── */
+.festivals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border-strong);
+  border: 1px solid var(--border-strong);
+  margin-bottom: 72px;
+}
+
+.festival-card {
+  background: var(--washi);
+  overflow: hidden;
+  transition: background 0.25s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.festival-card:hover { background: #efe8d8; }
+
+.festival-thumb {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #9b2335 0%, #b8860b 100%);
+}
+
+.festival-thumb::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.55));
+  pointer-events: none;
+}
+
+.festival-photo {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center center;
+  position: absolute; inset: 0;
+  transition: transform 0.4s ease;
+}
+
+.festival-card:hover .festival-photo { transform: scale(1.06); }
+
+.festival-thumb-kanji {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 56px;
+  color: rgba(255,255,255,0.92);
+  letter-spacing: 6px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  pointer-events: none;
+}
+
+.festival-badges {
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+  display: flex; gap: 5px;
+}
+
+.festival-badge {
+  padding: 4px 10px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  border-radius: 1px;
+}
+
+.badge-month { background: var(--beni); color: #fff; }
+
+.festival-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.festival-name-jp {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--sumi);
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+}
+
+.festival-name-en {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--enshu);
+  margin-bottom: 12px;
+}
+
+.festival-date {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--beni);
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  background: rgba(155,35,53,0.07);
+  border-left: 3px solid var(--beni);
+  border-radius: 1px;
+}
+
+.festival-place {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px;
+  color: var(--enshu);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  padding-left: 2px;
+}
+
+.festival-desc {
+  font-size: 16px;
+  color: var(--sumi-light);
+  line-height: 1.85;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.festival-cta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.festival-cta {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  border-radius: 2px;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.festival-cta:hover { opacity: 0.92; transform: translateY(-1px); }
+
+.cta-expedia {
+  background: #00355f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 16px;
+  letter-spacing: 1.2px;
+}
+
+.cta-viator {
+  background: var(--beni);
+  color: #fff;
+  font-size: 13px;
+  padding: 9px 16px;
+  letter-spacing: 1.5px;
 }
 
 /* ── SEASON ── */
@@ -1577,6 +1766,7 @@ footer {
   main { padding: 0 16px 60px; }
 
   .spots-grid { grid-template-columns: 1fr; }
+  .festivals-grid { grid-template-columns: 1fr; }
 
   .section-head { flex-direction: column; align-items: flex-start; gap: 8px; }
   .section-h2 { font-size: 24px; }
@@ -1613,6 +1803,7 @@ footer {
   main { padding: 0 32px 80px; }
   .filter-bar { padding: 0 32px 32px; }
   .spots-grid { grid-template-columns: repeat(2, 1fr); }
+  .festivals-grid { grid-template-columns: repeat(2, 1fr); }
   .season-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -1644,6 +1835,17 @@ footer {
 .spot-card:nth-child(19) { animation-delay: 0.76s; }
 .spot-card:nth-child(20) { animation-delay: 0.80s; }
 .spot-card:nth-child(21) { animation-delay: 0.84s; }
+
+.festival-card { animation: fadeUp 0.5s ease both; }
+.festival-card:nth-child(1) { animation-delay: 0.04s; }
+.festival-card:nth-child(2) { animation-delay: 0.08s; }
+.festival-card:nth-child(3) { animation-delay: 0.12s; }
+.festival-card:nth-child(4) { animation-delay: 0.16s; }
+.festival-card:nth-child(5) { animation-delay: 0.20s; }
+.festival-card:nth-child(6) { animation-delay: 0.24s; }
+.festival-card:nth-child(7) { animation-delay: 0.28s; }
+.festival-card:nth-child(8) { animation-delay: 0.32s; }
+.festival-card:nth-child(9) { animation-delay: 0.36s; }
 
 
 
@@ -2267,6 +2469,7 @@ footer {
 <div class="mobile-menu" id="mobileMenu">
   <ul>
     <li><a href="#spots" onclick="smoothTo('spots');toggleMobileMenu()">Shrines &amp; Temples</a></li>
+    <li><a href="#festivals" onclick="smoothTo('festivals');toggleMobileMenu()">Festivals</a></li>
     <li><a href="#seasons" onclick="smoothTo('seasons');toggleMobileMenu()">Seasons</a></li>
     <li><a href="#etiquette" onclick="smoothTo('etiquette');toggleMobileMenu()">Etiquette</a></li>
     <li><a href="#goshuin" onclick="smoothTo('goshuin');toggleMobileMenu()">Goshuin</a></li>
@@ -2415,6 +2618,7 @@ footer {
     <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 16px 0;text-align:center;">Contents 目次</p>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;">
       <a onclick="smoothTo('spots')" href="#spots" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:15px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🏯 Must-Visit Spots</a>
+      <a onclick="smoothTo('festivals')" href="#festivals" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:15px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🎆 Traditional Festivals</a>
       <a onclick="smoothTo('seasons')" href="#seasons" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:15px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🌸 Seasonal Guide</a>
       <a onclick="smoothTo('etiquette')" href="#etiquette" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:15px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🙏 Visitor Etiquette</a>
       <a onclick="smoothTo('tips')" href="#tips" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:15px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">✈️ Travel Tips</a>
@@ -3340,6 +3544,223 @@ footer {
         <a class="share-btn share-btn-line" href="#" onclick="shareSpot(this,'line');return false;">LINE</a>
         <a class="share-btn share-btn-pin" href="#" onclick="shareSpot(this,'pin');return false;">📌 Pin</a>
         <a class="share-btn share-btn-ig" href="#" onclick="shareSpot(this,'ig');return false;">📷 Instagram</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FESTIVALS -->
+  <div class="wa-divider">
+    <div class="wa-divider-line"></div>
+    <div class="wa-divider-mark">日本の伝統祭 — TRADITIONAL FESTIVALS</div>
+    <div class="wa-divider-line"></div>
+  </div>
+
+  <div class="section-head" id="festivals">
+    <div class="section-head-left">
+      <span class="section-h2">Major Festivals of Japan</span>
+      <span class="section-h2-jp">日本の伝統祭・祭礼ガイド</span>
+    </div>
+    <p style="max-width:680px;font-size:16px;color:var(--enshu);line-height:1.8;margin-top:12px;">For over a thousand years, matsuri have brought Japan's sacred shrines to life with portable mikoshi, towering floats, and ecstatic dancing. From Kyoto's elegant Heian processions to Aomori's roaring summer nights — these are the nine festivals to plan an entire trip around.</p>
+  </div>
+
+  <div class="festivals-grid">
+
+    <div class="festival-card">
+      <div class="festival-thumb">
+        <div class="festival-thumb-kanji">祇園祭</div>
+        <img src="images/festival-gion.jpg" alt="Gion Matsuri — Kyoto's grandest festival at Yasaka Shrine" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
+        <div class="festival-badges">
+          <span class="festival-badge badge-month">7月 July</span>
+          <span class="festival-badge badge-region">京都 Kyoto</span>
+        </div>
+      </div>
+      <div class="festival-body">
+        <div class="festival-name-jp">祇園祭</div>
+        <div class="festival-name-en">Gion Matsuri</div>
+        <div class="festival-date">📅 July 1–31 · Yamaboko Junko: July 17 &amp; 24</div>
+        <div class="festival-place">⛩️ Yasaka Shrine, Kyoto</div>
+        <p class="festival-desc">Kyoto's grandest festival and one of Japan's three greatest matsuri, dating back to 869 CE. The entire month of July is devoted to rituals, but the highlight is the Yamaboko Junko — a parade of 33 towering wooden floats up to 25 metres tall, drawn through downtown Kyoto. The three nights before each procession (yoiyama) close central streets to traffic, with float interiors lit by paper lanterns and families opening their machiya houses to display heirloom treasures.</p>
+        <div class="festival-cta-stack">
+          <a class="festival-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DKyoto&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_festival_gion')">🏨 Find Hotels Near Gion Matsuri →</a>
+          <a class="festival-cta cta-viator" href="https://www.viator.com/search/Kyoto?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_festival_gion')">🎒 Book Festival Tour →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="festival-card">
+      <div class="festival-thumb">
+        <div class="festival-thumb-kanji">三社祭</div>
+        <img src="images/festival-sanja.jpg" alt="Sanja Matsuri — Tokyo's wildest festival at Asakusa Shrine" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
+        <div class="festival-badges">
+          <span class="festival-badge badge-month">5月 May</span>
+          <span class="festival-badge badge-region">東京 Tokyo</span>
+        </div>
+      </div>
+      <div class="festival-body">
+        <div class="festival-name-jp">三社祭</div>
+        <div class="festival-name-en">Sanja Matsuri</div>
+        <div class="festival-date">📅 Third weekend of May (Friday–Sunday)</div>
+        <div class="festival-place">⛩️ Asakusa Shrine (next to Senso-ji), Tokyo</div>
+        <p class="festival-desc">Tokyo's biggest and rowdiest Shinto festival, drawing nearly two million spectators over three days. Around 100 mikoshi portable shrines are hauled, shaken and shouted through the narrow streets of Asakusa by tens of thousands of carriers — many of them Edo-era guild members in traditional happi coats with elaborate full-body irezumi tattoos on display. The Sunday climax sees the three main mikoshi of Asakusa Shrine paraded from dawn until late evening.</p>
+        <div class="festival-cta-stack">
+          <a class="festival-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DTokyo&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_festival_sanja')">🏨 Find Hotels Near Sanja Matsuri →</a>
+          <a class="festival-cta cta-viator" href="https://www.viator.com/search/Tokyo?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_festival_sanja')">🎒 Book Festival Tour →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="festival-card">
+      <div class="festival-thumb">
+        <div class="festival-thumb-kanji">天神祭</div>
+        <img src="images/festival-tenjin.jpg" alt="Tenjin Matsuri — Osaka's millennium-old river festival with fireworks" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
+        <div class="festival-badges">
+          <span class="festival-badge badge-month">7月 July</span>
+          <span class="festival-badge badge-region">大阪 Osaka</span>
+        </div>
+      </div>
+      <div class="festival-body">
+        <div class="festival-name-jp">天神祭</div>
+        <div class="festival-name-en">Tenjin Matsuri</div>
+        <div class="festival-date">📅 July 24 (eve) &amp; July 25 (main day)</div>
+        <div class="festival-place">⛩️ Osaka Tenmangu Shrine, Osaka</div>
+        <p class="festival-desc">A thousand-year-old festival counted among Japan's three greatest, honouring Sugawara no Michizane — the deity of scholarship. After the daytime land procession, more than 100 illuminated boats carry the deity's spirit down the Okawa River at dusk while 5,000 fireworks explode overhead. The reflections on the water and the chanting from the riverbanks create one of the most atmospheric nights in Japan's festival calendar.</p>
+        <div class="festival-cta-stack">
+          <a class="festival-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DOsaka&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_festival_tenjin')">🏨 Find Hotels Near Tenjin Matsuri →</a>
+          <a class="festival-cta cta-viator" href="https://www.viator.com/search/Osaka?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_festival_tenjin')">🎒 Book Festival Tour →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="festival-card">
+      <div class="festival-thumb">
+        <div class="festival-thumb-kanji">神田祭</div>
+        <img src="images/festival-kanda.jpg" alt="Kanda Matsuri — Tokyo's Edo-period festival at Kanda Myojin" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
+        <div class="festival-badges">
+          <span class="festival-badge badge-month">5月 May</span>
+          <span class="festival-badge badge-region">東京 Tokyo</span>
+        </div>
+      </div>
+      <div class="festival-body">
+        <div class="festival-name-jp">神田祭</div>
+        <div class="festival-name-en">Kanda Matsuri</div>
+        <div class="festival-date">📅 Mid-May, odd-numbered years only (next: 2027)</div>
+        <div class="festival-place">⛩️ Kanda Myojin Shrine, Tokyo</div>
+        <p class="festival-desc">One of Edo's three greatest festivals, held in alternating years to share the spotlight with Tenjin Matsuri. Around 200 mikoshi shrines weave through Kanda, Nihonbashi, Otemachi and Marunouchi — the heart of old downtown Tokyo, including a stop at the Imperial Palace. Originally a celebration of the Tokugawa shogunate's victory at Sekigahara in 1600, the procession of priests on horseback in Heian costume is a striking flash of medieval Japan in modern Tokyo.</p>
+        <div class="festival-cta-stack">
+          <a class="festival-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DTokyo&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_festival_kanda')">🏨 Find Hotels Near Kanda Matsuri →</a>
+          <a class="festival-cta cta-viator" href="https://www.viator.com/search/Tokyo?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_festival_kanda')">🎒 Book Festival Tour →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="festival-card">
+      <div class="festival-thumb">
+        <div class="festival-thumb-kanji">葵祭</div>
+        <img src="images/festival-aoi.jpg" alt="Aoi Matsuri — Kyoto's Heian-era imperial procession in court costume" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
+        <div class="festival-badges">
+          <span class="festival-badge badge-month">5月 May</span>
+          <span class="festival-badge badge-region">京都 Kyoto</span>
+        </div>
+      </div>
+      <div class="festival-body">
+        <div class="festival-name-jp">葵祭</div>
+        <div class="festival-name-en">Aoi Matsuri — Hollyhock Festival</div>
+        <div class="festival-date">📅 May 15 (every year)</div>
+        <div class="festival-place">⛩️ Kamigamo &amp; Shimogamo Shrines, Kyoto</div>
+        <p class="festival-desc">Kyoto's most refined and ancient festival, with origins in the 6th century. Some 500 marchers in authentic 8th-century court costume process slowly from the Imperial Palace through the city to first Shimogamo, then Kamigamo Shrine — accompanied by ox-drawn carriages, horses, and the Saio-dai princess in twelve-layered junihitoe robes. The whole route is decorated with hollyhock leaves (aoi), believed to ward off thunder and disasters.</p>
+        <div class="festival-cta-stack">
+          <a class="festival-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DKyoto&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_festival_aoi')">🏨 Find Hotels Near Aoi Matsuri →</a>
+          <a class="festival-cta cta-viator" href="https://www.viator.com/search/Kyoto?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_festival_aoi')">🎒 Book Festival Tour →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="festival-card">
+      <div class="festival-thumb">
+        <div class="festival-thumb-kanji">時代祭</div>
+        <img src="images/festival-jidai.jpg" alt="Jidai Matsuri — Festival of the Ages costume parade at Heian Jingu Kyoto" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
+        <div class="festival-badges">
+          <span class="festival-badge badge-month">10月 October</span>
+          <span class="festival-badge badge-region">京都 Kyoto</span>
+        </div>
+      </div>
+      <div class="festival-body">
+        <div class="festival-name-jp">時代祭</div>
+        <div class="festival-name-en">Jidai Matsuri — Festival of the Ages</div>
+        <div class="festival-date">📅 October 22 (every year)</div>
+        <div class="festival-place">⛩️ Heian Jingu, Kyoto</div>
+        <p class="festival-desc">A living history pageant established in 1895 to mark the 1,100th anniversary of Kyoto's founding. Around 2,000 marchers in painstakingly recreated period costume parade in chronological order from the Imperial Palace to Heian Jingu — beginning with Meiji-era statesmen, then Edo samurai, Sengoku warlords, Heian courtiers, and finally back to the founders of Heian-kyo in 794 CE. The whole sweep of Kyoto's 1,200 years passes by in a single afternoon.</p>
+        <div class="festival-cta-stack">
+          <a class="festival-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DKyoto&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_festival_jidai')">🏨 Find Hotels Near Jidai Matsuri →</a>
+          <a class="festival-cta cta-viator" href="https://www.viator.com/search/Kyoto?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_festival_jidai')">🎒 Book Festival Tour →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="festival-card">
+      <div class="festival-thumb">
+        <div class="festival-thumb-kanji">ねぶた</div>
+        <img src="images/festival-nebuta.jpg" alt="Aomori Nebuta Matsuri — gigantic illuminated warrior floats" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
+        <div class="festival-badges">
+          <span class="festival-badge badge-month">8月 August</span>
+          <span class="festival-badge badge-region">青森 Aomori</span>
+        </div>
+      </div>
+      <div class="festival-body">
+        <div class="festival-name-jp">青森ねぶた祭</div>
+        <div class="festival-name-en">Aomori Nebuta Matsuri</div>
+        <div class="festival-date">📅 August 2–7 (every year)</div>
+        <div class="festival-place">🏯 Aomori City, Aomori Prefecture</div>
+        <p class="festival-desc">Japan's most spectacular summer festival and a designated Important Intangible Folk Cultural Property. For six nights, gigantic illuminated paper-and-wire floats up to 9 metres wide and 5 metres tall — depicting samurai warriors, gods and demons from Japanese myth — are paraded through the streets of Aomori. Thousands of haneto dancers in colourful happi coats leap alongside them shouting "Rassera! Rassera!", and any visitor can join in by renting a costume.</p>
+        <div class="festival-cta-stack">
+          <a class="festival-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DAomori&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_festival_nebuta')">🏨 Find Hotels Near Nebuta Matsuri →</a>
+          <a class="festival-cta cta-viator" href="https://www.viator.com/search/Aomori?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_festival_nebuta')">🎒 Book Festival Tour →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="festival-card">
+      <div class="festival-thumb">
+        <div class="festival-thumb-kanji">阿波踊</div>
+        <img src="images/festival-awa.jpg" alt="Awa Odori — Tokushima's massive Obon dance festival" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
+        <div class="festival-badges">
+          <span class="festival-badge badge-month">8月 August</span>
+          <span class="festival-badge badge-region">徳島 Tokushima</span>
+        </div>
+      </div>
+      <div class="festival-body">
+        <div class="festival-name-jp">阿波踊り</div>
+        <div class="festival-name-en">Awa Odori</div>
+        <div class="festival-date">📅 August 12–15 (during Obon)</div>
+        <div class="festival-place">🏯 Tokushima City, Tokushima Prefecture</div>
+        <p class="festival-desc">Japan's largest dance festival and the world's biggest Bon Odori, with a 400-year history dating to 1586. For four nights during Obon, more than 100,000 dancers organised into "ren" troupes fill Tokushima's streets — men in low-slung steps, women in straw hats and elevated geta sandals, all moving to the lilting two-beat rhythm of shamisen, drums and flutes. The signature chant: "The dancers are fools, the watchers are fools — both are fools alike, so why not dance?"</p>
+        <div class="festival-cta-stack">
+          <a class="festival-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DTokushima&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_festival_awa')">🏨 Find Hotels Near Awa Odori →</a>
+          <a class="festival-cta cta-viator" href="https://www.viator.com/search/Tokushima?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_festival_awa')">🎒 Book Festival Tour →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="festival-card">
+      <div class="festival-thumb">
+        <div class="festival-thumb-kanji">よさこい</div>
+        <img src="images/festival-yosakoi.jpg" alt="Yosakoi Matsuri — Kochi's high-energy modern dance festival" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
+        <div class="festival-badges">
+          <span class="festival-badge badge-month">8月 August</span>
+          <span class="festival-badge badge-region">高知 Kochi</span>
+        </div>
+      </div>
+      <div class="festival-body">
+        <div class="festival-name-jp">よさこい祭り</div>
+        <div class="festival-name-en">Yosakoi Matsuri</div>
+        <div class="festival-date">📅 August 9–12 (every year)</div>
+        <div class="festival-place">🏯 Kochi City, Kochi Prefecture</div>
+        <p class="festival-desc">Born in 1954 as a postwar morale-boost, Yosakoi has grown into one of Japan's most energetic festivals — and inspired imitator events across the country, including Sapporo's massive Yosakoi Soran. Around 20,000 dancers in roughly 200 teams perform original choreographies blending traditional Tosa folk movement with modern music, each waving naruko wooden clappers. Costumes are wildly inventive — every team competes for the prestigious "Grand Prize" given on the final night.</p>
+        <div class="festival-cta-stack">
+          <a class="festival-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DKochi&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_festival_yosakoi')">🏨 Find Hotels Near Yosakoi Matsuri →</a>
+          <a class="festival-cta cta-viator" href="https://www.viator.com/search/Kochi?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_festival_yosakoi')">🎒 Book Festival Tour →</a>
+        </div>
       </div>
     </div>
 
