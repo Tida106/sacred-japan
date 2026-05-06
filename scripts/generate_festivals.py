@@ -1,21 +1,25 @@
-"""Generate Sacred Japan festival images via Gemini API (Imagen 4).
+"""Generate Sacred Japan festival images via Gemini API (Nano Banana / gemini-2.5-flash-image).
 
 Usage:
     python generate_festivals.py                # generate all 9
     python generate_festivals.py gion sanja     # generate specific ones
     python generate_festivals.py --force        # overwrite existing without prompt
 
-Output: ../images/festival-{name}.jpg  (16:9, photorealistic, copyright-safe)
+Output: ../images/festival-{name}.jpg  (photorealistic, copyright-safe)
+
+Note: gemini-2.5-flash-image returns PNG bytes at its native resolution
+(typically near 1024x1024). We convert to JPEG (quality 92) for site delivery.
 """
 from __future__ import annotations
 
+import io
 import os
 import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
 from google import genai
-from google.genai import types
+from PIL import Image
 
 
 PROMPTS: dict[str, str] = {
@@ -109,7 +113,29 @@ PROMPTS: dict[str, str] = {
     ),
 }
 
-MODEL = "imagen-4.0-generate-001"
+MODEL = "gemini-2.5-flash-image"
+JPEG_QUALITY = 92
+
+
+def extract_image_bytes(response) -> bytes | None:
+    """Pull the first inline image payload out of a generate_content response."""
+    for candidate in getattr(response, "candidates", []) or []:
+        content = getattr(candidate, "content", None)
+        if not content:
+            continue
+        for part in getattr(content, "parts", []) or []:
+            inline = getattr(part, "inline_data", None)
+            if inline and getattr(inline, "data", None):
+                return inline.data
+    return None
+
+
+def save_as_jpeg(png_bytes: bytes, out: Path) -> None:
+    """Convert PNG bytes from Nano Banana into a clean JPEG on disk."""
+    img = Image.open(io.BytesIO(png_bytes))
+    if img.mode != "RGB":
+        img = img.convert("RGB")
+    img.save(str(out), format="JPEG", quality=JPEG_QUALITY, optimize=True)
 
 
 def main(argv: list[str]) -> int:
@@ -129,6 +155,7 @@ def main(argv: list[str]) -> int:
 
     todo = targets if targets else list(PROMPTS.keys())
     failures: list[str] = []
+    successes = 0
 
     for name in todo:
         if name not in PROMPTS:
@@ -144,34 +171,36 @@ def main(argv: list[str]) -> int:
 
         print(f"Generating {out.name} ...")
         try:
-            result = client.models.generate_images(
+            response = client.models.generate_content(
                 model=MODEL,
-                prompt=PROMPTS[name],
-                config=types.GenerateImagesConfig(
-                    number_of_images=1,
-                    aspect_ratio="16:9",
-                    person_generation="allow_adult",
-                    safety_filter_level="block_only_high",
-                ),
+                contents=PROMPTS[name],
             )
         except Exception as e:
             print(f"  FAIL: {e}", file=sys.stderr)
             failures.append(name)
             continue
 
-        if not result.generated_images:
-            print(f"  FAIL: no image returned (likely safety-filter block)", file=sys.stderr)
+        png_bytes = extract_image_bytes(response)
+        if not png_bytes:
+            print(f"  FAIL: no image bytes returned (likely safety-filter block)", file=sys.stderr)
             failures.append(name)
             continue
 
-        result.generated_images[0].image.save(str(out))
-        print(f"  saved → {out.relative_to(Path.cwd()) if out.is_relative_to(Path.cwd()) else out}")
+        try:
+            save_as_jpeg(png_bytes, out)
+        except Exception as e:
+            print(f"  FAIL on JPEG conversion: {e}", file=sys.stderr)
+            failures.append(name)
+            continue
+
+        successes += 1
+        print(f"  saved -> {out}")
 
     print()
     if failures:
         print(f"Done with {len(failures)} failure(s): {', '.join(failures)}")
         return 2
-    print(f"Done. Generated {len(todo) - len([t for t in todo if t not in PROMPTS])} image(s).")
+    print(f"Done. Generated {successes} image(s).")
     return 0
 
 

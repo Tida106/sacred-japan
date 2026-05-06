@@ -1,6 +1,6 @@
 # Festival Image Generation Scripts
 
-Local Python tooling that calls the Gemini API (Imagen 4) to generate the 9 festival images for Sacred Japan.
+Local Python tooling that calls the Gemini API (Nano Banana / `gemini-2.5-flash-image`) to generate the 9 festival images for Sacred Japan. Returned PNG bytes are converted to JPEG at quality 92 before saving.
 
 Outputs land in `../images/festival-{name}.jpg` and are picked up automatically by the existing festival cards in `index.html`.
 
@@ -59,5 +59,5 @@ GitHub Pages will redeploy in 1–2 minutes; refresh `https://sacred-japan.net/#
 - **`GEMINI_API_KEY not set`** → `.env` missing or empty. Copy from `.env.example`.
 - **`safety-filter block`** → Gemini's filter rejected the prompt. Edit the offending prompt in `generate_festivals.py` (e.g. soften "fierce warrior" wording for Nebuta) and rerun just that one: `py generate_festivals.py nebuta --force`.
 - **`PERMISSION_DENIED` / `API key not valid`** → Key was revoked or doesn't have Generative Language API enabled. Re-issue and update `.env`.
-- **`RESOURCE_EXHAUSTED`** → Quota hit. Imagen requires the paid tier in most regions; check billing in Google Cloud Console.
-- **Imagen unavailable in your region** → Switch the `MODEL` constant in `generate_festivals.py` to `"gemini-2.5-flash-image"` (text-to-image works similarly via the multimodal endpoint).
+- **`RESOURCE_EXHAUSTED`** → Quota hit. Check billing / quota in Google AI Studio.
+- **Want a different model** → Change the `MODEL` constant in `generate_festivals.py` (e.g. `"imagen-4.0-generate-001"` for Imagen 4; note Imagen uses a different endpoint and the script's call site would need adjustment).
