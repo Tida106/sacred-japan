@@ -845,6 +845,45 @@ main { padding: 0 56px 80px; position: relative; z-index: 1; }
   display: flex; gap: 5px;
 }
 
+.festival-thumb-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.festival-thumb-link:focus-visible {
+  box-shadow: inset 0 0 0 3px var(--kin);
+}
+
+.festival-thumb-link::after {
+  content: '↗ Official Site';
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 3;
+  padding: 5px 10px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-family: 'EB Garamond', serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-radius: 1px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s, transform 0.25s;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
+
+.festival-card:hover .festival-thumb-link::after,
+.festival-thumb-link:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .festival-badge {
   padding: 4px 10px;
   font-family: 'Noto Serif JP', serif;
@@ -3567,6 +3606,7 @@ footer {
   <div class="festivals-grid">
 
     <div class="festival-card">
+      <a class="festival-thumb-link" href="https://www.gionmatsuri.or.jp/" target="_blank" rel="noopener noreferrer" aria-label="Visit Gion Matsuri official website (opens in new tab)">
       <div class="festival-thumb">
         <div class="festival-thumb-kanji">祇園祭</div>
         <img src="images/festival-gion.jpg" alt="Gion Matsuri — Kyoto's grandest festival at Yasaka Shrine" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
@@ -3575,6 +3615,7 @@ footer {
           <span class="festival-badge badge-region">京都 Kyoto</span>
         </div>
       </div>
+      </a>
       <div class="festival-body">
         <div class="festival-name-jp">祇園祭</div>
         <div class="festival-name-en">Gion Matsuri</div>
@@ -3589,6 +3630,7 @@ footer {
     </div>
 
     <div class="festival-card">
+      <a class="festival-thumb-link" href="https://www.asakusajinja.jp/sanjamatsuri/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sanja Matsuri official website (opens in new tab)">
       <div class="festival-thumb">
         <div class="festival-thumb-kanji">三社祭</div>
         <img src="images/festival-sanja.jpg" alt="Sanja Matsuri — Tokyo's wildest festival at Asakusa Shrine" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
@@ -3597,6 +3639,7 @@ footer {
           <span class="festival-badge badge-region">東京 Tokyo</span>
         </div>
       </div>
+      </a>
       <div class="festival-body">
         <div class="festival-name-jp">三社祭</div>
         <div class="festival-name-en">Sanja Matsuri</div>
@@ -3611,6 +3654,7 @@ footer {
     </div>
 
     <div class="festival-card">
+      <a class="festival-thumb-link" href="https://tenjin-matsuri.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Tenjin Matsuri official website (opens in new tab)">
       <div class="festival-thumb">
         <div class="festival-thumb-kanji">天神祭</div>
         <img src="images/festival-tenjin.jpg" alt="Tenjin Matsuri — Osaka's millennium-old river festival with fireworks" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
@@ -3619,6 +3663,7 @@ footer {
           <span class="festival-badge badge-region">大阪 Osaka</span>
         </div>
       </div>
+      </a>
       <div class="festival-body">
         <div class="festival-name-jp">天神祭</div>
         <div class="festival-name-en">Tenjin Matsuri</div>
@@ -3633,6 +3678,7 @@ footer {
     </div>
 
     <div class="festival-card">
+      <a class="festival-thumb-link" href="https://www.kandamyoujin.or.jp/kandamatsuri/" target="_blank" rel="noopener noreferrer" aria-label="Visit Kanda Matsuri official website (opens in new tab)">
       <div class="festival-thumb">
         <div class="festival-thumb-kanji">神田祭</div>
         <img src="images/festival-kanda.jpg" alt="Kanda Matsuri — Tokyo's Edo-period festival at Kanda Myojin" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
@@ -3641,6 +3687,7 @@ footer {
           <span class="festival-badge badge-region">東京 Tokyo</span>
         </div>
       </div>
+      </a>
       <div class="festival-body">
         <div class="festival-name-jp">神田祭</div>
         <div class="festival-name-en">Kanda Matsuri</div>
@@ -3655,6 +3702,7 @@ footer {
     </div>
 
     <div class="festival-card">
+      <a class="festival-thumb-link" href="https://www.kyoto-kankou.or.jp/event/aoi/" target="_blank" rel="noopener noreferrer" aria-label="Visit Aoi Matsuri official website (opens in new tab)">
       <div class="festival-thumb">
         <div class="festival-thumb-kanji">葵祭</div>
         <img src="images/festival-aoi.jpg" alt="Aoi Matsuri — Kyoto's Heian-era imperial procession in court costume" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
@@ -3663,6 +3711,7 @@ footer {
           <span class="festival-badge badge-region">京都 Kyoto</span>
         </div>
       </div>
+      </a>
       <div class="festival-body">
         <div class="festival-name-jp">葵祭</div>
         <div class="festival-name-en">Aoi Matsuri — Hollyhock Festival</div>
@@ -3677,6 +3726,7 @@ footer {
     </div>
 
     <div class="festival-card">
+      <a class="festival-thumb-link" href="https://www.heianjingu.or.jp/festival/jidai.html" target="_blank" rel="noopener noreferrer" aria-label="Visit Jidai Matsuri official website (opens in new tab)">
       <div class="festival-thumb">
         <div class="festival-thumb-kanji">時代祭</div>
         <img src="images/festival-jidai.jpg" alt="Jidai Matsuri — Festival of the Ages costume parade at Heian Jingu Kyoto" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
@@ -3685,6 +3735,7 @@ footer {
           <span class="festival-badge badge-region">京都 Kyoto</span>
         </div>
       </div>
+      </a>
       <div class="festival-body">
         <div class="festival-name-jp">時代祭</div>
         <div class="festival-name-en">Jidai Matsuri — Festival of the Ages</div>
@@ -3699,6 +3750,7 @@ footer {
     </div>
 
     <div class="festival-card">
+      <a class="festival-thumb-link" href="https://www.nebuta.jp/" target="_blank" rel="noopener noreferrer" aria-label="Visit Aomori Nebuta Matsuri official website (opens in new tab)">
       <div class="festival-thumb">
         <div class="festival-thumb-kanji">ねぶた</div>
         <img src="images/festival-nebuta.jpg" alt="Aomori Nebuta Matsuri — gigantic illuminated warrior floats" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
@@ -3707,6 +3759,7 @@ footer {
           <span class="festival-badge badge-region">青森 Aomori</span>
         </div>
       </div>
+      </a>
       <div class="festival-body">
         <div class="festival-name-jp">青森ねぶた祭</div>
         <div class="festival-name-en">Aomori Nebuta Matsuri</div>
@@ -3721,6 +3774,7 @@ footer {
     </div>
 
     <div class="festival-card">
+      <a class="festival-thumb-link" href="https://www.awaodori-kaikan.jp/" target="_blank" rel="noopener noreferrer" aria-label="Visit Awa Odori official website (opens in new tab)">
       <div class="festival-thumb">
         <div class="festival-thumb-kanji">阿波踊</div>
         <img src="images/festival-awa.jpg" alt="Awa Odori — Tokushima's massive Obon dance festival" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
@@ -3729,6 +3783,7 @@ footer {
           <span class="festival-badge badge-region">徳島 Tokushima</span>
         </div>
       </div>
+      </a>
       <div class="festival-body">
         <div class="festival-name-jp">阿波踊り</div>
         <div class="festival-name-en">Awa Odori</div>
@@ -3743,6 +3798,7 @@ footer {
     </div>
 
     <div class="festival-card">
+      <a class="festival-thumb-link" href="https://www.cciweb.or.jp/kochi/yosakoiweb/" target="_blank" rel="noopener noreferrer" aria-label="Visit Yosakoi Matsuri official website (opens in new tab)">
       <div class="festival-thumb">
         <div class="festival-thumb-kanji">よさこい</div>
         <img src="images/festival-yosakoi.jpg" alt="Yosakoi Matsuri — Kochi's high-energy modern dance festival" class="festival-photo" loading="lazy" onerror="this.style.display='none'">
@@ -3751,6 +3807,7 @@ footer {
           <span class="festival-badge badge-region">高知 Kochi</span>
         </div>
       </div>
+      </a>
       <div class="festival-body">
         <div class="festival-name-jp">よさこい祭り</div>
         <div class="festival-name-en">Yosakoi Matsuri</div>
