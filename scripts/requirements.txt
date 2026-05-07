@@ -1,3 +1,4 @@
 google-genai>=0.8.0
 python-dotenv>=1.0.0
 Pillow>=10.0.0
+truststore>=0.9.0  # Windows: use OS cert store so corporate/AV SSL inspection works

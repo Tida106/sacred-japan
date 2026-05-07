@@ -17,6 +17,15 @@ import os
 import sys
 from pathlib import Path
 
+# Use OS cert store before any TLS happens. On Windows this picks up the
+# Norton / antivirus / corporate-proxy MITM root that's already installed
+# system-wide, instead of certifi's pristine bundle that rejects it.
+try:
+    import truststore
+    truststore.inject_into_ssl()
+except ImportError:
+    pass
+
 from dotenv import load_dotenv
 from google import genai
 from PIL import Image
