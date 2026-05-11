@@ -95,12 +95,6 @@ nav {
   border-bottom: 1px solid var(--border-strong);
   overflow: hidden;
 }
-.hero-bg-kanji {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  font-family: 'Shippori Mincho', serif;
-  font-size: 280px; color: rgba(155,35,53,0.05); white-space: nowrap;
-  pointer-events: none; z-index: 0;
-}
 .hero-content { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
 .hero-label { font-family: 'Noto Serif JP', serif; font-size: 11px; letter-spacing: 5px; color: var(--beni); margin-bottom: 16px; text-transform: uppercase; }
 .hero h1 { font-family: 'Shippori Mincho', serif; font-size: 48px; font-weight: 400; line-height: 1.25; margin-bottom: 14px; color: var(--sumi); }
@@ -144,7 +138,6 @@ footer { background: var(--sumi); color: #d8c8b8; padding: 56px 32px 36px; text-
 
 @media (max-width: 900px) {
   .hero h1 { font-size: 34px; }
-  .hero-bg-kanji { font-size: 160px; }
   .page-section { padding: 36px 28px; margin: 24px 16px 60px; }
   .nav-links { display: none; }
 }
@@ -173,8 +166,7 @@ footer { background: var(--sumi); color: #d8c8b8; padding: 56px 32px 36px; text-
 
 <!-- ── HERO ── -->
 <section class="hero">
-  <div class="hero-bg-kanji">お問合せ</div>
-  <div class="hero-content">
+<div class="hero-content">
     <div class="hero-label">CONTACT / お問い合わせ</div>
     <h1>Contact Us</h1>
     <div class="hero-jp">お問い合わせ</div>

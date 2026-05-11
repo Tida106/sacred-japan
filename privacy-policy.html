@@ -100,12 +100,6 @@ nav {
   border-bottom: 1px solid var(--border-strong);
   overflow: hidden;
 }
-.hero-bg-kanji {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  font-family: 'Shippori Mincho', serif;
-  font-size: 280px; color: rgba(155,35,53,0.05); white-space: nowrap;
-  pointer-events: none; z-index: 0;
-}
 .hero-content { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
 .hero-label {
   font-family: 'Noto Serif JP', serif; font-size: 11px;
@@ -169,7 +163,6 @@ footer {
 
 @media (max-width: 900px) {
   .hero h1 { font-size: 34px; }
-  .hero-bg-kanji { font-size: 160px; }
   .page-section { padding: 36px 28px; margin: 24px 16px 60px; }
   .nav-links { display: none; }
 }
@@ -198,8 +191,7 @@ footer {
 
 <!-- ── HERO ── -->
 <section class="hero">
-  <div class="hero-bg-kanji">個人情報</div>
-  <div class="hero-content">
+<div class="hero-content">
     <div class="hero-label">LEGAL / 法的事項</div>
     <h1>Privacy Policy</h1>
     <div class="hero-jp">プライバシーポリシー</div>
