@@ -22,3 +22,6 @@ Thumbs.db
 .claude/
 *.tmp
 *.bak
+
+# Draft articles (manuscripts not yet published)
+drafts/
