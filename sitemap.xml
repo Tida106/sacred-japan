@@ -54,6 +54,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://sacred-japan.net/guides/atsuta-shrine/</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- ── HOMEPAGE SECTIONS (in-page anchors) ── -->
   <url>
