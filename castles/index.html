@@ -221,6 +221,58 @@ nav {
 }
 .mobile-menu ul li:last-child a { border-bottom: none; }
 .mobile-menu ul li a:hover { background: var(--washi-dark); }
+.mobile-menu ul li a.mobile-sub {
+  padding-left: 44px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  color: var(--enshu);
+}
+
+/* ── CULTURE DROPDOWN (PC nav) ── */
+.nav-dropdown { position: relative; }
+.nav-dropdown > a .nav-caret {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 9px;
+  opacity: 0.6;
+  transform: translateY(-1px);
+  transition: transform 0.2s;
+}
+.nav-dropdown:hover > a .nav-caret,
+.nav-dropdown:focus-within > a .nav-caret { transform: translateY(-1px) rotate(180deg); }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 210px;
+  background: rgba(245,240,232,0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  padding: 8px 0;
+  margin-top: 8px;
+  z-index: 100;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu a {
+  display: block;
+  padding: 9px 20px;
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--enshu);
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-dropdown-menu a:hover { background: var(--washi-dark); color: var(--sumi); }
+.nav-dropdown-sep { height: 1px; background: var(--border); margin: 6px 16px; }
 
 /* ── HERO ── */
 .hero {
@@ -641,7 +693,17 @@ footer {
     <li><a href="/">Home</a></li>
     <li><a href="/#spots">Sacred Sites</a></li>
     <li><a href="/guides/">Guides</a></li>
-    <li><a href="/culture/" class="current">Culture</a></li>
+    <li class="nav-dropdown">
+      <a href="/culture/" class="current">Culture<span class="nav-caret" aria-hidden="true">▾</span></a>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="/castles/" onclick="trackEvent('click','internal','nav_culture_to_castles')">Castles</a>
+        <a href="/crafts/" onclick="trackEvent('click','internal','nav_culture_to_crafts')">Crafts</a>
+        <a href="/anime/" onclick="trackEvent('click','internal','nav_culture_to_anime')">Anime Pilgrimage</a>
+        <a href="/regional-food/" onclick="trackEvent('click','internal','nav_culture_to_food')">Regional Food</a>
+        <div class="nav-dropdown-sep"></div>
+        <a href="/culture/" onclick="trackEvent('click','internal','nav_culture_to_hub')">Culture Hub →</a>
+      </div>
+    </li>
     <li><a href="/about/">About</a></li>
   </ul>
   <button class="nav-hamburger" id="navHamburger" aria-label="Menu" onclick="toggleMobileMenu()">
@@ -656,6 +718,11 @@ footer {
     <li><a href="/#spots">Sacred Sites</a></li>
     <li><a href="/guides/">Guides</a></li>
     <li><a href="/culture/">Culture</a></li>
+    <li><a href="/castles/" class="mobile-sub" onclick="trackEvent('click','internal','nav_culture_to_castles')">— Castles</a></li>
+    <li><a href="/crafts/" class="mobile-sub" onclick="trackEvent('click','internal','nav_culture_to_crafts')">— Crafts</a></li>
+    <li><a href="/anime/" class="mobile-sub" onclick="trackEvent('click','internal','nav_culture_to_anime')">— Anime Pilgrimage</a></li>
+    <li><a href="/regional-food/" class="mobile-sub" onclick="trackEvent('click','internal','nav_culture_to_food')">— Regional Food</a></li>
+    <li><a href="/culture/" class="mobile-sub" onclick="trackEvent('click','internal','nav_culture_to_hub')">— Culture Hub →</a></li>
     <li><a href="/about/">About</a></li>
   </ul>
 </div>
