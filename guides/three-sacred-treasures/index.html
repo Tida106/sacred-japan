@@ -158,16 +158,6 @@ body {
   font-size: 18px;
   line-height: 1.8;
 }
-body::before {
-  content: '';
-  position: fixed; inset: 0;
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(60,40,20,0.025) 39px, rgba(60,40,20,0.025) 40px),
-    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(60,40,20,0.015) 39px, rgba(60,40,20,0.015) 40px);
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* ── NAV ── */
 nav {
   position: sticky; top: 0; z-index: 100;
