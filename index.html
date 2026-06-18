@@ -304,8 +304,9 @@
 <link rel="dns-prefetch" href="https://formspree.io">
 <link rel="dns-prefetch" href="https://www.amazon.co.jp">
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-<link rel="preload" as="image" href="ogp.webp" type="image/webp" fetchpriority="high">
-<link rel="preload" as="image" href="images/ise-jingu.webp" type="image/webp">
+<link rel="preload" as="image" href="ogp-sm.webp" media="(max-width:768px)" fetchpriority="high">
+<link rel="preload" as="image" href="ogp.webp" media="(min-width:769px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/ise-jingu-card.webp" type="image/webp">
 <link rel="preload" as="image" href="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=1200&q=80&fit=crop">
 <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Zen+Brush&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Zen+Brush&display=swap"></noscript>
 <style>
@@ -2321,6 +2322,7 @@ transition: background 0.15s, color 0.15s;
 <!-- HERO -->
 <section class="hero">
 <picture style="position:absolute;inset:0;overflow:hidden;">
+  <source media="(max-width:768px)" srcset="ogp-sm.webp" type="image/webp">
   <source srcset="ogp.webp" type="image/webp">
   <img src="ogp.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" fetchpriority="high" loading="eager">
 </picture>
@@ -2533,7 +2535,7 @@ transition: background 0.15s, color 0.15s;
 
     <div class="spot-card" style="cursor:pointer;" role="button" tabindex="0" onclick="trackEvent('click','spot','isejingu');window.open('https://www.isejingu.or.jp', '_blank', 'noopener')" onkeydown="if(event.key==='Enter'||event.key===' ')window.open('https://www.isejingu.or.jp', '_blank', 'noopener')" data-type="shrine" data-region="chubu">
       <div class="spot-thumb" style="padding:0;overflow:hidden;position:relative;">
-        <picture><source srcset="images/ise-jingu.webp" type="image/webp"><img src="images/ise-jingu.jpg" alt="Ise Jingu — Japan's most sacred Shinto shrine in Mie Prefecture" style="width:100%;height:100%;object-fit:cover;object-position:center center;position:absolute;inset:0;transition:transform 0.4s ease;" class="spot-photo" loading="eager" fetchpriority="high"></picture>
+        <picture><source srcset="images/ise-jingu-card.webp" type="image/webp"><img src="images/ise-jingu-card.jpg" alt="Ise Jingu — Japan's most sacred Shinto shrine in Mie Prefecture" style="width:100%;height:100%;object-fit:cover;object-position:center center;position:absolute;inset:0;transition:transform 0.4s ease;" class="spot-photo" loading="eager" fetchpriority="high"></picture>
         <div class="spot-badges">
           <span class="spot-badge badge-shrine">神社 Shrine</span>
           <span class="spot-badge badge-region">三重 Mie</span>
