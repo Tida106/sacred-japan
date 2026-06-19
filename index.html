@@ -4886,17 +4886,21 @@ var spotsData = [
 ];
 
 window.addEventListener('DOMContentLoaded', function() {
-  var cards = document.querySelectorAll('.spot-card');
-  cards.forEach(function(card, i) {
-    if (i >= spotsData.length) return;
-    var rel = spotsData[i].related.slice(0,3);
-    var bar = document.createElement('div');
-    bar.className = 'related-bar';
-    bar.innerHTML = '<div class="related-bar-label">Also visit — 関連スポット</div><div class="related-bar-links">' +
-      rel.map(function(idx) {
-        return '<button class="related-link" onclick="scrollToCard(' + idx + ')">' + spotsData[idx].name + '</button>';
-      }).join('') + '</div>';
-    card.appendChild(bar);
+  requestAnimationFrame(function() {
+    var cards = document.querySelectorAll('.spot-card');
+    var bars = [];
+    cards.forEach(function(card, i) {
+      if (i >= spotsData.length) return;
+      var rel = spotsData[i].related.slice(0,3);
+      var bar = document.createElement('div');
+      bar.className = 'related-bar';
+      bar.innerHTML = '<div class="related-bar-label">Also visit — 関連スポット</div><div class="related-bar-links">' +
+        rel.map(function(idx) {
+          return '<button class="related-link" onclick="scrollToCard(' + idx + ')">' + spotsData[idx].name + '</button>';
+        }).join('') + '</div>';
+      bars.push({card: card, bar: bar});
+    });
+    bars.forEach(function(item) { item.card.appendChild(item.bar); });
   });
 });
 
@@ -5037,20 +5041,26 @@ function toggleMobileMenu() {
   menu.classList.toggle('open');
 }
 
+var _scrollTicking = false;
 window.addEventListener('scroll', function() {
-  var prog = document.getElementById('readingProgress');
-  if (prog) {
-    var scrollTop = window.scrollY;
-    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    prog.style.width = (docHeight > 0 ? (scrollTop / docHeight * 100) : 0) + '%';
-  }
-  var menu = document.getElementById('mobileMenu');
-  if (menu && menu.classList.contains('open')) {
-    menu.classList.remove('open');
-    document.getElementById('navHamburger').classList.remove('open');
-  }
-  var btn = document.getElementById('scrollTop');
-  if (btn) btn.classList.toggle('visible', window.scrollY > 400);
+  if (_scrollTicking) return;
+  _scrollTicking = true;
+  requestAnimationFrame(function() {
+    var prog = document.getElementById('readingProgress');
+    if (prog) {
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (docHeight > 0 ? (scrollTop / docHeight * 100) : 0) + '%';
+    }
+    var menu = document.getElementById('mobileMenu');
+    if (menu && menu.classList.contains('open')) {
+      menu.classList.remove('open');
+      document.getElementById('navHamburger').classList.remove('open');
+    }
+    var btn = document.getElementById('scrollTop');
+    if (btn) btn.classList.toggle('visible', window.scrollY > 400);
+    _scrollTicking = false;
+  });
 });
 
 window.addEventListener('popstate', function(e) {
@@ -5067,35 +5077,44 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script>
-document.querySelectorAll('.spot-card').forEach(function(card) {
-  var nameEn = card.querySelector('.spot-name-en');
-  if (!nameEn) return;
-  var query = encodeURIComponent(nameEn.textContent.trim());
-  var url = 'https://www.viator.com/search/' + query + '?pid=P00298374&mcid=42383&medium=api';
-  var shareBar = card.querySelector('.share-bar');
-  if (!shareBar) return;
-  var btn = document.createElement('a');
-  btn.href = url;
-  btn.target = '_blank';
-  btn.rel = 'noopener sponsored';
-  btn.textContent = 'Book a Tour →';
-  btn.style.cssText = 'display:inline-block;margin-top:12px;padding:8px 16px;background:var(--beni);color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
-  btn.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','viator_spot_' + query); };
-  shareBar.parentNode.insertBefore(btn, shareBar);
-
-  var spotLoc = card.querySelector('.spot-loc');
-  if (spotLoc) {
-    var locQuery = encodeURIComponent(spotLoc.textContent.trim());
-    var bookingUrl = 'https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3D' + locQuery + '&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8';
-    var btnB = document.createElement('a');
-    btnB.href = bookingUrl;
-    btnB.target = '_blank';
-    btnB.rel = 'noopener sponsored';
-    btnB.textContent = 'Find Hotels →';
-    btnB.style.cssText = 'display:inline-block;margin-top:8px;margin-left:8px;padding:8px 16px;background:#00355f;color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
-    btnB.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','expedia_spot_' + locQuery); };
-    shareBar.parentNode.insertBefore(btnB, shareBar);
-  }
+requestAnimationFrame(function() {
+  var cards = document.querySelectorAll('.spot-card');
+  var data = [];
+  cards.forEach(function(card) {
+    var nameEn = card.querySelector('.spot-name-en');
+    if (!nameEn) return;
+    var shareBar = card.querySelector('.share-bar');
+    if (!shareBar) return;
+    var spotLoc = card.querySelector('.spot-loc');
+    data.push({
+      query: encodeURIComponent(nameEn.textContent.trim()),
+      shareBar: shareBar,
+      locQuery: spotLoc ? encodeURIComponent(spotLoc.textContent.trim()) : null
+    });
+  });
+  data.forEach(function(d) {
+    var frag = document.createDocumentFragment();
+    var btn = document.createElement('a');
+    btn.href = 'https://www.viator.com/search/' + d.query + '?pid=P00298374&mcid=42383&medium=api';
+    btn.target = '_blank';
+    btn.rel = 'noopener sponsored';
+    btn.textContent = 'Book a Tour →';
+    btn.style.cssText = 'display:inline-block;margin-top:12px;padding:8px 16px;background:var(--beni);color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
+    (function(q) { btn.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','viator_spot_' + q); }; })(d.query);
+    frag.appendChild(btn);
+    if (d.locQuery) {
+      var bookingUrl = 'https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3D' + d.locQuery + '&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8';
+      var btnB = document.createElement('a');
+      btnB.href = bookingUrl;
+      btnB.target = '_blank';
+      btnB.rel = 'noopener sponsored';
+      btnB.textContent = 'Find Hotels →';
+      btnB.style.cssText = 'display:inline-block;margin-top:8px;margin-left:8px;padding:8px 16px;background:#00355f;color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
+      (function(lq) { btnB.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','expedia_spot_' + lq); }; })(d.locQuery);
+      frag.appendChild(btnB);
+    }
+    d.shareBar.parentNode.insertBefore(frag, d.shareBar);
+  });
 });
 </script>
 
