@@ -4886,22 +4886,20 @@ var spotsData = [
 ];
 
 window.addEventListener('DOMContentLoaded', function() {
-  requestAnimationFrame(function() {
-    var cards = document.querySelectorAll('.spot-card');
-    var bars = [];
-    cards.forEach(function(card, i) {
-      if (i >= spotsData.length) return;
-      var rel = spotsData[i].related.slice(0,3);
-      var bar = document.createElement('div');
-      bar.className = 'related-bar';
-      bar.innerHTML = '<div class="related-bar-label">Also visit — 関連スポット</div><div class="related-bar-links">' +
-        rel.map(function(idx) {
-          return '<button class="related-link" onclick="scrollToCard(' + idx + ')">' + spotsData[idx].name + '</button>';
-        }).join('') + '</div>';
-      bars.push({card: card, bar: bar});
-    });
-    bars.forEach(function(item) { item.card.appendChild(item.bar); });
+  var cards = document.querySelectorAll('.spot-card');
+  var bars = [];
+  cards.forEach(function(card, i) {
+    if (i >= spotsData.length) return;
+    var rel = spotsData[i].related.slice(0,3);
+    var bar = document.createElement('div');
+    bar.className = 'related-bar';
+    bar.innerHTML = '<div class="related-bar-label">Also visit — 関連スポット</div><div class="related-bar-links">' +
+      rel.map(function(idx) {
+        return '<button class="related-link" onclick="scrollToCard(' + idx + ')">' + spotsData[idx].name + '</button>';
+      }).join('') + '</div>';
+    bars.push({card: card, bar: bar});
   });
+  bars.forEach(function(item) { item.card.appendChild(item.bar); });
 });
 
 function scrollToCard(idx) {
@@ -5077,7 +5075,7 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script>
-requestAnimationFrame(function() {
+(function() {
   var cards = document.querySelectorAll('.spot-card');
   var data = [];
   cards.forEach(function(card) {
@@ -5115,7 +5113,7 @@ requestAnimationFrame(function() {
     }
     d.shareBar.parentNode.insertBefore(frag, d.shareBar);
   });
-});
+})();
 </script>
 
 
