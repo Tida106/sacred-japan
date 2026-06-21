@@ -131,6 +131,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sacred-japan.net/guides/kawasaki-daishi/</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sacred-japan.net/guides/three-sacred-treasures/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
