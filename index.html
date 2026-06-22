@@ -4913,20 +4913,23 @@ var spotsData = [
 ];
 
 window.addEventListener('DOMContentLoaded', function() {
-  var cards = document.querySelectorAll('.spot-card');
-  var bars = [];
-  cards.forEach(function(card, i) {
-    if (i >= spotsData.length) return;
-    var rel = spotsData[i].related.slice(0,3);
-    var bar = document.createElement('div');
-    bar.className = 'related-bar';
-    bar.innerHTML = '<div class="related-bar-label">Also visit — 関連スポット</div><div class="related-bar-links">' +
-      rel.map(function(idx) {
-        return '<button class="related-link" onclick="scrollToCard(' + idx + ')">' + spotsData[idx].name + '</button>';
-      }).join('') + '</div>';
-    bars.push({card: card, bar: bar});
+  var ric = window.requestIdleCallback || function(cb) { setTimeout(cb, 1); };
+  ric(function() {
+    var cards = document.querySelectorAll('.spot-card');
+    var bars = [];
+    cards.forEach(function(card, i) {
+      if (i >= spotsData.length) return;
+      var rel = spotsData[i].related.slice(0,3);
+      var bar = document.createElement('div');
+      bar.className = 'related-bar';
+      bar.innerHTML = '<div class="related-bar-label">Also visit — 関連スポット</div><div class="related-bar-links">' +
+        rel.map(function(idx) {
+          return '<button class="related-link" onclick="scrollToCard(' + idx + ')">' + spotsData[idx].name + '</button>';
+        }).join('') + '</div>';
+      bars.push({card: card, bar: bar});
+    });
+    bars.forEach(function(item) { item.card.appendChild(item.bar); });
   });
-  bars.forEach(function(item) { item.card.appendChild(item.bar); });
 });
 
 function scrollToCard(idx) {
@@ -5103,43 +5106,47 @@ window.addEventListener('DOMContentLoaded', function() {
 </script>
 <script>
 (function() {
-  var cards = document.querySelectorAll('.spot-card');
-  var data = [];
-  cards.forEach(function(card) {
-    var nameEn = card.querySelector('.spot-name-en');
-    if (!nameEn) return;
-    var shareBar = card.querySelector('.share-bar');
-    if (!shareBar) return;
-    var spotLoc = card.querySelector('.spot-loc');
-    data.push({
-      query: encodeURIComponent(nameEn.textContent.trim()),
-      shareBar: shareBar,
-      locQuery: spotLoc ? encodeURIComponent(spotLoc.textContent.trim()) : null
+  var ric = window.requestIdleCallback || function(cb) { setTimeout(cb, 1); };
+  function insertAffiliateButtons() {
+    var cards = document.querySelectorAll('.spot-card');
+    var data = [];
+    cards.forEach(function(card) {
+      var nameEn = card.querySelector('.spot-name-en');
+      if (!nameEn) return;
+      var shareBar = card.querySelector('.share-bar');
+      if (!shareBar) return;
+      var spotLoc = card.querySelector('.spot-loc');
+      data.push({
+        query: encodeURIComponent(nameEn.textContent.trim()),
+        shareBar: shareBar,
+        locQuery: spotLoc ? encodeURIComponent(spotLoc.textContent.trim()) : null
+      });
     });
-  });
-  data.forEach(function(d) {
-    var frag = document.createDocumentFragment();
-    var btn = document.createElement('a');
-    btn.href = 'https://www.viator.com/search/' + d.query + '?pid=P00298374&mcid=42383&medium=api';
-    btn.target = '_blank';
-    btn.rel = 'noopener sponsored';
-    btn.textContent = 'Book a Tour →';
-    btn.style.cssText = 'display:inline-block;margin-top:12px;padding:8px 16px;background:var(--beni);color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
-    (function(q) { btn.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','viator_spot_' + q); }; })(d.query);
-    frag.appendChild(btn);
-    if (d.locQuery) {
-      var bookingUrl = 'https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3D' + d.locQuery + '&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8';
-      var btnB = document.createElement('a');
-      btnB.href = bookingUrl;
-      btnB.target = '_blank';
-      btnB.rel = 'noopener sponsored';
-      btnB.textContent = 'Find Hotels →';
-      btnB.style.cssText = 'display:inline-block;margin-top:8px;margin-left:8px;padding:8px 16px;background:#00355f;color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
-      (function(lq) { btnB.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','expedia_spot_' + lq); }; })(d.locQuery);
-      frag.appendChild(btnB);
-    }
-    d.shareBar.parentNode.insertBefore(frag, d.shareBar);
-  });
+    data.forEach(function(d) {
+      var frag = document.createDocumentFragment();
+      var btn = document.createElement('a');
+      btn.href = 'https://www.viator.com/search/' + d.query + '?pid=P00298374&mcid=42383&medium=api';
+      btn.target = '_blank';
+      btn.rel = 'noopener sponsored';
+      btn.textContent = 'Book a Tour →';
+      btn.style.cssText = 'display:inline-block;margin-top:12px;padding:8px 16px;background:var(--beni);color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
+      (function(q) { btn.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','viator_spot_' + q); }; })(d.query);
+      frag.appendChild(btn);
+      if (d.locQuery) {
+        var bookingUrl = 'https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3D' + d.locQuery + '&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8';
+        var btnB = document.createElement('a');
+        btnB.href = bookingUrl;
+        btnB.target = '_blank';
+        btnB.rel = 'noopener sponsored';
+        btnB.textContent = 'Find Hotels →';
+        btnB.style.cssText = 'display:inline-block;margin-top:8px;margin-left:8px;padding:8px 16px;background:#00355f;color:#fff;text-decoration:none;font-family:\'EB Garamond\',serif;font-size:13px;letter-spacing:1px;border-radius:2px;';
+        (function(lq) { btnB.onclick = function(e) { e.stopPropagation(); trackEvent('click','affiliate','expedia_spot_' + lq); }; })(d.locQuery);
+        frag.appendChild(btnB);
+      }
+      d.shareBar.parentNode.insertBefore(frag, d.shareBar);
+    });
+  }
+  ric(insertAffiliateButtons);
 })();
 </script>
 
