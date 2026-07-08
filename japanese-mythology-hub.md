@@ -115,7 +115,7 @@ The Three Imperial Regalia (the Mirror, the Jewel, and the Sword) are considered
 *Kami* are not omnipotent, omniscient creators existing outside of nature. They are spirits that inhabit and animate the natural world—including mountains, rivers, storms, and unusual rock formations—as well as deified historical figures and ancestors. They possess both a gentle, nurturing side (*nigimitama*) and a fierce, destructive side (*aramitama*).
 
 ### How can a traveler show respect at a mythic Shinto shrine?
-Before entering through the *torii* gate, bow slightly. Wash your hands and rinse your mouth at the *temizuya* water pavilion to purify yourself before approaching the deity. At the main altar, throw a small coin into the offering box, bow deeply twice, clap your hands sharply twice to alert the *kami*, make a silent prayer, and finish with one final deep bow.
+Before entering through the *torii* gate, bow slightly. Wash your hands and rinse your mouth at the *temizuya* water pavilion to purify yourself before approaching the deity. At the main altar, throw a small coin into the offering box, bow deeply twice, clap his hands sharply twice to alert the *kami*, make a silent prayer, and finish with one final deep bow.
 
 ---
 
