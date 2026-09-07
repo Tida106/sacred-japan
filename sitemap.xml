@@ -1,39 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- ── HOMEPAGE ── -->
+  <!-- 笏笏 HOMEPAGE 笏笏 -->
   <url>
     <loc>https://sacred-japan.net/</loc>
     <lastmod>2026-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- ── GUIDES HUB ── -->
+  <!-- 笏笏 GUIDES HUB 笏笏 -->
   <url>
     <loc>https://sacred-japan.net/guides/</loc>
     <lastmod>2026-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- ── CULTURE HUB ── -->
+  <!-- 笏笏 CULTURE HUB 笏笏 -->
   <url>
     <loc>https://sacred-japan.net/culture/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- ── FESTIVALS ── -->
+  <!-- 笏笏 FESTIVALS 笏笏 -->
   <url>
     <loc>https://sacred-japan.net/festivals/</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- ── LONG-FORM GUIDES (/guides/) ── -->
+  <!-- 笏笏 LONG-FORM GUIDES (/guides/) 笏笏 -->
   <url>
     <loc>https://sacred-japan.net/guides/ise-grand-shrine/</loc>
     <lastmod>2026-06-08</lastmod>
@@ -250,8 +245,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ── TOP-LEVEL SUBPAGES ── -->
+  <!-- 笏笏 TOP-LEVEL SUBPAGES 笏笏 -->
   <url>
     <loc>https://sacred-japan.net/castles/</loc>
     <lastmod>2026-05-11</lastmod>
@@ -282,8 +276,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- ── HOMEPAGE SECTIONS (in-page anchors) ── -->
+  <!-- 笏笏 HOMEPAGE SECTIONS (in-page anchors) 笏笏 -->
   <url>
     <loc>https://sacred-japan.net/#spots</loc>
     <lastmod>2026-05-11</lastmod>
@@ -332,8 +325,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
-
-  <!-- ── LEGAL / CONTACT ── -->
+  <!-- 笏笏 LEGAL / CONTACT 笏笏 -->
   <url>
     <loc>https://sacred-japan.net/privacy-policy.html</loc>
     <lastmod>2026-05-11</lastmod>
@@ -352,5 +344,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
-
+  <url>
+    <loc>https://sacred-japan.net/guides/kotohira-gu/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
