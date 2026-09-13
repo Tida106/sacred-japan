@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Real Ryomen Sukuna: Jujutsu Kaisen vs. Japanese Mythology in Hida Takayama | Sacred Japan</title>
+<title>The Real Ryomen Sukuna: Jujutsu Kaisen vs. Japanese Mythology | Sacred Japan</title>
+<meta name="description" content="Discover the true history of Ryomen Sukuna in Hida Takayama, contrasting imperial propaganda, local guardian legends, and the 2005 2chan urban legend behind Jujutsu Kaisen.">
+<meta name="author" content="Sacred Japan">
+<link rel="canonical" href="https://sacred-japan.net/anime/ryomen-sukuna/">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%239b2335'/><text x='16' y='23' text-anchor='middle' font-size='20'>⛩</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Zen+Brush&display=swap">
@@ -15,54 +20,163 @@
   --sumi-light: #3d3530;
   --enshu: #8a7a6a;
   --beni: #9b2335;
+  --beni-light: #c94040;
   --kin: #b8860b;
   --border: rgba(60,40,20,0.12);
   --border-strong: rgba(60,40,20,0.22);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { background: var(--washi); color: var(--sumi); font-family: 'EB Garamond', serif; font-size: 18px; line-height: 1.8; }
-nav { position: sticky; top: 0; z-index: 100; background: rgba(245,240,232,0.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-strong); padding: 0 56px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+body {
+  background: var(--washi);
+  color: var(--sumi);
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  line-height: 1.85;
+}
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(245,240,232,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-strong);
+  padding: 0 56px;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
 .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.nav-logo-mark { width: 32px; height: 32px; border: 1.5px solid var(--beni); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--beni); }
+.nav-logo-mark {
+  width: 32px; height: 32px;
+  border: 1.5px solid var(--beni);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  color: var(--beni);
+}
 .nav-logo-text { font-family: 'EB Garamond', serif; font-size: 17px; font-weight: 500; letter-spacing: 1px; color: var(--sumi); }
 .nav-logo-jp { font-family: 'Noto Serif JP', serif; font-size: 11px; color: var(--enshu); display: block; letter-spacing: 3px; font-weight: 300; margin-top: -2px; }
-.nav-links { display: flex; gap: 18px; list-style: none; }
-.nav-links a { text-decoration: none; color: var(--enshu); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; font-family: 'EB Garamond', serif; }
+.nav-links { display: flex; gap: 18px; list-style: none; align-items: center; }
+.nav-links a {
+  text-decoration: none;
+  color: var(--enshu);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  font-family: 'EB Garamond', serif;
+}
 .nav-links a:hover { color: var(--sumi); }
 
-/* Guide Page Layout (Matching Kusunoki Style) */
-.guide-hero { position: relative; padding: 60px 56px 40px; border-bottom: 1px solid var(--border-strong); background: var(--washi); overflow: hidden; }
-.guide-kanji-bg { position: absolute; right: 40px; top: 20px; font-family: 'Zen Brush', serif; font-size: 80px; color: rgba(155,35,53,0.06); pointer-events: none; user-select: none; }
-.guide-category { font-family: 'Noto Serif JP', serif; font-size: 11px; letter-spacing: 4px; color: var(--beni); margin-bottom: 12px; }
-.guide-title { font-family: 'Shippori Mincho', serif; font-size: 42px; font-weight: 400; color: var(--sumi); margin-bottom: 8px; line-height: 1.25; }
-.guide-subtitle { font-family: 'EB Garamond', serif; font-size: 20px; font-style: italic; color: var(--enshu); margin-bottom: 24px; }
-.guide-meta { font-family: 'Noto Serif JP', serif; font-size: 11px; color: var(--enshu); letter-spacing: 2px; border-top: 1px solid var(--border); padding-top: 16px; display: inline-block; }
+/* Article Layout Structure */
+.page-section {
+  max-width: 820px;
+  margin: 48px auto;
+  padding: 64px 56px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+  border-radius: 4px;
+  border-top: 4px solid var(--beni);
+}
+.article-header {
+  border-bottom: 2px solid var(--kin);
+  padding-bottom: 28px;
+  margin-bottom: 40px;
+}
+.article-meta {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 12px;
+  color: var(--beni);
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.page-section h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--sumi);
+  line-height: 1.35;
+  margin-bottom: 16px;
+}
+.lead-text {
+  font-size: 20px;
+  color: var(--sumi);
+  line-height: 1.9;
+  margin-bottom: 32px;
+  font-style: italic;
+  border-left: 3px solid var(--kin);
+  padding-left: 20px;
+  background: rgba(184,134,11,0.03);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.page-section h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--sumi);
+  margin: 56px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px;
+}
+.page-section h2::before { content: '◆'; font-size: 14px; color: var(--beni); }
+.page-section h3 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sumi);
+  margin: 36px 0 12px;
+}
+.page-section p {
+  font-size: 17px;
+  color: var(--sumi-light);
+  line-height: 2.1;
+  margin-bottom: 24px;
+}
+.highlight-box {
+  background: var(--washi);
+  border-left: 3px solid var(--beni);
+  padding: 24px 28px;
+  margin: 36px 0;
+  border-radius: 0 4px 4px 0;
+}
+.highlight-box p { margin-bottom: 0; font-family: 'Noto Serif JP', serif; font-size: 15px; color: var(--sumi); }
 
-.breadcrumb-bar { background: rgba(184,134,11,0.06); border-bottom: 1px solid var(--border); padding: 12px 56px; font-family: 'EB Garamond', serif; font-size: 14px; color: var(--enshu); }
-.breadcrumb-bar a { color: var(--enshu); text-decoration: none; }
-.breadcrumb-bar a:hover { color: var(--sumi); }
+/* Breadcrumb & Back */
+.breadcrumb {
+  max-width: 820px;
+  margin: 24px auto 0;
+  padding: 0 16px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 12px;
+  color: var(--enshu);
+  letter-spacing: 1px;
+}
+.breadcrumb a { color: var(--beni); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
 
-.guide-container { max-width: 840px; margin: 48px auto; padding: 0 40px; }
+footer {
+  border-top: 1px solid var(--border-strong);
+  padding: 40px 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--washi);
+  margin-top: 80px;
+}
+.footer-logo-text { font-family: 'Shippori Mincho', serif; font-size: 16px; color: var(--sumi); }
+.footer-logo-jp { font-family: 'Noto Serif JP', serif; font-size: 10px; color: var(--enshu); letter-spacing: 3px; font-weight: 300; display: block; }
+.footer-links { display: flex; gap: 28px; list-style: none; }
+.footer-links a { font-size: 12px; letter-spacing: 1.5px; color: var(--enshu); text-decoration: none; text-transform: uppercase; }
+.footer-links a:hover { color: var(--sumi); }
 
-/* Table of Contents Box */
-.toc-box { background: #fff; border: 1px solid var(--border-strong); border-left: 4px solid var(--kin); padding: 32px 36px; margin-bottom: 48px; box-shadow: 0 4px 16px rgba(0,0,0,0.02); }
-.toc-title { font-family: 'Noto Serif JP', serif; font-size: 11px; letter-spacing: 3px; color: var(--kin); margin-bottom: 12px; text-transform: uppercase; }
-.toc-heading { font-family: 'Shippori Mincho', serif; font-size: 24px; color: var(--sumi); margin-bottom: 20px; }
-.toc-list { list-style: none; }
-.toc-list li { padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; align-items: baseline; gap: 16px; }
-.toc-list li:last-child { border-bottom: none; }
-.toc-num { font-family: 'EB Garamond', serif; font-size: 16px; color: var(--beni); width: 24px; }
-.toc-list a { font-family: 'EB Garamond', serif; font-size: 17px; color: var(--sumi-light); text-decoration: none; transition: color 0.2s; }
-.toc-list a:hover { color: var(--beni); }
-
-/* Article Content Styles */
-.article-content h2 { font-family: 'Shippori Mincho', serif; font-size: 28px; font-weight: 700; color: var(--sumi); margin: 56px 0 20px; padding-bottom: 10px; border-bottom: 2px solid var(--kin); }
-.article-content h3 { font-family: 'Shippori Mincho', serif; font-size: 21px; font-weight: 700; color: var(--sumi); margin: 36px 0 14px; }
-.article-content p { font-size: 18px; color: var(--sumi-light); line-height: 2; margin-bottom: 28px; font-family: 'EB Garamond', serif; }
-.article-content blockquote { border-left: 3px solid var(--beni); padding: 16px 24px; background: rgba(155,35,53,0.04); margin: 32px 0; font-style: italic; color: var(--sumi); font-size: 19px; line-height: 1.8; }
-
-footer { border-top: 1px solid var(--border-strong); padding: 40px 56px; text-align: center; background: #fff; margin-top: 80px; }
+@media (max-width: 768px) {
+  nav { padding: 0 16px; height: 56px; }
+  .nav-links { display: none; }
+  .page-section { margin: 20px 12px; padding: 32px 20px; }
+  .page-section h1 { font-size: 28px; }
+  footer { padding: 32px 20px; flex-direction: column; gap: 16px; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
 </style>
 </head>
 <body>
@@ -83,94 +197,60 @@ footer { border-top: 1px solid var(--border-strong); padding: 40px 56px; text-al
   </ul>
 </nav>
 
-<div class="breadcrumb-bar">
-  <a href="/">Home</a> &nbsp;&gt;&nbsp; <a href="/anime/">Anime Pilgrimage</a> &nbsp;&gt;&nbsp; Ryomen Sukuna's True Myth
+<div class="breadcrumb">
+  <a href="/">Home</a> &gt; <a href="/anime/">Anime Pilgrimage</a> &gt; <span>Ryomen Sukuna's True Myth</span>
 </div>
 
-<header class="guide-hero">
-  <div class="guide-kanji-bg">両面宿儺</div>
-  <div class="guide-category">ANIME PILGRIMAGE &amp; MYTHOLOGY ／ アニメ聖地・神話の真実</div>
-  <h1 class="guide-title">The Real Ryomen Sukuna: Jujutsu Kaisen's "King of Curses" vs. Japanese Mythology in Hida Takayama</h1>
-  <div class="guide-subtitle">Imperial Propaganda, 21st-Century Internet Urban Legends, and the Benevolent Guardian of Gifu</div>
-  <div class="guide-meta">WRITTEN BY SACRED JAPAN &nbsp;·&nbsp; LICENSED NATIONAL TOUR GUIDE (ENGLISH) &nbsp;·&nbsp; UPDATED SEPTEMBER 2026</div>
-</header>
-
-<main class="guide-container">
-
-  <!-- TABLE OF CONTENTS -->
-  <div class="toc-box">
-    <div class="toc-title">Table of Contents &nbsp;·&nbsp; 目次</div>
-    <div class="toc-heading">In This Guide</div>
-    <ul class="toc-list">
-      <li><span class="toc-num">01</span><a href="#section1">Introduction: The King of Curses vs. The Hida Protector</a></li>
-      <li><span class="toc-num">02</span><a href="#section2">The Meaning of "Ryomen": Symbolism of Two Faces and Four Arms</a></li>
-      <li><span class="toc-num">03</span><a href="#section3">History Written by Victors: The Nihon Shoki Propaganda</a></li>
-      <li><span class="toc-num">04</span><a href="#section4">The 2005 2chan Urban Legend: The True Blueprint for Akutami's Creation</a></li>
-      <li><span class="toc-num">05</span><a href="#section5">Real-Life Pilgrimage Spots: Senko-ji and Zendou-ji in Hida Takayama</a></li>
-      <li><span class="toc-num">06</span><a href="#section6">Frequently Asked Questions (FAQ)</a></li>
-    </ul>
+<main class="page-section">
+  <div class="article-header">
+    <div class="article-meta">ANIME PILGRIMAGE ／ アニメ聖地巡礼</div>
+    <h1>The Real Ryomen Sukuna: Jujutsu Kaisen's "King of Curses" vs. Japanese Mythology in Hida Takayama</h1>
   </div>
 
-  <div class="article-content">
-    
-    <h2 id="section1">01. Introduction: The King of Curses vs. The Hida Protector</h2>
-    <p>Within the fictional narrative of the global mega-hit anime <em>Jujutsu Kaisen</em>, Ryomen Sukuna (両面宿儺) is universally feared as the "King of Curses" (呪いの王). He is depicted as a sadistic, four-armed, two-faced sorcerer whose overwhelming, cataclysmic cursed energy drives the core conflict of the series. For millions of international fans worldwide, this terrifying, bloodthirsty image is the definitive definition of Ryomen Sukuna.</p>
-    
-    <p>However, if you take a journey to the misty, mountainous Hida region in Gifu Prefecture—specifically around Takayama—and ask local residents or temple priests about the "King of Curses," your inquiry will be met with polite confusion, or perhaps gentle correction. In this quiet, historical pocket of Japan, Ryomen Sukuna is not remembered as a demonic tyrant, but as a revered divine protector, an agricultural pioneer, and a local hero.</p>
+  <p class="lead-text">Within the fictional narrative of the global hit anime <em>Jujutsu Kaisen</em>, Ryomen Sukuna is feared as the "King of Curses." But in the misty mountains of Hida Takayama, he is revered not as a demon, but as an ancient savior.</p>
 
-    <blockquote>"History is a set of lies agreed upon." — The divergence between the imperial records of the Yamato court and the oral traditions of Hida encapsulates how ancient politics weaponized mythology.</blockquote>
+  <p>For millions of international fans, the four-armed, two-faced sorcerer of Shinjuku carnage is the definitive Ryomen Sukuna. However, if you travel to Gifu Prefecture and ask local elders about the "King of Curses," you will be met with profound bewilderment. Here, the historical reality of Sukuna is a fascinating tapestry woven from imperial political propaganda, regional pride, agricultural ingenuity, and a 21st-century digital urban legend.</p>
 
-    <p>The historical reality of Ryomen Sukuna is a fascinating, multifaceted tapestry woven from imperial political propaganda, profound regional pride, ancient agricultural animism, and—most surprisingly—a 21st-century digital urban legend born on an anonymous Japanese imageboard.</p>
+  <h2>The Meaning of "Ryomen": The Symbolism of Absolute Vigilance</h2>
+  <p>To understand the true Sukuna, we must examine his name. "Ryomen Sukuna" (両面宿儺) translates literally to "Two-Faced." While modern Western interpretations often associate "two-faced" with deceit, in the context of ancient Japanese animism and tribal leadership, possessing two faces was a powerful symbol of absolute vigilance.</p>
+  
+  <p>It represented a chieftain with superhuman situational awareness—capable of looking in all directions simultaneously to protect his clan from surprise attacks. Furthermore, his legendary four arms symbolized the ultimate form of ancient multi-tasking: wielding weapons to defend the frontier while simultaneously operating agricultural tools to clear land and secure bountiful harvests.</p>
 
-    <h2 id="section2">02. The Meaning of "Ryomen": Symbolism of Two Faces and Four Arms</h2>
-    <p>To untangle the myth, we must first examine the literal meaning of his name. "Ryomen Sukuna" (両面宿儺) translates directly to "Two-Faced Sukuna." While modern Western and contemporary horror tropes automatically associate "two-faced" with deceit, hypocrisy, or treachery, in the context of ancient Japanese animism and tribal leadership, possessing multiple faces and limbs carried an entirely different symbolic weight.</p>
-
-    <p>In ancient folklore, a leader with two faces represented <strong>absolute vigilance and all-encompassing awareness</strong>. It symbolized a chieftain or regional ruler who could "look in all directions" simultaneously, ensuring that no surprise attack from rival clans or foreign invaders could catch his people off guard. Furthermore, his legendary four arms represented the ultimate embodiment of multi-tasking leadership: holding martial weapons (such as a bow and sword) in two hands to defend the province, while simultaneously wielding agricultural tools (like a hoe and sickle) with the other two hands to clear wilderness, irrigate fields, and guarantee bountiful harvests for his followers.</p>
-
-    <h2 id="section3">03. History Written by Victors: The Nihon Shoki Propaganda</h2>
-    <p>Why is there such an astronomical chasm between Hida's benevolent guardian and the imperial monster? The answer lies in the oldest rule of historiography: history is written by the victors. The earliest official written mention of Ryomen Sukuna appears in the <em>Nihon Shoki</em> (Chronicles of Japan), compiled under imperial commission in 720 AD.</p>
-
-    <p>During the Asuka and Nara periods, the central Yamato imperial court was aggressively expanding its military and political hegemony across the Japanese archipelago. Independent regional leaders who refused to submit to the Emperor's authority were systematically vilified, dehumanized, and recorded in official state chronicles as grotesque monsters, demons, or rebel chieftains.</p>
-
-    <p>The <em>Nihon Shoki</em> (specifically under the reign of the legendary Emperor Nintoku) records that in the year 65 AD, a strange man appeared in Hida province. He possessed a single torso with two distinct faces facing opposite directions, each head having its own set of eyes and mouth. He had no crown or heels, but possessed four arms and four legs, each pair operating independently. He was exceptionally swift, wielding swords and bows with deadly proficiency. Crucially, the imperial text states that he "refused to obey the Imperial Court and plundered the people," prompting the Emperor to dispatch the brave general Takefurukuma-no-mikoto to subjugate and slay him.</p>
-
-    <p>In stark contrast, local Hida oral traditions and temple records tell an entirely opposite story. According to the people of Hida, Sukuna was a wise local chieftain who introduced advanced irrigation, established trade routes, and successfully banished a poisonous, dragon-like serpent terrorizing the valleys. The "rebellion" was nothing more than Hida's stubborn resistance against imperial annexation, punished by having their hero branded as a multi-limbed freak in government archives.</p>
-
-    <h2 id="section4">04. The 2005 2chan Urban Legend: The True Blueprint for Akutami's Creation</h2>
-    <p>If the historical Ryomen Sukuna was a noble tribal leader, how did he transform into the mummified, cannibalistic curse seen in <em>Jujutsu Kaisen</em>? The chilling aesthetic of Akutami's Sukuna—complete with conjoined mummified bodies, four arms, two faces, and cursed object finger-sealing—did not come from the 8th-century <em>Nihon Shoki</em> at all. It was born in the digital underground of 2005.</p>
-
-    <p>In 2005, a remarkably detailed, spine-chilling horror story was published anonymously on <em>2chan</em> (Futaba Channel), Japan's massive imageboard network. The post claimed that workers demolishing an old, abandoned temple in Iwate Prefecture discovered a sealed wooden box. Inside was a horrifying mummy of conjoined twins possessing two faces and four arms, purportedly created via a dark, forbidden cannibalistic ritual (known as <em>Kodoku</em>) during the Taisho era to serve as an ultimate cursed object.</p>
-
-    <p>Gege Akutami masterfully lifted the core aesthetic, body horror, and "sealed cursed object" mechanic directly from this 21st-century digital creepypasta, affixing the historical name of "Ryomen Sukuna" to give the narrative immediate gravitas and mythical resonance. Thus, the anime Sukuna is a brilliant modern hybrid: an 8th-century imperial political scapegoat fused with a 2005 internet urban legend.</p>
-
-    <h2 id="section5">05. Real-Life Pilgrimage Spots: Senko-ji and Zendou-ji in Hida Takayama</h2>
-    <p>For international fans and cultural travelers wishing to witness the true roots of the legend, the Hida region offers an enriching, peaceful pilgrimage that stands in poetic contrast to the carnage of the anime.</p>
-
-    <h3>Senko-ji Temple (Takayama, Gifu)</h3>
-    <p>Perched dramatically at an altitude of 900 meters on Mount Kesayama, Senko-ji is universally recognized as the epicenter of Ryomen Sukuna worship. Temple lore maintains that Sukuna himself founded the sanctuary approximately 1,600 years ago.</p>
-    
-    <p>The temple's crown jewel is the sacred wooden <em>Ryomen Sukuna Seated Statue</em>, sculpted around 1685 by the legendary itinerant monk-sculptor Enku. Eschewing the terrifying imperial description, Enku carved Sukuna's two faces side-by-side: one side radiates deep compassion and wisdom (representing the benevolent ruler), while the other displays fierce, unyielding protection (representing the defender of the province). Enku also carved Sukuna grasping a heavy carpenter's broadaxe—a profound, deliberate tribute to the master woodworkers and carpenters of Hida, whose guilds revered Sukuna as their patron deity.</p>
-
-    <h3>Zendou-ji Temple</h3>
-    <p>Located nearby in Hida, Zendou-ji further preserves the legacy of Sukuna, maintaining records that he introduced early spiritual teachings and agricultural innovations to the isolated mountain basin long before Yamato imperial influence penetrated the Alps.</p>
-
-    <h2 id="section6">06. Frequently Asked Questions (FAQ)</h2>
-    
-    <h3>Is Ryomen Sukuna a real historical person?</h3>
-    <p>Historians generally agree that Ryomen Sukuna was likely a composite archetype representing powerful local chieftains or tribal leaders in the Hida region who resisted the centralization and taxation policies of the early Yamato imperial state.</p>
-
-    <h3>Can you visit Ryomen Sukuna's grave or statues in Japan?</h3>
-    <p>Yes. The primary pilgrimage site is <strong>Senko-ji Temple</strong> in Takayama, Gifu Prefecture, where Enku's famous double-faced statue is housed. Several local shrines and caves in the Hida mountains are also associated with his legends.</p>
-
-    <h3>Does Jujutsu Kaisen accurately portray Japanese mythology?</h3>
-    <p>No. While the name "Ryomen Sukuna" and his physical attributes (two faces, four arms) are borrowed from Japanese folklore and the <em>Nihon Shoki</em>, his personality as a murderous king of curses and his specific backstory in the manga are largely fictional creations by Gege Akutami, heavily influenced by 21st-century internet horror folklore.</p>
-
+  <div class="highlight-box">
+    <p><strong>Key Insight:</strong> In Hida's oral history, Sukuna was never a monster. He was a visionary 4th-century regional leader who brought metallurgy, agriculture, and peace to the isolated mountain valleys.</p>
   </div>
+
+  <h2>History Written by the Victors: The Nihon Shoki Propaganda</h2>
+  <p>The chasm between Hida's benevolent hero and the anime's monstrous villain stems directly from political authorship. The earliest official mention of Ryomen Sukuna appears in the <em>Nihon Shoki</em> (Chronicles of Japan), compiled by the Yamato imperial court in 720 AD.</p>
+  
+  <p>During this era, the Yamato court was aggressively consolidating centralized power across the archipelago. Regional chieftains who resisted imperial hegemony were systematically demonized in official records, recast as monstrous rebels or "earth spiders" (Tsuchigumo) to justify military conquest. The imperial text frames Sukuna as an insubordinate monster slain by imperial generals. Conversely, Hida's unbroken oral tradition remembers him as a civilizing pioneer who famously banished a poisonous dragon-deity to save the valley populace.</p>
+
+  <h2>The 2005 Internet Urban Legend: The True Inspiration for Jujutsu Kaisen</h2>
+  <p>If the historical Sukuna was a noble chieftain, why does the <em>Jujutsu Kaisen</em> incarnation resemble a mummified, cannibalistic curse? The answer lies in modern digital folklore.</p>
+
+  <p>In 2005, a chilling fictional horror narrative surfaced on <em>2chan</em>, Japan's largest anonymous imageboard. The post detailed the macabre discovery of a sealed wooden box inside a demolished temple, containing the mummified remains of conjoined twins with two faces and four arms—purportedly forged via dark rituals (Kodoku) in the Taisho era. Manga creator Gege Akutami masterfully grafted this 21st-century internet creepypasta onto the historical name of the Hida chieftain, forging a brilliant hybrid pop-culture icon.</p>
+
+  <h2>Real-Life Sacred Spots: Anime Pilgrimage Locations in Hida</h2>
+  <p>For fans seeking the true roots of the legend, Hida offers a profound cultural pilgrimage.</p>
+
+  <h3>Senko-ji Temple (Takayama)</h3>
+  <p>Perched at 900 meters altitude on Mount Kesayama, Senko-ji is the spiritual epicenter of Sukuna worship, reportedly founded by Sukuna himself 1,600 years ago. The temple houses the famed wooden <em>Ryomen Sukuna Seated Statue</em> carved around 1685 by the itinerant monk Enku. Breaking from strict tradition, Enku carved Sukuna's two faces side-by-side—simultaneously expressing fierce protection and compassionate mercy—while holding a master carpenter's broadaxe in deep homage to Hida's legendary woodworkers.</p>
+
+  <h3>Zendou-ji Temple & Nyukawa-cho</h3>
+  <p>Nearby Zendou-ji honors Sukuna as an early bearer of Buddhist wisdom to the northern mountains. Visiting these sanctuaries bridges the gap between modern anime fiction and the resilient, proud heritage of rural Japan.</p>
 </main>
 
 <footer>
-  <div class="footer-logo-text">Sacred Japan</div>
-  <div style="font-size: 11px; color: var(--enshu); letter-spacing: 1px; margin-top: 12px;">© 2026 Sacred Japan · All Rights Reserved. Licensed National Tour Guide (English).</div>
+  <div>
+    <div class="footer-logo-text">Sacred Japan</div>
+    <span class="footer-logo-jp">神社と寺院をめぐる旅</span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/#spots">Shrines & Temples</a></li>
+    <li><a href="/anime/">Anime</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
 </footer>
 
 </body>
