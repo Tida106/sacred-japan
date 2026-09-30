@@ -651,10 +651,13 @@ font-size: 13px;
 padding: 9px 16px;
 letter-spacing: 1.5px;
 }
+
+/* 修正箇所：.sticky-cta の z-index を 9999 に変更し、pointer-events: auto; を追加 */
 .sticky-cta {
 position: fixed;
 bottom: 0; left: 0; right: 0;
-z-index: 90;
+z-index: 9999;
+pointer-events: auto;
 background: rgba(253,240,243,0.96);
 backdrop-filter: blur(10px);
 border-top: 1px solid var(--border-strong);
@@ -1386,7 +1389,7 @@ footer { padding: 40px 24px 100px; }
             <span class="anime-highlight">🔍 Mystery Manga Town</span>
             <span class="anime-highlight">🎨 Aoyama Hometown</span>
             <span class="anime-highlight">🏛️ Manga Factory Museum</span>
-            <span class="anime-highlight">🏝️ Tottori Sand Dunes</span>
+            <span class="anime-highlight">🏝️️ Tottori Sand Dunes</span>
           </div>
           <div class="anime-cta-stack">
             <a class="anime-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DTottori&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_anime_conan_street')">🏨 Find Hotels Near Tottori →</a>
