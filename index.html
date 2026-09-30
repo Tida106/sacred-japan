@@ -1983,25 +1983,25 @@ border-top: 1px solid var(--border);
 .viator-grid { grid-template-columns: 1fr; }
 }
 .sticky-cta {
-position: fixed;
-bottom: 80px;
-left: 50%;
-transform: translateX(-50%);
-background: var(--sumi);
-color: var(--washi);
-padding: 12px 24px;
-display: flex;
-align-items: center;
-gap: 16px;
-z-index: 190;
-border-radius: 3px;
-box-shadow: 0 4px 24px rgba(0,0,0,0.3);
-font-family: 'EB Garamond', serif;
-font-size: 15px;
-opacity: 0;
-pointer-events: none;
-transition: opacity 0.4s;
-white-space: nowrap;
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--sumi);
+  color: var(--washi);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 9999;
+  border-radius: 3px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  white-space: nowrap;
 }
 .sticky-cta.visible { opacity: 1; pointer-events: auto; }
 .sticky-cta-text { letter-spacing: 0.5px; }
