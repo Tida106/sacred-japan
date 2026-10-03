@@ -1983,25 +1983,25 @@ border-top: 1px solid var(--border);
 .viator-grid { grid-template-columns: 1fr; }
 }
 .sticky-cta {
-position: fixed;
-bottom: 80px;
-left: 50%;
-transform: translateX(-50%);
-background: var(--sumi);
-color: var(--washi);
-padding: 12px 24px;
-display: flex;
-align-items: center;
-gap: 16px;
-z-index: 190;
-border-radius: 3px;
-box-shadow: 0 4px 24px rgba(0,0,0,0.3);
-font-family: 'EB Garamond', serif;
-font-size: 15px;
-opacity: 0;
-pointer-events: none;
-transition: opacity 0.4s;
-white-space: nowrap;
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--sumi);
+  color: var(--washi);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 9999;
+  border-radius: 3px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  white-space: nowrap;
 }
 .sticky-cta.visible { opacity: 1; pointer-events: auto; }
 .sticky-cta-text { letter-spacing: 0.5px; }
@@ -3928,55 +3928,61 @@ transition: background 0.15s, color 0.15s;
   <div class="etiquette-section" style="margin-bottom:72px;">
     <div class="etiquette-grid">
 
-      <div class="etiquette-card">
+      <!-- 1. Demon Slayer -->
+      <a href="/anime/demon-slayer/" class="etiquette-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
         <div class="etiquette-num">Demon Slayer — 鬼滅の刃</div>
-        <div class="etiquette-title">Asakusa & Kamado-jinja</div>
+        <div class="etiquette-title">Asakusa & Kamado-jinja ↗</div>
         <span class="etiquette-title-jp">浅草・竈門神社</span>
         <p class="etiquette-body">The opening scenes of the wildly popular Demon Slayer series are set in the atmospheric back streets of Asakusa, Tokyo — a district centred around Senso-ji Temple. Equally significant is Kamado-jinja shrine in Dazaifu, Fukuoka, whose name directly echoes the protagonist's family name. Both sites draw fans from across the world and have embraced their anime connections with dedicated merchandise and themed goshuin stamps.</p>
-        <div style="margin-top:12px;font-size:13px;color:var(--beni);letter-spacing:1px;">📍 Senso-ji, Asakusa, Tokyo &nbsp;·&nbsp; Kamado-jinja, Dazaifu, Fukuoka</div>
-      </div>
+        <div style="margin-top:auto; padding-top:12px; font-size:13px; color:var(--beni); letter-spacing:1px;">📍 Senso-ji, Asakusa, Tokyo &nbsp;·&nbsp; Kamado-jinja, Dazaifu, Fukuoka</div>
+      </a>
 
-      <div class="etiquette-card">
+      <!-- 2. Your Name -->
+      <a href="/anime/" class="etiquette-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
         <div class="etiquette-num">Your Name — 君の名は。</div>
-        <div class="etiquette-title">Suwa Taisha & Hida Furukawa</div>
+        <div class="etiquette-title">Suwa Taisha & Hida Furukawa ↗</div>
         <span class="etiquette-title-jp">諏訪大社・飛騨古川</span>
         <p class="etiquette-body">Makoto Shinkai's stunning film "Your Name" drew heavily from the landscapes and spiritual atmosphere of the Suwa region in Nagano Prefecture. Suwa Taisha — Japan's oldest shrine — and the surrounding Lake Suwa scenery are unmistakable in the film's rural sequences. The town of Hida Furukawa in Gifu Prefecture served as the model for the fictional Itomori village, complete with its own hilltop shrine that fans flock to recreate iconic scenes.</p>
-        <div style="margin-top:12px;font-size:13px;color:var(--beni);letter-spacing:1px;">📍 Suwa Taisha, Nagano &nbsp;·&nbsp; Hida Furukawa, Gifu</div>
-      </div>
+        <div style="margin-top:auto; padding-top:12px; font-size:13px; color:var(--beni); letter-spacing:1px;">📍 Suwa Taisha, Nagano &nbsp;·&nbsp; Hida Furukawa, Gifu</div>
+      </a>
 
-      <div class="etiquette-card">
+      <!-- 3. Spirited Away -->
+      <a href="/anime/spirited-away/" class="etiquette-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
         <div class="etiquette-num">Spirited Away — 千と千尋</div>
-        <div class="etiquette-title">Dogo Onsen & Edo-Tokyo Museum</div>
+        <div class="etiquette-title">Dogo Onsen & Edo-Tokyo Museum ↗</div>
         <span class="etiquette-title-jp">道後温泉・江戸東京たてもの園</span>
         <p class="etiquette-body">Hayao Miyazaki's masterpiece "Spirited Away" draws from numerous real Japanese locations, most visibly the historic Dogo Onsen bathhouse in Matsuyama, Ehime — one of Japan's oldest hot spring bathhouses and a clear inspiration for the film's bathhouse setting. The Edo-Tokyo Open Air Architectural Museum in Koganei also provided visual reference material. While the film's world is entirely fictional, these locations offer a tangible connection to its atmosphere.</p>
-        <div style="margin-top:12px;font-size:13px;color:var(--beni);letter-spacing:1px;">📍 Dogo Onsen, Matsuyama, Ehime &nbsp;·&nbsp; Koganei, Tokyo</div>
-      </div>
+        <div style="margin-top:auto; padding-top:12px; font-size:13px; color:var(--beni); letter-spacing:1px;">📍 Dogo Onsen, Matsuyama, Ehime &nbsp;·&nbsp; Koganei, Tokyo</div>
+      </a>
 
-      <div class="etiquette-card">
+      <!-- 4. Inuyasha -->
+      <a href="/guides/fushimi-inari-taisha/" class="etiquette-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
         <div class="etiquette-num">Inuyasha — 犬夜叉</div>
-        <div class="etiquette-title">Fushimi Inari & Higashi Ikoma</div>
+        <div class="etiquette-title">Fushimi Inari & Higashi Ikoma ↗</div>
         <span class="etiquette-title-jp">伏見稲荷・東生駒</span>
         <p class="etiquette-body">The long-running manga and anime series Inuyasha, set in feudal Japan and centred on a demon-slaying half-demon, draws its spiritual atmosphere from real Shinto shrines and their fox deity traditions. Fushimi Inari Taisha in Kyoto — dedicated to Inari, the fox deity — feels unmistakably like the world of Inuyasha. The Shinoda forest in Osaka, sacred to Inari fox spirits, is another significant location connected to the series' spiritual themes.</p>
-        <div style="margin-top:12px;font-size:13px;color:var(--beni);letter-spacing:1px;">📍 Fushimi Inari Taisha, Kyoto &nbsp;·&nbsp; Shinoda forest, Osaka</div>
-      </div>
+        <div style="margin-top:auto; padding-top:12px; font-size:13px; color:var(--beni); letter-spacing:1px;">📍 Fushimi Inari Taisha, Kyoto &nbsp;·&nbsp; Shinoda forest, Osaka</div>
+      </a>
 
-      <div class="etiquette-card">
+      <!-- 5. Noragami -->
+      <a href="/anime/" class="etiquette-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
         <div class="etiquette-num">Noragami — ノラガミ</div>
-        <div class="etiquette-title">Yushima Tenmangu & Kanda Myojin</div>
+        <div class="etiquette-title">Yushima Tenmangu & Kanda Myojin ↗</div>
         <span class="etiquette-title-jp">湯島天満宮・神田明神</span>
         <p class="etiquette-body">The anime series Noragami follows a minor deity seeking recognition and worshippers, set against the backdrop of real Tokyo shrines. Kanda Myojin shrine in Akihabara and Yushima Tenmangu in Bunkyo are prominently featured and easily recognisable. Both shrines have embraced their pop culture connections — Kanda Myojin in particular is famous among anime fans and has collaborated with various series over the years, offering special themed goshuin and ema votive plaques.</p>
-        <div style="margin-top:12px;font-size:13px;color:var(--beni);letter-spacing:1px;">📍 Kanda Myojin, Akihabara, Tokyo &nbsp;·&nbsp; Yushima Tenmangu, Bunkyo, Tokyo</div>
-      </div>
+        <div style="margin-top:auto; padding-top:12px; font-size:13px; color:var(--beni); letter-spacing:1px;">📍 Kanda Myojin, Tokyo &nbsp;·&nbsp; Yushima Tenmangu, Tokyo</div>
+      </a>
 
-    <div class="etiquette-card">
+      <!-- 6. Fruits Basket -->
+      <a href="/anime/fruits-basket/" class="etiquette-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
         <div class="etiquette-num">Fruits Basket — フルーツバスケット</div>
-        <div class="etiquette-title">Nikko Tosho-gu & Shrine Architecture</div>
+        <div class="etiquette-title">Nikko Tosho-gu & Shrine Architecture ↗</div>
         <span class="etiquette-title-jp">日光東照宮・社寺建築</span>
         <p class="etiquette-body">The beloved manga and anime series Fruits Basket centres on a family cursed by the spirits of the Chinese zodiac, deeply rooted in Japanese spiritual traditions. The ornate shrine architecture of Nikko Tosho-gu — with its elaborate carvings of the twelve zodiac animals — resonates strongly with the series' themes. Many fans visit Nikko specifically to see the zodiac animal carvings and connect with the spiritual world depicted in the series.</p>
-        <div style="margin-top:12px;font-size:13px;color:var(--beni);letter-spacing:1px;">📍 Nikko Tosho-gu, Tochigi &nbsp;·&nbsp; Nikko, Tochigi</div>
-      
-</div>
-<!-- 楠木邸 -->
+        <div style="margin-top:auto; padding-top:12px; font-size:13px; color:var(--beni); letter-spacing:1px;">📍 Nikko Tosho-gu, Tochigi</div>
+      </a>
+
+      <!-- 7. 楠木邸 -->
       <a href="/anime/kusunoki-tei/" class="etiquette-card" style="text-decoration: none; color: inherit; border-bottom: 3px solid var(--matcha); display: flex; flex-direction: column; height: 100%;">
         <div class="etiquette-num" style="color:var(--matcha); font-weight:bold;">IYASHIKEI MASTERPIECE</div>
         <div class="etiquette-title" style="color:var(--sumi);">Kusunoki's Garden of Gods ↗</div>
@@ -3985,7 +3991,7 @@ transition: background 0.15s, color 0.15s;
         <div style="margin-top: auto; font-size:13px; color:var(--matcha); letter-spacing:1px; padding-top: 12px;">📍 Horai-ji, Aichi / Shinto Lore</div>
       </a>
 
-      <!-- 両面宿儺 -->
+      <!-- 8. 両面宿儺 -->
       <a href="/anime/ryomen-sukuna/" class="etiquette-card" style="text-decoration: none; color: inherit; border-bottom: 3px solid var(--beni); display: flex; flex-direction: column; height: 100%;">
         <div class="etiquette-num" style="color:var(--beni); font-weight:bold;">JUJUTSU KAISEN — 呪術廻戦</div>
         <div class="etiquette-title" style="color:var(--sumi);">Ryomen Sukuna's True Myth ↗</div>
@@ -3994,18 +4000,15 @@ transition: background 0.15s, color 0.15s;
         <div style="margin-top: auto; font-size:13px; color:var(--beni); letter-spacing:1px; padding-top: 12px;">📍 Senko-ji Temple, Takayama, Gifu</div>
       </a>
 
-      <!-- 空き枠を埋めるダミーカード -->
+      <!-- 9. 空き枠を埋めるダミーカード -->
       <div class="etiquette-card" style="display: flex; align-items: center; justify-content: center; opacity: 0.6; height: 100%;">
         <div style="text-align: center;">
           <div style="font-family:'EB Garamond',serif; font-size:15px; letter-spacing:2px; color:var(--enshu); font-style:italic;">More guides coming soon...</div>
         </div>
       </div>
 
-    </div> <!-- ★ここで3列グリッドの箱を閉じるのが正解です★ -->
-   
-
-    </div> <!-- ★ここで3列グリッドの箱を閉じるのが正解です★ -->
-    
+    </div>
+        
     <div style="margin-top:32px;padding:24px 28px;background:rgba(155,35,53,0.05);border:1px solid rgba(155,35,53,0.2);border-radius:2px;">
       <div style="font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:3px;color:var(--beni);margin-bottom:8px;">聖地巡礼のマナー</div>
       <div style="font-family:'Shippori Mincho',serif;font-size:18px;color:var(--sumi);margin-bottom:8px;">Anime Pilgrimage Etiquette</div>
@@ -5331,6 +5334,8 @@ window.addEventListener('DOMContentLoaded', function() {
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" title="Back to top">↑</button>
 </body>
 </html>
+
+
 
 
 
