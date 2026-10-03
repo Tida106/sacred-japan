@@ -530,14 +530,19 @@ color: var(--sumi);
 display: block;
 text-decoration: none;
 color: inherit;
-position: relative;
 cursor: pointer;
 outline: none;
+}
+.anime-thumb-link::before {
+content: '';
+position: absolute;
+inset: 0;
+z-index: 1;
 }
 .anime-thumb-link:focus-visible {
 box-shadow: inset 0 0 0 3px var(--kin);
 }
-.anime-thumb-link::after {
+.anime-thumb::before {
 content: '↗ Official Site';
 position: absolute;
 bottom: 12px;
@@ -556,8 +561,8 @@ transition: opacity 0.25s, transform 0.25s;
 pointer-events: none;
 backdrop-filter: blur(4px);
 }
-.anime-card:hover .anime-thumb-link::after,
-.anime-thumb-link:focus-visible::after {
+.anime-card:hover .anime-thumb::before,
+.anime-thumb-link:focus-visible .anime-thumb::before {
 opacity: 1;
 transform: translateY(0);
 }
@@ -626,6 +631,8 @@ padding-top: 12px;
 border-top: 1px solid var(--border);
 }
 .anime-cta {
+position: relative;
+z-index: 2;
 display: block;
 padding: 12px 16px;
 text-decoration: none;
