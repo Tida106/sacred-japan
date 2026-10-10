@@ -124,6 +124,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sacred-japan.net/guides/hashikuraji/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sacred-japan.net/guides/hiraizumi/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -154,6 +160,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sacred-japan.net/guides/katsuragawa/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sacred-japan.net/guides/kawasaki-daishi/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -167,6 +179,12 @@
   </url>
   <url>
     <loc>https://sacred-japan.net/guides/kiyomizu-dera/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sacred-japan.net/guides/kongoin/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -226,6 +244,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sacred-japan.net/guides/omamori/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sacred-japan.net/guides/omiya-hikawa-jinja/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -233,6 +257,12 @@
   </url>
   <url>
     <loc>https://sacred-japan.net/guides/ryoanji/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sacred-japan.net/guides/ryuonji/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -406,13 +436,13 @@
   <!-- Site pages -->
   <url>
     <loc>https://sacred-japan.net/contact.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://sacred-japan.net/privacy-policy.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
