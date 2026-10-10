@@ -1066,6 +1066,9 @@ footer { padding: 40px 24px; }
 .compare-table thead th { font-size: 14px; }
 .compare-table tbody td.element-cell { font-size: 11.5px; letter-spacing: 0.5px; }
 }
+/* Body-text links */
+article p a, article li a, article .faq-answer a { color: var(--beni); text-decoration: underline; text-underline-offset: 3px; }
+article p a:hover, article li a:hover, article .faq-answer a:hover { color: var(--beni-light); }
 </style>
 </head>
 <body>
@@ -1197,15 +1200,21 @@ footer { padding: 40px 24px; }
     <!-- 3. THE TWO RELIGIONS -->
     <h2 id="two-religions">The Two Religions Behind Them<span class="h2-jp">神道と仏教</span></h2>
     <p>Understanding shrines and temples without understanding Shinto and Buddhism is like trying to tell a church from a mosque without knowing what Christianity or Islam are. The architecture follows the religion.</p>
+    <h3>Shinto: The Religion of This Life</h3>
     <p><strong>Shinto</strong> (<span class="jp">神道</span>) is the oldest religious tradition in Japan. It has no founder, no scripture comparable to the Bible, and no formal doctrine of an afterlife. Instead, it is built around a single core belief: that the natural world is alive with spirits called <strong>kami</strong>. There are kami in mountains, rivers, ancient trees, certain rocks, the sun, the rice harvest, and the spirits of remarkable ancestors. The phrase often used to describe this worldview is <span class="jp">yaoyorozu no kami (八百万の神)</span> — "eight million gods," a way of saying the number is essentially infinite. Shinto is concerned with this life: harvests, weddings, the birth of children, the protection of the home.</p>
+    <h3>Buddhism: The Religion of the Next</h3>
     <p><strong>Buddhism</strong> (<span class="jp">仏教</span>) arrived in Japan in the 6th century — traditionally dated to 538 CE — when the Korean kingdom of Baekje sent Buddhist scriptures and statues to the court of Emperor Kinmei. Unlike Shinto, Buddhism came with a founder (the historical Buddha, Siddhartha Gautama), elaborate scriptures, detailed teachings about reincarnation and the afterlife, and a developed monastic tradition. Buddhism in Japan is concerned with the deeper questions: suffering, impermanence, the nature of mind, what happens after death.</p>
+    <h3>The Distinction That Explains Everything</h3>
     <p>This is the single most important distinction for understanding everything else: <strong>Shinto is the religion of this life. Buddhism is the religion of the next.</strong> It's why most Japanese, even today, will visit a shrine for a wedding or a newborn's first blessing, and a temple for a funeral. There is a famous saying: <em>"Born Shinto, die Buddhist."</em></p>
 
     <!-- 4. A BRIEF HISTORY -->
     <h2 id="history">A Brief History of How They Coexist<span class="h2-jp">神仏習合と分離の歴史</span></h2>
+    <h3>Shinbutsu-shugo: A Thousand Years of Blending</h3>
     <p>For most of Japanese history, Shinto and Buddhism were not seen as competing religions but as complementary ones. This blending is called <strong><span class="jp">Shinbutsu-shugo (神仏習合)</span></strong> — the syncretism of kami and Buddhas. From around the 8th century onward, Buddhist temples often had Shinto shrines on their grounds (called <span class="jp">chinjusha</span> — guardian shrines), and Shinto shrines often had Buddhist halls. Some places functioned as both simultaneously. Priests would chant Buddhist sutras to Shinto kami. Shrines used Buddhist bells. Buddhist temples used Shinto purification rites.</p>
     <p>This continued for over a thousand years.</p>
+    <h3>The 1868 Separation</h3>
     <p>Then, in <strong>March 1868</strong>, the new Meiji government issued the <strong><span class="jp">Shinbutsu Bunri Rei (神仏分離令)</span></strong> — the Edict for the Separation of Shinto and Buddhism. The intention was to elevate Shinto as a state religion centered on the emperor, and to strip away the Buddhist elements that had become entangled with shrines over the centuries. The edict triggered a violent grassroots movement called <strong><span class="jp">haibutsu kishaku (廃仏毀釈)</span></strong> — "abolish the Buddha, destroy the teachings" — during which thousands of Buddhist statues, sutras, bells, and entire temple buildings were destroyed across the country. In some regions, three-quarters of all Buddhist temples were either destroyed or repurposed.</p>
+    <h3>Why the Line Feels So Sharp Today</h3>
     <p>The wounds of this period are why today, more than 150 years later, the distinction between shrines and temples feels so sharp — even though for most of Japanese history, the line was deliberately blurred.</p>
 
     <!-- 5. 7 VISUAL CUES -->
@@ -1388,7 +1397,7 @@ footer { padding: 40px 24px; }
 
     <!-- 7. HOW TO PRAY -->
     <h2 id="how-to-pray">How to Pray at Each (Step by Step)<span class="h2-jp">参拝の作法</span></h2>
-    <p>This is the single piece of information most travelers most want. Both rituals are simple, take less than two minutes, and signal genuine respect when performed even imperfectly.</p>
+    <p>This is the single piece of information most travelers most want. Both rituals are simple, take less than two minutes, and signal genuine respect when performed even imperfectly. For the full shrine routine, including the purification basin, see our <a href="/culture/shrine-etiquette/" onclick="trackEvent('click','internal','guide_shrine_vs_temple_to_shrine_etiquette')">Shrine Etiquette guide</a>.</p>
 
     <div class="pray-section">
       <div class="pray-section-head">
@@ -1688,6 +1697,18 @@ footer { padding: 40px 24px; }
           <div class="related-card-label">SACRED JAPAN ／ GUIDE 04</div>
           <div class="related-card-title">📖 The Complete Omamori Guide →</div>
           <div class="related-card-desc">Choose, carry, and respectfully return Japan's protective charms after you visit a shrine or temple.</div>
+        </a>
+
+        <a class="related-card" href="/culture/shrine-etiquette/" onclick="trackEvent('click','internal','related_shrine_vs_temple_to_shrine_etiquette')">
+          <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
+          <div class="related-card-title">📖 How to Visit a Japanese Shrine →</div>
+          <div class="related-card-desc">The torii, the water basin, and the bow-clap-bow — a complete etiquette guide.</div>
+        </a>
+
+        <a class="related-card" href="/culture/what-is-shinto/" onclick="trackEvent('click','internal','related_shrine_vs_temple_to_what_is_shinto')">
+          <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
+          <div class="related-card-title">📖 What Is Shinto? →</div>
+          <div class="related-card-desc">The religion behind every shrine — kami, purity, and the great separation of 1868.</div>
         </a>
 
       </div>
