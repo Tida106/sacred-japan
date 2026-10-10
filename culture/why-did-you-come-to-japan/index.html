@@ -908,6 +908,8 @@ footer { padding: 40px 24px; }
 .footer-links { gap: 14px; }
 .sticky-cta { flex-wrap: wrap; justify-content: center; max-width: calc(100vw - 24px); font-size: 12.5px; }
 }
+/* card titles are real headings now */
+h3.show-card-title, h3.platform-name, h3.step-title { margin-top: 0; }
 </style>
 </head>
 <body>
@@ -1028,7 +1030,7 @@ footer { padding: 40px 24px; }
 
     <div class="show-card">
       <div class="show-card-label">SHOW PROFILE ／ 番組概要</div>
-      <div class="show-card-title">Why Did You Come to Japan?</div>
+      <h3 class="show-card-title">Why Did You Come to Japan?</h3>
       <div class="show-card-jp">YOUは何しに日本へ？</div>
       <dl class="show-meta">
         <dt>Broadcaster</dt><dd>TV Tokyo (テレビ東京)</dd>
@@ -1038,7 +1040,9 @@ footer { padding: 40px 24px; }
       </dl>
     </div>
 
+    <h3>The Premise</h3>
     <p>The premise is simple and irresistible: a film crew waits at Japanese airports — Narita is their main hub — and approaches foreign arrivals with one question: <em>"Why did you come to Japan?"</em> When someone gives an interesting answer, the crew asks to follow them, documenting their journey across Japan in a style the Japanese call <em>mitchaku shuzai</em> ("close-contact reporting").</p>
+    <h3>The Range of Reasons</h3>
     <p>What makes it special is the sheer range of reasons people give. Some come for a single bowl of ramen at a specific shop. Some come to train with a sword master, to photograph a festival, to propose at a shrine, or to chase a hobby most people have never heard of. Along the way, the show keeps stumbling onto corners of Japanese culture that even Japanese viewers did not know existed. It is funny, frequently moving, and genuinely contagious.</p>
 
     <!-- 3. WHERE TO WATCH YOU WA -->
@@ -1047,15 +1051,15 @@ footer { padding: 40px 24px; }
 
     <div class="platform-stack">
       <div class="platform-card">
-        <div class="platform-name">Apple TV</div>
+        <h3 class="platform-name">Apple TV</h3>
         <p>Released internationally as episodes / season packs for purchase. Generally subtitled in English.</p>
       </div>
       <div class="platform-card">
-        <div class="platform-name">Amazon Prime Video</div>
+        <h3 class="platform-name">Amazon Prime Video</h3>
         <p>Look for the version marked as subtitled rather than dubbed — Japanese variety shows sometimes list both, and you want the one with English subtitles.</p>
       </div>
       <div class="platform-card">
-        <div class="platform-name">Crunchyroll</div>
+        <h3 class="platform-name">Crunchyroll</h3>
         <p>The series has appeared in Crunchyroll's catalog as well; availability rotates by region, so check the current listing.</p>
       </div>
     </div>
@@ -1071,7 +1075,7 @@ footer { padding: 40px 24px; }
 
     <div class="show-card">
       <div class="show-card-label">SHOW PROFILE ／ 番組概要</div>
-      <div class="show-card-title">Sekai! Nippon Ikitai Hito Ouendan</div>
+      <h3 class="show-card-title">Sekai! Nippon Ikitai Hito Ouendan</h3>
       <div class="show-card-jp">世界！ニッポン行きたい人応援団</div>
       <dl class="show-meta">
         <dt>Broadcaster</dt><dd>TV Tokyo (テレビ東京) — Monday evenings</dd>
@@ -1081,6 +1085,7 @@ footer { padding: 40px 24px; }
       </dl>
     </div>
 
+    <h3>The Mirror Image of the Airport Show</h3>
     <p>Its concept is the mirror image of the airport show. Instead of meeting people who have already arrived, the program seeks out foreigners living overseas who are <em>desperate</em> to come to Japan — people who have fallen head over heels for one specific part of Japanese culture and pursued it passionately from thousands of miles away. A Belgian perfecting fluffy okonomiyaki at home. An American chef who dreams of opening a bento shop. Devotees of Japanese knives, bonsai, traditional crafts, festivals, and shrines. The show then invites them to Japan to finally live their dream — to train with the masters, taste the real thing, and stand in the places they have only seen in photos.</p>
     <p>If you have ever scrolled through pictures of Japan with a quiet ache to be there, this show is, in a sense, about you. That is what makes it so emotional to watch: it is not about tourists ticking boxes, but about people whose love for Japan ran deep long before they ever set foot here.</p>
 
@@ -1090,15 +1095,15 @@ footer { padding: 40px 24px; }
 
     <div class="platform-stack">
       <div class="platform-card">
-        <div class="platform-name">TVer (in Japan)</div>
+        <h3 class="platform-name">TVer (in Japan)</h3>
         <p>The official free streaming hub for Japanese broadcast TV. Recent episodes typically remain available for about one week after broadcast.</p>
       </div>
       <div class="platform-card">
-        <div class="platform-name">Net Mo Tele-To / ネットもテレ東 (in Japan)</div>
+        <h3 class="platform-name">Net Mo Tele-To / ネットもテレ東 (in Japan)</h3>
         <p>TV Tokyo's own streaming service. Same week-long catch-up window as TVer for recent episodes.</p>
       </div>
       <div class="platform-card">
-        <div class="platform-name">U-NEXT (subscription)</div>
+        <h3 class="platform-name">U-NEXT (subscription)</h3>
         <p>Past episodes from the back catalog often surface here for paying subscribers — useful once the free week on TVer has lapsed.</p>
       </div>
     </div>
@@ -1117,7 +1122,7 @@ footer { padding: 40px 24px; }
       <div class="step-card">
         <div class="step-num">01</div>
         <div class="step-body">
-          <div class="step-title">The Hand-Brushed Shrine Stamps</div>
+          <h3 class="step-title">The Hand-Brushed Shrine Stamps</h3>
           <p>When you see someone receive a <em>goshuin</em> — a beautiful hand-inked, calligraphed stamp marking their visit — and treasure it, know that you can collect them too. Our <a class="inline-link" href="/culture/goshuin-guide/" onclick="trackEvent('click','internal','guide_tvshows_to_goshuin_inline')">Goshuin Guide</a> walks you through how the stamp books work and the etiquette of receiving one.</p>
         </div>
       </div>
@@ -1125,7 +1130,7 @@ footer { padding: 40px 24px; }
       <div class="step-card">
         <div class="step-num">02</div>
         <div class="step-body">
-          <div class="step-title">The Bow at the Gate, the Clap at the Hall</div>
+          <h3 class="step-title">The Bow at the Gate, the Clap at the Hall</h3>
           <p>The shows are full of foreigners learning shrine and temple manners, sometimes beautifully, sometimes hilariously. If you would rather arrive prepared, our <a class="inline-link" href="/culture/shrine-vs-temple/" onclick="trackEvent('click','internal','guide_tvshows_to_shrine_vs_temple_inline')">Shrine vs Temple Guide</a> explains the difference between the two and exactly how to worship at each.</p>
         </div>
       </div>
@@ -1133,7 +1138,7 @@ footer { padding: 40px 24px; }
       <div class="step-card">
         <div class="step-num">03</div>
         <div class="step-body">
-          <div class="step-title">The Endless Vermilion Torii Gates</div>
+          <h3 class="step-title">The Endless Vermilion Torii Gates</h3>
           <p>Few images make people want to visit Japan more than the tunnels of red gates at Fushimi Inari. Our <a class="inline-link" href="/guides/best-time-fushimi-inari/" onclick="trackEvent('click','internal','guide_tvshows_to_fushimi_inline')">guide to the best time to visit Fushimi Inari</a> shows you how to experience it without the crowds.</p>
         </div>
       </div>
@@ -1141,7 +1146,7 @@ footer { padding: 40px 24px; }
       <div class="step-card">
         <div class="step-num">04</div>
         <div class="step-body">
-          <div class="step-title">The Little Brocade Charm</div>
+          <h3 class="step-title">The Little Brocade Charm</h3>
           <p>When a guest is handed an <em>omamori</em> to carry home, that small gesture often lands hardest. Our <a class="inline-link" href="/culture/omamori-guide/" onclick="trackEvent('click','internal','guide_tvshows_to_omamori_inline')">Omamori Guide</a> covers how to choose one, what the kanji mean, and how to return it respectfully.</p>
         </div>
       </div>
