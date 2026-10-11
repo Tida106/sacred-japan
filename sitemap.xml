@@ -268,6 +268,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sacred-japan.net/guides/yushima-tenmangu/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sacred-japan.net/guides/suwa-taisha/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sacred-japan.net/guides/omiya-hikawa-jinja/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
