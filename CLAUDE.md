@@ -45,7 +45,9 @@
 - best-castles-japanのネスト`<a>`タグバグ（13箇所）修正
 - Viatorダミー箱：kotohira-guは削除、hiraizumi/dewa-sanzan/takachihoは広域検索語に差し替え（Tohoku/Yamagata/Miyazaki）
 - 【2026-10-11 完了】個別記事65本の短縮版バラバラだったモバイルナビを、ハブページと同じ地域グループ構成の完全版に統一（div/ul/li/a balance=0確認済み、コミットac2490f）
-- 【2026-10-11 完了】anime配下の内部リンクも機械チェック。fruits-basket/inuyasha/kusunoki-tei/spirited-awayはanimeハブ以外からリンクされておらず、対応するguide記事（nikko-toshogu/fushimi-inari-taisha・best-time-fushimi-inari/atsuta-shrine/kotohira-gu）側は既にアニメ記事へリンクしていたが逆方向が無かった（片方向リンク）。該当5ガイドの関連記事セクションに相互リンクを追加（コミットd3b0027）。noragami（Yushima Tenmangu/Kanda Myojin）とyour-name（Suwa Taisha/Hida Furukawa）は対応するguide記事がサイトに存在しないため未対応（新規ガイド作成が必要）
+- 【2026-10-11 完了】anime配下の内部リンクも機械チェック。fruits-basket/inuyasha/kusunoki-tei/spirited-awayはanimeハブ以外からリンクされておらず、対応するguide記事（nikko-toshogu/fushimi-inari-taisha・best-time-fushimi-inari/atsuta-shrine/kotohira-gu）側は既にアニメ記事へリンクしていたが逆方向が無かった（片方向リンク）。該当5ガイドの関連記事セクションに相互リンクを追加（コミットd3b0027）
+- 【2026-10-11 完了】noragami・your-nameの未解消だった内部リンク問題を、新規ガイド記事2本の執筆で解消：guides/yushima-tenmangu/（湯島天満宮、458年創建の力の神→1355年に菅原道真の祟り神テンジンへ乗っ取られた経緯、受験シーズンの絵馬壁、梅まつり、神田明神との組み合わせ）とguides/suwa-taisha/（諏訪大社、四社中三社に本殿が無い構造、建御名方の敗走神話、御柱祭）。事実はWeb検索で裏取り済み。サイトの一人称guide視点＋FAQ4問＋締め＋関連ガイド（anime記事への相互リンク含む）の型に完全準拠。ハブページのKanto／Chubu&Tokaiグループ・JSON-LD ItemList（position 50-51）・モバイルナビ・sitemap.xml・OGP画像すべてに反映済み（コミットae179a6）
+- 【2026-10-11 完了】OGP画像バッチ生成（コミットdf8f766）で一部ページ（20本）のog:image:width/heightが旧ogp.pngの寸法（1424×752）のまま更新されていなかったバグを発見・修正。正しい1200×630に統一（コミットae179a6）
 
 ## コンテンツ品質メモ（2026-10-11実施）
 - 問題：Gemini DeepResearchで集めた素材をそのまま貼るだけで、サイトの語り口（一人称「As a licensed guide」＋神話/伝説フック）に変換していなかった記事が存在（原因はDeepResearch自体ではなく変換工程の欠落）
