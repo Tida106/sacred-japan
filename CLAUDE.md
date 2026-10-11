@@ -53,3 +53,6 @@
 - GA4で上記4本の表示回数を確認したところ過去28日間すべて0。原因は文章の硬さ以前の問題で、guides/index.html（ハブページ）にカードが無く、autumn-sanctuaries記事以外から一切リンクされていない「孤立ページ」状態だった（構造改革メモの孤立ページ発見時に見逃していた分）
 - katsuragawa, kongoin, ryuonji をハブページのKansaiグループに追加。hashikurajiとkotohira-gu（同じく未掲載だった）用に新規「Shikoku 四国」地域グループを新設して追加。JSON-LD ItemListにposition 44〜48を追加。div balance=0確認済み（2026-10-11, コミットd3b4b95）
 - 全ページ対象に内部リンク数を機械チェックし、guides/omamori/（culture/omamori-guide/からしかリンクされていなかった）も発見・ハブに追加（position 49, コミット8b5e5d2）。これでチェック範囲内（guides/shrines/culture配下）の孤立・弱リンクページは解消済み
+- 【2026-10-11 完了】全65記事（anime 8本、culture 9本、guides 46本、shrines 2本）を本文全文で通読し語り口を精査（開幕段落だけの高速スクリーニングではなく、全文を実際に読んだ）。結果：5本目の問題記事としてguides/hokakuji/を発見（他の4本と同じ「素材貼り付けのまま」状態で、かつ他記事の1/3程度の文字数、一人称なし、FAQなし、締めの一文なし）。一人称guide視点＋FAQ＋締めに書き換え済み（事実は元記事にあったもののみ使用、新規の住所・創建年等は創作せず）。div balance=0確認済み（コミットa390118）
+- 他に見つかった「硬い」記事はゼロ。確認した別タイプの語り口（いずれも問題ではなく意図されたバリエーション）：kyoto-illuminations/meiji-jingu/nikko-toshogu/shikoku-pilgrimage/todaiji＝「学術的スリラー」調、samukawa-shrine/hebikubo-shrine/seimei-shrine＝絵文字・箇条書き多用の「情報密度重視リスト」調。これらはhedge文体ではなく独自のフックを持つため書き換え対象外と判断
+- 今後、新規記事を素材から作る際は必ず「一人称guide視点＋フック＋FAQ＋締めの一文」を含める。文字数が他記事の半分未満になりそうな場合は特に要注意（hokakujiはこれが見逃しの主因だった）
