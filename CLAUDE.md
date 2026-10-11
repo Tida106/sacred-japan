@@ -31,7 +31,7 @@
 
 ## 次にやること
 1. AdSense・Agoda承認後に対応
-2. KKday：Involve Asiaにsacred-japan.netをプロパティ追加→申請（てぃーだ側の作業）。承認されたらリンクをもらって埋め込む
+2. KKday：Involve Asiaにsacred-japan.netをプロパティ追加済み（2026-10-11、カテゴリ：Travel/IT & Internet/Hobbies, Arts & Crafts）→審査中（Pending）。承認されたらKKdayに提携申請→承認後リンクをもらって埋め込む
 3. GA4データ（event_label/event_category カスタムディメンション、2026-10-10登録）が反映され次第、ページ別アフィリエイトクリックを分析
 4. Pinterest：/anime/ の残り記事（fruits-basket, inuyasha, your-name）はlucky-sun-shine.comとの重複未確認、必要なら調査してピン作成
 5. GA4データ蓄積後（1〜2ヶ月）にサイト構成見直し
