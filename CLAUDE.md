@@ -33,8 +33,10 @@
 1. AdSense・Agoda承認後に対応
 2. KKday：Involve Asiaにsacred-japan.netをプロパティ追加済み（2026-10-11、カテゴリ：Travel/IT & Internet/Hobbies, Arts & Crafts）→審査中（Pending）。承認されたらKKdayに提携申請→承認後リンクをもらって埋め込む
 3. GA4データ（event_label/event_category カスタムディメンション、2026-10-10登録）が反映され次第、ページ別アフィリエイトクリックを分析
-4. Pinterest：/anime/ の残り記事（fruits-basket, inuyasha, your-name）はlucky-sun-shine.comとの重複未確認、必要なら調査してピン作成
-5. GA4データ蓄積後（1〜2ヶ月）にサイト構成見直し
+4. GA4データ蓄積後（1〜2ヶ月）にサイト構成見直し
+
+## 完了事項
+- Pinterest：/anime/ のkusunoki-tei, noragami, ryomen-sukunaはピン作成済み。fruits-basket/inuyasha/your-nameはlucky-sun-shine.comと重複するため対象外（完了・対応不要）
 
 ## 構造改革メモ（2026-10-11実施）
 - ホーム＋ハブ8ページ（guides/culture/castles/crafts/anime/regional-food/festivals/about）のモバイルメニューを地域グループ構成に統一、新規ページ全部リンク済み
