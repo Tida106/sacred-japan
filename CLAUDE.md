@@ -52,3 +52,4 @@
 - 今後、DeepResearch素材から記事を作る際は「素材収集→一人称・ストーリーフックへの変換」を必須工程にする
 - GA4で上記4本の表示回数を確認したところ過去28日間すべて0。原因は文章の硬さ以前の問題で、guides/index.html（ハブページ）にカードが無く、autumn-sanctuaries記事以外から一切リンクされていない「孤立ページ」状態だった（構造改革メモの孤立ページ発見時に見逃していた分）
 - katsuragawa, kongoin, ryuonji をハブページのKansaiグループに追加。hashikurajiとkotohira-gu（同じく未掲載だった）用に新規「Shikoku 四国」地域グループを新設して追加。JSON-LD ItemListにposition 44〜48を追加。div balance=0確認済み（2026-10-11, コミットd3b4b95）
+- 全ページ対象に内部リンク数を機械チェックし、guides/omamori/（culture/omamori-guide/からしかリンクされていなかった）も発見・ハブに追加（position 49, コミット8b5e5d2）。これでチェック範囲内（guides/shrines/culture配下）の孤立・弱リンクページは解消済み
