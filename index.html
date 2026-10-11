@@ -2287,7 +2287,7 @@ transition: background 0.15s, color 0.15s;
 .hero-petals { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
 .hero-petal {
   position: absolute;
-  top: -5%;
+  top: -20px;
   border-radius: 150% 0 150% 0;
   background: radial-gradient(circle at 30% 30%, #ffe3ec, #f7a8c4 60%, #e685ab);
   opacity: 0.8;
@@ -2298,7 +2298,7 @@ transition: background 0.15s, color 0.15s;
   0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
   8%   { opacity: 0.8; }
   92%  { opacity: 0.8; }
-  100% { transform: translate(var(--drift), 115%) rotate(380deg); opacity: 0; }
+  100% { transform: translate(var(--drift), 100vh) rotate(380deg); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-light-sweep, .hero-petal { animation: none; display: none; }
