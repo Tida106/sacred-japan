@@ -2251,6 +2251,58 @@ transition: background 0.15s, color 0.15s;
 @media (max-width: 768px) {
 .nav-hamburger { display: flex; }
 }
+/* ── HERO MOTION: Ken Burns zoom, light shimmer, falling petals ── */
+.hero-bg-kenburns {
+  animation: heroKenBurns 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes heroKenBurns {
+  0%   { transform: scale(1.0) translate(0, 0); }
+  100% { transform: scale(1.1) translate(-1.5%, -1%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-kenburns { animation: none; }
+}
+.hero-light-sweep {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(115deg,
+    rgba(255,255,255,0) 35%,
+    rgba(255,224,170,0.16) 48%,
+    rgba(255,255,255,0.28) 50%,
+    rgba(255,224,170,0.16) 52%,
+    rgba(255,255,255,0) 65%);
+  background-size: 300% 300%;
+  animation: heroShimmer 8s ease-in-out infinite;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+@keyframes heroShimmer {
+  0%   { background-position: 0% 50%; opacity: 0; }
+  40%  { opacity: 1; }
+  55%  { background-position: 100% 50%; opacity: 1; }
+  100% { background-position: 100% 50%; opacity: 0; }
+}
+.hero-petals { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.hero-petal {
+  position: absolute;
+  top: -5%;
+  border-radius: 150% 0 150% 0;
+  background: radial-gradient(circle at 30% 30%, #ffe3ec, #f7a8c4 60%, #e685ab);
+  opacity: 0.8;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
+  animation: heroPetalFall linear infinite;
+}
+@keyframes heroPetalFall {
+  0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  8%   { opacity: 0.8; }
+  92%  { opacity: 0.8; }
+  100% { transform: translate(var(--drift), 115%) rotate(380deg); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-light-sweep, .hero-petal { animation: none; display: none; }
+}
 </style>
 </head>
 <body>
@@ -2364,9 +2416,11 @@ transition: background 0.15s, color 0.15s;
 <picture style="position:absolute;inset:0;overflow:hidden;">
   <source media="(max-width:768px)" srcset="ogp-sm.webp" type="image/webp">
   <source srcset="ogp.webp" type="image/webp">
-  <img src="ogp.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" fetchpriority="high" loading="eager">
+  <img src="ogp.webp" alt="" class="hero-bg-kenburns" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" fetchpriority="high" loading="eager">
 </picture>
 <div style="position:absolute;inset:0;background:rgba(253,240,243,0.15);z-index:0;"></div>
+<div class="hero-light-sweep"></div>
+<div class="hero-petals" id="heroPetals"></div>
 
 <svg class="hero-wa-pattern" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.7;" aria-hidden="true">
   <defs>
@@ -4942,6 +4996,30 @@ function smoothTo(id) {
     }, 50);
   }
 }
+
+(function() {
+  var container = document.getElementById('heroPetals');
+  if (!container) return;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) return;
+  var count = 14;
+  for (var i = 0; i < count; i++) {
+    var p = document.createElement('div');
+    p.className = 'hero-petal';
+    var left = Math.random() * 100;
+    var dur = 10 + Math.random() * 8;
+    var delay = Math.random() * 16;
+    var drift = (Math.random() * 120 - 60) + 'px';
+    var size = 7 + Math.random() * 8;
+    p.style.left = left + 'vw';
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.animationDuration = dur + 's';
+    p.style.animationDelay = delay + 's';
+    p.style.setProperty('--drift', drift);
+    container.appendChild(p);
+  }
+})();
 
 function filterCards(filter, btn) {
   smoothTo('spots');
