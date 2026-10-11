@@ -45,6 +45,7 @@
 - best-castles-japanのネスト`<a>`タグバグ（13箇所）修正
 - Viatorダミー箱：kotohira-guは削除、hiraizumi/dewa-sanzan/takachihoは広域検索語に差し替え（Tohoku/Yamagata/Miyazaki）
 - 【2026-10-11 完了】個別記事65本の短縮版バラバラだったモバイルナビを、ハブページと同じ地域グループ構成の完全版に統一（div/ul/li/a balance=0確認済み、コミットac2490f）
+- 【2026-10-11 完了】anime配下の内部リンクも機械チェック。fruits-basket/inuyasha/kusunoki-tei/spirited-awayはanimeハブ以外からリンクされておらず、対応するguide記事（nikko-toshogu/fushimi-inari-taisha・best-time-fushimi-inari/atsuta-shrine/kotohira-gu）側は既にアニメ記事へリンクしていたが逆方向が無かった（片方向リンク）。該当5ガイドの関連記事セクションに相互リンクを追加（コミットd3b0027）。noragami（Yushima Tenmangu/Kanda Myojin）とyour-name（Suwa Taisha/Hida Furukawa）は対応するguide記事がサイトに存在しないため未対応（新規ガイド作成が必要）
 
 ## コンテンツ品質メモ（2026-10-11実施）
 - 問題：Gemini DeepResearchで集めた素材をそのまま貼るだけで、サイトの語り口（一人称「As a licensed guide」＋神話/伝説フック）に変換していなかった記事が存在（原因はDeepResearch自体ではなく変換工程の欠落）
