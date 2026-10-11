@@ -56,3 +56,9 @@
 - 【2026-10-11 完了】全65記事（anime 8本、culture 9本、guides 46本、shrines 2本）を本文全文で通読し語り口を精査（開幕段落だけの高速スクリーニングではなく、全文を実際に読んだ）。結果：5本目の問題記事としてguides/hokakuji/を発見（他の4本と同じ「素材貼り付けのまま」状態で、かつ他記事の1/3程度の文字数、一人称なし、FAQなし、締めの一文なし）。一人称guide視点＋FAQ＋締めに書き換え済み（事実は元記事にあったもののみ使用、新規の住所・創建年等は創作せず）。div balance=0確認済み（コミットa390118）
 - 他に見つかった「硬い」記事はゼロ。確認した別タイプの語り口（いずれも問題ではなく意図されたバリエーション）：kyoto-illuminations/meiji-jingu/nikko-toshogu/shikoku-pilgrimage/todaiji＝「学術的スリラー」調、samukawa-shrine/hebikubo-shrine/seimei-shrine＝絵文字・箇条書き多用の「情報密度重視リスト」調。これらはhedge文体ではなく独自のフックを持つため書き換え対象外と判断
 - 今後、新規記事を素材から作る際は必ず「一人称guide視点＋フック＋FAQ＋締めの一文」を含める。文字数が他記事の半分未満になりそうな場合は特に要注意（hokakujiはこれが見逃しの主因だった）
+
+## SEOメモ（2026-10-11実施）
+- hokakujiのみ`<meta name="robots" content="noindex, follow">`になっておりGoogle非インデックス状態だった（全46ガイド中唯一）。`"index, follow"`に修正（コミットf7562c0）。sitemap.xmlには元々掲載済みだったので別途修正不要
+- FAQPage構造化データ（JSON-LD）：guides/culture/shrines配下でFAQセクションを持つ45ページ中44ページは既に実装済み（過去セッションで対応済みと判明）。未実装だったhokakujiのみ追加（4問、コミットae26eec）
+- OGP画像：50ページ（guides/culture/anime/shrines配下）が汎用ogp.pngのみに依存していた。サイトのデザイントークン（washi/beni/sumi等）を使ったブランド付きタイトルカード画像を自動生成するPythonスクリプト（PIL/Pillow）を作成し、該当50ページ全部に個別画像を設置（images/og/og-<section>-<slug>.jpg、コミットdf8f766）。既に実写真を使っていた15ページ（best-castles-japan, dazaifu-tenmangu, ise-grand-shrine, itsukushima-shrine, kinkakuji, kotohira-gu, meiji-jingu, nikko-toshogu, sensoji, sumiyoshi-taisha, kamidana, demon-slayer, noragami, ryomen-sukuna, your-name）は対象外（変更なし）
+- OG画像生成スクリプトはh1のタイトル抽出で`<em>`タグ直後の句読点（: , . ; ! ?）前に余計なスペースが入るバグがあったが修正済み（正規表現で除去）
