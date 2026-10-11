@@ -22,11 +22,13 @@
 ## サイト構成
 - スポットカード：24枚（3列×8行）
 - Foodセクション：6枚
-- Animeセクション：画像未追加（作業待ち）
-- 日本地図：images/japan-map.png（チェッカー柄問題あり・再生成待ち）
+- Animeセクション：18記事、画像18枚とも設置済み
+- 日本地図：images/japan-map.png（再生成済み・チェッカー柄解消）
+- ガイド：/guides/temple-stay/, /guides/japan-travel-planning/ 追加済み（2026-10-11）
+- カルチャー：/culture/kamidana/ 追加済み（2026-10-11）
 
 ## 次にやること
-1. japan-map.png再生成（Gemini制限解除後）
-2. Animeセクションに画像追加
-3. AdSense・Agoda承認後に対応
+1. AdSense・Agoda承認後に対応
+2. GA4データ（event_label/event_category カスタムディメンション、2026-10-10登録）が反映され次第、ページ別アフィリエイトクリックを分析
+3. Pinterest：/anime/ の残り記事（fruits-basket, inuyasha, your-name）はlucky-sun-shine.comとの重複未確認、必要なら調査してピン作成
 4. GA4データ蓄積後（1〜2ヶ月）にサイト構成見直し
