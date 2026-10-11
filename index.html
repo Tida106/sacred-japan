@@ -2293,6 +2293,7 @@ transition: background 0.15s, color 0.15s;
   opacity: 0.8;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
   animation: heroPetalFall linear infinite;
+  will-change: transform, opacity;
 }
 @keyframes heroPetalFall {
   0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
@@ -5002,7 +5003,7 @@ function smoothTo(id) {
   if (!container) return;
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) return;
-  var count = 14;
+  var count = 26;
   for (var i = 0; i < count; i++) {
     var p = document.createElement('div');
     p.className = 'hero-petal';
