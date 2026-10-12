@@ -39,6 +39,11 @@
 ## 完了事項
 - Pinterest：/anime/ のkusunoki-tei, noragami, ryomen-sukunaはピン作成済み。fruits-basket/inuyasha/your-nameはlucky-sun-shine.comと重複するため対象外（完了・対応不要）
 
+## ホームページ改善メモ（2026-10-12実施）
+- ヒーロー画像にCSSのみでインパクト追加（動画・新規画像・AI生成は不使用、LCP維持のため）：Ken Burns風ズーム、斜め光のシマー、桜の花びらが「ひらひら」舞い落ちるアニメーション（外側divで落下、内側divで独立した左右スウェイ＋回転を重ねることで、直線的な「羽根」ではなく本物の花びららしい不規則な動きを実現）。prefers-reduced-motionで無効化対応済み
+- 地図（images/japan-map.png, .webp）をチープなクローム調3Dレンダーから刷新：実際の都道府県GeoJSON境界データ＋geopandas/matplotlibで、サイトのブランドカラー（beni/kin等）に地方ごと正確に着色したフラットなベクター地図に変更。列島を-16度回転＋トリミングして横長構図に最適化、離島の小片はノイズとして除去、日英バイリンガルラベル＋ソフトシャドウを追加。washi背景との馴染みを確認済み（コミット86a22f6）
+- 未対応の指摘：ホームの「Shrines」（赤）と「Temples」（グレー）のフィルターボタンの視覚的重みが不揃い（地図の地方色に合わせた配色自体は妥当という前提で、別問題として提起したのみ・ユーザー未承認）
+
 ## 構造改革メモ（2026-10-11実施）
 - ホーム＋ハブ8ページ（guides/culture/castles/crafts/anime/regional-food/festivals/about）のモバイルメニューを地域グループ構成に統一、新規ページ全部リンク済み
 - 孤立ページ5つ発見・解消：hebikubo-shrine, seimei-shrine, hokakuji, samukawa-shrine, best-castles-japan（hokakujiはsitemapにも無かった）
