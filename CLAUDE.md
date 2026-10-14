@@ -69,8 +69,8 @@
 ## 実写真追加メモ（2026-10-13実施）
 - 記事に画像が無いと「殺風景」との指摘を受け、guides/culture配下67記事を機械チェックしたところ49記事が画像ゼロと判明。全部は非現実的なので、検索されやすい有名どころ6本から着手
 - 手法：Wikimedia Commonsの検索URLを渡してユーザー側で候補を探してもらい、良さそうな写真の位置を指定→ライセンス（CC BY/BY-SA/CC0等）と作者名をスクショで確認→本体を送ってもらう→1400px/1050px幅にリサイズ・トリミング（4:3）してjpg/webp両方生成→ヒーロー画像（記事冒頭、max-height:420px、object-fit:cover）＋本文中1枚（関連セクション末、max-width:420px）の計2枚構成で設置、全てfigcaptionに作者名・ライセンスリンク・Wikimedia Commonsのクレジット表記を記載
-- 完了23記事（コミット順）：fushimi-inari-taisha（社殿／狐像）、kiyomizu-dera（本堂舞台／音羽の滝）、meiji-jingu（大鳥居／森の小川）、izumo-taisha（本殿屋根／しめ縄）、kasuga-taisha（拝殿／吊り灯籠）、best-shrines-kyoto（平安神宮大鳥居／八坂神社楼門）、todaiji（大仏殿／大仏）、nikko-toshogu（陽明門／三猿彫刻）、tsurugaoka-hachimangu（本殿／大鳥居）、ryoanji（石庭／方丈畳間）、byodoin（鳳凰堂全景／鳳凰像）、zenko-ji（本堂／仁王門）、atsuta-shrine（森の鳥居／摂社）、hakone-shrine（湖の大鳥居／神事）、enryakuji（根本中堂／横川）、kumano-kodo（参道階段／大鳥居／大社本殿の3枚構成）、mount-koya（奥の院／根本大塔）、naritasan-shinshoji（大本堂／三重塔）、kawasaki-daishi（大本堂／仲見世通り）、omiya-hikawa-jinja（楼門／参道鳥居／舞殿の3枚構成）、suwa-taisha（下社秋宮神楽殿／下社春宮鳥居）、yushima-tenmangu（本殿／絵馬の壁／梅と女坂の3枚構成）、samukawa-shrine（拝殿／三の鳥居と神池橋）
-- 残り：guides/culture配下の画像ゼロ記事が約26本残存。次に優先度の高い記事から同じ手法で継続予定
+- 完了24記事（コミット順）：fushimi-inari-taisha（社殿／狐像）、kiyomizu-dera（本堂舞台／音羽の滝）、meiji-jingu（大鳥居／森の小川）、izumo-taisha（本殿屋根／しめ縄）、kasuga-taisha（拝殿／吊り灯籠）、best-shrines-kyoto（平安神宮大鳥居／八坂神社楼門）、todaiji（大仏殿／大仏）、nikko-toshogu（陽明門／三猿彫刻）、tsurugaoka-hachimangu（本殿／大鳥居）、ryoanji（石庭／方丈畳間）、byodoin（鳳凰堂全景／鳳凰像）、zenko-ji（本堂／仁王門）、atsuta-shrine（森の鳥居／摂社）、hakone-shrine（湖の大鳥居／神事）、enryakuji（根本中堂／横川）、kumano-kodo（参道階段／大鳥居／大社本殿の3枚構成）、mount-koya（奥の院／根本大塔）、naritasan-shinshoji（大本堂／三重塔）、kawasaki-daishi（大本堂／仲見世通り）、omiya-hikawa-jinja（楼門／参道鳥居／舞殿の3枚構成）、suwa-taisha（下社秋宮神楽殿／下社春宮鳥居）、yushima-tenmangu（本殿／絵馬の壁／梅と女坂の3枚構成）、samukawa-shrine（拝殿／三の鳥居と神池橋）、hebikubo-shrine（表参道鳥居／弁財天近くの鳥居。shrines/配下）
+- 残り：guides/culture配下の画像ゼロ記事が約25本残存。次に優先度の高い記事から同じ手法で継続予定
 - ユーザー指示（2026-10-14）：進行確認（「続ける？」）は不要、次の記事を直接出す運用に変更
 - 副産物：guides/meiji-jinguが約833語と他記事（2000語超）の半分以下で、FAQセクションも無いことが判明。後日の拡充対象として記録（画像追加作業とは別タスク）
 
