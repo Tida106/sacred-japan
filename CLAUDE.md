@@ -77,7 +77,7 @@
   - 3枚目追加完了（13記事）：shrine-vs-temple（浅草寺の大香炉）、goshuin-guide（八坂神社南楼門）、best-shrines-kyoto（上賀茂神社の立砂）、best-time-fushimi-inari（混雑時の正面鳥居）、omamori-guide（お焚き上げの焚き火）、shrine-etiquette（手水舎の柄杓）、what-is-shinto（祓串を振る神職）、byodoin（宇治上神社の拝殿）、koyasan-temple-stay（壇上伽藍・根本大塔）、hakone-shrine（杉並木の参道）、tsurugaoka-hachimangu（実朝暗殺の石段）、dewa-sanzan（三神合祭殿）、enryakuji（東塔の堂宇）
   - 2枚目追加完了（7記事）：kotohira-gu（表参道の石段）、dazaifu-tenmangu（神牛像）、kinkakuji（屋根上の鳳凰）、sensoji（仲見世通り）、ise-grand-shrine（内宮・宇治橋）、itsukushima-shrine（干潮時の大鳥居）、sumiyoshi-taisha（反橋）
 - ユーザー指示（2026-10-14）：進行確認（「続ける？」）は不要、次の記事を直接出す運用に変更
-- 副産物：guides/meiji-jinguが約833語と他記事（2000語超）の半分以下で、FAQセクションも無いことが判明。後日の拡充対象として記録（画像追加作業とは別タスク）
+- 【2026-10-15 完了】副産物として判明していたguides/meiji-jingu（約833語・FAQ無し）を拡充。新規セクション4つ（Who Is Enshrined／Burned in 1945, Rebuilt in 1958／Reading the Approach：夫婦楠・酒樽とワイン樽・大鳥居／Inner Garden and Kiyomasa's Well）を追加し約1950語に。FAQ6問＋FAQPage JSON-LD、closing-blockも新設。事実はWeb検索で裏取り済み（thegate12.com, gltjp.com）、新規写真追加は無し（既存2枚を再利用）。TOC更新・div等タグbalance=0確認済み（コミットbedea59）
 
 ## SEOメモ（2026-10-11実施）
 - hokakujiのみ`<meta name="robots" content="noindex, follow">`になっておりGoogle非インデックス状態だった（全46ガイド中唯一）。`"index, follow"`に修正（コミットf7562c0）。sitemap.xmlには元々掲載済みだったので別途修正不要
