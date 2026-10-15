@@ -73,8 +73,8 @@
 - スキップ：hokakuji（記事は奈良県の廃墟寺が題材だが、Wikimedia検索は同名の山梨県甲州市の現役寺院がヒットしてしまい無関係。奈良版で再検索しても無名すぎてCommonsに写真なし→対応見送り）、katsuragawa（滋賀・葛川息障明王院、Commonsに写真なし→対応見送り）、ryuonji（Commonsに写真なし→対応見送り）、kongoin（舞鶴・金剛院。「Kongoin」単独検索は1件のみで無関係の可能性、「Kongoin Maizuru」は0件、日本語「金剛院 舞鶴」は広すぎて護衛艦「こんごう」やコスプレ写真が混入し本物の金剛院か確証が持てず→対応見送り）
 - guides配下は実写真追加対象がこれで全て完了。2026-10-15、guides/culture/shrines配下の画像ゼロ記事はこれで全て完了（対応見送りの4本を除く）
 - 【2026-10-15 第2弾】文字数の割に写真が少ない記事（2200語超で写真2枚以下、または1800語超で写真1枚）を機械チェックし、3枚目／2枚目を追加する作業を開始。対象20記事。
-  - 3枚目追加完了：shrine-vs-temple（浅草寺の大香炉）、goshuin-guide（八坂神社南楼門）、best-shrines-kyoto（上賀茂神社の立砂）、best-time-fushimi-inari（混雑時の正面鳥居）、omamori-guide（お焚き上げの焚き火）、shrine-etiquette（手水舎の柄杓）、what-is-shinto（祓串を振る神職）、byodoin（宇治上神社の拝殿）、koyasan-temple-stay（壇上伽藍・根本大塔）、hakone-shrine（杉並木の参道）、tsurugaoka-hachimangu（実朝暗殺の石段）
-  - 残り：dewa-sanzan, enryakuji（以上3枚目追加）／kotohira-gu, dazaifu-tenmangu, kinkakuji, sensoji, ise-grand-shrine, itsukushima-shrine, sumiyoshi-taisha（以上2枚目追加）
+  - 3枚目追加完了：shrine-vs-temple（浅草寺の大香炉）、goshuin-guide（八坂神社南楼門）、best-shrines-kyoto（上賀茂神社の立砂）、best-time-fushimi-inari（混雑時の正面鳥居）、omamori-guide（お焚き上げの焚き火）、shrine-etiquette（手水舎の柄杓）、what-is-shinto（祓串を振る神職）、byodoin（宇治上神社の拝殿）、koyasan-temple-stay（壇上伽藍・根本大塔）、hakone-shrine（杉並木の参道）、tsurugaoka-hachimangu（実朝暗殺の石段）、dewa-sanzan（三神合祭殿）
+  - 残り：enryakuji（以上3枚目追加）／kotohira-gu, dazaifu-tenmangu, kinkakuji, sensoji, ise-grand-shrine, itsukushima-shrine, sumiyoshi-taisha（以上2枚目追加）
 - ユーザー指示（2026-10-14）：進行確認（「続ける？」）は不要、次の記事を直接出す運用に変更
 - 副産物：guides/meiji-jinguが約833語と他記事（2000語超）の半分以下で、FAQセクションも無いことが判明。後日の拡充対象として記録（画像追加作業とは別タスク）
 
