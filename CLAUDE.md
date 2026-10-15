@@ -12,6 +12,7 @@
 - GitHubアップロード時にindex.html.htmlになりやすいので注意
 - index.htmlを編集する際はdivタグの開閉に注意
 - レスポンスは簡潔に・日本語で返答する
+- サイトはCloudflare経由で配信。画像追加・更新をpushした後はCloudflareダッシュボードでキャッシュパージが必要（このセッションにはAPIトークン無し、ユーザー側で実施）
 
 ## アフィリエイト構成
 - Viator：PID P00298374（「Book a Tour →」赤ボタン）
