@@ -74,7 +74,8 @@
 - guides配下は実写真追加対象がこれで全て完了。2026-10-15、guides/culture/shrines配下の画像ゼロ記事はこれで全て完了（対応見送りの4本を除く）
 - 【2026-10-15 第2弾】文字数の割に写真が少ない記事（2200語超で写真2枚以下、または1800語超で写真1枚）を機械チェックし、3枚目／2枚目を追加する作業を開始。対象20記事。
   - 3枚目追加完了（全13記事終了）：shrine-vs-temple（浅草寺の大香炉）、goshuin-guide（八坂神社南楼門）、best-shrines-kyoto（上賀茂神社の立砂）、best-time-fushimi-inari（混雑時の正面鳥居）、omamori-guide（お焚き上げの焚き火）、shrine-etiquette（手水舎の柄杓）、what-is-shinto（祓串を振る神職）、byodoin（宇治上神社の拝殿）、koyasan-temple-stay（壇上伽藍・根本大塔）、hakone-shrine（杉並木の参道）、tsurugaoka-hachimangu（実朝暗殺の石段）、dewa-sanzan（三神合祭殿）、enryakuji（東塔の堂宇）
-  - 残り（2枚目追加）：kotohira-gu, dazaifu-tenmangu, kinkakuji, sensoji, ise-grand-shrine, itsukushima-shrine, sumiyoshi-taisha
+  - 2枚目追加完了：kotohira-gu（表参道の石段）
+  - 残り（2枚目追加）：dazaifu-tenmangu, kinkakuji, sensoji, ise-grand-shrine, itsukushima-shrine, sumiyoshi-taisha
 - ユーザー指示（2026-10-14）：進行確認（「続ける？」）は不要、次の記事を直接出す運用に変更
 - 副産物：guides/meiji-jinguが約833語と他記事（2000語超）の半分以下で、FAQセクションも無いことが判明。後日の拡充対象として記録（画像追加作業とは別タスク）
 
