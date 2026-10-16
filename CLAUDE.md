@@ -21,6 +21,7 @@
 - Agoda：CID 1963662（審査中・現在カードから削除済み）
 - Amazon US（sacredjapan-20）：2026-10-11、Associates USにsacred-japan.netを追加（trance-nexusと同一アカウント内）、新タグ取得。ホームのAmazonセクション9商品を amazon.co.jp→amazon.com、検索語も英訳して差し替え済み。JP版タグ（sacredjapan-22）は不使用に。Rakutenリンク（lucky-sun-shineのID使用）は削除済み。申請後180日以内に適格売上3件が必要（Associates規約）
 - KKday：Involve Asia経由で申請予定（2026-10-11〜）。旅行ロジ系（eSIM/JRパス/WiFi）狙い。承認後、guides/japan-travel-planning/ に「Staying Connected」セクションを新設してリンクを埋め込む（money と rail セクションの間）
+- VoiceMap（Awin, Merchant ID 99601／Awin Affiliate ID 2869709）：2026-10-16承認済み。音声ガイドアプリ（GPS連動の自己ガイドツアー）、手数料4〜10%。guides/meiji-jingu/ の「Getting There」セクションにkey-calloutボックス＋CTAボタンで埋め込み済み（Tokyo・Meiji Jingu forest and gardenツアー）。ディープリンクはAwinダッシュボード「Toolbox→Link Builder」から発行（このセッションにはAwin APIアクセス無し）。他候補：Kyoto祇園・寺社系ツアーあり（voicemap.me/tour/kyoto/配下）→他記事への追加展開は今後検討
 
 ## サイト構成
 - スポットカード：24枚（3列×8行）
