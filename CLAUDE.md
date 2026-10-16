@@ -22,7 +22,7 @@
 - Amazon US（sacredjapan-20）：2026-10-11、Associates USにsacred-japan.netを追加（trance-nexusと同一アカウント内）、新タグ取得。ホームのAmazonセクション9商品を amazon.co.jp→amazon.com、検索語も英訳して差し替え済み。JP版タグ（sacredjapan-22）は不使用に。Rakutenリンク（lucky-sun-shineのID使用）は削除済み。申請後180日以内に適格売上3件が必要（Associates規約）
 - KKday：Involve Asia経由で申請予定（2026-10-11〜）。旅行ロジ系（eSIM/JRパス/WiFi）狙い。承認後、guides/japan-travel-planning/ に「Staying Connected」セクションを新設してリンクを埋め込む（money と rail セクションの間）
 - VoiceMap（Awin, Merchant ID 99601／Awin Affiliate ID 2869709）：2026-10-16承認済み。音声ガイドアプリ（GPS連動の自己ガイドツアー）、手数料4〜10%。ディープリンクはAwinダッシュボード「Toolbox→Link Builder」から発行（このセッションにはAwin APIアクセス無し）。埋め込み済み4記事：guides/meiji-jingu/「Getting There」セクション、guides/best-shrines-kyoto/ Yasaka Shrineセクション（Gion districtツアー）、guides/sensoji/（Secrets of Sensoji Temple、FAQ直前に設置）、guides/kiyomizu-dera/（Kiyomizu-dera mysteries/legends/ritualsツアー、practical-list直後に設置）。meiji-jingu/best-shrines-kyotoはkey-calloutクラス使用、sensoji/kiyomizu-deraはkey-callout未実装のためインラインstyleで同等の見た目を再現。いずれもCTAボタン「Start the Audio Tour →」形式
-- VoiceMap：fushimi-inari-taisha用ツアー（Fushimi Inari Shrine: An In-Depth Guide, voicemap.me/tour/kyoto/fushimi-inari-shrine-an-in-depth-guide/map）は確認済みだが2026-10-16時点でディープリンク未発行・未埋め込み（次回ユーザーからリンクもらい次第対応）。他候補：Kamo River／architecture／tea cultureツアー（kyoto配下）、Shinjuku神社ツアー・Ebisuフードツアー（tokyo配下）は対応記事なし or 弱いため保留
+- 【2026-10-16完了】VoiceMap：guides/fushimi-inari-taisha/にも埋め込み完了（Fushimi Inari Shrine: An In-Depth Guide）。既存の「Guided Walks」セクション（Viatorガイドツアー紹介）の直後に、セルフペース派向けの代替としてインラインリンクを追加（独立ボックスではなく地の文に自然に差し込む形）。これでVoiceMap埋め込みは計5記事（meiji-jingu／best-shrines-kyoto／sensoji／kiyomizu-dera／fushimi-inari-taisha）。他候補：Kamo River／architecture／tea cultureツアー（kyoto配下）、Shinjuku神社ツアー・Ebisuフードツアー（tokyo配下）は対応記事なし or 弱いため保留
 
 ## サイト構成
 - スポットカード：24枚（3列×8行）
