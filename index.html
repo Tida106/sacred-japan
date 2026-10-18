@@ -328,7 +328,7 @@
 html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
 overflow-x: hidden;
-background: var(--washi);
+background: linear-gradient(to bottom, #fdf0f3 0%, #f8d9e0 25%, #f3c4d1 50%, #eeb0c0 75%, #e8a8ba 100%);
 color: var(--sumi);
 font-family: 'EB Garamond', serif;
 font-size: 18px;
@@ -409,7 +409,7 @@ min-height: 60vh;
 display: flex; align-items: center;
 padding: 80px 56px;
 overflow: hidden;
-background: var(--washi);
+background: transparent;
 }
 .hero-bg-kanji {
 position: absolute;
@@ -613,13 +613,13 @@ border: 1px solid var(--border-strong);
 margin-bottom: 72px;
 }
 .spot-card {
-background: var(--washi);
+background: transparent;
 overflow: hidden;
 transition: background 0.25s;
 cursor: pointer;
 position: relative;
 }
-.spot-card:hover { background: #efe8d8; }
+.spot-card:hover { background: rgba(0,0,0,0.06); }
 .spot-card[onclick]:hover .spot-name-jp::after {
 content: ' ↗';
 font-size: 12px;
@@ -715,14 +715,14 @@ border: 1px solid var(--border-strong);
 margin-bottom: 72px;
 }
 .festival-card {
-background: var(--washi);
+background: transparent;
 overflow: hidden;
 transition: background 0.25s;
 position: relative;
 display: flex;
 flex-direction: column;
 }
-.festival-card:hover { background: #efe8d8; }
+.festival-card:hover { background: rgba(0,0,0,0.06); }
 .festival-thumb {
 height: 220px;
 position: relative;
@@ -897,11 +897,11 @@ border: 1px solid var(--border-strong);
 margin-top: 28px;
 }
 .season-card {
-background: var(--washi);
+background: transparent;
 padding: 28px 24px;
 transition: background 0.2s;
 }
-.season-card:hover { background: var(--washi-dark); }
+.season-card:hover { background: rgba(0,0,0,0.06); }
 .season-num {
 font-family: 'EB Garamond', serif;
 font-size: 42px;
@@ -954,7 +954,7 @@ align-items: stretch;
 .etiquette-grid--equal { grid-auto-rows: 1fr; }
 }
 .etiquette-card {
-background: var(--washi);
+background: transparent;
 padding: 28px 24px;
 transition: background 0.2s;
 position: relative;
@@ -971,7 +971,7 @@ opacity: 0.20;
 pointer-events: none;
 }
 .etiquette-card > * { position: relative; z-index: 1; }
-.etiquette-card:hover { background: var(--washi-dark); }
+.etiquette-card:hover { background: rgba(0,0,0,0.06); }
 .etiquette-num {
 font-family: 'EB Garamond', serif;
 font-size: 11px;
@@ -1395,14 +1395,14 @@ border: 1px solid var(--border-strong);
 margin-top: 28px;
 }
 .amazon-card {
-background: var(--washi);
+background: transparent;
 padding: 24px 22px;
 transition: background 0.2s;
 display: flex;
 flex-direction: column;
 gap: 10px;
 }
-.amazon-card:hover { background: #efe8d8; }
+.amazon-card:hover { background: rgba(0,0,0,0.06); }
 .amazon-card-icon {
 font-size: 32px;
 line-height: 1;
@@ -1539,7 +1539,7 @@ footer {
 border-top: 1px solid var(--border-strong);
 padding: 40px 56px;
 display: flex; align-items: center; justify-content: space-between;
-background: var(--washi);
+background: transparent;
 }
 .footer-logo-text {
 font-family: 'Shippori Mincho', serif;
@@ -1941,7 +1941,7 @@ border: 1px solid var(--border-strong);
 margin-top: 28px;
 }
 .viator-card {
-background: var(--washi);
+background: transparent;
 padding: 28px 24px;
 display: flex;
 flex-direction: column;
