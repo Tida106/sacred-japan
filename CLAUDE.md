@@ -1,5 +1,8 @@
 # Sacred Japan - CLAUDE.md
 
+## 進行中タスク（2026-10-18時点・未完了）
+- 【進行中】サイトのデザイン変更検討：背景色をもう少し濃いピンクにする案。Artifact（Designキャンバス）でサンプル作成済み → https://claude.ai/artifact/T85DptEdMxn9d6y9Q7Ebk5 。現行--washi(#fdf0f3)に対し案A(#f8d9e0)／案B(#f3c4d1)／案C(#e8a8ba)を比較するカードと、さらにセクションごとに下に行くほど濃くなる5段階グラデーション案（Hero→Footer、#fdf0f3→#e8a8ba）のサンプルを作成。ユーザーがartifact側で表示できず未確認（キャンバスのズレ疑い、再読み込み・fit to screen案内済みだが未解決）。次にやること：artifact再確認→好みの案決定→実サイトのCSS変数（--washi, --washi-dark等）に反映してpush
+
 ## サイト基本情報
 - サイト名: Sacred Japan（日本の神社・寺院ガイド）
 - 公開URL: https://sacred-japan.net
