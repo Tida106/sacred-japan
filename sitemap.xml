@@ -420,6 +420,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://sacred-japan.net/shrines/kifune-shrine/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sacred-japan.net/shrines/nonomiya-shrine/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Anime pilgrimage -->
   <url>
     <loc>https://sacred-japan.net/anime/demon-slayer/</loc>
