@@ -1,7 +1,16 @@
 # Sacred Japan - CLAUDE.md
 
-## 進行中タスク（2026-10-18時点・未完了）
+## 進行中タスク（2026-10-25時点・未完了）
 - 【進行中】サイトのデザイン変更検討：背景色をもう少し濃いピンクにする案。Artifact（Designキャンバス）でサンプル作成済み → https://claude.ai/artifact/T85DptEdMxn9d6y9Q7Ebk5 。現行--washi(#fdf0f3)に対し案A(#f8d9e0)／案B(#f3c4d1)／案C(#e8a8ba)を比較するカードと、さらにセクションごとに下に行くほど濃くなる5段階グラデーション案（Hero→Footer、#fdf0f3→#e8a8ba）のサンプルを作成。ユーザーがartifact側で表示できず未確認（キャンバスのズレ疑い、再読み込み・fit to screen案内済みだが未解決）。次にやること：artifact再確認→好みの案決定→実サイトのCSS変数（--washi, --washi-dark等）に反映してpush
+
+## regional-food 公式リンク作業メモ（2026-10-24〜25実施・完了）
+- 18食品カードすべてのGoogle Maps検索リンクを公式観光サイトリンクに差し替え、Amazon「Get at Home」バッジを関連性の高い5品（Edomae Sushi／Takoyaki／Sanuki Udon／Hakata Tonkotsu Ramen／Goya Champuru）に追加（コミット0414c07）。Sapporo Miso Ramenは別途Maruchan Gold Spicy Misoバッジで先行対応済み（コミット893cc7e, 3513b5b）
+- 公開後、ユーザーのライブ確認で3件のリンク切れが判明（discover-nagasaki.com全体停止／gotokyo.org 502／edolegacytravel.metro.tokyo.lg.jp メンテナンス中）→ 差し替え（コミット8125bb6）：
+  - Nagasaki Champon → https://www.japan.travel/en/ca/cuisine/kyushu/nagasaki/
+  - Tsukishima Monjayaki → https://thegate12.com/article/262
+  - Edomae Sushi → japan.travel Kanto（関東全般ページで寿司への言及が薄く、ユーザー指摘で再修正）→ gotokyo.orgの寿司特集記事に変更（コミットefb0877）→ gotokyo.orgがサイト全体502で落ちていることが判明し、Time Out Tokyoの江戸前寿司の由来記事に最終差し替え（コミットf181eef、現行）
+- 【教訓】gotokyo.orgは本セッション中に複数ページで502が発生（/en/spot/85/、寿司記事）。サイト全体が不安定な可能性が高いため、今後このドメインを新規リンクの候補にする際は特に注意（なるべく避けるか、採用前に必ずライブ確認）
+- 現状：3件とも差し替え完了・push済み・タグバランス確認済み。ユーザーには毎回Cloudflareキャッシュパージを依頼済み。追加のリンク切れ報告があれば同じ手順（WebSearch→WebFetchで現役確認→差し替え→タグバランス確認→commit/push）で対応
 
 ## サイト基本情報
 - サイト名: Sacred Japan（日本の神社・寺院ガイド）
