@@ -563,6 +563,12 @@ display: flex;
 flex-direction: column;
 flex: 1;
 }
+.food-title-row {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 10px;
+}
 .food-name-jp {
 font-family: 'Shippori Mincho', serif;
 font-size: 24px;
@@ -578,6 +584,27 @@ font-style: italic;
 color: var(--enshu);
 margin-bottom: 12px;
 }
+.food-authentic-badge {
+flex-shrink: 0;
+display: inline-flex;
+align-items: center;
+gap: 4px;
+background: #ff9900;
+color: #1a1203;
+font-family: 'EB Garamond', serif;
+font-weight: 700;
+font-size: 11.5px;
+letter-spacing: 0.3px;
+line-height: 1.25;
+padding: 7px 11px;
+border-radius: 20px;
+text-decoration: none;
+white-space: nowrap;
+box-shadow: 0 2px 7px rgba(0,0,0,0.18);
+transition: transform 0.15s, box-shadow 0.15s;
+margin-top: 2px;
+}
+.food-authentic-badge:hover { transform: scale(1.05); box-shadow: 0 3px 10px rgba(0,0,0,0.24); }
 .food-desc {
 font-size: 15px;
 color: var(--sumi-light);
@@ -945,8 +972,13 @@ footer { padding: 40px 24px 100px; }
         </div>
         </a>
         <div class="food-body">
-          <div class="food-name-jp">札幌味噌ラーメン</div>
-          <div class="food-name-en">Sapporo Miso Ramen</div>
+          <div class="food-title-row">
+            <div>
+              <div class="food-name-jp">札幌味噌ラーメン</div>
+              <div class="food-name-en">Sapporo Miso Ramen</div>
+            </div>
+            <a class="food-authentic-badge" href="https://www.amazon.com/s?k=sun+noodle+miso+ramen+kit&tag=sacredjapan-20" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','amazon_badge_sapporo_miso_ramen')">🛒 Real Sapporo<br>Noodles →</a>
+          </div>
           <p class="food-desc">Born in the snowbound streets of Hokkaido in 1955, Sapporo's miso ramen warms the body like nothing else. Rich fermented miso broth — golden and almost stew-like — is loaded with stir-fried pork, garlic, ginger, butter, and sweet corn, then crowned with curly yellow noodles. The bowl was invented at Aji no Sanpei to combat brutal winters and quickly defined the city's culinary identity. Today the famous Ramen Yokocho alley packs a dozen tiny shops elbow-to-elbow, each guarding its own miso recipe.</p>
           <div class="food-highlights">
             <span class="food-highlight">🍜 Postwar 1955 Origin</span>
@@ -957,7 +989,7 @@ footer { padding: 40px 24px 100px; }
           <div class="food-cta-stack">
             <a class="food-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DSapporo&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_food_sapporo_miso_ramen')">🏨 Find Hotels Near Sapporo →</a>
             <a class="food-cta cta-viator" href="https://www.viator.com/Sapporo/d4416-ttd?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_food_sapporo_miso_ramen')">🎒 Book Sapporo Miso Ramen Food Tour →</a>
-            <a class="food-cta cta-amazon" href="https://www.amazon.com/s?k=sapporo+ichiban+miso+ramen&tag=sacredjapan-20" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','amazon_food_sapporo_miso_ramen')">🛒 Get Sapporo Miso Ramen at Home →</a>
+            <a class="food-cta cta-amazon" href="https://www.amazon.com/s?k=sun+noodle+miso+ramen+kit&tag=sacredjapan-20" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','amazon_food_sapporo_miso_ramen')">🛒 Get Authentic Miso Ramen at Home →</a>
           </div>
         </div>
       </div>
