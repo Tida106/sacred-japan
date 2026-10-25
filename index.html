@@ -899,6 +899,10 @@ padding: 28px 24px;
 transition: background 0.2s;
 }
 .season-card:hover { background: var(--washi-dark); }
+.season-card--photo { padding: 0; display: flex; flex-direction: column; }
+.season-photo { height: 150px; background-size: cover; background-position: center; }
+.season-body { padding: 22px 22px 26px; flex: 1; }
+.season-card--photo:hover .season-body { filter: brightness(0.97); }
 .season-num {
 font-family: 'EB Garamond', serif;
 font-size: 42px;
@@ -916,10 +920,10 @@ margin-bottom: 2px;
 }
 .season-name-jp {
 font-family: 'Noto Serif JP', serif;
-font-size: 10px;
-font-weight: 300;
-color: var(--enshu);
-letter-spacing: 3px;
+font-size: 12px;
+font-weight: 400;
+color: var(--sumi-light);
+letter-spacing: 2px;
 display: block;
 margin-bottom: 12px;
 }
@@ -1585,11 +1589,14 @@ height: 56px;
 .nav-right { display: none; }
 .hero { min-height: 0; padding: 28px 20px 20px; flex-direction: column; align-items: flex-start; justify-content: center; }
 .hero-h1 { font-size: 44px; }
-.hero-h1-en { font-size: 13px; }
+.hero-h1-en { font-size: 32px; margin-bottom: 16px; font-weight: 500; }
 .hero-desc { font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
 .hero-stats { position: relative; right: auto; bottom: auto; flex-direction: row; padding: 12px 0 0; gap: 20px; flex-wrap: wrap; margin-top: 12px; }
 .hero-stat { text-align: left; }
 .hero-stat-num { font-size: 22px; }
+.hero-bg-kanji { display: none; }
+.hero-content, .hero-stats { text-shadow: 0 0 10px rgba(253,240,243,0.95), 0 0 3px rgba(253,240,243,0.95); }
+.hero-label, .hero-h1-en, .hero-stat-label { color: var(--sumi); }
 .filter-bar { padding: 0 16px 24px; gap: 6px; }
 .filter-btn { padding: 7px 14px; font-size: 14px; }
 main { padding: 0 16px 60px; }
@@ -1599,6 +1606,9 @@ main { padding: 0 16px 60px; }
 .section-h2 { font-size: 24px; }
 .season-grid { grid-template-columns: 1fr 1fr; }
 .season-card { padding: 24px 20px; }
+.season-card--photo { padding: 0; }
+.season-photo { height: 130px; }
+.season-body { padding: 18px 18px 22px; }
 .kamidana-offerings-grid { grid-template-columns: repeat(2, 1fr); }
 .kamidana-rules-grid { grid-template-columns: 1fr; }
 .kamidana-daily { grid-template-columns: repeat(2, 1fr); }
@@ -3565,9 +3575,9 @@ transition: background 0.15s, color 0.15s;
 
   <div class="season-section">
     <div class="season-grid">
-      <div class="season-card" style="background-image:url('https://images.unsplash.com/photo-1522383225653-ed111181a951?w=400&q=50');background-size:cover;background-position:center;position:relative;">
-        <div style="position:absolute;inset:0;background:rgba(253,235,240,0.45);"></div>
-        <div style="position:relative;z-index:1;">
+      <div class="season-card season-card--photo">
+        <div class="season-photo" style="background-image:url('https://images.unsplash.com/photo-1522383225653-ed111181a951?w=400&q=50');" role="img" aria-hidden="true"></div>
+        <div class="season-body" style="background:rgba(253,235,240,0.55);">
         <div class="season-num">01</div>
         <div class="season-name-en">Spring</div>
         <span class="season-name-jp">春 — March to May</span>
@@ -3575,9 +3585,9 @@ transition: background 0.15s, color 0.15s;
         <p class="season-tip">Cherry blossoms transform shrine gardens into pale pink dreamscapes. Book accommodation many months ahead for Kyoto and Nara.</p>
         </div>
       </div>
-      <div class="season-card" style="background-image:url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=400&q=50');background-size:cover;background-position:center;position:relative;">
-        <div style="position:absolute;inset:0;background:rgba(225,245,230,0.45);"></div>
-        <div style="position:relative;z-index:1;">
+      <div class="season-card season-card--photo">
+        <div class="season-photo" style="background-image:url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=400&q=50');" role="img" aria-hidden="true"></div>
+        <div class="season-body" style="background:rgba(225,245,230,0.55);">
         <div class="season-num">02</div>
         <div class="season-name-en">Summer</div>
         <span class="season-name-jp">夏 — June to August</span>
@@ -3585,9 +3595,9 @@ transition: background 0.15s, color 0.15s;
         <p class="season-tip">Vibrant summer festivals and Obon ceremonies light up temple grounds at dusk. Gion Matsuri in Kyoto is unmissable.</p>
         </div>
       </div>
-      <div class="season-card" style="background-image:url('https://images.unsplash.com/photo-1570459027562-4a916cc6113f?w=400&q=50');background-size:cover;background-position:center;position:relative;">
-        <div style="position:absolute;inset:0;background:rgba(253,238,218,0.45);"></div>
-        <div style="position:relative;z-index:1;">
+      <div class="season-card season-card--photo">
+        <div class="season-photo" style="background-image:url('https://images.unsplash.com/photo-1570459027562-4a916cc6113f?w=400&q=50');" role="img" aria-hidden="true"></div>
+        <div class="season-body" style="background:rgba(253,238,218,0.55);">
         <div class="season-num">03</div>
         <div class="season-name-en">Autumn</div>
         <span class="season-name-jp">秋 — September to November</span>
@@ -3595,9 +3605,9 @@ transition: background 0.15s, color 0.15s;
         <p class="season-tip">Crimson maple leaves against ancient stone and vermillion pillars — Japan's most celebrated and perhaps finest season.</p>
         </div>
       </div>
-      <div class="season-card" style="background-image:url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=400&q=50');background-size:cover;background-position:center;position:relative;">
-        <div style="position:absolute;inset:0;background:rgba(225,235,248,0.45);"></div>
-        <div style="position:relative;z-index:1;">
+      <div class="season-card season-card--photo">
+        <div class="season-photo" style="background-image:url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=400&q=50');" role="img" aria-hidden="true"></div>
+        <div class="season-body" style="background:rgba(225,235,248,0.55);">
         <div class="season-num">04</div>
         <div class="season-name-en">Winter</div>
         <span class="season-name-jp">冬 — December to February</span>
