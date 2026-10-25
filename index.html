@@ -1595,7 +1595,12 @@ height: 56px;
 .hero-stat { text-align: left; }
 .hero-stat-num { font-size: 22px; }
 .hero-bg-kanji { display: none; }
-.hero-content, .hero-stats { text-shadow: 0 0 10px rgba(253,240,243,0.95), 0 0 3px rgba(253,240,243,0.95); }
+.hero { display: block; position: relative; padding: 0 20px 24px; background: var(--washi); }
+.hero > picture { position: relative !important; inset: auto !important; display: block; height: 200px; margin: 0 -20px 20px; }
+.hero > picture img { object-position: center 12% !important; }
+.hero > div[style*="rgba(253,240,243,0.15)"], .hero-light-sweep, .hero-wa-pattern { display: none !important; }
+.hero-petals { height: 200px; bottom: auto; }
+.hero-content, .hero-stats { text-shadow: none; }
 .hero-label, .hero-h1-en, .hero-stat-label { color: var(--sumi); }
 .filter-bar { padding: 0 16px 24px; gap: 6px; }
 .filter-btn { padding: 7px 14px; font-size: 14px; }
