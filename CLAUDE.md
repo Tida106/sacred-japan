@@ -3,6 +3,17 @@
 ## 進行中タスク（2026-10-25時点・未完了）
 - 【進行中】サイトのデザイン変更検討：背景色をもう少し濃いピンクにする案。Artifact（Designキャンバス）でサンプル作成済み → https://claude.ai/artifact/T85DptEdMxn9d6y9Q7Ebk5 。現行--washi(#fdf0f3)に対し案A(#f8d9e0)／案B(#f3c4d1)／案C(#e8a8ba)を比較するカードと、さらにセクションごとに下に行くほど濃くなる5段階グラデーション案（Hero→Footer、#fdf0f3→#e8a8ba）のサンプルを作成。ユーザーがartifact側で表示できず未確認（キャンバスのズレ疑い、再読み込み・fit to screen案内済みだが未解決）。次にやること：artifact再確認→好みの案決定→実サイトのCSS変数（--washi, --washi-dark等）に反映してpush
 
+## 紅葉・季節コンテンツ作業メモ（2026-10-25実施・完了）
+- ホーム季節カード4枚を各ガイドにリンク：春=guides/cherry-blossoms-shrines-temples/（新規）、夏=festivals/summer-festivals/、秋=guides/autumn-sanctuaries/、冬=guides/kyoto-illuminations/。ガイドハブに「By Season」グループ追加
+- 祭りページ（festivals/・summer-festivals/）のAI画像を実写真（Wikimedia Commons）に置換、各祭りに公式／紹介サイトへのリンク追加
+- guides/autumn-sanctuaries/：冒頭に高台寺の石段（CC0）、聖域5つの前に「The Famous Ones First」節（有名8スポット：清水寺・ライトアップ・日光・厳島・永観堂・東福寺・嵐山天龍寺・高野山、各カードに公式/観光協会リンク、清水寺・東福寺・永観堂・天龍寺の写真）。日光東照宮の写真は紅葉が見つからず無し
+- 新規ガイド（検索流入狙い）：guides/tofukuji/（GUIDE 56）、guides/eikando/（57）、guides/tenryuji/（58）。いずれも一人称ガイド視点＋FAQ5問＋公式リンク＋Expedia/Viator、ハブ・JSON-LD・sitemap・OGP・相互リンク反映済み。OGP生成は一時スクリプトで実施（リポジトリ内に常設スクリプト無し）
+- guides/nikko-toshogu/ と guides/itsukushima-shrine/ に紅葉の節＋写真を追加（日光=標高順に色づく、いろは坂の渋滞対策／宮島=紅葉谷公園）
+- 写真の流れ：ユーザーがCommons/Openverseで探して写真本体＋作者・ライセンスのスクショを送る→1200px幅でjpg/webp生成→figcaptionに作者・ライセンス・via Wikimedia Commons。CC BY-NC-ND等（NC/ND）は使用不可。写真が必要な記事は毎回、検索リンク付きで伝えること
+- 料金・開門時間は資料間で食い違うため、記事では「約」「公式で確認」表記
+- 【未対応】Search Consoleのインデックス登録リクエスト：tofukuji / eikando / tenryuji / cherry-blossoms-shrines-temples、更新したautumn-sanctuaries・nikko-toshogu・itsukushima-shrine。公式リンクが確認できなかった日光東照宮は未リンク（nikko-kankou.org系の確認待ち）
+- 【次の候補】他の紅葉定番（醍醐寺、光明寺など）の単独ガイド、桜記事のOmuro桜写真差し替え、背景色ピンク案の決定
+
 ## regional-food 公式リンク作業メモ（2026-10-24〜25実施・完了）
 - 18食品カードすべてのGoogle Maps検索リンクを公式観光サイトリンクに差し替え、Amazon「Get at Home」バッジを関連性の高い5品（Edomae Sushi／Takoyaki／Sanuki Udon／Hakata Tonkotsu Ramen／Goya Champuru）に追加（コミット0414c07）。Sapporo Miso Ramenは別途Maruchan Gold Spicy Misoバッジで先行対応済み（コミット893cc7e, 3513b5b）
 - 公開後、ユーザーのライブ確認で3件のリンク切れが判明（discover-nagasaki.com全体停止／gotokyo.org 502／edolegacytravel.metro.tokyo.lg.jp メンテナンス中）→ 差し替え（コミット8125bb6）：
