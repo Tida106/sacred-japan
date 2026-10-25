@@ -640,6 +640,21 @@ font-size: 60px;
 transition: transform 0.4s ease;
 }
 .spot-card:hover .spot-photo { transform: scale(1.06); }
+/* tap hint labels on image links (touch / mobile) */
+@media (hover: none), (max-width: 768px) {
+.spot-card[onclick] .spot-thumb::before,
+.food-thumb-link::after {
+  position: absolute; right: 10px; bottom: 10px; z-index: 3;
+  padding: 6px 12px; border-radius: 999px;
+  background: rgba(255,255,255,0.92); color: #2a2a2a;
+  font: 600 12px/1 system-ui, -apple-system, sans-serif; letter-spacing: .02em;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.25); pointer-events: none;
+}
+.spot-card[onclick] .spot-thumb::before { content: 'Details \2197'; }
+.food-thumb-link { position: relative; }
+.food-thumb-link::after { content: 'Read guide \2197'; bottom: 24px; }
+}
+
 .spot-badges {
 position: absolute; top: 10px; left: 10px; z-index: 2;
 display: flex; gap: 5px;
