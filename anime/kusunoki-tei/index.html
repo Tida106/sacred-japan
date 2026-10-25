@@ -274,7 +274,7 @@ white-space: nowrap;
 filter: drop-shadow(0 1px 5px rgba(184,134,11,0.3));
 opacity: 0.55;
 }
-.hero-content { position: relative; z-index: 1; max-width: 720px; }
+.hero-content { position: relative; z-index: 1; max-width: 720px; width: 100%; min-width: 0; }
 .hero-label {
 font-family: 'Noto Serif JP', serif;
 font-size: 11px;
@@ -616,6 +616,7 @@ nav { padding: 0 20px; }
 .nav-links { display: none; }
 .nav-hamburger { display: flex; }
 .hero { padding: 56px 24px; min-height: auto; }
+table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .hero h1 { font-size: 26px; }
 .hero-jp { font-size: 14px; letter-spacing: 4px; }
 .hero-bg-kanji { display: none; }

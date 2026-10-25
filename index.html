@@ -1603,6 +1603,14 @@ main { padding: 0 16px 60px; }
 .kamidana-rules-grid { grid-template-columns: 1fr; }
 .kamidana-daily { grid-template-columns: repeat(2, 1fr); }
 .goshuin-intro { grid-template-columns: 1fr; }
+.etiquette-grid { grid-template-columns: 1fr; }
+.kamidana-intro { grid-template-columns: 1fr; }
+.goshuin-meaning-grid { grid-template-columns: 1fr; }
+.goshuin-howto { grid-template-columns: repeat(2, 1fr); }
+.amazon-grid { grid-template-columns: repeat(2, 1fr); }
+.stay-gallery { grid-template-columns: 1fr !important; }
+.etiquette-card, .amazon-card { padding: 22px 18px; }
+.etiquette-title { font-size: 20px; }
 footer {
 padding: 32px 20px;
 flex-direction: column;
@@ -1617,6 +1625,8 @@ text-align: center;
 .season-grid { grid-template-columns: 1fr; }
 .kamidana-offerings-grid { grid-template-columns: repeat(2, 1fr); }
 .kamidana-daily { grid-template-columns: 1fr 1fr; }
+.amazon-grid { grid-template-columns: 1fr; }
+.goshuin-howto { grid-template-columns: 1fr; }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
 nav { padding: 0 32px; }
@@ -1625,6 +1635,10 @@ main { padding: 0 32px 80px; }
 .spots-grid { grid-template-columns: repeat(2, 1fr); }
 .festivals-grid { grid-template-columns: repeat(2, 1fr); }
 .season-grid { grid-template-columns: repeat(2, 1fr); }
+.etiquette-grid { grid-template-columns: repeat(2, 1fr); }
+.goshuin-meaning-grid { grid-template-columns: repeat(2, 1fr); }
+.kamidana-rules-grid { grid-template-columns: repeat(2, 1fr); }
+.amazon-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @keyframes fadeUp {
 from { opacity: 0; transform: translateY(16px); }
@@ -4234,7 +4248,7 @@ transition: background 0.15s, color 0.15s;
 
 
     <!-- STAY PHOTO GALLERY -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-strong);border:1px solid var(--border-strong);margin:0 0 32px;">
+    <div class="stay-gallery" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-strong);border:1px solid var(--border-strong);margin:0 0 32px;">
       <div style="overflow:hidden;aspect-ratio:16/9;position:relative;">
         <picture><source srcset="images/shukubo-koyasan.webp" type="image/webp"><img src="images/shukubo-koyasan.jpg" alt="Traditional shukubo temple lodging room with tatami, futon, and moss garden view in Koyasan Japan" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"></picture>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.7));font-family:'Noto Serif JP',serif;font-size:11px;letter-spacing:2px;color:#fff;">宿坊の間 — Temple Room</div>
