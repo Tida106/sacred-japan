@@ -76,6 +76,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sacred-japan.net/guides/seasonal-traditions/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sacred-japan.net/guides/eikando/</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>

@@ -3,6 +3,11 @@
 ## 進行中タスク（2026-10-25時点・未完了）
 - 【進行中】サイトのデザイン変更検討：背景色をもう少し濃いピンクにする案。Artifact（Designキャンバス）でサンプル作成済み → https://claude.ai/artifact/T85DptEdMxn9d6y9Q7Ebk5 。現行--washi(#fdf0f3)に対し案A(#f8d9e0)／案B(#f3c4d1)／案C(#e8a8ba)を比較するカードと、さらにセクションごとに下に行くほど濃くなる5段階グラデーション案（Hero→Footer、#fdf0f3→#e8a8ba）のサンプルを作成。ユーザーがartifact側で表示できず未確認（キャンバスのズレ疑い、再読み込み・fit to screen案内済みだが未解決）。次にやること：artifact再確認→好みの案決定→実サイトのCSS変数（--washi, --washi-dark等）に反映してpush
 
+## 季節の行事と食べ物ガイド（2026-10-27実施）
+- 新規 guides/seasonal-traditions/（春＝花まつり／夏＝夏越の祓・水無月／秋＝月見・七五三／冬＝除夜の鐘・初詣・節分）。事実は Discover Kyoto／Kyoto Travel／Nippon.com／Keihan／Wikipedia で裏取り、ページ末の sources-note に記載。ヒーロー写真は shrine-etiquette の神田明神初詣（CC BY 2.0）を再利用、本文中に唐津くんち写真（CC BY-SA 2.5）
+- 反映先：guides/index.html（By Seasonカード＋JSON-LD position 60）、sitemap.xml、index.html（季節カード下のリンク）、festivals/autumn-winter-festivals・summer-festivals の関連カード、OGP（images/og/og-guides-seasonal-traditions.jpg）
+- 【未対応】Search Consoleのインデックス登録リクエスト（guides/seasonal-traditions/）、季節ガイド（春・冬）の記事側からの相互リンク追加
+
 ## 紅葉・季節コンテンツ作業メモ（2026-10-25実施・完了）
 - ホーム季節カード4枚を各ガイドにリンク：春=guides/cherry-blossoms-shrines-temples/（新規）、夏=festivals/summer-festivals/、秋=guides/autumn-sanctuaries/、冬=guides/kyoto-illuminations/。ガイドハブに「By Season」グループ追加
 - 祭りページ（festivals/・summer-festivals/）のAI画像を実写真（Wikimedia Commons）に置換、各祭りに公式／紹介サイトへのリンク追加
