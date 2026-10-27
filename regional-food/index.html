@@ -493,6 +493,10 @@ position: absolute; inset: 0;
 background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.55));
 pointer-events: none;
 }
+.food-extra { margin: 14px 0 0; }
+.food-extra img { width: 100%; height: auto; border-radius: 6px; display: block; }
+.food-extra figcaption { font-size: 12px; color: var(--enshu); line-height: 1.5; margin-top: 8px; }
+.food-extra figcaption a { color: var(--enshu); text-decoration: underline; }
 .photo-credit { font-size: 12px; color: var(--enshu); line-height: 1.5; margin: 10px 0 0; }
 .photo-credit a { color: var(--enshu); text-decoration: underline; }
 .food-photo {
@@ -1605,12 +1609,17 @@ footer { padding: 40px 24px 100px; }
           <div class="food-name-jp">愛媛の鯛めし</div>
           <div class="food-name-en">Ehime Taimeshi (Sea Bream Rice)</div>
           <p class="food-desc">Ehime leads Japan in sea bream, and the fish is the prefecture's symbol, so <em>taimeshi</em> comes in two forms. Across most of Ehime it means rice cooked together with a whole bream. In Uwajima it is something rarer: fresh raw bream sashimi dipped in a sauce of raw egg, soy sauce and dashi, then laid over hot rice and finished with nori, spring onion and sesame. Stories trace it to sailors of the Iyo navy, who ate without open flames on board, and to the pirates of the Uwa Sea. It is on the government's list of 100 local dishes.</p>
+          <figure class="food-extra">
+            <picture><source srcset="../images/food-taimeshi-set.webp" type="image/webp"><img src="../images/food-taimeshi-set.jpg" alt="A tray of Nanyo-style taimeshi: sliced raw sea bream on rice with a cup of egg and soy sauce, a bowl of sauce-thinned rice, seasonings, and clear soup" width="900" height="675" loading="lazy"></picture>
+            <figcaption>Nanyo-style taimeshi set in Matsuyama (August 2014). Photo: ゆたかしげる, public domain, via Wikimedia Commons (resized)</figcaption>
+          </figure>
           <div class="food-highlights">
             <span class="food-highlight">🐟 Sea Bream Capital</span>
             <span class="food-highlight">🥚 Egg &amp; Soy Sauce</span>
             <span class="food-highlight">🍚 Raw Over Hot Rice</span>
             <span class="food-highlight">🏴‍☠️ Navy &amp; Pirate Legends</span>
           </div>
+          <p class="photo-credit">Top photo: Uwajima taimeshi at Gansui, Matsuyama, by Fred Cherrygarden, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, via Wikimedia Commons (resized)</p>
           <div class="food-cta-stack">
             <a class="food-cta cta-expedia" href="https://expedia.com/affiliate?siteid=1&landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DMatsuyama&camref=1101l5JmFa&creativeref=1011l87782&adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_food_ehime_taimeshi')">🏨 Find Hotels Near Matsuyama →</a>
             <a class="food-cta cta-viator" href="https://www.viator.com/search/Matsuyama?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_food_ehime_taimeshi')">🎒 Book Matsuyama Food Tours →</a>
