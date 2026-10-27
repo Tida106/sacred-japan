@@ -1058,6 +1058,13 @@ footer { padding: 40px 24px; }
 /* Body-text links */
 article p a, article li a, article .faq-answer a { color: var(--beni); text-decoration: underline; text-underline-offset: 3px; }
 article p a:hover, article li a:hover, article .faq-answer a:hover { color: var(--beni-light); }
+/* desktop readability: Garamond runs small, so scale body text up */
+@media (min-width: 900px) {
+main { max-width: 900px; }
+article p { font-size: 19.5px; }
+article ul li, article ol li { font-size: 19px; }
+.site-card p { font-size: 16.5px; }
+}
 </style>
 </head>
 <body>
@@ -1182,7 +1189,7 @@ article p a:hover, article li a:hover, article .faq-answer a:hover { color: var(
 </section>
 
 <!-- ── BREADCRUMB ── -->
-<div role="navigation" aria-label="Breadcrumb" style="max-width:860px;margin:24px auto 0;padding:0 56px;font-size:12px;letter-spacing:1.5px;color:var(--enshu);">
+<div role="navigation" aria-label="Breadcrumb" style="max-width:900px;margin:24px auto 0;padding:0 56px;font-size:12px;letter-spacing:1.5px;color:var(--enshu);">
   <a href="/" style="color:var(--enshu);text-decoration:none;" onclick="trackEvent('click','internal','guide_sacred_animals_to_home')">Home</a>
   <span style="margin:0 8px;color:var(--border-strong);">›</span>
   <a href="/guides/" style="color:var(--enshu);text-decoration:none;" onclick="trackEvent('click','internal','guide_sacred_animals_to_guides_hub')">Guides</a>

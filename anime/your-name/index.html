@@ -1043,6 +1043,13 @@ article figure img { border-radius: 4px; }
 .flow-chart { background: var(--sumi); color: var(--washi); padding: 16px 20px; text-align: center; border-radius: 2px; font-weight: 700; margin: 24px 0; letter-spacing: 1px; font-size: 15px; }
 .flow-arrow { color: var(--kin-light); margin: 0 10px; }
 .poem { font-family: "Noto Serif JP", serif; font-style: italic; color: var(--sumi-light); background: var(--washi-dark); padding: 24px; border: 1px solid var(--border-strong); text-align: center; line-height: 2; margin: 24px 0; }
+/* desktop readability: Garamond runs small, so scale body text up */
+@media (min-width: 900px) {
+main { max-width: 900px; }
+article p { font-size: 19.5px; }
+article ul li, article ol li { font-size: 19px; }
+.site-card p { font-size: 16.5px; }
+}
 </style>
 </head>
 <body>
@@ -1167,7 +1174,7 @@ article figure img { border-radius: 4px; }
 </section>
 
 <!-- ── BREADCRUMB ── -->
-<div role="navigation" aria-label="Breadcrumb" style="max-width:860px;margin:24px auto 0;padding:0 56px;font-size:12px;letter-spacing:1.5px;color:var(--enshu);">
+<div role="navigation" aria-label="Breadcrumb" style="max-width:900px;margin:24px auto 0;padding:0 56px;font-size:12px;letter-spacing:1.5px;color:var(--enshu);">
   <a href="/" style="color:var(--enshu);text-decoration:none;" onclick="trackEvent('click','internal','guide_anime_your_name_to_home')">Home</a>
   <span style="margin:0 8px;color:var(--border-strong);">›</span>
   <a href="/anime/" style="color:var(--enshu);text-decoration:none;" onclick="trackEvent('click','internal','guide_anime_your_name_to_hub')">Anime Pilgrimage</a>
