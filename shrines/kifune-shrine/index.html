@@ -296,7 +296,13 @@
       .quick-facts dt { margin-top: 8px; }
       .ai-imagery-note { padding: 16px 20px; }
     }
-  </style>
+  /* desktop readability: Garamond runs small, so scale text up */
+@media (min-width: 900px) {
+main { max-width: 900px; }
+article p { font-size: 19.5px; }
+article ul li, article ol li, article li { font-size: 19px; }
+}
+</style>
 </head>
 <body>
 
@@ -386,7 +392,7 @@
 </section>
 
 <!-- ── BREADCRUMB ── -->
-<div role="navigation" aria-label="Breadcrumb" style="max-width:860px;margin:24px auto 0;padding:0 56px;font-size:12px;letter-spacing:1.5px;color:var(--enshu);">
+<div role="navigation" aria-label="Breadcrumb" style="max-width:900px;margin:24px auto 0;padding:0 56px;font-size:12px;letter-spacing:1.5px;color:var(--enshu);">
   <a href="/" style="color:var(--enshu);text-decoration:none;" onclick="trackEvent('click','internal','shrines_kifune_shrine_to_home')">Home</a>
   <span style="margin:0 8px;color:var(--border-strong);">›</span>
   <a href="/guides/" style="color:var(--enshu);text-decoration:none;" onclick="trackEvent('click','internal','shrines_kifune_shrine_to_hub')">Guides</a>

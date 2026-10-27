@@ -4,7 +4,7 @@
 - 【進行中】サイトのデザイン変更検討：背景色をもう少し濃いピンクにする案。Artifact（Designキャンバス）でサンプル作成済み → https://claude.ai/artifact/T85DptEdMxn9d6y9Q7Ebk5 。現行--washi(#fdf0f3)に対し案A(#f8d9e0)／案B(#f3c4d1)／案C(#e8a8ba)を比較するカードと、さらにセクションごとに下に行くほど濃くなる5段階グラデーション案（Hero→Footer、#fdf0f3→#e8a8ba）のサンプルを作成。ユーザーがartifact側で表示できず未確認（キャンバスのズレ疑い、再読み込み・fit to screen案内済みだが未解決）。次にやること：artifact再確認→好みの案決定→実サイトのCSS変数（--washi, --washi-dark等）に反映してpush
 
 ## PC表示の可読性調整（2026-10-27実施・完了）
-- 本文が小さい／狭いとの指摘を受け、PC（幅900px以上）のみ：article p 17.5→19.5px、li 19px、.site-card p 16.5px、main max-width 860→900px。74ページに一括反映（末尾の@media、コミットa8bdd6d）。トップ・ハブ・about等10ページは構造が違うため対象外
+- 本文が小さい／狭いとの指摘を受け、PC（幅900px以上）のみ：article p 17.5→19.5px、li 19px、.site-card p 16.5px、main max-width 860→900px。74ページに一括反映（末尾の@media、コミットa8bdd6d）。残り10ページ（トップ・guides/culture/castles/anime/crafts/regional-food/about・shrines2本）も個別CSSで同日反映：ハブ2本は幅1100px＋文字拡大、castles等はdesc文字+1〜2px、shrines2本は記事と同じ設定
 - autumn-sanctuaries：カード群（.iconic-block）のみ1200px以上で幅1100px。カード見出しリンクの青下線を修正
 - パンくずが<nav>でグローバルのsticky navスタイルを拾いメニューに混入していた不具合を、div[role=navigation]に変更して84ページ修正（コミット66a3770）。今後パンくずに<nav>タグを使わないこと
 - 目安：人気サイトの本文は17〜21px。20px超は避ける。まだ読みにくければ本文幅を820px前後に絞る案
