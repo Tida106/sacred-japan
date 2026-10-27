@@ -3,6 +3,12 @@
 ## 進行中タスク（2026-10-25時点・未完了）
 - 【進行中】サイトのデザイン変更検討：背景色をもう少し濃いピンクにする案。Artifact（Designキャンバス）でサンプル作成済み → https://claude.ai/artifact/T85DptEdMxn9d6y9Q7Ebk5 。現行--washi(#fdf0f3)に対し案A(#f8d9e0)／案B(#f3c4d1)／案C(#e8a8ba)を比較するカードと、さらにセクションごとに下に行くほど濃くなる5段階グラデーション案（Hero→Footer、#fdf0f3→#e8a8ba）のサンプルを作成。ユーザーがartifact側で表示できず未確認（キャンバスのズレ疑い、再読み込み・fit to screen案内済みだが未解決）。次にやること：artifact再確認→好みの案決定→実サイトのCSS変数（--washi, --washi-dark等）に反映してpush
 
+## PC表示の可読性調整（2026-10-27実施・完了）
+- 本文が小さい／狭いとの指摘を受け、PC（幅900px以上）のみ：article p 17.5→19.5px、li 19px、.site-card p 16.5px、main max-width 860→900px。74ページに一括反映（末尾の@media、コミットa8bdd6d）。トップ・ハブ・about等10ページは構造が違うため対象外
+- autumn-sanctuaries：カード群（.iconic-block）のみ1200px以上で幅1100px。カード見出しリンクの青下線を修正
+- パンくずが<nav>でグローバルのsticky navスタイルを拾いメニューに混入していた不具合を、div[role=navigation]に変更して84ページ修正（コミット66a3770）。今後パンくずに<nav>タグを使わないこと
+- 目安：人気サイトの本文は17〜21px。20px超は避ける。まだ読みにくければ本文幅を820px前後に絞る案
+
 ## 季節の行事と食べ物ガイド（2026-10-27実施）
 - 新規 guides/seasonal-traditions/（春＝花まつり／夏＝夏越の祓・水無月／秋＝月見・七五三／冬＝除夜の鐘・初詣・節分）。事実は Discover Kyoto／Kyoto Travel／Nippon.com／Keihan／Wikipedia で裏取り、ページ末の sources-note に記載。ヒーロー写真は shrine-etiquette の神田明神初詣（CC BY 2.0）を再利用、本文中に唐津くんち写真（CC BY-SA 2.5）
 - 反映先：guides/index.html（By Seasonカード＋JSON-LD position 60）、sitemap.xml、index.html（季節カード下のリンク）、festivals/autumn-winter-festivals・summer-festivals の関連カード、OGP（images/og/og-guides-seasonal-traditions.jpg）
