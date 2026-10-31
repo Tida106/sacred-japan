@@ -126,3 +126,4 @@
 
 ## カード見出しの表記変更（2026-10-31）
 - regional-food／crafts／castles のカード見出しを、英語を上（大きく）・日本語を下（小さく・enshu色）に変更（海外読者向け）。HTMLの順序をname-en→name-jpに入れ替え、CSSでサイズ調整（コミット済み）
+- 同じ変更をホーム（.spot-card 24枚）とanime（.anime-card 18枚）にも適用済み（ホームのhover「↗」は英語名側に移動）。festivals系ページは該当クラスなし
