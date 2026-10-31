@@ -120,3 +120,6 @@
 - FAQPage構造化データ（JSON-LD）：guides/culture/shrines配下でFAQセクションを持つ45ページ中44ページは既に実装済み（過去セッションで対応済みと判明）。未実装だったhokakujiのみ追加（4問、コミットae26eec）
 - OGP画像：50ページ（guides/culture/anime/shrines配下）が汎用ogp.pngのみに依存していた。サイトのデザイントークン（washi/beni/sumi等）を使ったブランド付きタイトルカード画像を自動生成するPythonスクリプト（PIL/Pillow）を作成し、該当50ページ全部に個別画像を設置（images/og/og-<section>-<slug>.jpg、コミットdf8f766）。既に実写真を使っていた15ページ（best-castles-japan, dazaifu-tenmangu, ise-grand-shrine, itsukushima-shrine, kinkakuji, kotohira-gu, meiji-jingu, nikko-toshogu, sensoji, sumiyoshi-taisha, kamidana, demon-slayer, noragami, ryomen-sukuna, your-name）は対象外（変更なし）
 - OG画像生成スクリプトはh1のタイトル抽出で`<em>`タグ直後の句読点（: , . ; ! ?）前に余計なスペースが入るバグがあったが修正済み（正規表現で除去）
+
+## 宿坊ガイド写真追加（2026-10-31）
+- guides/temple-stay/ に実写真7枚を追加（高野山の宿坊：無量光院の客室・夕食、成就院の客室2＋布団、奥之院の灯籠参道、座禅堂＝CC0・場所不明のため「illustrative」表記）。Search Console表示が上がってきたため。全て作者・ライセンス（CC BY 2.0 / BY-SA 3.0 / CC0）をfigcaptionに記載
