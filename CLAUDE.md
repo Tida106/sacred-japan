@@ -132,4 +132,5 @@
 - 背景：アニメ記事が「論文調」で読者の動機（あの場面はどこ？）に答えていなかったため、8本すべてを新しい型で書き直し（noragami→your-name/demon-slayer/spirited-away/inuyasha/fruits-basket/ryomen-sukuna/kusunoki-tei）
 - 型：冒頭は場面や設定のフック（一人称ガイド）→「場面→実在の場所→行き方」の対応表（確度も併記：公式／広く言われる／ファン説）→体験セクション→場所別Expedia/Viator枠→FAQ4問（FAQPage JSON-LD）→締めの一文
 - ルール：公式に確認できない対応は断言しない（ファンの聖地マップ由来と明記）。誤情報だった「神田明神がノラガミの場面」の記述は湯島天満宮ガイドとホームのカードも修正済み
-- 【未対応】アニメハブ（anime/index.html）の各カード説明文は旧記事の調子のまま。Search Consoleの再インデックス登録（8記事）
+- 判明：アニメハブ（anime/index.html）はGoogleマップリンクの18カード（別作品）で、8記事はホームのカードからしかリンクされていなかった。ハブ上部に「In-Depth Pilgrimage Guides」8カードを追加（2026-11-01）
+- 【未対応】Search Consoleの再インデックス登録（8記事）
