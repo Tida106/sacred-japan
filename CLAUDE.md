@@ -138,4 +138,5 @@
 ## アニメ聖地ガイド新規3本（2026-11-01実施）
 - 新規：anime/lucky-star/（鷲宮神社）、anime/anohana/（秩父）、anime/love-live/（神田明神）。リライト版と同じ型、写真なし（OGPはPILで簡易カード生成）。ハブ「In-Depth」カードとsitemap反映済み（コミットc11d27f）
 - 事実はWikipedia／kanko-map／ANN／FUN! JAPANで裏取り。最寄り駅の徒歩時間や料金は古い記事由来のため「要確認」表記
-- 【未対応】写真追加（3本とも）、Search Consoleインデックス登録、ガルパン（大洗磯前神社）・氷菓（高山）は裏取り不足のため未着手
+- 【未対応】写真追加（3本とも）、Search Consoleインデックス登録、
+- 追加2本（同日）：anime/girls-und-panzer/（大洗磯前神社・大洗町）、anime/hyouka/（高山・日吉神社）。JNTO／watabi／rawjpn／Ibaraki観光で裏取り、写真なし。【未対応】写真追加、インデックス登録（lucky-star／anohana／love-live／anime/＋この2本。2026-11-01は上限到達のため翌日）
