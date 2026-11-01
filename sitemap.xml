@@ -566,4 +566,22 @@
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
+  <url>
+    <loc>https://sacred-japan.net/anime/lucky-star/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sacred-japan.net/anime/anohana/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sacred-japan.net/anime/love-live/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
