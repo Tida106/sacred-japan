@@ -164,3 +164,4 @@
 - 新規：guides/inuyama-castle/（GLTJP／japan-guide／FUN! JAPANで裏取り。創建年は1537年説と他説があり「one of the oldest」表記、料金1,000円（浦楽園セット2,000円）・9:00-17:00・12/29-31休は「公式確認」表記。ナルセ家が2004年まで所有）。ハブ・JSON-LD(position 72)・sitemap・OGP・城ハブ上部カード反映済み。写真なし（既存のimages/castle-inuyama.jpgは出典不明のため未使用）。【未対応】ヒーロー＋本文写真追加、インデックス登録。次の候補：彦根城、二条城
 \n
 - 犬山城 写真7枚追加済み（ヒーロー：桜の天守 Tomio344456 CC BY-SA 4.0／犬山橋からの遠景 Alpsdake CC BY-SA 3.0／梁 Hyppolyte de Saint-Rambert CC BY 4.0／上段の間 村国左近 CC BY-SA 4.0／木曽川と城 KKPCW CC BY-SA 4.0／犬山祭の山車2枚 Bariston CC BY-SA 4.0）。【未対応】インデックス登録。次の候補：彦根城、二条城
+- 新規：guides/hikone-castle/（japan-guide／Wikipedia／彦根市観光で裏取り。天守は大津城から移築、明治の取り壊しを天皇の要請で免れた説、玄宮園、ひこにゃん。料金1,000円（博物館込み1,500円）・8:30-17:00はjapan-guide引用で「公式確認」表記）。ハブ・JSON-LD(position 73)・sitemap・OGP・城ハブ上部カード反映済み。写真なし。【未対応】ヒーロー＋本文写真追加、インデックス登録。次の候補：二条城
