@@ -154,5 +154,6 @@
 - 城ハブ（/castles/）最上部に詳細ガイドカードを配置（READ FIRST）。新しい城ガイドはここにカードを足す
 - 新規：guides/himeji-castle/（公式歴史ページ／Wikipedia／japan-guide／Japan Timesで裏取り。2026年3月から非居住者2,500円・市民1,000円。お菊井戸は「伝説」として記述）。ヒーローはbest-castles-japanと同じBernard Gagnon写真（CC BY-SA 3.0）を再利用。ハブ・JSON-LD(position 69)・sitemap・OGP反映済み
 - 作り方：scratchpadのcraft.py（edo-kiriko複製）＋castle_run.py。本文中の内部リンクにはclass="inline-link"を付けること（付けないと青リンクになる）
+- 本文写真5枚追加済み（外観Gorgo PD／回廊Drivephotographer CC0／火縄銃pdeaudney CC BY 2.0／天守内部Zairon CC BY 4.0／お菊井戸Drivephotographer CC0）
 - 【未対応】インデックス登録（guides/himeji-castle/、/castles/）。次の候補：松本城、熊本城、犬山城、彦根城、二条城（京都）
 
