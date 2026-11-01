@@ -140,3 +140,11 @@
 - 事実はWikipedia／kanko-map／ANN／FUN! JAPANで裏取り。最寄り駅の徒歩時間や料金は古い記事由来のため「要確認」表記
 - 【未対応】写真追加（3本とも）、Search Consoleインデックス登録、
 - 追加2本（同日）：anime/girls-und-panzer/（大洗磯前神社・大洗町）、anime/hyouka/（高山・日吉神社）。JNTO／watabi／rawjpn／Ibaraki観光で裏取り、写真なし。【未対応】写真追加、インデックス登録（lucky-star／anohana／love-live／anime/＋この2本。2026-11-01は上限到達のため翌日）
+
+## 工芸ハブ再構成と工芸ガイド追加（2026-11-01実施）
+- 方針：外部の公式サイトに頼る構成から、自前記事へ誘導する構成へ。工芸ハブ（/crafts/）は3ヶ月で最もクリックが多い工芸ページ（CTR 2.1%）。記事が出来た工芸カードは、画像リンク・「Read the full guide」ボタンを自前記事へ、公式サイトは小さい下線リンクに降格。記事が無いカードは従来のまま
+- 対象：nambu-tekki／edo-kiriko／arita-ware＋新規 bizen-ware／wajima-nuri。ハブ最上部に「Try a Craft Yourself」（金継ぎ・陶芸・藍染め・江戸切子・和紙・茶道のViator検索リンク6枚＋kintsugi記事カード）。【要確認】Viator検索結果が0件のカードが無いか
+- 新規ガイド3本：guides/kintsugi/（Wikipedia）、guides/bizen-ware/（岡山県公式観光）、guides/wajima-nuri/（Wikipedia＋KOGEI Standardの2024年報告）。edo-kirikoのページ構成を流用、写真なし。輪島の被災・宿泊状況は2024年秋時点の記事のため「要確認」表記
+- 【未対応】3本の写真追加、インデックス登録、残り13工芸の記事化（優先：Mashiko、Awa Aizome、Nishijin、Kaga Yuzen、Hagi、Shigaraki）
+- 今後の工芸記事の作り方：edo-kiriko型（冒頭フック→what→選び方/見どころ→訪問→FAQ→結び）、体験Viator枠、ハブカードを自前記事リンクに切替
+- 背景（Search Console 3ヶ月）：アニメ系クエリが上位、/anime/が2位、ホームは表示19,515でCTR0.4%。ホームに「Start here」3入口、/anime/はタイトル・H1をキーワード化し詳細13記事を最上部に移動
