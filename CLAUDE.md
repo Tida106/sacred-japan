@@ -160,3 +160,6 @@
 - 新規：guides/kumamoto-castle/（GLTJP／Wikipedia／熊本城復旧見学ルート公式／Nippon.comで裏取り。料金800円・9:00-17:00・12/29休はGLTJP引用で「公式確認」表記。復旧完了目標2052年。ヒーローはbest-castles-japanと同じ663highland写真 CC BY-SA 3.0）。ハブ・JSON-LD(position 71)・sitemap・OGP・城ハブ上部カード反映済み。城3本のヒーロー上ラベルの「伝統工芸」残りを「城」に修正。【未対応】本文写真追加、インデックス登録。次の候補：犬山城、彦根城、二条城
 - 熊本城：2026-07-28にM7.1の地震（震源は宇城市付近、最大震度7＝宇城市・氷川町）があり、石垣40か所崩落・11か所に構造被害（天守の床のひびを含む）、16日間閉鎖→8/13再開（The Star／The Art Newspaper／GIGAZINE）。ガイドに「July 2026: Shaken Again」節を追加、タイトルを「Walls, Two Earthquakes and Visiting Today」に変更（OGP再生成、ハブ・JSON-LD反映）。FAQ・復旧目標（2052年は再延期の可能性）も更新。【注意】guides/best-castles-japan/ の熊本城節は2026年地震未反映の可能性。
 - 熊本城 本文写真6枚追加済み（663highland×2 CC BY-SA 3.0／Nagoya Taro CC BY-SA 3.0／Fraxinus2 CC BY-SA 4.0／そらみみ CC BY-SA 3.0／Katorisi 2026崩落の石垣 CC BY-SA 4.0）。663highlandの「人々が歩く石垣」はヒーローと同一のため未使用。【未対応】インデックス登録。次の候補：犬山城、彦根城、二条城
+
+- 新規：guides/inuyama-castle/（GLTJP／japan-guide／FUN! JAPANで裏取り。創建年は1537年説と他説があり「one of the oldest」表記、料金1,000円（浦楽園セット2,000円）・9:00-17:00・12/29-31休は「公式確認」表記。ナルセ家が2004年まで所有）。ハブ・JSON-LD(position 72)・sitemap・OGP・城ハブ上部カード反映済み。写真なし（既存のimages/castle-inuyama.jpgは出典不明のため未使用）。【未対応】ヒーロー＋本文写真追加、インデックス登録。次の候補：彦根城、二条城
+\n
