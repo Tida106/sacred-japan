@@ -165,3 +165,4 @@
 \n
 - 犬山城 写真7枚追加済み（ヒーロー：桜の天守 Tomio344456 CC BY-SA 4.0／犬山橋からの遠景 Alpsdake CC BY-SA 3.0／梁 Hyppolyte de Saint-Rambert CC BY 4.0／上段の間 村国左近 CC BY-SA 4.0／木曽川と城 KKPCW CC BY-SA 4.0／犬山祭の山車2枚 Bariston CC BY-SA 4.0）。【未対応】インデックス登録。次の候補：彦根城、二条城
 - 新規：guides/hikone-castle/（japan-guide／Wikipedia／彦根市観光で裏取り。天守は大津城から移築、明治の取り壊しを天皇の要請で免れた説、玄宮園、ひこにゃん。料金1,000円（博物館込み1,500円）・8:30-17:00はjapan-guide引用で「公式確認」表記）。ハブ・JSON-LD(position 73)・sitemap・OGP・城ハブ上部カード反映済み。写真なし。【未対応】ヒーロー＋本文写真追加、インデックス登録。次の候補：二条城
+- 彦根城 写真8枚追加済み（ヒーロー：紅葉の天守 Martin Falbisoner CC BY-SA 4.0／石畳の道 Mti CC BY-SA 3.0／天秤櫓・太鼓門櫓・西の丸三重櫓 z tanuki CC BY 3.0／ひこにゃん Hyppolyte de Saint-Rambert CC BY-SA 4.0／夢京橋キャッスルロード Sakaori CC BY 3.0／堀の桜 Luka Peternel CC BY-SA 4.0）。【未対応】インデックス登録。次の候補：二条城
