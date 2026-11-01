@@ -156,4 +156,4 @@
 - 作り方：scratchpadのcraft.py（edo-kiriko複製）＋castle_run.py。本文中の内部リンクにはclass="inline-link"を付けること（付けないと青リンクになる）
 - 本文写真5枚追加済み（外観Gorgo PD／回廊Drivephotographer CC0／火縄銃pdeaudney CC BY 2.0／天守内部Zairon CC BY 4.0／お菊井戸Drivephotographer CC0）
 - 【未対応】インデックス登録（guides/himeji-castle/、/castles/）。次の候補：松本城、熊本城、犬山城、彦根城、二条城（京都）
-- 新規：guides/matsumoto-castle/（Wikipedia／GLTJP／Go Nagano／Nagano Tabiで裏取り。料金はGLTJPの電子券1,200円・紙1,300円を「最近のガイド」として記載、公式確認を促す表記）。ヒーローはbest-castles-japanと同じManishprabhune写真（CC BY 4.0）。ハブ・JSON-LD(position 70)・sitemap・OGP・城ハブ上部カード反映済み。【未対応】インデックス登録、本文中の写真追加。次の候補：熊本城、犬山城、彦根城、二条城
+- 新規：guides/matsumoto-castle/（Wikipedia／GLTJP／Go Nagano／Nagano Tabiで裏取り。料金はGLTJPの電子券1,200円・紙1,300円を「最近のガイド」として記載、公式確認を促す表記）。ヒーローはbest-castles-japanと同じManishprabhune写真（CC BY 4.0）。ハブ・JSON-LD(position 70)・sitemap・OGP・城ハブ上部カード反映済み。【2026-11-01 写真追加済み】鎧レプリカ(lumoplank CC0)／天守内部・月見櫓内部(z tanuki CC BY 3.0)／月見櫓の窓(KimonBerlin CC BY-SA 2.0)／雪(Beggerly CC BY 2.0)／雪囲い(Japanexperterna CC BY-SA 3.0)／アルプスと天守(tsuruta yosuke CC BY 2.0)。Fg2のPD写真は青枠注釈入りのため未使用。【未対応】インデックス登録。次の候補：熊本城、犬山城、彦根城、二条城
