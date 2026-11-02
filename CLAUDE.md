@@ -166,3 +166,7 @@
 - 犬山城 写真7枚追加済み（ヒーロー：桜の天守 Tomio344456 CC BY-SA 4.0／犬山橋からの遠景 Alpsdake CC BY-SA 3.0／梁 Hyppolyte de Saint-Rambert CC BY 4.0／上段の間 村国左近 CC BY-SA 4.0／木曽川と城 KKPCW CC BY-SA 4.0／犬山祭の山車2枚 Bariston CC BY-SA 4.0）。【未対応】インデックス登録。次の候補：彦根城、二条城
 - 新規：guides/hikone-castle/（japan-guide／Wikipedia／彦根市観光で裏取り。天守は大津城から移築、明治の取り壊しを天皇の要請で免れた説、玄宮園、ひこにゃん。料金1,000円（博物館込み1,500円）・8:30-17:00はjapan-guide引用で「公式確認」表記）。ハブ・JSON-LD(position 73)・sitemap・OGP・城ハブ上部カード反映済み。写真なし。【未対応】ヒーロー＋本文写真追加、インデックス登録。次の候補：二条城
 - 彦根城 写真8枚追加済み（ヒーロー：紅葉の天守 Martin Falbisoner CC BY-SA 4.0／石畳の道 Mti CC BY-SA 3.0／天秤櫓・太鼓門櫓・西の丸三重櫓 z tanuki CC BY 3.0／ひこにゃん Hyppolyte de Saint-Rambert CC BY-SA 4.0／夢京橋キャッスルロード Sakaori CC BY 3.0／堀の桜 Luka Peternel CC BY-SA 4.0）。【未対応】インデックス登録。次の候補：二条城
+
+## アニメ記事：写真4枚化と聖地巡礼寄りの書き直し（2026-11-02開始）
+- 方針：全13アニメ記事を写真4枚に（リール化のため）。現状：anohana 3／love-live 1／他11本は2枚。ユーザーが写真＋ライセンスのスクショを送るので、入れられるだけ入れる。誤った場所の写真（例：山梨・笛吹の定林寺は秩父のAnohanaとは別寺）は使わない
+- 書き直し：理論寄りの節を縮め、「Pilgrimage Plan」のkey-calloutで行き方・時間・料金・開放日を明記。済み：ryomen-sukuna（千光寺：タクシー約20〜30分、宝物館500円、冬季休、宿儺堂は開放日要確認）、spirited-away（道後：市電15〜20分、商店街約250m、Kami no Yu／Tama no Yu、開館時間は要確認、神道形而上学ボックスを縮約）。【未対応】fruits-basket（日光の歩き方）、kusunoki-tei、inuyasha、demon-slayer、noragami の巡礼プラン化
