@@ -173,3 +173,4 @@
 - 2026-11-02 anohana：秩父神社の節（#chichibu-shrine）を新設し写真7枚追加（鳥居 yamai36 CC BY 3.0／赤門・本殿隅の龍 Carbonium CC BY 3.0／拝殿 NY066 CC BY-SA 3.0／つなぎの龍・北辰の梟・元気三猿 tak1701d CC BY-SA 3.0）。写真ごとの解説あり（出典：jinjajourney、japan-guide）。Anohanaは計10枚。リールは4枚に絞って使う。写真が多い記事は写真ごとに説明文を書く方針（ユーザー指示）
 - 2026-11-02 love-live：神田明神の写真6枚＋解説を追加（随神門と銅の鳥居 Kakidai CC BY-SA 3.0／随神門の彫刻2枚・ハート形おみくじ台 Hyppolyte de Saint-Rambert CC BY-SA 4.0／祭務所と神楽殿の夕景 Simo Räsänen CC BY-SA 4.0／手水舎の龍 江戸村のとくぞう CC BY-SA 4.0）。Love Liveは計7枚。noragamiにも鳥居と手水舎の龍を再利用（計4枚）。パス注意：神社マナー記事は /culture/shrine-etiquette/（/guides/ではない）
 - 2026-11-02 love-live：階段2枚（Junya Ogura CC BY-SA 2.0／Simo Räsänen CC BY-SA 4.0）＋神田祭2枚（Jose Fernando CC BY-SA 2.0／江戸村のとくぞう CC BY-SA 4.0）を追加。Love Liveは計11枚
+- 2026-11-02 lucky-star：鷲宮神社の写真6枚＋解説を追加（旧大鳥居2012・参道・社殿側面・屋根 Peter Schlömer CC BY-SA 3.0／新鳥居2023 Lukini CC BY-SA 4.0／絵馬の壁 Nao Iizuka CC BY 2.0）。Lucky Starは計8枚。旧鳥居の写真は「2018年に倒壊し交換」の記述と対応させて新旧比較で見せている
