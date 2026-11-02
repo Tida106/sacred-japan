@@ -192,3 +192,4 @@
 - 2026-11-02 inuyasha：伏見稲荷の狐像の写真6枚＋解説を追加（跳ぶ狐2枚 Oren Rozen／Alice.liv CC BY-SA 4.0、鍵の狐 Dumphasizer CC BY-SA 2.0、巻物の狐 Hyppolyte de Saint-Rambert CC BY-SA 4.0、苔の狐 Jakub Hałun CC BY 4.0、陶器の狐と小鳥居 Immanuel Giel CC BY-SA 4.0）。計12枚。【要確認】苔の狐と巻物の狐の作者対応は縦横比が同じため撮影地点・ファイルサイズから推定。鍵の狐と陶器の狐はCommons説明に場所の明記なし
 - 2026-11-02 inuyasha：千本鳥居の写真3枚＋解説を追加（Balon Greyjoy CC0／DXR CC BY-SA 4.0／Kakidai CC BY-SA 4.0）。計15枚。【未対応】Ryomen Sukuna（千光寺・高山）の写真
 - 2026-11-02 ryomen-sukuna：千光寺本堂（Tomio344456 CC BY-SA 4.0）、円空作 両面宿儺像1685（Toyotsu CC BY-SA 4.0・阿倍野ハルカス円空展、千光寺の像とは限らない旨を記載）、宿儺像（Ryōmen-sukunal CC BY-SA 4.0・撮影地不明）の3枚＋解説を追加。計5枚。Pilgrimage Planの直前に配置。全13記事の写真追加はこれで一巡
+- 2026-11-02 ryomen-sukuna：渋谷事変の節（#shibuya）を新設。場面→実在の場所の対応表（渋谷駅B5F/B4F・ヒカリエB3F・マークシティ通路・スクランブル交差点・明治神宮前・青山霊園）、巡礼プラン、Expedia/Viator枠、FAQ1問（JSON-LD含む）、TOC追加。出典FUN! JAPAN／Tabimania Japan。ナナミンの最期の場所は資料が食い違うため記載せず。【未対応】渋谷の写真追加（ユーザー指示）。タイトル・meta・ハブのカード文言の渋谷反映は未実施
