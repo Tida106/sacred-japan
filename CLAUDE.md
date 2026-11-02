@@ -187,3 +187,4 @@
 - 2026-11-02 spirited-away：道後温泉の写真5枚＋解説を追加（商店街 Raita Futo CC BY 2.0／本館正面 Wei-Te Wong CC BY-SA 2.0／飛鳥乃湯泉の畳の広間・浴室・椿の湯 松山市役所 CC BY 4.0）。新h3「The Two Other Public Baths」。計8枚。本館正面は2017年（改修前）のため「現在と異なる可能性」と記載
 - 2026-11-02 fruits-basket：日光東照宮の写真4枚＋解説を追加（雀の彫刻 pastaitaken CC BY 3.0／神厩舎 Fg2 PD／神厩舎の彫刻列 Joli Rumi CC BY-SA 4.0／三猿 foooomio CC BY 2.0）。新h3「Also at Nikko: The Sacred Stable and Its Monkeys」。計6枚。【要確認】雀の写真はCommonsの説明が「Tombe de Humayun」と不一致のファイルのスクショと対応させた（320px・小さい）。違えば削除
 - 2026-11-02 kusunoki-tei：鳳来寺の写真5枚＋解説を追加（石段入口・892段目と医王院・鐘楼2枚・紅葉の本堂 いずれもAlpsdake CC0）。新h3「Up the Stone Stairs」（#lore直前）。計7枚。仁王門の写真はヒーローと同一ショットのため未使用。傘杉の写真は未入手
+- 2026-11-02 kusunoki-tei：傘杉の写真2枚＋解説を追加（根元・見上げ Alpsdake CC0、Commons説明：樹齢800年以上・樹高約60m・幹回り約7.5m）。石段入口の直後に配置。計9枚
