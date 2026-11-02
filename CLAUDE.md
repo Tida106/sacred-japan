@@ -185,3 +185,4 @@
 - 2026-11-02 demon-slayer：竈門神社（太宰府）の写真3枚＋解説を追加（拝殿2枚・式部稲荷の鳥居 いずれもそらみみ CC BY-SA 4.0）。計8枚。拝殿2枚の撮影時刻はスクショ上2枚（15:27/15:31）だが写真との対応不明のため時刻は記載せず
 - 2026-11-02 spirited-away：道後温泉本館の夜のバルコニー写真1枚を追加（Takuya Matsuyama CC BY 3.0、2015年）。計3枚。色付きの窓は特別ライトアップの可能性があるため「日によって異なる」と記載
 - 2026-11-02 spirited-away：道後温泉の写真5枚＋解説を追加（商店街 Raita Futo CC BY 2.0／本館正面 Wei-Te Wong CC BY-SA 2.0／飛鳥乃湯泉の畳の広間・浴室・椿の湯 松山市役所 CC BY 4.0）。新h3「The Two Other Public Baths」。計8枚。本館正面は2017年（改修前）のため「現在と異なる可能性」と記載
+- 2026-11-02 fruits-basket：日光東照宮の写真4枚＋解説を追加（雀の彫刻 pastaitaken CC BY 3.0／神厩舎 Fg2 PD／神厩舎の彫刻列 Joli Rumi CC BY-SA 4.0／三猿 foooomio CC BY 2.0）。新h3「Also at Nikko: The Sacred Stable and Its Monkeys」。計6枚。【要確認】雀の写真はCommonsの説明が「Tombe de Humayun」と不一致のファイルのスクショと対応させた（320px・小さい）。違えば削除
