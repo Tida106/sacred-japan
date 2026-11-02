@@ -170,3 +170,4 @@
 ## アニメ記事：写真4枚化と聖地巡礼寄りの書き直し（2026-11-02開始）
 - 方針：全13アニメ記事を写真4枚に（リール化のため）。現状：anohana 3／love-live 1／他11本は2枚。ユーザーが写真＋ライセンスのスクショを送るので、入れられるだけ入れる。誤った場所の写真（例：山梨・笛吹の定林寺は秩父のAnohanaとは別寺）は使わない
 - 書き直し：理論寄りの節を縮め、「Pilgrimage Plan」のkey-calloutで行き方・時間・料金・開放日を明記。済み：ryomen-sukuna（千光寺：タクシー約20〜30分、宝物館500円、冬季休、宿儺堂は開放日要確認）、spirited-away（道後：市電15〜20分、商店街約250m、Kami no Yu／Tama no Yu、開館時間は要確認、神道形而上学ボックスを縮約）。【未対応】fruits-basket（日光の歩き方）、kusunoki-tei、inuyasha、demon-slayer、noragami の巡礼プラン化
+- 2026-11-02 anohana：秩父神社の節（#chichibu-shrine）を新設し写真7枚追加（鳥居 yamai36 CC BY 3.0／赤門・本殿隅の龍 Carbonium CC BY 3.0／拝殿 NY066 CC BY-SA 3.0／つなぎの龍・北辰の梟・元気三猿 tak1701d CC BY-SA 3.0）。写真ごとの解説あり（出典：jinjajourney、japan-guide）。Anohanaは計10枚。リールは4枚に絞って使う。写真が多い記事は写真ごとに説明文を書く方針（ユーザー指示）
