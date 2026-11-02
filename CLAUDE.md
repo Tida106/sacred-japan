@@ -174,3 +174,4 @@
 - 2026-11-02 love-live：神田明神の写真6枚＋解説を追加（随神門と銅の鳥居 Kakidai CC BY-SA 3.0／随神門の彫刻2枚・ハート形おみくじ台 Hyppolyte de Saint-Rambert CC BY-SA 4.0／祭務所と神楽殿の夕景 Simo Räsänen CC BY-SA 4.0／手水舎の龍 江戸村のとくぞう CC BY-SA 4.0）。Love Liveは計7枚。noragamiにも鳥居と手水舎の龍を再利用（計4枚）。パス注意：神社マナー記事は /culture/shrine-etiquette/（/guides/ではない）
 - 2026-11-02 love-live：階段2枚（Junya Ogura CC BY-SA 2.0／Simo Räsänen CC BY-SA 4.0）＋神田祭2枚（Jose Fernando CC BY-SA 2.0／江戸村のとくぞう CC BY-SA 4.0）を追加。Love Liveは計11枚
 - 2026-11-02 lucky-star：鷲宮神社の写真6枚＋解説を追加（旧大鳥居2012・参道・社殿側面・屋根 Peter Schlömer CC BY-SA 3.0／新鳥居2023 Lukini CC BY-SA 4.0／絵馬の壁 Nao Iizuka CC BY 2.0）。Lucky Starは計8枚。旧鳥居の写真は「2018年に倒壊し交換」の記述と対応させて新旧比較で見せている
+- 2026-11-02 girls-und-panzer：大洗磯前神社の写真7枚＋解説を追加（神磯の鳥居・波 Saigen Jiro PD／正面鳥居・境内・本殿 Saigen Jiro PD／階段・随神門 Σ64 CC BY 3.0／絵馬 KΛΝΛΤΛ CC BY-SA 3.0）。計9枚。随神門の掲示は「月次祭 1日・15日 10時」と読み取れるが「要確認」表記
