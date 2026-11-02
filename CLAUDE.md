@@ -178,3 +178,4 @@
 - 2026-11-02 hyouka：写真9枚＋解説を追加。新節#yatai（高山祭の屋台：神楽台 Gagnon CC BY-SA 3.0／屋台2枚 Chme82 CC BY-SA 4.0／屋台会館2枚 Daderot CC0）、古い町並み（雪の通り2枚 Raita Futo CC BY 2.0／パノラマ2枚 z tanuki CC BY 3.0）。計11枚。日吉神社の祭礼日を「4/14・15（春）、10/9・10（秋・桜山八幡宮）」に修正（旧記述の4/3は削除）。屋台2枚の撮影日は30 Apr 2017表記のみで祭礼日とは断定せず
 - 2026-11-02 noragami：新節#yushima-visit（湯島天満宮）に写真6枚＋解説（銅鳥居と露店 江戸村のとくぞう CC BY-SA 4.0／拝殿 Carbonium CC BY 3.0・Ph0kin PD／回廊 KimonBerlin CC BY-SA 2.0／絵馬 Vellut CC BY 2.0／臥牛 Daderot CC0）。noragamiは計10枚
 - 2026-11-02 noragami：梅・夕景（Pbdragonwang CC BY-SA 4.0×2／Manish Prabhune CC BY 4.0）と新節#suehiro（末廣神社 Higa4 CC0×3）を追加。計16枚。夜の湯島天満宮の写真は作者が不明（ライセンス画面が切れていた）ため未使用。末廣神社の写真1枚（狛犬）はライセンス画面なしで未使用
+- 2026-11-02 your-name：須賀神社の写真4枚＋解説を追加（階段を見上げ・鳥居・拝殿 Higa4 CC0／階段を見下ろし Yuet Man Lee CC BY-SA 4.0）。計6枚。飛騨古川の写真は未追加
