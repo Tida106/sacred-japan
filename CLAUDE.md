@@ -191,3 +191,4 @@
 - 2026-11-02 inuyasha：葛葉稲荷神社の写真4枚＋解説を追加（入口の鳥居 阪神強いな CC BY-SA 3.0／拝殿・狐の碑・姿見の井戸 KENPEI CC BY-SA 3.0）。#kuzunoha節の末尾。計6枚。入口の写真は2007年撮影のため「変わっている可能性」と記載。【未対応】伏見稲荷の写真追加
 - 2026-11-02 inuyasha：伏見稲荷の狐像の写真6枚＋解説を追加（跳ぶ狐2枚 Oren Rozen／Alice.liv CC BY-SA 4.0、鍵の狐 Dumphasizer CC BY-SA 2.0、巻物の狐 Hyppolyte de Saint-Rambert CC BY-SA 4.0、苔の狐 Jakub Hałun CC BY 4.0、陶器の狐と小鳥居 Immanuel Giel CC BY-SA 4.0）。計12枚。【要確認】苔の狐と巻物の狐の作者対応は縦横比が同じため撮影地点・ファイルサイズから推定。鍵の狐と陶器の狐はCommons説明に場所の明記なし
 - 2026-11-02 inuyasha：千本鳥居の写真3枚＋解説を追加（Balon Greyjoy CC0／DXR CC BY-SA 4.0／Kakidai CC BY-SA 4.0）。計15枚。【未対応】Ryomen Sukuna（千光寺・高山）の写真
+- 2026-11-02 ryomen-sukuna：千光寺本堂（Tomio344456 CC BY-SA 4.0）、円空作 両面宿儺像1685（Toyotsu CC BY-SA 4.0・阿倍野ハルカス円空展、千光寺の像とは限らない旨を記載）、宿儺像（Ryōmen-sukunal CC BY-SA 4.0・撮影地不明）の3枚＋解説を追加。計5枚。Pilgrimage Planの直前に配置。全13記事の写真追加はこれで一巡
