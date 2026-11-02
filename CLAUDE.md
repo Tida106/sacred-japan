@@ -180,3 +180,4 @@
 - 2026-11-02 noragami：梅・夕景（Pbdragonwang CC BY-SA 4.0×2／Manish Prabhune CC BY 4.0）と新節#suehiro（末廣神社 Higa4 CC0×3）を追加。計16枚。夜の湯島天満宮の写真は作者が不明（ライセンス画面が切れていた）ため未使用。末廣神社の写真1枚（狛犬）はライセンス画面なしで未使用
 - 2026-11-02 your-name：須賀神社の写真4枚＋解説を追加（階段を見上げ・鳥居・拝殿 Higa4 CC0／階段を見下ろし Yuet Man Lee CC BY-SA 4.0）。計6枚。飛騨古川の写真は未追加
 - 2026-11-02 your-name：飛騨古川の写真3枚＋解説（駅舎・駅名標 そらみみ CC BY-SA 4.0／起し太鼓展示の建物 Asturio Cantabrio CC BY-SA 4.0）。計9枚。瀬戸川・白壁土蔵の写真は未追加
+- 2026-11-02 your-name：瀬戸川と白壁土蔵（Asturio Cantabrio CC BY-SA 4.0）を追加。計10枚
