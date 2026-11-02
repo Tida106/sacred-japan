@@ -181,3 +181,4 @@
 - 2026-11-02 your-name：須賀神社の写真4枚＋解説を追加（階段を見上げ・鳥居・拝殿 Higa4 CC0／階段を見下ろし Yuet Man Lee CC BY-SA 4.0）。計6枚。飛騨古川の写真は未追加
 - 2026-11-02 your-name：飛騨古川の写真3枚＋解説（駅舎・駅名標 そらみみ CC BY-SA 4.0／起し太鼓展示の建物 Asturio Cantabrio CC BY-SA 4.0）。計9枚。瀬戸川・白壁土蔵の写真は未追加
 - 2026-11-02 your-name：瀬戸川と白壁土蔵（Asturio Cantabrio CC BY-SA 4.0）を追加。計10枚
+- 2026-11-02 demon-slayer：浅草の雷門の写真3枚＋解説を追加（正面 Daderot PD／仲見世から提灯 MIKI Yoshihito CC BY 2.0／軒と金龍山の扁額 Another Believer CC BY-SA 4.0）。計5枚。雷門は1865年焼失→1960年再建のため大正期の浅草には無かった旨を記載
