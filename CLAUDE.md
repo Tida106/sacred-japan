@@ -189,3 +189,4 @@
 - 2026-11-02 kusunoki-tei：鳳来寺の写真5枚＋解説を追加（石段入口・892段目と医王院・鐘楼2枚・紅葉の本堂 いずれもAlpsdake CC0）。新h3「Up the Stone Stairs」（#lore直前）。計7枚。仁王門の写真はヒーローと同一ショットのため未使用。傘杉の写真は未入手
 - 2026-11-02 kusunoki-tei：傘杉の写真2枚＋解説を追加（根元・見上げ Alpsdake CC0、Commons説明：樹齢800年以上・樹高約60m・幹回り約7.5m）。石段入口の直後に配置。計9枚
 - 2026-11-02 inuyasha：葛葉稲荷神社の写真4枚＋解説を追加（入口の鳥居 阪神強いな CC BY-SA 3.0／拝殿・狐の碑・姿見の井戸 KENPEI CC BY-SA 3.0）。#kuzunoha節の末尾。計6枚。入口の写真は2007年撮影のため「変わっている可能性」と記載。【未対応】伏見稲荷の写真追加
+- 2026-11-02 inuyasha：伏見稲荷の狐像の写真6枚＋解説を追加（跳ぶ狐2枚 Oren Rozen／Alice.liv CC BY-SA 4.0、鍵の狐 Dumphasizer CC BY-SA 2.0、巻物の狐 Hyppolyte de Saint-Rambert CC BY-SA 4.0、苔の狐 Jakub Hałun CC BY 4.0、陶器の狐と小鳥居 Immanuel Giel CC BY-SA 4.0）。計12枚。【要確認】苔の狐と巻物の狐の作者対応は縦横比が同じため撮影地点・ファイルサイズから推定。鍵の狐と陶器の狐はCommons説明に場所の明記なし
