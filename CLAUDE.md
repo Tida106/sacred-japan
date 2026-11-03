@@ -243,3 +243,43 @@
   - アクセス：地下鉄名城線「名古屋城」駅7番出口から徒歩約5分（2023-01-04に市役所駅から改称）。メーグルは月曜運休・1回210円/1日500円
   - 桜：約1,000本・10品種（GLTJP）、桜まつり3月下旬〜4月下旬。watabi：天守に登りたいなら大阪城を勧める
   - 写真が必要：天守外観と金鯱、本丸御殿、桜、堀と隅櫓
+
+## 【引き継ぎ】城ガイド量産の手順と運用ルール（2026-11-03・新チャット用）
+### ユーザーとのやり取りの決まり
+- 返答は丁寧な日本語・簡潔・結論先・温かいトーン・結びの言葉なし。推奨は1案に絞る
+- 更新のたびに：①公開URL（クリック可）②Cloudflareキャッシュパージのお願い③Search Consoleインデックス登録のお願い（フルURLで、新規は各言語版も）。pushは毎回
+- 写真が必要な記事は毎回、必要な写真と検索リンクを伝える。リンクは https://commons.wikimedia.org/w/index.php?search=TERM&title=Special:MediaSearch&type=image 形式（画像検索モード）、検索語は広め、クリック可のリンク（コードブロックにしない）
+- 写真：ユーザーが写真本体＋作者・ライセンスのスクショを送る。作者・ライセンスが確認できない写真は使わず保留→Author欄/ライセンス欄のスクショを依頼。NC/ND不可。送られた写真は入れられるだけ入れ、全写真に解説段落を書く
+- スクショだけ届いて写真本体が無い時は、読み取れたライセンスを一覧にして写真本体を依頼（責められた訳ではない）
+- 料金・開館時間・年は資料間で食い違えば併記し「公式確認」。単一ソースは明記
+- SNS：リール投稿時は「投稿直後にコメントを」と促す。コメント文はFB・Threads（フルURL）とInstagram（URLなし＝プロフィールのリンクへ）を別々に。リールは3〜4項目、1ページ約3.5秒、音楽なし
+- コミット末尾に必ず付ける：
+  Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+  Claude-Session: https://claude.ai/code/session_01EpyvmJaAWoN52Wmz9c73wc
+### 写真追加の手順
+- 写真⇔スクショの対応はピクセル寸法・縦横比・説明文・撮影日・消去法で行う
+- 幅1200px（拡大しない）でjpg(q84)＋webp(q80)を guides/SLUG/images/ に保存
+- figure：横長 max-width 760px／縦長 420px／ヒーローは `<main>` 直後の `<figure style="margin:0 0 48px;">`（eager、max-height 420px、object-fit cover）。figcaption＝作者・ライセンスリンク・「via Wikimedia Commons (resized)」＋解説の`<p>`
+- PHOTO-CREDITS.csv（CRLF、列：page,image,license,license_url,commons_link,caption）に追記、CLAUDE.mdに記録
+- GFDL併記はCC BY-SA側を採用
+### 新規城ガイドのチェックリスト
+1. 既存城ページ（osaka-castle）の head/tail を流用するビルダースクリプトで main を書き換え（_tools/castle/osaka.py を複製してnagoya.pyに。scratchpadが消えていたら osaka-castle/index.html から直接複製でも可）。本文内部リンクは class="inline-link"。パンくずに<nav>を使わない
+2. guides/index.html：前の城カードの後ろにカード＋JSON-LD ItemList（次は position 84）
+3. castles/index.html：上部カードを前の城の後ろに追加
+4. sitemap.xml（lastmod当日）
+5. OGP 1200×630：images/og/og-guides-matsue-castle.jpg をコピー→矩形[40,150,1170,380]を(252,240,242)で塗り、タイトル2行をDejaVuSerif-Bold 48pt (66,170)/(66,238)（2行目の幅<1090）、漢字をNotoSerifCJK-Bold.ttc 28pt (66,332)
+6. CLAUDE.mdに記録
+7. チェック：div/figure/picture/p/a/ul/li/details/section/h2のタグ均衡、JSON-LDのparse、スマホ390px幅の横はみ出し（Playwright、`390 []`なら問題なし。_tools/castle/shot_os.py）
+8. commit→push
+- ローカル確認：`cd /home/claude/sacred-japan && nohup python3 -m http.server 8765 &`（よく落ちる。再起動する。`pkill -f http.server`は使わない）
+- WebFetchは許可リスト外で失敗しやすい。検索結果に出たURLか、japan-guide／watabi／japantravel等を使う。gltjpやWikipediaミラーは失敗することあり
+### 名古屋城ガイドの方針
+- 天守は2018-05から閉鎖中（本丸御殿と敷地は見学可）を冒頭で明示。木造復元の時期は「FY2032目標／2032年以降で未確定」を併記
+- 追加で調べたい点：隅櫓の見学可否、公式の料金・時間ページ（nagoyajo.city.nagoya.jp/en/information/）
+### 未対応バックログ（主なもの）
+- インデックス登録（城：osaka／kochi／best-castles-japan／castles／guides、他は上記各メモの【未対応】参照）
+- 写真待ち：丸亀（崩落石垣・桜）、丸岡（石瓦・堀）、備中松山（天守内部・石段）、高知（桜・本丸御殿）、二条城（梅・玄関）、松江（井戸）、松山城Jyo81（Author欄待ち）、名古屋城（作成後）
+- アニメ記事の巡礼プラン化：fruits-basket／kusunoki-tei／inuyasha／demon-slayer／noragami。アニメ記事のリール
+- 工芸記事の残り13（Mashiko、Awa Aizome、Nishijin、Kaga Yuzen、Hagi、Shigaraki優先）、/crafts/のViator 0件カード確認
+- 弘前城は曳戻し完了後（2027年春）に更新。背景ピンク案の決定
+- 次の城候補：名古屋城→江戸城（皇居東御苑）→岡山城→広島城
