@@ -246,6 +246,8 @@
 
 - 2026-11-03 新規：guides/nagoya-castle/（上記調査メモをもとに _tools/castle/nagoya.py で生成。タイトル「Nagoya Castle Guide: Golden Shachi, a Rebuilt Palace and a Keep That Is Closed」。天守は2018-05から閉鎖中を冒頭で明示、木造復元はFY2032目標（GLTJP）／2032年以降で未確定（japan-guide）を併記。本丸御殿2009-2018・約150億円・30室超・撮影可（フラッシュ・三脚不可）。金鯱の寸法と金量は公式／Wikipedia。料金1,000円（2026-10-01〜、旧500円）はGLTJP／japan-guide／watabi一致だが公式の料金ページ未確認＝「公式確認」表記。隅櫓は「通常非公開」と記載（見学可否は未確認）。FAQ5問。ハブ・JSON-LD(position 84)・sitemap・OGP・城ハブ上部カード反映済み、タグ均衡・JSON-LD・390px幅OK）。写真なし（ヒーロー無し）。【未対応】ヒーロー＋本文写真追加（天守外観と金鯱、本丸御殿、桜、堀と隅櫓）、インデックス登録（guides/nagoya-castle/、/castles/、/guides/）。次の城候補：江戸城（皇居東御苑）→岡山城→広島城
 
+- 2026-11-03 nagoya-castle：写真4枚＋解説を追加（ヒーロー：天守と金鯱 Noodle snacks CC BY-SA 3.0・2008-08-09（3×3の合成）／下から見た天守 Syced CC0・2025-03-23／空撮パノラマ BobTanGo CC BY 4.0・2024-12-17／桜と天守 Hiroaki Kaneko CC BY-SA 3.0・2016-03-31（Panoramio由来、画像に「H. Kaneko」の透かし文字あり）。写真とスクショは寸法・日付・季節（下から見た天守＝裸木なので3月のSyced）で対応。【未使用】スクショ2枚分の写真本体が真っ黒（6000×8000）／真っ白で空だったため：Syced（stitched、日付1970-01-01）とMauricio V. Genta（CC BY-SA 4.0・2023-08-27）→再送待ち。本丸御殿・堀と隅櫓の写真は未入手。PHOTO-CREDITS.csv追記済み。【未対応】インデックス登録
+
 ## 【引き継ぎ】城ガイド量産の手順と運用ルール（2026-11-03・新チャット用）
 ### ユーザーとのやり取りの決まり
 - 返答は丁寧な日本語・簡潔・結論先・温かいトーン・結びの言葉なし。推奨は1案に絞る
