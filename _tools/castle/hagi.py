@@ -136,7 +136,7 @@ main='''<main>
   </article>
 
 '''
-tail=tail.replace('kochi-castle',SL).replace('_kochi_','_hagi_')
+tail=tail.replace('kochi-castle',SL).replace('_kochi_','_hagi_').replace('DKochi','DHagi').replace('search/Kochi','search/Hagi')
 def L(u,l,t): return f'<a href="{u}" target="_blank" rel="noopener" style="color:var(--beni);text-decoration:underline;" onclick="trackEvent(\'click\',\'external\',\'{l}\')">{t}</a>'
 src='Sources verified at time of writing: '+', '.join([
  L('https://www.gltjp.com/en/directory/item/16147/','src_hagi_gltjp','GLTJP'),
