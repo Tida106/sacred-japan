@@ -257,9 +257,7 @@
 - スクショだけ届いて写真本体が無い時は、読み取れたライセンスを一覧にして写真本体を依頼（責められた訳ではない）
 - 料金・開館時間・年は資料間で食い違えば併記し「公式確認」。単一ソースは明記
 - SNS：リール投稿時は「投稿直後にコメントを」と促す。コメント文はFB・Threads（フルURL）とInstagram（URLなし＝プロフィールのリンクへ）を別々に。リールは3〜4項目、1ページ約3.5秒、音楽なし
-- コミット末尾に必ず付ける：
-  Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
-  Claude-Session: https://claude.ai/code/session_01EpyvmJaAWoN52Wmz9c73wc
+- コミット末尾に必ず付ける：Co-Authored-By行とClaude-Session行（Claude-SessionのURLはセッションごとに違う。そのセッションのsystem-reminderに書かれた値を使う。Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>）
 ### 写真追加の手順
 - 写真⇔スクショの対応はピクセル寸法・縦横比・説明文・撮影日・消去法で行う
 - 幅1200px（拡大しない）でjpg(q84)＋webp(q80)を guides/SLUG/images/ に保存
@@ -338,3 +336,11 @@
 - 2026-11-05 gifu-castle：写真5枚＋解説を追加（ロープウェイの客車 Hyppolyte de Saint-Rambert CC BY 4.0・2025-05-15、Commons説明『au parc de Gifu』、70周年表示・帰蝶の装飾は「私の読み」／岐阜公園・織田信長居館跡の門と標柱 そらみみ CC BY-SA 3.0・2014-02-05／信長の庭の池 同・同日（原構かは不明と明記）／長良川の鵜飼 Ludger Heide CC BY-SA 4.0・2025-07-07（Flickr審査済み）／鵜の顔 yellow_bird_woodstock CC BY-SA 2.0・2010-05-01（岐阜市・昼間の撮影））。ロープウェイは#see冒頭、門と庭は岐阜公園の段落後、鵜飼は長良川の段落後。岐阜城は計12枚（ヒーロー含む）。PHOTO-CREDITS.csv追記済み。【写真本体待ち】Hyppolyte 2025-05-15 06:06:56（4864×3648・CC BY 4.0）。【受領済み・未使用】大垣城：Hyppolyte 2025-05-29 外観（CC BY 4.0）、KKPCW 2016-12-18 鯱瓦（CC BY-SA 4.0）、山頂からの眺め（作者不明）＝大垣城ガイドを作る場合に使用。【未対応】紅葉・夜景の写真、インデックス登録
 - 2026-11-05 gifu-castle：紅葉の写真1枚＋解説を追加（鷹巣山から望む金華山 Alpsdake CC BY-SA 4.0・2023-11-26、縦長420px、#see紅葉の段落の後）。色づきはまだら＝一様な赤ではないと本文に記載。岐阜城は計13枚（ヒーロー含む）。PHOTO-CREDITS.csv追記済み。【写真本体待ち】Hyppolyte 2025-05-15 06:06:56。【未対応】夜景の写真、インデックス登録
 - 2026-11-05 gifu-castle：ヒーローを差し替え（丘の上の天守 Adam Jones CC BY-SA 2.0・2019-05-24、Commons説明『View toward Gifu Castle - From Gifu Park』、Flickr審査済み）。旧ヒーロー（冬の天守 Drivephotographer CC0）は#keepの本文写真に移し解説を追加。計14枚。PHOTO-CREDITS.csv追記済み。【写真本体待ち】Hyppolyte 2025-05-15 06:06:56（再送の6枚には含まれず）。【未使用】夕方の川の眺め（作者不明）
+
+## 【引き継ぎ・最新】2026-11-05 15:00時点（新チャット用）
+- 直近の状態：岐阜城ガイド（guides/gifu-castle/）は写真14枚まで完了・push済み（最新コミット7e06282）。ヒーローはAdam Jones（丘の上の天守）。写真待ち＝夜景、Hyppolyte de Saint-Rambert 2025-05-15 06:06:56の写真本体（4864×3648・CC BY 4.0・内容不明。ユーザーに6枚再送してもらったが含まれず）。夕方の長良川の眺め（霞んだ・3:2・作者不明）はAuthor/ライセンスのスクショ待ち。大垣城の写真（Hyppolyte外観・KKPCW鯱瓦）は受領済み・未使用（大垣城ガイドを作る場合に使う）
+- 次の作業：福岡城跡のガイド作成（ユーザーに「次は福岡城跡」と伝達済み）。手順は上の「新規城ガイドのチェックリスト」。雛形は直近のguides/gifu-castle/（_tools/castle/gifu.py＝builder、gifu_photos1〜4.py＝写真挿入のひな形）。ハブのJSON-LDの次のpositionは100（Gifuがposition 99）。builderのリーク検査assertにFukuokaを追加し、固定CTAの destination%3D と viator.com/search/ を福岡に置換、_kochi_ → _fukuoka_ の置換も忘れないこと。次の城候補：福岡城跡→上田城→浜松城→小倉城→今帰仁城
+- インデックス登録リクエスト：済み＝goryokaku／aizuwakamatsu-castle／odawara-castle／takeda-castle-ruins／shuri-castle／kanazawa-castle、/castles/、/guides/。未登録（1日の上限があるので数本ずつ依頼）＝sendai／tsuyama／hagi／hiroshima／okayama／edo／nagoya／osaka／kochi／wakayama／takato／gifu
+- 写真待ちバックログ：和歌山・仙台（石垣・夜のライトアップ・博物館）、丸亀、丸岡、備中松山、高知、二条城、松江、松山城Jyo81（Author欄待ち）
+- その他：弘前城は曳戻し完了後（2027年春）に更新、岐阜城は天守再開（2027年11月予定）で更新。アニメ記事の巡礼プラン化（fruits-basket／kusunoki-tei／inuyasha／demon-slayer／noragami）、工芸記事の残り13、背景ピンク案の決定
+- 写真スクショ⇔写真本体の対応は、まず縦横比・ピクセル寸法・内容で行い、掲載済み写真との重複確認は縮小画像の差分（numpy）で機械的に行うと確実
