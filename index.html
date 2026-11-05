@@ -2616,6 +2616,10 @@ transition: background 0.15s, color 0.15s;
 </section>
 
 <!-- START HERE -->
+<style>
+#start-here .start-btn{display:inline-block;margin:0 8px 8px 0;padding:8px 15px;background:var(--kin);color:#1a1a1a;font-weight:600;font-size:15px;letter-spacing:.02em;text-decoration:none;border-radius:3px;border:1px solid #a8893a;transition:filter .2s,transform .2s;}
+#start-here .start-btn:hover{filter:brightness(1.08);transform:translateY(-1px);}
+</style>
 <section id="start-here" style="background:#fff;padding:40px 24px 8px;">
   <div style="max-width:1100px;margin:0 auto;">
     <p style="font-family:'EB Garamond',serif;font-size:14px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 6px;text-align:center;">Start here</p>
@@ -2625,19 +2629,37 @@ transition: background 0.15s, color 0.15s;
         <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 8px;">Most popular</p>
         <h2 style="font-family:'Shippori Mincho',serif;font-size:22px;font-weight:400;color:var(--kon);margin:0 0 8px;line-height:1.4;">Anime Pilgrimage in Japan</h2>
         <p style="font-size:17px;line-height:1.7;color:var(--kon);margin:0 0 14px;">Thirteen scene-by-scene guides to the real places behind Your Name, Demon Slayer, Spirited Away, Anohana, Lucky Star and more.</p>
-        <div><a href="/anime/" onclick="trackEvent('click','internal','home_start_anime')" style="display:inline-block;margin:0 14px 6px 0;color:var(--beni,#9b2335);font-weight:600;text-decoration:none;font-size:17px;">Browse anime pilgrimage guides →</a></div>
+        <div><a href="/anime/" onclick="trackEvent('click','internal','home_start_anime')" class="start-btn">Anime pilgrimage guides</a></div>
       </div>
       <div style="background:#fff;border:1px solid #e8d8c4;border-left:4px solid var(--kin);border-radius:4px;padding:22px 24px;">
         <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 8px;">New to Japan's sacred sites</p>
         <h2 style="font-family:'Shippori Mincho',serif;font-size:22px;font-weight:400;color:var(--kon);margin:0 0 8px;line-height:1.4;">The Basics, Explained</h2>
         <p style="font-size:17px;line-height:1.7;color:var(--kon);margin:0 0 14px;">Etiquette, symbols and the questions first-time visitors ask, in plain English.</p>
-        <div><a href="/culture/what-is-shinto/" onclick="trackEvent('click','internal','home_start_shinto')" style="display:inline-block;margin:0 14px 6px 0;color:var(--beni,#9b2335);font-weight:600;text-decoration:none;font-size:17px;">What is Shinto? →</a><a href="/culture/shrine-vs-temple/" onclick="trackEvent('click','internal','home_start_shrine_vs_temple')" style="display:inline-block;margin:0 14px 6px 0;color:var(--beni,#9b2335);font-weight:600;text-decoration:none;font-size:17px;">Shrine vs temple →</a><a href="/culture/kamidana/" onclick="trackEvent('click','internal','home_start_kamidana')" style="display:inline-block;margin:0 14px 6px 0;color:var(--beni,#9b2335);font-weight:600;text-decoration:none;font-size:17px;">The home altar →</a></div>
+        <div><a href="/culture/what-is-shinto/" onclick="trackEvent('click','internal','home_start_shinto')" class="start-btn">What is Shinto?</a><a href="/culture/shrine-vs-temple/" onclick="trackEvent('click','internal','home_start_shrine_vs_temple')" class="start-btn">Shrine vs temple</a><a href="/culture/kamidana/" onclick="trackEvent('click','internal','home_start_kamidana')" class="start-btn">The home altar</a></div>
       </div>
       <div style="background:#fff;border:1px solid #e8d8c4;border-left:4px solid var(--kin);border-radius:4px;padding:22px 24px;">
         <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 8px;">Plan your trip</p>
         <h2 style="font-family:'Shippori Mincho',serif;font-size:22px;font-weight:400;color:var(--kon);margin:0 0 8px;line-height:1.4;">Where to Go and What to Book</h2>
         <p style="font-size:17px;line-height:1.7;color:var(--kon);margin:0 0 14px;">Temple lodgings, seasonal highlights and practical planning for shrines and temples.</p>
-        <div><a href="/guides/temple-stay/" onclick="trackEvent('click','internal','home_start_temple_stay')" style="display:inline-block;margin:0 14px 6px 0;color:var(--beni,#9b2335);font-weight:600;text-decoration:none;font-size:17px;">Temple stay guide →</a><a href="/guides/japan-travel-planning/" onclick="trackEvent('click','internal','home_start_planning')" style="display:inline-block;margin:0 14px 6px 0;color:var(--beni,#9b2335);font-weight:600;text-decoration:none;font-size:17px;">Trip planning →</a><a href="/guides/" onclick="trackEvent('click','internal','home_start_guides')" style="display:inline-block;margin:0 14px 6px 0;color:var(--beni,#9b2335);font-weight:600;text-decoration:none;font-size:17px;">All guides →</a></div>
+        <div><a href="/guides/temple-stay/" onclick="trackEvent('click','internal','home_start_temple_stay')" class="start-btn">Temple stay guide</a><a href="/guides/japan-travel-planning/" onclick="trackEvent('click','internal','home_start_planning')" class="start-btn">Trip planning</a><a href="/guides/" onclick="trackEvent('click','internal','home_start_guides')" class="start-btn">All guides</a></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e8d8c4;border-left:4px solid var(--kin);border-radius:4px;padding:22px 24px;">
+        <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 8px;">Castles</p>
+        <h2 style="font-family:'Shippori Mincho',serif;font-size:22px;font-weight:400;color:var(--kon);margin:0 0 8px;line-height:1.4;">Japan's Castles, One by One</h2>
+        <p style="font-size:17px;line-height:1.7;color:var(--kon);margin:0 0 14px;">In-depth guides to original keeps, ruins and rebuilt castles, from Himeji and Matsumoto to Osaka and Shuri.</p>
+        <div><a href="/castles/" onclick="trackEvent('click','internal','home_start_castles')" class="start-btn">Castle guides</a><a href="/guides/himeji-castle/" onclick="trackEvent('click','internal','home_start_himeji')" class="start-btn">Himeji Castle</a><a href="/guides/best-castles-japan/" onclick="trackEvent('click','internal','home_start_best_castles')" class="start-btn">Best castles</a></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e8d8c4;border-left:4px solid var(--kin);border-radius:4px;padding:22px 24px;">
+        <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 8px;">Traditional crafts</p>
+        <h2 style="font-family:'Shippori Mincho',serif;font-size:22px;font-weight:400;color:var(--kon);margin:0 0 8px;line-height:1.4;">Crafts With a Story</h2>
+        <p style="font-size:17px;line-height:1.7;color:var(--kon);margin:0 0 14px;">Kintsugi, Bizen ware, Wajima lacquer, Edo kiriko and more, plus crafts you can try yourself.</p>
+        <div><a href="/crafts/" onclick="trackEvent('click','internal','home_start_crafts')" class="start-btn">Craft guides</a><a href="/guides/kintsugi/" onclick="trackEvent('click','internal','home_start_kintsugi')" class="start-btn">Kintsugi</a></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e8d8c4;border-left:4px solid var(--kin);border-radius:4px;padding:22px 24px;">
+        <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 8px;">Autumn leaves</p>
+        <h2 style="font-family:'Shippori Mincho',serif;font-size:22px;font-weight:400;color:var(--kon);margin:0 0 8px;line-height:1.4;">Where to See the Colours</h2>
+        <p style="font-size:17px;line-height:1.7;color:var(--kon);margin:0 0 14px;">From Kyoto's famous temples to quieter sanctuaries, with illuminations after dark.</p>
+        <div><a href="/guides/autumn-sanctuaries/" onclick="trackEvent('click','internal','home_start_autumn')" class="start-btn">Autumn guide</a><a href="/guides/kyoto-illuminations/" onclick="trackEvent('click','internal','home_start_illuminations')" class="start-btn">Kyoto illuminations</a><a href="/guides/tofukuji/" onclick="trackEvent('click','internal','home_start_tofukuji')" class="start-btn">Tofuku-ji</a></div>
       </div>
     </div>
   </div>
