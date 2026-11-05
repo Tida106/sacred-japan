@@ -344,3 +344,4 @@
 - 写真待ちバックログ：和歌山・仙台（石垣・夜のライトアップ・博物館）、丸亀、丸岡、備中松山、高知、二条城、松江、松山城Jyo81（Author欄待ち）
 - その他：弘前城は曳戻し完了後（2027年春）に更新、岐阜城は天守再開（2027年11月予定）で更新。アニメ記事の巡礼プラン化（fruits-basket／kusunoki-tei／inuyasha／demon-slayer／noragami）、工芸記事の残り13、背景ピンク案の決定
 - 写真スクショ⇔写真本体の対応は、まず縦横比・ピクセル寸法・内容で行い、掲載済み写真との重複確認は縮小画像の差分（numpy）で機械的に行うと確実
+- 2026-11-05 guides/best-castles-japan/（最初の記事）を大幅加筆：既存4城に写真11枚追加（姫路4／松本3／熊本3／二条4）、新節「Ten More Original Keeps」（犬山・彦根・松江・丸岡・松山・備中松山・弘前・宇和島・高知・丸亀、各2枚＋個別ガイドへのリンク）、「Rebuilt Castles Worth the Trip」（大阪・名古屋・広島・岡山）、「Which Castle Should You Visit?」を追加。写真は既存ガイドの画像・クレジットを再利用（新規ファイル無し）、TOC・dateModified更新。本文中のリンクは個別ガイドへ。生成は _tools/castle/best_expand.py＋best_expand2.py
