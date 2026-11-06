@@ -541,7 +541,7 @@ z-index: 1;
 box-shadow: inset 0 0 0 3px var(--kin);
 }
 .anime-thumb::before {
-content: '↗ Official Site';
+content: none;
 position: absolute;
 bottom: 12px;
 right: 12px;
@@ -895,7 +895,7 @@ footer { padding: 40px 24px 100px; }
     <h1>Anime Pilgrimage in Japan: <em>Real Locations</em>, Scene by Scene</h1>
     <div class="hero-jp">せいちじゅんれい ─ 日本のアニメ聖地をめぐる旅</div>
     <p>"Seichi junrei" — anime pilgrimage — has become one of Japan's most distinctive forms of modern travel. Fans visit the real shrines, schools, bridges, and bathhouses that inspired their favorite series, often greeted by hand-drawn fan art on prayer plaques and themed merchandise in town.</p>
-    <p>Start with the thirteen scene-by-scene guides below: each one matches scenes to real places, tells you how to get there and marks what is official and what is only fan-sourced. Further down, a map of eighteen more pilgrimage spots links to official tourism and shrine sites, with hotels and guided tours nearby.</p>
+    <p>Start with the thirteen scene-by-scene guides below: each one matches scenes to real places, tells you how to get there and marks what is official and what is only fan-sourced. Further down, eighteen more pilgrimage spots, with hotels and guided tours nearby.</p>
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">18</div>
@@ -999,7 +999,7 @@ footer { padding: 40px 24px 100px; }
     <h2 class="section-h2">An Anime Pilgrimage Map of Japan</h2>
     <span class="section-h2-jp">にほんのアニメせいち ・ ちずきこう</span>
   </div>
-  <p class="section-intro">More places to explore: seven regions, eighteen pilgrimage spots. Click any image to visit the official tourism or shrine website, or use the buttons below each card to find hotels and book guided tours nearby.</p>
+  <p class="section-intro">More places to explore: seven regions, eighteen pilgrimage spots. Use the buttons below each card to find hotels and book guided tours nearby.</p>
 
 
   <!-- eSIM AFFILIATE TIP -->
@@ -1033,16 +1033,14 @@ footer { padding: 40px 24px 100px; }
     <div class="anime-grid">
 
       <!-- 1. Karasuno HS Model -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Sendai+City+Gymnasium+Miyagi" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_karasuno')" aria-label="Visit Sendai official tourism website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">烏野高校<br>モデル校</div>
           <picture><source srcset="../images/anime-karasuno-school.webp" type="image/webp"><img src="../images/anime-karasuno-school.jpg" alt="Karasuno High School model area — rural Tohoku schools and Sendai gymnasium that inspired the volleyball anime Haikyuu" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">宮城 Miyagi</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Karasuno High School Model Area</div>
           <div class="anime-name-jp">烏野高校モデル校</div>
@@ -1062,16 +1060,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 2. Morioh / Sendai (JoJo Part 4) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Sendai+Mediatheque+Miyagi" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_jojo_morioh')" aria-label="Visit Sendai official tourism website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">杜王町<br>仙台</div>
           <picture><source srcset="../images/anime-morioh-sendai.webp" type="image/webp"><img src="../images/anime-morioh-sendai.jpg" alt="Morioh and Sendai — the Tohoku city that inspired the fictional setting of JoJo's Bizarre Adventure Part 4" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">宮城 Miyagi</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Morioh / Sendai</div>
           <div class="anime-name-jp">杜王町・仙台</div>
@@ -1106,16 +1102,14 @@ footer { padding: 40px 24px 100px; }
     <div class="anime-grid">
 
       <!-- 3. Suga Shrine (Your Name) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Suga+Shrine+Yotsuya+Tokyo" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_suga_shrine')" aria-label="Visit Tokyo official tourism website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">須賀神社<br>四谷</div>
           <picture><source srcset="../images/anime-suga-shrine.webp" type="image/webp"><img src="../images/anime-suga-shrine.jpg" alt="Suga Shrine staircase in Yotsuya, Tokyo — the iconic stone steps recreated frame-perfect in Makoto Shinkai's Your Name" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">東京 Tokyo</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Suga Shrine, Yotsuya</div>
           <div class="anime-name-jp">須賀神社（四谷）</div>
@@ -1135,16 +1129,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 4. Kanda Myojin (Love Live!) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Kanda+Myojin+Shrine+Tokyo" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_kanda_myojin')" aria-label="Visit Kanda Myojin Shrine official website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">神田明神</div>
           <picture><source srcset="../images/anime-kanda-myojin.webp" type="image/webp"><img src="../images/anime-kanda-myojin.jpg" alt="Kanda Myojin Shrine in Akihabara, Tokyo — the 1300-year-old shrine that became the spiritual home of the Love Live! franchise" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">東京 Tokyo</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Kanda Myojin Shrine</div>
           <div class="anime-name-jp">神田明神</div>
@@ -1164,16 +1156,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 5. Washinomiya Shrine (Lucky Star) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Washinomiya+Shrine+Saitama" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_washinomiya')" aria-label="Visit Washinomiya Shrine official website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">鷲宮神社</div>
           <picture><source srcset="../images/anime-washinomiya-shrine.webp" type="image/webp"><img src="../images/anime-washinomiya-shrine.jpg" alt="Washinomiya Shrine in Saitama — Japan's first major modern anime pilgrimage destination since the slice-of-life series Lucky Star aired in 2007" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">埼玉 Saitama</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Washinomiya Shrine</div>
           <div class="anime-name-jp">鷲宮神社</div>
@@ -1193,16 +1183,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 6. Oarai Isosaki Shrine (Girls und Panzer) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Oarai+Isosaki+Shrine+Ibaraki" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_oarai_isosaki')" aria-label="Visit Oarai Isosaki Shrine official website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">大洗磯前<br>神社</div>
           <picture><source srcset="../images/anime-oarai-isosaki.webp" type="image/webp"><img src="../images/anime-oarai-isosaki.jpg" alt="Oarai Isosaki Shrine sea torii in Ibaraki — the dragon-flanked Pacific torii featured in tank-warfare anime Girls und Panzer" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">茨城 Ibaraki</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Oarai Isosaki Shrine</div>
           <div class="anime-name-jp">大洗磯前神社</div>
@@ -1222,16 +1210,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 7. Old Chichibu Bridge (Anohana) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Kyu+Chichibu+Bridge+Saitama" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_chichibu_bridge')" aria-label="Visit Chichibu City official tourism website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">旧秩父橋</div>
           <picture><source srcset="../images/anime-kyu-chichibu-bridge.webp" type="image/webp"><img src="../images/anime-kyu-chichibu-bridge.jpg" alt="Old Chichibu Bridge in Saitama — the arched concrete bridge that recurs throughout the emotional drama Anohana" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">埼玉 Saitama</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Kyu Chichibu Bridge</div>
           <div class="anime-name-jp">旧秩父橋</div>
@@ -1266,16 +1252,14 @@ footer { padding: 40px 24px 100px; }
     <div class="anime-grid">
 
       <!-- 8. Lake Suwa (Your Name) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Lake+Suwa+Nagano" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_lake_suwa')" aria-label="Visit Suwa City official tourism website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">諏訪湖<br>長野</div>
           <picture><source srcset="../images/anime-lake-suwa.webp" type="image/webp"><img src="../images/anime-lake-suwa.jpg" alt="Lake Suwa in central Nagano — the mountain-cradled lake that inspired the fictional Itomori Lake in Makoto Shinkai's Your Name" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">長野 Nagano</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Lake Suwa</div>
           <div class="anime-name-jp">諏訪湖</div>
@@ -1295,16 +1279,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 9. Ueda Castle (Summer Wars) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Ueda+Castle+Nagano" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_ueda_castle')" aria-label="Visit Ueda City official tourism website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">上田城<br>長野</div>
           <picture><source srcset="../images/anime-ueda-castle.webp" type="image/webp"><img src="../images/anime-ueda-castle.jpg" alt="Ueda Castle in Nagano — the 1583 Sanada-clan castle in the city that hosted the family-tech drama Summer Wars" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">長野 Nagano</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Ueda Castle</div>
           <div class="anime-name-jp">上田城</div>
@@ -1324,16 +1306,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 10. Takayama Jinya (Hyouka) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Takayama+Jinya+Gifu" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_takayama_jinya')" aria-label="Visit Hida Takayama official tourism website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">高山陣屋<br>岐阜</div>
           <picture><source srcset="../images/anime-takayama-jinya.webp" type="image/webp"><img src="../images/anime-takayama-jinya.jpg" alt="Takayama Jinya in Gifu — the only surviving Edo-period government office in Japan, featured throughout the Kyoto Animation mystery series Hyouka" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">岐阜 Gifu</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Takayama Jinya</div>
           <div class="anime-name-jp">高山陣屋</div>
@@ -1368,16 +1348,14 @@ footer { padding: 40px 24px 100px; }
     <div class="anime-grid">
 
       <!-- 11. Old Toyosato Elementary (K-On!) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Old+Toyosato+Elementary+School+Shiga" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_toyosato_school')" aria-label="Visit Toyosato Town official tourism website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">旧豊郷小学校<br>滋賀</div>
           <picture><source srcset="../images/anime-toyosato-school.webp" type="image/webp"><img src="../images/anime-toyosato-school.jpg" alt="Old Toyosato Elementary School in Shiga — the 1937 Vories-designed Western brick school whose music room was preserved as a fan tribute to the K-On! music anime" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">滋賀 Shiga</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Old Toyosato Elementary School</div>
           <div class="anime-name-jp">旧豊郷小学校</div>
@@ -1397,16 +1375,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 12. Nishinomiya Kita HS (Haruhi Suzumiya) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Nishinomiya+Kita+High+School+Hyogo" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_nishinomiya_kita')" aria-label="Visit Nishinomiya Tourism Association official website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">西宮北高校<br>西宮</div>
           <picture><source srcset="../images/anime-nishinomiya-kita.webp" type="image/webp"><img src="../images/anime-nishinomiya-kita.jpg" alt="Nishinomiya Kita High School area in Hyogo — the hillside school approach and surrounding neighborhoods featured in the cult slice-of-life series The Melancholy of Haruhi Suzumiya" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">兵庫 Hyogo</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Nishinomiya Kita HS Area</div>
           <div class="anime-name-jp">西宮北高校・西宮</div>
@@ -1426,16 +1402,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 13. Uji Bridge (Sound! Euphonium) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Uji+Bridge+Kyoto" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_uji_bridge')" aria-label="Visit Uji City official tourism website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">宇治橋<br>京都</div>
           <picture><source srcset="../images/anime-uji-bridge.webp" type="image/webp"><img src="../images/anime-uji-bridge.jpg" alt="Uji Bridge in Kyoto — the historic 646 AD bridge over the Uji River near Byodo-in temple, featured throughout the high-school music drama Sound! Euphonium" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">京都 Kyoto</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Uji Bridge</div>
           <div class="anime-name-jp">宇治橋</div>
@@ -1470,16 +1444,14 @@ footer { padding: 40px 24px 100px; }
     <div class="anime-grid">
 
       <!-- 14. Mizuki Shigeru Road (GeGeGe no Kitaro) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Mizuki+Shigeru+Road+Tottori" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_mizuki_road')" aria-label="Visit Mizuki Shigeru Road / Sakaiminato official tourism website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">水木しげる<br>ロード</div>
           <picture><source srcset="../images/anime-mizuki-road.webp" type="image/webp"><img src="../images/anime-mizuki-road.jpg" alt="Mizuki Shigeru Road in Sakaiminato, Tottori — the 800-meter shopping street lined with 177 bronze yokai sculptures from GeGeGe no Kitaro" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">鳥取 Tottori</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Mizuki Shigeru Road</div>
           <div class="anime-name-jp">水木しげるロード</div>
@@ -1499,16 +1471,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 15. Conan Street (Detective Conan) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Gosho+Aoyama+Manga+Factory+Tottori" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_conan_street')" aria-label="Visit Gosho Aoyama Manga Factory official website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">コナン通り<br>鳥取</div>
           <picture><source srcset="../images/anime-conan-street.webp" type="image/webp"><img src="../images/anime-conan-street.jpg" alt="Conan Street in Hokuei, Tottori — the themed boulevard with bronze sculptures and decorated manhole covers in the hometown of Detective Conan creator Gosho Aoyama" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">鳥取 Tottori</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Conan Street, Hokuei</div>
           <div class="anime-name-jp">コナン通り（北栄町）</div>
@@ -1543,16 +1513,14 @@ footer { padding: 40px 24px 100px; }
     <div class="anime-grid">
 
       <!-- 16. Dogo Onsen Honkan (Spirited Away) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Dogo+Onsen+Honkan+Ehime" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_dogo_onsen')" aria-label="Visit Dogo Onsen official website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">道後温泉<br>本館</div>
           <picture><source srcset="../images/anime-dogo-onsen.webp" type="image/webp"><img src="../images/anime-dogo-onsen.jpg" alt="Dogo Onsen Honkan in Matsuyama, Ehime — the 1894 wooden bathhouse widely cited as a primary architectural inspiration for Studio Ghibli's Spirited Away" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">愛媛 Ehime</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Dogo Onsen Honkan</div>
           <div class="anime-name-jp">道後温泉本館</div>
@@ -1587,16 +1555,14 @@ footer { padding: 40px 24px 100px; }
     <div class="anime-grid">
 
       <!-- 17. Homangu Kamado Shrine (Demon Slayer) -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Homangu+Kamado+Shrine+Fukuoka" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_kamado_shrine')" aria-label="Visit Homangu Kamado Shrine official website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">宝満宮<br>竈門神社</div>
           <picture><source srcset="../images/anime-kamado-shrine.webp" type="image/webp"><img src="../images/anime-kamado-shrine.jpg" alt="Homangu Kamado Shrine on Mount Homan in Dazaifu, Fukuoka — a 1350-year-old matchmaking shrine that gained new fame through the Demon Slayer phenomenon" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">福岡 Fukuoka</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Homangu Kamado Shrine</div>
           <div class="anime-name-jp">宝満宮竈門神社</div>
@@ -1616,16 +1582,14 @@ footer { padding: 40px 24px 100px; }
       </div>
 
       <!-- 18. Attack on Titan in Hita -->
-      <div class="anime-card" style="cursor:pointer" onclick="if(!event.target.closest('a'))this.querySelector('.anime-thumb-link').click()">
-        <a class="anime-thumb-link" href="https://www.google.com/maps/search/?api=1&query=Attack+on+Titan+Hita+Oita" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click','official_site','anime_official_site_aot_museum')" aria-label="Visit Attack on Titan in Hita official website (opens in new tab)">
-        <div class="anime-thumb">
+      <div class="anime-card">
+                <div class="anime-thumb">
           <div class="anime-thumb-kanji">進撃の巨人<br>in HITA</div>
           <picture><source srcset="../images/anime-hita-oyama-dam.webp" type="image/webp"><img src="../images/anime-hita-oyama-dam.jpg" alt="Attack on Titan in Hita, Oita — the bronze sculpture trio beside Oyama Dam in the hometown of manga creator Hajime Isayama" class="anime-photo" loading="lazy" onerror="this.style.display='none'"></picture>
           <div class="anime-badges">
             <span class="anime-badge">大分 Oita</span>
           </div>
         </div>
-        </a>
         <div class="anime-body">
           <div class="anime-name-en">Attack on Titan in Hita</div>
           <div class="anime-name-jp">進撃の巨人 in HITA</div>
