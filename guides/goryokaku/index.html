@@ -836,7 +836,9 @@ footer { padding: 40px 24px; }
 @media (max-width: 768px) { .key-callout { padding: 16px 18px; } .key-callout p { font-size: 15.5px; } }
 /* desktop readability: Garamond runs small, so scale body text up */
 @media (min-width: 900px) {
-main { max-width: 900px; }
+main { max-width: 1100px; }
+main article > p, main article > ul, main article > ol { max-width: 960px; }
+main figure[style*="max-width:760px"] { max-width: 960px !important; }
 article p { font-size: 19.5px; }
 article ul li, article ol li { font-size: 19px; }
 .site-card p { font-size: 16.5px; }
