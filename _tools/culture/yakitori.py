@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='yakitori'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'set':('e9d47c76-image.jpg',1200),'negima':('483f4aa3-image.jpg',1000),'tsukune':('a4a9004d-image.jpg',1000),'seseri':('a635b0ea-image.jpg',1000),'sasami':('830f617d-image.jpg',1000),'beef':('9d38a312-image.jpg',1000),'shop':('94c1c1ca-image.jpg',1000),'kushiage':('c68f2df6-image.jpg',1000)}
+photos={'set':('e9d47c76-image.jpg',1200),'negima':('483f4aa3-image.jpg',1000),'tsukune':('a4a9004d-image.jpg',1000),'seseri':('a635b0ea-image.jpg',1000),'sasami':('830f617d-image.jpg',1000),'beef':('9d38a312-image.jpg',1000),'shop':('94c1c1ca-image.jpg',1000),'bonjiri':('eb8b18bd-image.jpg',1000),'tebasaki':('20c07db9-image.jpg',1000),'mune':('32e52064-image.jpg',1000),'hatsu':('ca4b7d79-image.jpg',1000),'kawa':('86669163-image.jpg',1000),'butabara':('017fa6b8-image.jpg',900)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -21,6 +21,7 @@ def fig(k,alt,cap,credit,hero=False,maxw=760):
 def lic(n,u): return f'<a href="{u}" target="_blank" rel="noopener" style="color:var(--enshu);">{n}</a>'
 CC0=lic('CC0','https://creativecommons.org/publicdomain/zero/1.0/')
 BYSA4=lic('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/')
+BY4=lic('CC BY 4.0','https://creativecommons.org/licenses/by/4.0/')
 BYSA3=lic('CC BY-SA 3.0','https://creativecommons.org/licenses/by-sa/3.0/')
 VIA='via Wikimedia Commons (resized)'
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
@@ -36,10 +37,15 @@ f_ses=fig('seseri','Two skewers of crinkled, golden-brown grilled chicken pieces
 f_sas=fig('sasami','Two skewers of pale, tender-looking chicken pieces with a few grill marks and black pepper flecks on a cream plate','Sasami: the lean tenderloin, lightly grilled.',f'Photo: Ocdp, {CC0}, 10 April 2015. Commons titles it "Chicken tenderloin Yakitori". {VIA}',maxw=700)
 f_beef=fig('beef','Several dark, glossy skewers of grilled beef with charred edges and sauce pooled on a cream plate','Beef skewers glazed with sauce.',f'Photo: Ocdp, {CC0}, 10 April 2015. Commons gives the English title "Spit-roasted beef" and the Japanese name 牛串たれ焼, meaning sauce-grilled beef skewers. {VIA}',maxw=700)
 f_shop=fig('shop','The front of an izakaya with a large yellow sign reading TORIKIZOKU, dark wooden doors with small-pane windows, a pink bicycle parked at the entrance and a standing sign at the left','The street front of a yakitori izakaya chain.',f'Photo: L26, {BYSA3} (also offered under the GFDL), 13 September 2016. Commons describes it as an example of a Torikizoku store, the Abiko branch in Sumiyoshi Ward, Osaka. Signs and fronts change, so treat it as a 2016 example. {VIA}',maxw=700)
-f_kush=fig('kushiage','A steel tray with a wire rack holding several skewers of breaded, deep-fried pieces and, at the right, a round slice with holes in it','Kushiage: breaded, deep-fried skewers.',f'Photo: Ocdp, {CC0}, 8 April 2017. Commons describes it as assorted kushiage (各種串揚げ) and gives no venue. The round slice with holes at the right looks like lotus root to me. {VIA}',maxw=700)
+f_bon=fig('bonjiri','Two skewers of golden, crinkled grilled chicken pieces with small charred bone tips and a pinch of pepper on a cream plate','Bonjiri: the tail.',f'Photo: Ocdp, {CC0}, 10 April 2015. Commons titles it "Bonjiri Yakitori". {VIA}',maxw=700)
+f_mune=fig('mune','A plate holding grilled chicken-breast pieces topped with a pink mentaiko mayonnaise and strips of dark seaweed, with the bamboo skewers visible at the right','Mune: breast with mentaiko mayonnaise and nori.',f'Photo: Ocdp, {CC0}, 10 April 2015. Commons describes it as "A grilled chicken breast with seasoned cod roe and mayonnaise" and gives the Japanese name むね肉明太マヨネーズ焼. {VIA}',maxw=700)
+f_kawa=fig('kawa','Five skewers of golden, crinkled grilled chicken skin on a round white plate on a wooden table','Kawa: skewers of grilled skin.',f'Photo: くろふね (Kurofune), {BY4}, 21 November 2020. Commons titles it "博多とりかわ塩" (Hakata torikawa, salt), from a skewer shop in Hakata. {VIA}',maxw=700)
+f_hatsu=fig('hatsu','Two skewers of glossy, dark-brown grilled chicken hearts glazed with sauce, with sauce pooled on a cream plate','Hatsu: heart, grilled with tare.',f'Photo: Ocdp, {CC0}, 17 April 2015. Commons titles it "Yakitori heart tare" (ハートたれ). {VIA}',maxw=700)
+f_teba=fig('tebasaki','Two grilled chicken wings, golden with blistered skin and black pepper, on a cream plate','Tebasaki: grilled chicken wings.',f'Photo: Ocdp, {CC0}, 10 April 2015. Commons titles it "Tebasaki Yakitori". {VIA}',maxw=700)
+f_pork=fig('butabara','A blue-and-white plate piled with skewers of thick pork-belly pieces, glossy and browned, with wedges of onion between them','Butabara: pork belly skewers.',f'Photo: 舌先現象になります, {BY4}, 8 June 2019. Commons says buta-bara skewers are often served at yakitori shops in Kyushu, such as in Saga and Fukuoka prefectures, and that the photo is from a charcoal yakitori shop in Kitakyushu. {VIA}',maxw=700)
 
 faqs=[
-("Is yakitori always chicken?","The name means grilled bird, and chicken is the core of the menu, including organ cuts such as liver, heart and gizzard. Many menus add other meats, though. The photos on this page include a beef skewer, and Commons describes one set as including pork harami, so ask or check the menu."),
+("Is yakitori always chicken?","The name means grilled bird, and chicken is the core of the menu, including organ cuts such as liver, heart and gizzard. Many menus add other meats, though. The photos on this page include a beef skewer and a plate of pork-belly skewers, and Commons describes one set as including pork harami, so ask or check the menu."),
 ("Should I choose salt or sauce?","Shio is salt and tare is a sweet-savory sauce. FUN! JAPAN gives a rule of thumb: sauce for fatty cuts such as thigh, salt for lean cuts such as breast. TableCheck says staff typically ask which you prefer, so you can ask for their recommendation."),
 ("What is negima?","Negima is chicken pieces alternating with green onion or leek on a skewer. FUN! JAPAN describes it as thigh with green onion, and TableCheck says thigh or breast pieces, so the cut can vary by restaurant."),
 ("How many skewers should I order at once?","FUN! JAPAN says it is general etiquette to order at least two skewers of the same cut, since the chef cooks many at once. TableCheck advises ordering a few types at a time, not everything at once, so the skewers do not go cold."),
@@ -71,7 +77,6 @@ main=f'''<main>
       <li><a href="#cuts">The Cuts to Know</a></li>
       <li><a href="#shio-tare">Salt or Sauce</a></li>
       <li><a href="#izakaya">At the Izakaya</a></li>
-      <li><a href="#kushiage">Not to Confuse: Kushiage</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
     </ol>
@@ -117,10 +122,28 @@ main=f'''<main>
     {f_sas}
     <p>Sasami looks very different: pale, lean and only lightly marked by the grill. These two skewers have a few grill marks and dark specks of seasoning. Because the meat is so lean, it is the cut where the accompaniments matter, and TableCheck mentions plum sauce, wasabi or shiso.</p>
 
+    {f_bon}
+    <p>This is bonjiri, the tail. TableCheck calls it rare and fatty. The two skewers have a crinkled, golden surface, and the small dark tips at the ends of some pieces look like bone to me, so I would expect a few bits that need care. I am describing the picture, not a texture I can promise.</p>
+
+    {f_mune}
+    <p>Mune is breast, the lean cut. Here it is grilled and dressed with a pink mayonnaise made with mentaiko (seasoned cod roe) and a few strips of nori. Commons gives that description, and the Japanese title adds that it is "grilled" (<em>yaki</em>). It shows how a mild, lean cut is often paired with a strong topping.</p>
+
+    {f_kawa}
+    <p>Kawa is the skin. These five skewers, labeled by Commons as Hakata torikawa with salt, are crinkled and golden and packed closely on the stick. I will not explain how the skin is prepared, because I have no source for it, but the photo shows how different it looks from the lean cuts above.</p>
+
+    {f_hatsu}
+    <p>These are hatsu, the heart, ordered with <em>tare</em>. TableCheck calls the heart meaty and softer than the gizzard. The sauce has turned the pieces dark and glossy, and the extra has dripped onto the plate.</p>
+
+    {f_teba}
+    <p>Tebasaki are wings. TableCheck calls them a specialty of Nagoya, though they appear on yakitori menus elsewhere too. These two are blistered golden with black pepper, and the wing tips are still attached.</p>
+
     <h2 id="shio-tare">Salt or Sauce<span class="h2-jp">塩とタレ</span></h2>
     <p>When you order, you are usually asked whether you want <em>shio</em> (salt) or <em>tare</em> (sauce). {FJ} gives a rule of thumb: sauce for fatty cuts such as thigh, salt for lean cuts such as breast, and it says shio lets you taste the difference between cuts while tare shows off a restaurant's own sauce. {TC} says staff typically ask, so you can simply ask what they recommend.</p>
     {f_beef}
     <p>This is the sauce side. Commons calls these beef skewers, with the Japanese title meaning sauce-grilled beef, and they are a reminder that yakitori menus often go beyond chicken. The glaze is dark and glossy, and the sticks are charred at the ends from the grill.</p>
+
+    {f_pork}
+    <p>Pork turns up too. Commons says buta-bara (pork belly) skewers are often served at yakitori shops in Kyushu, in prefectures such as Saga and Fukuoka, and the photo is from a charcoal yakitori shop in Kitakyushu. Here the thick pieces alternate with onion on a blue-and-white plate. I cannot tell from the picture whether it is salt or sauce.</p>
 
     <h2 id="izakaya">At the Izakaya<span class="h2-jp">居酒屋で</span></h2>
     <p>Yakitori is served at everything from a smoky counter with a handful of seats to a large chain. Prices follow: {TC} lists chef's-choice courses from about 2,980 yen up to more than 13,000 yen, though the article does not date them, while the photo at the top shows single skewers at 176 to 198 yen in 2023.</p>
@@ -136,11 +159,6 @@ main=f'''<main>
     </ul>
     <p>If you would rather have a guide lead you, a {ext(VI,'local food tour','yaki_viator_food_tour')} is one way to try it in a neighborhood with someone who can read the menu.</p>
 
-    <h2 id="kushiage">Not to Confuse: Kushiage<span class="h2-jp">串揚げ</span></h2>
-    <p>Kushiage is a different dish that looks similar on a menu: skewered pieces that are breaded and deep-fried, not grilled. Many izakaya serve both, so check the word before you order.</p>
-    {f_kush}
-    <p>The tray holds an assortment, with golden crumb coatings and, at the right, a round slice with holes that looks like lotus root. Commons gives no venue. It is the same format as yakitori, small pieces on a stick, and a quick way to see how the cooking method changes the look.</p>
-
     <h2 id="faq">Frequently Asked Questions<span class="h2-jp">よくあるご質問</span></h2>
 
     <div class="faq-stack">
@@ -148,7 +166,7 @@ main=f'''<main>
 {faq_html}    </div>
 
     <h2 id="final">Final Thoughts<span class="h2-jp">むすびに</span></h2>
-    <p>Start with negima or tsukune, add something lean like sasami and something richer like seseri, and ask the staff about salt or sauce. For more dishes, see our {link('/culture/popular-dishes/','guide to popular Japanese dishes','yaki_to_dishes')}.</p>
+    <p>Start with negima or tsukune, add something lean like sasami and something richer like seseri, and ask the staff about salt or sauce. For more dishes, including breaded and deep-fried kushiage, see our {link('/culture/popular-dishes/','guide to popular Japanese dishes','yaki_to_dishes')}.</p>
 
     <div class="closing-block">
       <span class="torii">🍢</span>

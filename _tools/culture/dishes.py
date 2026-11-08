@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='popular-dishes'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'sashimi':('db7f1645-image.jpg',1000),'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000),'karaage':('83219fff-image.jpg',1000),'tonkatsu':('819ef8f8-image.jpg',1000),'katsudon':('b63be16b-image.jpg',1000),'sushi':('5258f7c5-image.jpg',1200),'sushi2':('cc5994a3-image.jpg',1200)}
+photos={'kushiage':('c68f2df6-image.jpg',1000),'sashimi':('db7f1645-image.jpg',1000),'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000),'karaage':('83219fff-image.jpg',1000),'tonkatsu':('819ef8f8-image.jpg',1000),'katsudon':('b63be16b-image.jpg',1000),'sushi':('5258f7c5-image.jpg',1200),'sushi2':('cc5994a3-image.jpg',1200)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -34,6 +34,7 @@ f_kara=fig('karaage','A tall heap of golden-brown fried chicken pieces dusted wi
 f_ton=fig('tonkatsu','Thick slices of golden-brown breaded pork cutlet standing on a wire rack over a glazed blue-green plate, with a mound of shredded cabbage and carrot behind and a dab of yellow mustard at the right edge','A thick-cut tonkatsu on a wire rack, with shredded cabbage and mustard.',f'Photo: ayustety, {BYSA2}, 20 April 2007 (Flickr, license reviewed on Commons). Commons describes it as a thick-cut tonkatsu at Hiraboku (平田牧場) in Tokyo. {VIA}',maxw=700)
 f_kats=fig('katsudon','A white bowl of fried pork cutlet pieces under a softly cooked egg and chopped green garnish on rice, with a bowl of miso soup at the right, on a pale wooden table','A katsudon bowl with a bowl of miso soup.',f'Photo: Chacmool, {BYSA4}, 23 July 2023. Commons describes it as the katsudon (梅, ume) at Katsuya, a chain restaurant. {VIA}',maxw=700)
 f_sushi=fig('sushi','A white rectangular plate of sushi: in front a shrimp, a pale scallop, salmon, a yellowtail-like slice and red tuna on rice; behind them tuna rolls, a yellow rolled omelet, salmon roe in a seaweed wrap with a green shiso leaf, and white-fish pieces, with pickled ginger at the left','A mixed sushi plate: nigiri, rolls, a rolled omelet and salmon roe.',f'Photo: t-mizo, {BY2}, 3 January 2013 (Flickr, license reviewed on Commons). Commons titles it "Sushi" and gives no venue. {VIA}',maxw=760)
+f_kush=fig('kushiage','A steel tray with a wire rack holding several skewers of breaded, deep-fried pieces and, at the right, a round slice with holes in it','Kushiage: breaded, deep-fried skewers.',f'Photo: Ocdp, {CC0}, 8 April 2017. Commons describes it as assorted kushiage (各種串揚げ) and gives no venue. The round slice with holes at the right looks like lotus root to me. {VIA}',maxw=700)
 f_sashimi=fig('sashimi','A wooden serving board on short feet holding sliced raw fish on shredded white radish: deep-red tuna with a yellow chrysanthemum-shaped garnish, pale pink fatty tuna, translucent white fish, fish slices with the scaled skin left on, and a sprig of curly parsley','A sashimi set on a wooden board.',f'Photo: Ocdp, {CC0}, 24 July 2022. Commons describes it as a reference image of sashimi: a "kami-sashimi" set meal at 1,650 yen including tax at a restaurant called Yamata-kun in Choshi, Chiba. {VIA}',maxw=700)
 f_sushi2=fig('sushi2','A dark plum-blossom-shaped plate seen from above holding eleven pieces of sushi: a long glazed eel at the front, shrimp, squid topped with sea urchin, red tuna, scallop, several pieces of marbled and pale tuna and a silvery fish with ginger and green onion, plus two seaweed-wrapped pieces topped with minced tuna and a quail yolk and with salmon roe, with ginger at the right and a red lacquer bowl of miso soup beside it','An eleven-piece nigiri and gunkan set with miso soup.',f'Photo: N509FZ, {BYSA4}, 2 August 2023. Commons describes it as 11 pieces for JPY 3,520 and gives no venue. {VIA}',maxw=760)
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
@@ -45,6 +46,8 @@ TJ=ext('https://www.jeepe.jp/en/articles/tempura-basic-guide-1629','Jeepe','dish
 TK=ext('https://www.kikkoman.com/en/cookbook/glossary/tenpura.html','Kikkoman','dishes_kikkoman')
 TON=ext('https://gov-online.go.jp/eng/publicity/book/hlj/html/201810/201810_08_en.html','Highlighting Japan (Government of Japan)','dishes_hlj_tonkatsu')
 KJT=ext('https://japantimes.co.jp/life/2021/03/20/food/fried-chicken-kara-age-zangi','Japan Times','dishes_japantimes')
+KFO=ext('https://foodinjapan.org/kansai/kushi-katsu/','Food in Japan','dishes_foodinjapan_kushikatsu')
+KJE=ext('https://www.jeepe.jp/en/articles/osaka-kushikatsu-1426','Jeepe','dishes_jeepe_kushikatsu')
 SG=ext('https://sushiwalker.com/en/feature/85740/','Sushi Walker','dishes_sushiwalker')
 TG=ext('https://thegate12.com/article/258','The Gate','dishes_thegate')
 KFJ=ext('https://foodinjapan.org/japan/karaage','Food in Japan','dishes_foodinjapan')
@@ -57,6 +60,7 @@ faqs=[
 ("What is the difference between Kanto and Kansai sukiyaki?","In the Kanto style, a sauce called warishita (soy sauce, sugar, sake and mirin) is heated first and everything is simmered in it. In the Kansai style, the beef is seared first and the sugar, sake and soy sauce go in afterward, with the vegetables added last. Both styles dip the cooked food in raw beaten egg."),
 ("Do I have to eat the raw egg with sukiyaki?","No rule says so, but it is the standard way, and both regional styles use it. Arigato Japan says the egg cools the hot meat and adds a creamy coating in Kansai, and softens the sweetness of the broth in Kanto. If you avoid raw egg, tell the staff when you order."),
 ("What does oyakodon mean?","Oyakodon (親子丼) is literally a parent-and-child rice bowl, because it uses both chicken and egg. Wikipedia says its origin is subject to several theories, and one widely cited account links it to the Tokyo restaurant Tamahide in 1891."),
+("What is kushiage, and what is the double-dipping rule?","Kushiage is meat, seafood or vegetables on a skewer, breaded and deep-fried. Food in Japan says that in Osaka the name kushikatsu means the same thing. At shops that serve sauce in a shared container, you dip each skewer once and never put a bitten one back; Jeepe says you can use the free cabbage to scoop more sauce onto the skewer. Neither article cites a source for the rule."),
 ("What is katsudon, and why do students eat it?","Katsudon is a pork cutlet over rice. In the standard version the cutlet is simmered in a dashi and soy broth with onion and beaten egg, and regional versions use a sauce instead. Wikipedia says students eat it before exams because katsu sounds like the word for winning, and presents this as a modern tradition."),
 ]
 faq_html=''.join(f'''      <details class="faq-item">
@@ -84,6 +88,7 @@ main=f'''<main>
       <li><a href="#tempura">Tempura: Light Batter, Fried to Order</a></li>
       <li><a href="#tonkatsu">Tonkatsu: A Western Dish Made Japanese</a></li>
       <li><a href="#karaage">Karaage: Japanese Fried Chicken</a></li>
+      <li><a href="#kushiage">Kushiage: Breaded Skewers</a></li>
       <li><a href="#donburi">Rice Bowls: Gyudon, Oyakodon, Katsudon and Tendon</a></li>
       <li><a href="#sushi">Sushi: Edomae and the Everyday Plate</a></li>
       <li><a href="#how">How to Order and Eat</a></li>
@@ -105,6 +110,7 @@ main=f'''<main>
       <li><strong>Tempura (<span class="jp">天ぷら</span>):</strong> seafood and vegetables in a thin batter, deep-fried.</li>
       <li><strong>Tonkatsu (<span class="jp">とんかつ</span>):</strong> a breaded, deep-fried pork cutlet served with shredded cabbage.</li>
       <li><strong>Karaage (<span class="jp">唐揚げ</span>):</strong> marinated chicken pieces, lightly coated and deep-fried.</li>
+      <li><strong>Kushiage (<span class="jp">串揚げ</span>):</strong> meat, seafood or vegetables on a skewer, breaded and deep-fried, often with a shared dipping sauce.</li>
       <li><strong>Sushi (<span class="jp">寿司</span>):</strong> vinegared rice with fish or other toppings: nigiri, maki and gunkan, with Edomae as the Tokyo style.</li>
       <li><strong>Donburi (<span class="jp">丼</span>):</strong> a bowl of rice with a topping: gyudon (beef), oyakodon (chicken and egg), katsudon (pork cutlet) and tendon (tempura).</li>
     </ul>
@@ -147,6 +153,13 @@ main=f'''<main>
     <h3>Where Did It Start?</h3>
     <p>{KJT} dates the first appearance of the dish to 1932, at Mikasa Kaikan, a chicken specialty restaurant in Ginza, but this comes from the Japan Karaage Association and the page gives no independent confirmation. {KFJ} calls it a frequently cited account. The city of Nakatsu in Oita calls itself the "sacred ground" of karaage, a claim made by the town itself, and the same page says local accounts trace boneless karaage to Chinese restaurants in nearby Usa after World War II.</p>
     <p>A close cousin is <em>tatsuta-age</em>, marinated in soy sauce and coated in potato starch only. The Japan Times reports disagreement about how it differs from karaage, since some karaage recipes use only potato starch too.</p>
+
+    <h2 id="kushiage">Kushiage: Breaded Skewers<span class="h2-jp">串揚げ</span></h2>
+    <p>Kushiage is meat, seafood or vegetables on a skewer, coated in flour, egg and panko and deep-fried. It looks like yakitori on a menu, but it is fried, not grilled, and many izakaya serve both, so check the word before you order. {KFO} says that in Osaka <em>kushikatsu</em> and kushiage mean the same thing, and notes a Tokyo distinction that it does not source.</p>
+    {f_kush}
+    <p>The tray holds an assortment, with golden crumb coatings and, at the right, a round slice with holes that looks like lotus root. Commons gives no venue. {KFO} and {KJE} list beef, pork with onion, shrimp, quail egg, lotus root and shiitake among the usual choices.</p>
+    <p><strong>The double-dipping rule.</strong> At many shops the sauce is a shared container, so you dip each skewer once and never put a bitten one back. Both articles describe this, though neither cites a source. If you need more sauce, {KJE} says you can scoop some onto the skewer with the free cabbage.</p>
+    <p><strong>Where it started.</strong> Both say Shinsekai in Osaka is the home of kushikatsu, and that it spread there in the early Showa era as cheap food for workers. {KFO} puts it around 1929, and {KJE} says the shop Kushikatsu Daruma "claims" 1929 as its founding year. Neither gives a source, so I would treat the date as the shop's own claim. Prices are not worth quoting: {KJE} gives a figure without a source and says they vary by shop.</p>
 
     <h2 id="donburi">Rice Bowls: Gyudon, Oyakodon, Katsudon and Tendon<span class="h2-jp">丼</span></h2>
     <p><em>Donburi</em> means a bowl of rice with a topping. It is the dish you can eat alone, quickly and cheaply, and many chains specialize in one bowl.</p>
