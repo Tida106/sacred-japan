@@ -952,8 +952,9 @@ margin-bottom: 12px;
 .summer-accent { background: var(--matcha); }
 .autumn-accent { background: #c06030; }
 .winter-accent { background: var(--kon); }
-.season-link { display: block; width: fit-content; margin-top: 12px; padding: 6px 0; font-size: 14px; font-weight: 700; color: var(--beni); text-decoration: underline; text-underline-offset: 3px; }
-.season-link:hover { color: var(--sumi); }
+.season-link, .season-btn { display: block; width: fit-content; max-width: 100%; margin-top: 10px; padding: 8px 15px; background: linear-gradient(135deg,#f9e9a8 0%,#e6c45a 28%,#c9971c 52%,#f3d77c 78%,#d6a92b 100%); color: #1a1a1a; font-weight: 700; font-size: 14px; letter-spacing: .02em; text-decoration: none; border-radius: 3px; border: 1px solid #b8860b; box-shadow: inset 0 1px 0 rgba(255,255,255,.7),0 1px 3px rgba(120,80,0,.35); text-shadow: 0 1px 0 rgba(255,245,200,.6); transition: filter .2s,transform .2s,box-shadow .2s; }
+.season-link:hover, .season-btn:hover { filter: brightness(1.07) saturate(1.1); transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,.8),0 3px 8px rgba(160,110,0,.45); }
+.season-btn { display: inline-block; font-size: 15px; margin-top: 0; }
 .food-cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
 .food-cta { display: inline-block; white-space: nowrap; padding: 14px 28px; font-size: 17px; font-weight: 700; letter-spacing: 0.4px; text-decoration: none; border-radius: 4px; box-shadow: 0 3px 10px rgba(0,0,0,0.18); transition: transform .15s, box-shadow .15s; }
 .food-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.25); }
@@ -3662,8 +3663,8 @@ transition: background 0.15s, color 0.15s;
         <span class="season-name-jp">春 — March to May</span>
         <div class="season-accent spring-accent"></div>
         <p class="season-tip">Cherry blossoms transform shrine gardens into pale pink dreamscapes. Book accommodation many months ahead for Kyoto and Nara.</p>
-        <a class="season-link" href="/guides/cherry-blossoms-shrines-temples/" onclick="trackEvent('click','internal','home_season_spring_cherry')">Where to see sacred cherry trees →</a>
-        <a class="season-link" href="/guides/seasonal-traditions/#spring" onclick="trackEvent('click','internal','home_season_spring_traditions')">Spring rituals and foods →</a>
+        <a class="season-link" href="/guides/cherry-blossoms-shrines-temples/" onclick="trackEvent('click','internal','home_season_spring_cherry')">Where to see sacred cherry trees</a>
+        <a class="season-link" href="/guides/seasonal-traditions/#spring" onclick="trackEvent('click','internal','home_season_spring_traditions')">Spring rituals and foods</a>
         </div>
       </div>
       <div class="season-card season-card--photo">
@@ -3674,8 +3675,8 @@ transition: background 0.15s, color 0.15s;
         <span class="season-name-jp">夏 — June to August</span>
         <div class="season-accent summer-accent"></div>
         <p class="season-tip">Vibrant summer festivals and Obon ceremonies light up temple grounds at dusk. Gion Matsuri in Kyoto is unmissable.</p>
-        <a class="season-link" href="/festivals/summer-festivals/" onclick="trackEvent('click','internal','home_season_summer_festivals')">Five great summer festivals →</a>
-        <a class="season-link" href="/guides/seasonal-traditions/#summer" onclick="trackEvent('click','internal','home_season_summer_traditions')">Summer rituals and foods →</a>
+        <a class="season-link" href="/festivals/summer-festivals/" onclick="trackEvent('click','internal','home_season_summer_festivals')">Five great summer festivals</a>
+        <a class="season-link" href="/guides/seasonal-traditions/#summer" onclick="trackEvent('click','internal','home_season_summer_traditions')">Summer rituals and foods</a>
         </div>
       </div>
       <div class="season-card season-card--photo">
@@ -3686,8 +3687,8 @@ transition: background 0.15s, color 0.15s;
         <span class="season-name-jp">秋 — September to November</span>
         <div class="season-accent autumn-accent"></div>
         <p class="season-tip">Crimson maple leaves against ancient stone and vermillion pillars — Japan's most celebrated and perhaps finest season.</p>
-        <a class="season-link" href="/guides/autumn-sanctuaries/" onclick="trackEvent('click','internal','home_season_autumn_sanctuaries')">Where to find true autumn sanctuaries →</a>
-        <a class="season-link" href="/guides/seasonal-traditions/#autumn" onclick="trackEvent('click','internal','home_season_autumn_traditions')">Autumn rituals and foods →</a>
+        <a class="season-link" href="/guides/autumn-sanctuaries/" onclick="trackEvent('click','internal','home_season_autumn_sanctuaries')">Where to find true autumn sanctuaries</a>
+        <a class="season-link" href="/guides/seasonal-traditions/#autumn" onclick="trackEvent('click','internal','home_season_autumn_traditions')">Autumn rituals and foods</a>
         </div>
       </div>
       <div class="season-card season-card--photo">
@@ -3698,13 +3699,13 @@ transition: background 0.15s, color 0.15s;
         <span class="season-name-jp">冬 — December to February</span>
         <div class="season-accent winter-accent"></div>
         <p class="season-tip">Hatsumode (New Year's first visit) is among Japan's most cherished traditions. Snow-dusted temples offer rare, breathtaking stillness.</p>
-        <a class="season-link" href="/guides/kyoto-illuminations/" onclick="trackEvent('click','internal','home_season_winter_illuminations')">Kyoto temples after dark →</a>
-        <a class="season-link" href="/guides/seasonal-traditions/#winter" onclick="trackEvent('click','internal','home_season_winter_traditions')">Winter rituals and foods →</a>
+        <a class="season-link" href="/guides/kyoto-illuminations/" onclick="trackEvent('click','internal','home_season_winter_illuminations')">Kyoto temples after dark</a>
+        <a class="season-link" href="/guides/seasonal-traditions/#winter" onclick="trackEvent('click','internal','home_season_winter_traditions')">Winter rituals and foods</a>
         </div>
       </div>
     </div>
-    <p style="text-align:center;margin:28px 0 0;font-size:16px;"><a href="/guides/shrine-temple-sweets/" onclick="trackEvent('click','internal','home_season_sweets')" style="color:var(--beni);text-decoration:underline;">Shrine and temple sweets worth the detour →</a></p>
-    <p style="text-align:center;margin:10px 0 0;font-size:16px;"><a href="/guides/seasonal-traditions/" onclick="trackEvent('click','internal','home_season_all_traditions')" style="color:var(--beni);text-decoration:underline;">Seasonal rituals and the foods that go with them →</a></p>
+    <p style="text-align:center;margin:28px 0 0;font-size:16px;"><a class="season-btn" href="/guides/shrine-temple-sweets/" onclick="trackEvent('click','internal','home_season_sweets')">Shrine and temple sweets worth the detour</a></p>
+    <p style="text-align:center;margin:10px 0 0;font-size:16px;"><a class="season-btn" href="/guides/seasonal-traditions/" onclick="trackEvent('click','internal','home_season_all_traditions')">Seasonal rituals and the foods that go with them</a></p>
   </div>
 
   <!-- ETIQUETTE -->
