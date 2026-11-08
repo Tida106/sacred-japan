@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='bread'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'melon':('a979011d-image.jpg',1200),'anpan':('60f4abb2-image.jpg',1000),'curry':('5cbe84b8-image.jpg',1000),'yakisoba':('5b6ab78a-image.jpg',1000),'agepan':('c776a767-image.jpg',1000),'croquette':('923ce486-image.jpg',1000),'cornet':('0e15151b-image.jpg',700),'menchi':('e47dc74b-image.jpg',640),'tamago':('1cf92e48-image.jpg',1000),'fruit':('82f76ef5-image.jpg',689),'ogura':('896abc06-image.jpg',900),'oyaki':('d1256580-image.jpg',1000),'satsuma':('6efa4385-image.jpg',1000),'raisin':('1c1c5aa4-image.jpg',1000)}
+photos={'melon':('a979011d-image.jpg',1200),'anpan':('60f4abb2-image.jpg',1000),'curry':('5cbe84b8-image.jpg',1000),'yakisoba':('5b6ab78a-image.jpg',1000),'agepan':('c776a767-image.jpg',1000),'croquette':('923ce486-image.jpg',1000),'cornet':('0e15151b-image.jpg',700),'menchi':('e47dc74b-image.jpg',640),'tamago':('1cf92e48-image.jpg',1000),'fruit':('82f76ef5-image.jpg',689),'ogura':('896abc06-image.jpg',900),'oyaki':('d1256580-image.jpg',1000),'satsuma':('6efa4385-image.jpg',1000),'raisin':('1c1c5aa4-image.jpg',1000),'yomogi':('31b925aa-image.jpg',1000),'oyaki2':('79370c3e-image.jpg',1000),'nikuman':('d6858203-image.jpg',1000)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -38,6 +38,8 @@ TTK=ext('https://www.tastingtable.com/1165772/japans-korokke-pan-is-a-mashed-pot
 MAFFO=ext('https://www.maff.go.jp/e/policies/market/k_ryouri/areastory/1360/index.html','MAFF (oyaki)','bread_maff_oyaki')
 FIO=ext('https://www.foodinjapan.org/chubu/nagano/oyaki/','Food in Japan (oyaki)','bread_foodinjapan_oyaki')
 JTM=ext('https://japanesetaste.com/blogs/japanese-taste-blog/how-to-make-mushi-pan-japanese-steamed-cake-recipe','Japanese Taste (mushi pan)','bread_jtaste_mushipan')
+CHK=ext('https://japanese-products.blog/2018/11/21/chukaman-buns','Japanese Products blog (chukaman)','bread_jpb_chukaman')
+GJB=ext('https://en.japantravel.com/tokyo/kagurazaka-gojuban/57693','Japan Travel (Kagurazaka Gojuban)','bread_jt_gojuban')
 TT=ext('https://www.tastingtable.com/stories/yakisoba-pan-is-the-japanese-noodle-sandwich-you-should-try/','Tasting Table (yakisoba pan)','bread_tt_yakisoba')
 NPL=ext('https://www.nippon.com/en/japan-topics/g02481/','Nippon.com (school lunches)','bread_nippon_lunch')
 JP=ext('https://www.jeepe.jp/fr/articles/nagoya-ogura-toast-1418','Jeepe (ogura toast)','bread_jeepe_ogura')
@@ -52,6 +54,9 @@ f_age=fig('agepan','Two long, golden rolls on a cooling rack, one with a sugar-c
 f_oyaki=fig('oyaki','Two pale, round, flat dumplings on a white background, the left one cut open to show dark green filling','Two oyaki, one with nozawana greens and one with eggplant.',f'Photo: Ocdp, {CC0}, 27 November 2021. {VIA}')
 f_sat=fig('satsuma','Two pale yellow, fluffy steamed buns with golden chunks, in a clear plastic tray','Sweet-potato mushipan in a packaged tray.',f'Photo: KKPCW (Kyu3), {BYSA4}, 19 March 2023. {VIA}')
 f_rai=fig('raisin','A triangular wedge of light brown steamed cake with a raisin on top, on a blue-and-white patterned plate','Triangular raisin mushipan.',f'Photo: Kyu3a, {BYSA4}, 30 November 2023. {VIA}')
+f_yom=fig('yomogi','Four green steamed cakes in white paper cups on a yellow plastic wrapper, each dotted with dark red beans','Yomogi mushipan with red beans, still on the wrapper.',f'Photo: Kyu3a, {BYSA4}, 17 February 2024. {VIA}')
+f_oy2=fig('oyaki2','A pale, round dumpling cut in half on a white plate, showing a filling of shredded dried daikon and small orange carrot pieces','An oyaki cut open to show a dried-daikon filling.',f'Photo: Qurren, {BYSA4}, 10 June 2023. {VIA}')
+f_nik=fig('nikuman','Two hands pulling apart a soft white steamed bun to show a ground-meat filling, with two more buns on a dark tray behind','A nikuman torn open.',f'Photo: Hsaifsa, {CC0}, 6 June 2022. {VIA}')
 f_croq=fig('croquette','A white plate with a round, dark, fried curry bread and a long korokke pan roll with a breaded croquette on it, next to a white mug of black coffee on a wooden slatted table','Curry bread (round, left) and korokke pan (the long roll) with coffee.',f'Photo: Ocdp, {CC0}, 21 May 2017. {VIA}')
 f_corn=fig('cornet','A glossy golden-brown spiral-shaped bun with a dark filling visible at the open end, in a clear wrapper','A chocolate cornet: a spiral bun with a dark filling.',f'Photo: yto (Flickr, uploaded by Psihedelisto), {BY2}, uploaded 8 October 2021. {VIA}',maxw=420)
 f_men=fig('menchi','An orange box holding a sandwich cut into pieces: thick breaded minced-meat patties with sauce between slices of white bread','A menchi-katsu sandwich in its box.',f'Photo: jetalone, {BY2}, 16 December 2006. {VIA}',maxw=560)
@@ -154,10 +159,21 @@ main=f'''<main>
     {f_rai}
     <p>Commons describes this as a triangular raisin mushipan. The wedge shape and the single raisin on top make it look like a slice of cake, which is the closest English comparison, though it is steamed.</p>
 
+    {f_yom}
+    <p>Commons calls this yomogi mushipan, a steamed cake colored green with yomogi (mugwort), and the dark red beans on top are visible in each cup. The wrapper under the cakes is printed with small ingredient text, so it was clearly bought packaged, which fits the usual way mushipan is sold.</p>
+
     <h3>Oyaki</h3>
     <p>{MAFFO} calls oyaki the best-known local dish of Nagano Prefecture, a stuffed dumpling whose varieties differ so much by place that a map could be drawn from them. Wheat flour is the common dough, but the page also mentions rice flour and buckwheat in some areas. Fillings follow the seasons: pickled nozawana greens, dried daikon, wild spring plants, summer eggplant, and autumn sweet potato and squash. It adds that oyaki can be roasted, steamed or fried, and that oyaki, nozawana pickles and hand-cut soba have been on Nagano's register of selected intangible folk cultural properties since 1983.</p>
     {f_oyaki}
     <p>Commons describes the left oyaki as filled with nozawana and the right one with eggplant, which matches the dark green filling visible in the cut one. {FIO} says they were grilled or steamed depending on local and personal taste, and explains the name by the "yaki" that means to grill, from the open hearth. The same article ties oyaki to Nagano's cold, mountainous land where rice was hard to grow, but it does not source that account, so I treat it as the common story, not a documented fact.</p>
+
+    {f_oy2}
+    <p>Commons describes this one as a ready-made oyaki with dried daikon (<em>kiriboshi-daikon</em>), and the strands of daikon and flecks of carrot are easy to see in the cut half. The browned patches on the skin show it was pan-finished, which matches the "roasted" method {MAFFO} lists.</p>
+
+    <h3>Nikuman</h3>
+    {f_nik}
+    <p>Nikuman is the steamed meat bun, and it is the best-known of the Chinese-style steamed buns called <em>chukaman</em>. {CHK} says they are sold at every convenience store chain from around September through the winter, kept hot in a warmer beside the register, and that the nikuman filling is usually ground pork with finely chopped vegetables such as onion, bamboo shoots and shiitake. The same blog says the buns came from China about 100 years ago, with no source given, so I treat that as a rough note. {GJB} gives a similar picture, saying Chinese-style steamed buns were first introduced to Japan in the 1920s and that pork nikuman remain the most popular.</p>
+    <p>Commons describes this photo as a nikuman from a Kagurazaka shop. {GJB} says that shop, Kagurazaka Gojuban, was founded in 1957 and still makes its buns by hand, but it does not say it invented nikuman, and neither do I. If you want to try one, a convenience store in cold weather is the easiest place.</p>
 
     <h2 id="sando">Sandwiches and Toast<span class="h2-jp">サンドイッチとトースト</span></h2>
     <p>Most Japanese sandwiches use shokupan, the soft, lightly sweet, rectangular loaf, usually with the crusts trimmed. {JTA} covers the main ones.</p>
@@ -218,7 +234,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> anpan from {NP} and {JT}; melonpan from {TW}; curry bread from {FIJ}; yakisoba-pan from {TT}; agepan from {NPL}; korokke pan from {FIK} and {TTK}; mushipan from {JTM}; oyaki from {MAFFO} and {FIO}; sandwiches from {JTA} and {TTF}; ogura toast from {JP}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details or prices.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> anpan from {NP} and {JT}; melonpan from {TW}; curry bread from {FIJ}; yakisoba-pan from {TT}; agepan from {NPL}; korokke pan from {FIK} and {TTK}; mushipan from {JTM}; oyaki from {MAFFO} and {FIO}; nikuman from {CHK} and {GJB}; sandwiches from {JTA} and {TTF}; ogura toast from {JP}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details or prices.</p>
 
   </article>
 
