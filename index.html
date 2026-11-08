@@ -955,6 +955,20 @@ margin-bottom: 12px;
 .season-link, .season-btn { display: block; width: fit-content; max-width: 100%; margin-top: 10px; padding: 8px 15px; background: linear-gradient(135deg,#f9e9a8 0%,#e6c45a 28%,#c9971c 52%,#f3d77c 78%,#d6a92b 100%); color: #1a1a1a; font-weight: 700; font-size: 14px; letter-spacing: .02em; text-decoration: none; border-radius: 3px; border: 1px solid #b8860b; box-shadow: inset 0 1px 0 rgba(255,255,255,.7),0 1px 3px rgba(120,80,0,.35); text-shadow: 0 1px 0 rgba(255,245,200,.6); transition: filter .2s,transform .2s,box-shadow .2s; }
 .season-link:hover, .season-btn:hover { filter: brightness(1.07) saturate(1.1); transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,.8),0 3px 8px rgba(160,110,0,.45); }
 .season-btn { display: inline-block; font-size: 15px; margin-top: 0; }
+.fc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:8px 0 56px;}
+.fc-card{background:var(--washi);border:1px solid var(--border-strong);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 4px rgba(80,40,40,.08);}
+.fc-link{display:block;text-decoration:none;color:#5a3a00;}
+.fc-ph{display:block;aspect-ratio:4/3;width:100%;overflow:hidden;background:var(--washi-dark);}
+.fc-ph img{width:100%;height:100%;object-fit:cover;display:block;}
+.fc-ph-hub{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f9e9a8,#c9971c);font-family:'Shippori Mincho',serif;font-size:64px;color:#5a3a00;}
+.fc-body{padding:18px 20px 22px;display:flex;flex-direction:column;align-items:flex-start;flex:1;}
+.fc-lab{font-family:'Noto Serif JP',serif;font-size:11px;letter-spacing:2px;color:var(--beni);margin-bottom:6px;}
+.fc-t{font-family:'Shippori Mincho',serif;font-size:21px;font-weight:500;color:var(--sumi);margin:0 0 8px;}
+.fc-d{font-size:15px;color:var(--sumi-light);line-height:1.7;margin:0 0 16px;flex:1;}
+.fc-body .season-btn{margin-top:auto;}
+@media(max-width:900px){.fc-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.fc-grid{grid-template-columns:1fr;}}
+
 .food-cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
 .food-cta { display: inline-block; white-space: nowrap; padding: 14px 28px; font-size: 17px; font-weight: 700; letter-spacing: 0.4px; text-decoration: none; border-radius: 4px; box-shadow: 0 3px 10px rgba(0,0,0,0.18); transition: transform .15s, box-shadow .15s; }
 .food-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.25); }
@@ -3606,19 +3620,26 @@ transition: background 0.15s, color 0.15s;
   <!-- FESTIVALS -->
   <div class="wa-divider">
     <div class="wa-divider-line"></div>
-    <div class="wa-divider-mark">日本の伝統祭 — TRADITIONAL FESTIVALS</div>
+    <div class="wa-divider-mark">祭りと文化 — FESTIVALS &amp; CULTURE</div>
     <div class="wa-divider-line"></div>
   </div>
 
-  <div class="section-head" id="festivals">
+<div class="section-head" id="festivals">
+    <span id="culture"></span>
     <div class="section-head-left">
-      <h2 class="section-h2">Major Festivals of Japan</h2>
-      <span class="section-h2-jp">日本の伝統祭・祭礼ガイド</span>
+      <h2 class="section-h2">Festivals &amp; Culture</h2>
+      <span class="section-h2-jp">祭りと日本文化を巡る</span>
     </div>
-    <p style="max-width:680px;font-size:16px;color:var(--enshu);line-height:1.8;margin-top:12px;">For over a thousand years, matsuri have brought Japan's sacred shrines to life with portable mikoshi, towering floats, and ecstatic dancing. At its heart every matsuri is a sacred act — a community honoring its local deity in public. Our in-depth guide covers nine unmissable festivals, from Kyoto's Gion Matsuri to Aomori's Nebuta, with dates, hotel links, and everything you need to plan around them.</p>
-    <a href="/festivals/" onclick="trackEvent('click','internal','home_festivals_teaser_cta')" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:12px 26px;background:var(--beni);color:#fff;text-decoration:none;font-family:'EB Garamond',serif;font-size:15px;letter-spacing:1px;border-radius:2px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Read the Festivals Guide →</a>
+    <p style="max-width:680px;font-size:16px;color:var(--enshu);line-height:1.8;margin-top:12px;">Beyond shrines and temples, Japan's sacred world lives on in its matsuri, castles, crafts, anime pilgrimage routes and regional cooking. Start with whichever draws you in.</p>
   </div>
-
+  <div class="fc-grid">
+<div class="fc-card"><a class="fc-link" href="/festivals/" onclick="trackEvent('click','internal','home_festivals_teaser_cta')" tabindex="-1" aria-hidden="true"><picture class="fc-ph"><source type="image/webp" srcset="/images/home-cards/festivals.webp"><img src="/images/home-cards/festivals.jpg" alt="Gion Matsuri floats, Kyoto" width="640" height="480" loading="lazy"></picture></a><div class="fc-body"><div class="fc-lab">FESTIVALS ／ 祭り</div><h3 class="fc-t">Major Festivals</h3><p class="fc-d">Gion, Nebuta, Awa Odori — nine unmissable matsuri, with dates, hotel links and planning tips.</p><a class="season-btn" href="/festivals/" onclick="trackEvent('click','internal','home_festivals_teaser_cta')">Read the Festivals Guide</a></div></div>
+<div class="fc-card"><a class="fc-link" href="/castles/" onclick="trackEvent('click','internal','home_to_culture_castles')" tabindex="-1" aria-hidden="true"><picture class="fc-ph"><source type="image/webp" srcset="/images/home-cards/castles.webp"><img src="/images/home-cards/castles.jpg" alt="Himeji Castle" width="640" height="480" loading="lazy"></picture></a><div class="fc-body"><div class="fc-lab">CULTURE ／ 日本の城</div><h3 class="fc-t">Japanese Castles</h3><p class="fc-d">Himeji, Matsumoto, Hikone — the surviving original keeps and the samurai lords who built them.</p><a class="season-btn" href="/castles/" onclick="trackEvent('click','internal','home_to_culture_castles')">Explore Castles</a></div></div>
+<div class="fc-card"><a class="fc-link" href="/crafts/" onclick="trackEvent('click','internal','home_to_culture_crafts')" tabindex="-1" aria-hidden="true"><picture class="fc-ph"><source type="image/webp" srcset="/images/home-cards/crafts.webp"><img src="/images/home-cards/crafts.jpg" alt="Kintsugi bowl" width="640" height="480" loading="lazy"></picture></a><div class="fc-body"><div class="fc-lab">CULTURE ／ 伝統工芸</div><h3 class="fc-t">Traditional Crafts</h3><p class="fc-d">Lacquerware, ceramics, textiles, washi paper — regional craft traditions still made by hand.</p><a class="season-btn" href="/crafts/" onclick="trackEvent('click','internal','home_to_culture_crafts')">Explore Crafts</a></div></div>
+<div class="fc-card"><a class="fc-link" href="/anime/" onclick="trackEvent('click','internal','home_to_culture_anime')" tabindex="-1" aria-hidden="true"><picture class="fc-ph"><source type="image/webp" srcset="/images/home-cards/anime.webp"><img src="/images/home-cards/anime.jpg" alt="Kaminarimon, Asakusa" width="640" height="480" loading="lazy"></picture></a><div class="fc-body"><div class="fc-lab">CULTURE ／ アニメ聖地</div><h3 class="fc-t">Anime Pilgrimage</h3><p class="fc-d">The real places behind Your Name, Spirited Away, Demon Slayer and the anime that shaped a generation of travelers.</p><a class="season-btn" href="/anime/" onclick="trackEvent('click','internal','home_to_culture_anime')">Explore Anime Spots</a></div></div>
+<div class="fc-card"><a class="fc-link" href="/regional-food/" onclick="trackEvent('click','internal','home_to_culture_food')" tabindex="-1" aria-hidden="true"><picture class="fc-ph"><source type="image/webp" srcset="/images/home-cards/food.webp"><img src="/images/home-cards/food.jpg" alt="Sanuki udon" width="640" height="480" loading="lazy"></picture></a><div class="fc-body"><div class="fc-lab">CULTURE ／ 郷土料理</div><h3 class="fc-t">Regional Cuisine</h3><p class="fc-d">From Hokkaido seafood to Okinawan champuru — local dishes worth planning a trip around.</p><a class="season-btn" href="/regional-food/" onclick="trackEvent('click','internal','home_to_culture_food')">Explore Regional Food</a></div></div>
+<div class="fc-card"><a class="fc-link" href="/culture/" onclick="trackEvent('click','internal','home_to_culture_hub')" tabindex="-1" aria-hidden="true"><div class="fc-ph fc-ph-hub"><span>文化</span></div></a><div class="fc-body"><div class="fc-lab">CULTURE ／ 文化ハブ</div><h3 class="fc-t">All Culture Guides</h3><p class="fc-d">Etiquette, omamori, goshuin, kamidana and more — the full culture hub in one place.</p><a class="season-btn" href="/culture/" onclick="trackEvent('click','internal','home_to_culture_hub')">Open the Culture Hub</a></div></div>
+  </div>
 
 
   <!-- NEWSLETTER -->
@@ -4937,45 +4958,6 @@ transition: background 0.15s, color 0.15s;
 
   </div>
         
-
-  <!-- CULTURE -->
-  <div class="section-head" id="culture">
-    <div class="section-head-left">
-      <h2 class="section-h2">Explore Japanese Culture</h2>
-      <span class="section-h2-jp">日本文化を巡る</span>
-    </div>
-  </div>
-
-  <div style="margin:0 0 40px;padding:32px 32px 28px;background:var(--washi-dark);border-left:4px solid var(--kin);">
-    <div style="font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:3px;color:var(--beni);margin-bottom:6px;">JAPANESE CULTURE ／ 文化探訪</div>
-    <div style="font-family:'Shippori Mincho',serif;font-size:22px;color:var(--sumi);margin-bottom:6px;">Beyond shrines and temples — Japan's living culture</div>
-    <div style="font-size:14px;color:var(--enshu);margin-bottom:20px;">Four dedicated guides to the worlds that shape Japan today — castles, crafts, anime pilgrimage, and regional cuisine.</div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
-      <a href="/castles/" onclick="trackEvent('click','internal','home_to_culture_castles')" style="display:block;padding:20px 24px;background:var(--washi);border:1px solid var(--border-strong);border-top:3px solid #4a5566;text-decoration:none;border-radius:2px;transition:background 0.2s,transform 0.15s;">
-        <div style="font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:2px;color:#4a5566;margin-bottom:4px;">CULTURE ／ 日本の城</div>
-        <div style="font-family:'Shippori Mincho',serif;font-size:17px;color:var(--sumi);margin-bottom:6px;">🏯 Japanese Castles →</div>
-        <div style="font-size:13px;color:var(--enshu);line-height:1.6;">Himeji, Matsumoto, Hikone — the surviving original keeps and the samurai lords who built them.</div>
-      </a>
-      <a href="/crafts/" onclick="trackEvent('click','internal','home_to_culture_crafts')" style="display:block;padding:20px 24px;background:var(--washi);border:1px solid var(--border-strong);border-top:3px solid #7a5c3a;text-decoration:none;border-radius:2px;transition:background 0.2s,transform 0.15s;">
-        <div style="font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:2px;color:#7a5c3a;margin-bottom:4px;">CULTURE ／ 伝統工芸</div>
-        <div style="font-family:'Shippori Mincho',serif;font-size:17px;color:var(--sumi);margin-bottom:6px;">🎨 Traditional Crafts →</div>
-        <div style="font-size:13px;color:var(--enshu);line-height:1.6;">Lacquerware, ceramics, textiles, washi paper — the regional craft traditions still made by hand across Japan.</div>
-      </a>
-      <a href="/anime/" onclick="trackEvent('click','internal','home_to_culture_anime')" style="display:block;padding:20px 24px;background:var(--washi);border:1px solid var(--border-strong);border-top:3px solid #b8324a;text-decoration:none;border-radius:2px;transition:background 0.2s,transform 0.15s;">
-        <div style="font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:2px;color:#b8324a;margin-bottom:4px;">CULTURE ／ アニメ聖地</div>
-        <div style="font-family:'Shippori Mincho',serif;font-size:17px;color:var(--sumi);margin-bottom:6px;">🌸 Anime Pilgrimage →</div>
-        <div style="font-size:13px;color:var(--enshu);line-height:1.6;">The real-world locations behind Your Name, Spirited Away, and the anime that shaped a generation of travelers.</div>
-      </a>
-      <a href="/regional-food/" onclick="trackEvent('click','internal','home_to_culture_food')" style="display:block;padding:20px 24px;background:var(--washi);border:1px solid var(--border-strong);border-top:3px solid #6b7a3a;text-decoration:none;border-radius:2px;transition:background 0.2s,transform 0.15s;">
-        <div style="font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:2px;color:#6b7a3a;margin-bottom:4px;">CULTURE ／ 郷土料理</div>
-        <div style="font-family:'Shippori Mincho',serif;font-size:17px;color:var(--sumi);margin-bottom:6px;">🍜 Regional Cuisine →</div>
-        <div style="font-size:13px;color:var(--enshu);line-height:1.6;">From Hokkaido seafood to Okinawan champuru — the local dishes worth planning a trip around.</div>
-      </a>
-    </div>
-    <div style="margin-top:20px;text-align:right;">
-      <a href="/culture/" onclick="trackEvent('click','internal','home_to_culture_hub')" style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:1.5px;color:var(--beni);text-decoration:none;text-transform:uppercase;">See all in the Culture Hub →</a>
-    </div>
-  </div>
 
   <!-- BANNER -->
   <div class="banner">
