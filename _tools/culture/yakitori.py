@@ -164,6 +164,11 @@ main=f'''<main>
           <div class="related-card-title">🍱 Popular Japanese Dishes Guide →</div>
           <div class="related-card-desc">Sukiyaki, tempura, tonkatsu, karaage, rice bowls and sushi.</div>
         </a>
+        <a class="related-card" href="/culture/bread/" onclick="trackEvent('click','internal','related_yaki_to_bread')">
+          <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
+          <div class="related-card-title">🥐 Japanese Bread Guide →</div>
+          <div class="related-card-desc">Anpan, melonpan, curry bread, sandwiches and ogura toast.</div>
+        </a>
         <a class="related-card" href="/culture/noodles/" onclick="trackEvent('click','internal','related_yaki_to_noodles')">
           <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
           <div class="related-card-title">🍜 Japanese Noodles Guide →</div>
