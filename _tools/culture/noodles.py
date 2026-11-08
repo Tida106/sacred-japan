@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='noodles'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'mori-soba':('8a68f241-image.jpg',1200),'cha-soba':('1f32f253-image.jpg',1000),'somen-ice':('afeac011-image.jpg',800),'hiyamugi-bowl':('066797f8-image.jpg',1000)}
+photos={'mori-soba':('8a68f241-image.jpg',1200),'cha-soba':('1f32f253-image.jpg',1000),'somen-ice':('afeac011-image.jpg',800),'hiyamugi-bowl':('066797f8-image.jpg',1000),'yakisoba-ota':('430b7bad-image.jpg',1000),'yaki-udon':('0d234ed1-image.jpg',1000),'kamaage-udon':('13f2d4de-image.jpg',1000),'miso-nikomi-udon':('4daefc97-image.jpg',1000)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -23,11 +23,18 @@ CC0=lic('CC0','https://creativecommons.org/publicdomain/zero/1.0/')
 BY2=lic('CC BY 2.0','https://creativecommons.org/licenses/by/2.0/')
 BY4=lic('CC BY 4.0','https://creativecommons.org/licenses/by/4.0/')
 BYSA4=lic('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/')
+BY3=lic('CC BY 3.0','https://creativecommons.org/licenses/by/3.0/')
+BYSA3=lic('CC BY-SA 3.0','https://creativecommons.org/licenses/by-sa/3.0/')
 VIA='via Wikimedia Commons (resized)'
 f_mori=fig('mori-soba','A square black frame holding a bamboo mat piled with grey-brown soba noodles, beside a black cup of dark dipping sauce with a red inside and a small black dish of chopped scallions and a dab of green wasabi, on a tray','Mori soba: cold noodles, dipping sauce, scallions and wasabi.',f'Photo: 毒島みるく, {CC0}, 31 August 2019, {VIA}',hero=True)
 f_cha=fig('cha-soba','A tall pile of green-tinted soba noodles topped with shredded dark nori on a black plate with a white-and-black slatted rest','Green-tea-flavored soba, topped with shredded nori.',f'Photo: Pauloleong2002, {BYSA4}, 13 August 2022, {VIA}',maxw=640)
 f_somen=fig('somen-ice','Thin white noodles piled in a glass dish with ice cubes, a green leaf and a halved cherry tomato, in front of a red lacquer tray with sesame seeds, a green citrus, chopped scallions and a pale condiment','Somen on ice, with condiments in a red lacquer tray.',f'Photo: a.koto, {BY2}, 21 August 2007 (Flickr, license reviewed on Commons), {VIA}',maxw=640)
 f_hiya=fig('hiyamugi-bowl','Pale thin noodles with ice cubes in an octagonal glass bowl with a fern pattern, next to a small pale-green cup of brown dipping sauce with mushrooms and small puffed bits, on a wooden table with a checked cloth','Hiyamugi with ice, and a cup of dipping sauce.',f'Photo: RuinDig / Yuki Uchida, {BY4}, 28 August 2023, {VIA}',maxw=640)
+
+f_yakisoba=fig('yakisoba-ota','Dark brown stir-fried noodles with pieces of cabbage and green seaweed flakes in a clear plastic takeout tray, with a pile of bright red pickled ginger in one corner','Yakisoba in a takeout tray, with green seaweed flakes and red pickled ginger.',f'Photo: Ocdp, {CC0}, 27 September 2021. Commons describes it as yakisoba from a shop called Momi no Ki in Ota, Gunma. {VIA}',maxw=640)
+f_yakiudon=fig('yaki-udon','Thick stir-fried udon noodles with cabbage, topped with shredded dark nori and a heap of bonito flakes, with a small pile of orange shredded carrot at the side, on a white speckled plate','Yaki udon topped with nori and bonito flakes.',f'Photo: jetalone, {BY2}, 15 May 2007 (Flickr, license reviewed on Commons). Commons notes it was taken at a restaurant in Tsukishima, Tokyo. {VIA}',maxw=640)
+f_kamaage=fig('kamaage-udon','A round wooden tub holding thick white udon noodles in hot water, on a black tray beside a small bowl of chopped green scallions and a black bowl of dark dipping sauce','Kamaage udon in its wooden tub, with scallions and dipping sauce.',f'Photo: Lombroso, {BYSA3}, 1 June 2013. Commons says it was taken at a Marugame Seimen shop. {VIA}',maxw=640)
+f_miso=fig('miso-nikomi-udon','Flat, wide udon noodles in a dark brown miso broth in a heavy clay pot, with a raw egg yolk in the middle, slices of pink-and-white fish cake, mushroom and green beans','Miso nikomi udon, with a raw egg in the middle.',f'Photo: ウィ貴公子, {BYSA4}, 3 September 2023, {VIA}',maxw=640)
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 def ext(href,txt,lab): return f'<a href="{href}" target="_blank" rel="noopener" onclick="trackEvent(\'click\',\'external\',\'{lab}\')">{txt}</a>'
 VI='https://www.viator.com/search/Japan+food+tour?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
@@ -35,6 +42,9 @@ JG=ext('https://www.japan-guide.com/r/e104.html','japan-guide','noodles_japangui
 NIP=ext('https://www.nippon.com/en/japan-data/h02034/somen-and-hiyamugi-defining-japanese-summer-noodles.html','Nippon.com','noodles_nippon')
 WK=ext('https://en.wikipedia.org/wiki/Ramen','Wikipedia','noodles_wiki_ramen')
 TT=ext('https://tokyotreat.com/blog/yakisoba-a-festival-street-food-classic','TokyoTreat','noodles_tokyotreat')
+JW=ext('https://jw-webmagazine.com/types-of-udon','JW Web Magazine','noodles_jw')
+MG=ext('https://www.marugame.co.jp/','Marugame Seimen official site (Japanese)','noodles_marugame')
+MN=ext('https://japanese-products.blog/2017/09/09/misonikomi-udon-one-of-the-most-famous-dishes-originated-in-nagoya','Japanese Products blog','noodles_misonikomi')
 JC=ext('https://japanesecooking101.com/?p=4427','Japanese Cooking 101','noodles_jc101')
 RTE=ext('https://japan.recipetineats.com/hiyashi-chuka-cold-ramen/','RecipeTin Japan','noodles_rte')
 PRODBLOG=ext('https://japanese-products.blog/2018/03/22/zaru-soba-mori-soba-seiro-soba','Japanese Products blog','noodles_products')
@@ -52,8 +62,8 @@ faq_html=''.join(f'''      <details class="faq-item">
 
 ''' for q,a in faqs)
 faq_ld=json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]},ensure_ascii=False,indent=2)
-TITLE="Japanese Noodles Guide: Soba, Somen, Hiyamugi and Cold Ramen"
-DESC="A licensed guide's English introduction to Japanese noodles beyond ramen: soba, green tea soba, somen, hiyamugi, hiyashi chuka and chuka soba, with photographs and simple tips for ordering."
+TITLE="Japanese Noodles Guide: Soba, Udon, Yakisoba, Somen and Cold Ramen"
+DESC="A licensed guide's English introduction to Japanese noodles beyond ramen: soba, green tea soba, somen, hiyamugi, hiyashi chuka, chuka soba, yakisoba and udon, with photographs and simple tips for ordering."
 URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-noodles.jpg"
 main=f'''<main>
@@ -72,6 +82,7 @@ main=f'''<main>
       <li><a href="#hiyashi">Hiyashi Chuka: Chilled Ramen Noodles</a></li>
       <li><a href="#chuka-soba">Chuka Soba: A Name for Ramen</a></li>
       <li><a href="#yakisoba">Yakisoba: Stir-Fried Festival Noodles</a></li>
+      <li><a href="#udon">Udon: Thick Wheat Noodles</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
     </ol>
@@ -92,6 +103,7 @@ main=f'''<main>
       <li><strong>Hiyamugi (<span class="jp">冷麦</span>):</strong> thin wheat noodles, slightly thicker than somen.</li>
       <li><strong>Hiyashi chuka (<span class="jp">冷やし中華</span>):</strong> chilled ramen-style noodles with cold toppings.</li>
       <li><strong>Chuka soba (<span class="jp">中華そば</span>):</strong> a name for ramen, often the classic style.</li>
+      <li><strong>Udon (<span class="jp">うどん</span>):</strong> thick wheat noodles, hot or cold, with many regional styles.</li>
       <li><strong>Yakisoba (<span class="jp">焼きそば</span>):</strong> stir-fried wheat noodles with a sweet-savory sauce, the festival-stall classic.</li>
     </ul>
 
@@ -127,8 +139,22 @@ main=f'''<main>
     <h2 id="yakisoba">Yakisoba: Stir-Fried Festival Noodles<span class="h2-jp">焼きそば</span></h2>
     <p>Despite the name, yakisoba is not made from buckwheat. {TT} says it is made with Chinese wheat noodles (<em>chuka soba</em>), boiled first and then stir-fried with cabbage, onion, carrot and usually pork. {JC} explains that the noodles are made with an alkaline solution, which gives them a yellow tint and a springy, chewy bite, and that they are sold pre-steamed so they fry without breaking apart.</p>
     <p>The flavor comes from a sweet, thick sauce that is often compared to Worcestershire sauce. Classic toppings are <em>aonori</em> (green seaweed flakes), red pickled ginger and bonito flakes, and some cooks add mayonnaise. {TT} says it is most common at festival stalls, where vendors cook on iron grills, and also sells as microwave boxes at convenience stores and supermarkets.</p>
+    {f_yakisoba}
     <p>On its history, {TT} says the origin is unclear but that Asakusa was known for sauce yakisoba in the 1930s, and that the dish was a typical light meal before World War II. {JC} traces it to Chinese stir-fried noodles that reached Japan more than a hundred years ago, and says postwar shortages made it a cheap, filling staple. Treat the dates as approximate, since the two sources tell the story differently.</p>
     <p>One more thing to look for is <em>yakisoba-pan</em>, a bread roll filled with yakisoba, which {TT} says turns up at bakeries, convenience stores and school lunches. It also notes variations such as <em>yaki udon</em> in the Kitakyushu/Kokura area, made with udon instead.</p>
+    {f_yakiudon}
+    <p>The bowl above is yaki udon, the same stir-fry with thick udon in place of chuka noodles. Commons notes that this one was photographed in Tsukishima, Tokyo.</p>
+
+    <h2 id="udon">Udon: Thick Wheat Noodles<span class="h2-jp">うどん</span></h2>
+    <p>{JW} describes udon as a thick Japanese noodle made of wheat flour, water and salt. It is the third big noodle family after ramen and soba, and it comes hot or cold, plain or with toppings, in styles that change from region to region.</p>
+    <h3>Kamaage Udon</h3>
+    <p>Boiled noodles are normally rinsed in cold water. {JW} says kamaage udon is served without that rinse, which gives the noodles a chewier texture. Shops typically bring it in the hot water it was boiled in, with a dipping sauce and condiments such as scallions on the side. The photo below was taken at a Marugame Seimen shop, a nationwide udon chain; its {MG} is linked here.</p>
+    {f_kamaage}
+    <h3>Sanuki and Kitsune</h3>
+    <p>{JW} calls Kagawa Prefecture the capital of udon in Japan, and says Sanuki udon is characterized by a softer, watery texture compared with regular udon. It also lists kitsune udon, which is the plain udon in broth topped with <em>abura-age</em>, sweet fried tofu. For more on Sanuki udon as a regional dish, see our {link('/regional-food/','regional food guide','noodles_to_regional_food_udon')}.</p>
+    <h3>Miso Nikomi Udon</h3>
+    <p>{MN} describes miso nikomi udon as a Nagoya dish, one of the local specialties called <em>Nagoya meshi</em>. The noodles are simmered in a broth of <em>mame miso</em> (also called Hatcho miso or Nagoya miso), a dark miso made from soybeans, salt and water. The same source says the noodles are made without salt and may be round or flat, like kishimen, and lists chicken, egg, scallions, shiitake and fish cake as typical toppings. It arrives bubbling in its own pot, so let it cool a little before the first bite.</p>
+    {f_miso}
 
     <h2 id="how">How to Order and Eat<span class="h2-jp">注文と食べ方</span></h2>
     <p>These are my own habits as a guide, not strict rules.</p>
