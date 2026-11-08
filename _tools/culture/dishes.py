@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='popular-dishes'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000)}
+photos={'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000),'karaage':('83219fff-image.jpg',1000)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -29,6 +29,7 @@ f_t2=fig('tempura-kappo','Tempura on a blue-and-white scalloped plate lined with
 f_tendon=fig('tendon','A round bowl with a dark blue rim holding rice topped with a large shrimp tempura, slices of pumpkin and a green vegetable, all glazed in brown sauce','A tendon bowl: tempura glazed with sauce on rice.',f'Photo: 毒島みるく, {CC0}, 4 January 2019. Commons describes it as the tendon from Tenya, priced at 540 yen. {VIA}',maxw=520)
 f_gyu=fig('gyudon','Sliced beef and onion in brown sauce on rice in a white bowl with a blue pattern, topped with a pile of red pickled ginger, with a small cup holding a raw egg in the upper right','Gyudon with red pickled ginger and a raw egg on the side.',f'Photo: jetalone, {BY2}, 2 October 2006 (Flickr, license reviewed on Commons). Commons says it is a regular-size bowl with an egg at a Yoshinoya near Higashi-Ginza, Tokyo. {VIA}',maxw=640)
 f_oya=fig('oyakodon','A white bowl of chicken and softly set egg in a glossy brown sauce, topped with a three-leaf green garnish and chopped green onion, on a wooden tray with a small dish of pickles','Oyakodon: chicken and egg over rice.',f'Photo: Ocdp, {CC0}, 7 June 2019. Commons describes it as a Suigo chicken oyakodon at a restaurant called Suigo no Toriyasan in Katori, Chiba. {VIA}',maxw=640)
+f_kara=fig('karaage','A tall heap of golden-brown fried chicken pieces dusted with a pale coating, on a black plate with white Japanese lettering, with shredded cabbage and a dab of mayonnaise at the side','A heaped plate of karaage with cabbage and mayonnaise.',f'Photo: Ocdp, {CC0}, 5 July 2020. Commons describes it as a karaage set meal in a very large portion (鬼盛り) at a restaurant called Densetsu no Sutadonya, and titles it a reference image of chicken karaage. {VIA}',maxw=700)
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 def ext(href,txt,lab): return f'<a href="{href}" target="_blank" rel="noopener" onclick="trackEvent(\'click\',\'external\',\'{lab}\')">{txt}</a>'
 VI='https://www.viator.com/search/Japan+food+tour?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
@@ -128,6 +129,8 @@ main=f'''<main>
 
     <h2 id="karaage">Karaage: Japanese Fried Chicken<span class="h2-jp">唐揚げ</span></h2>
     <p>Karaage is chicken pieces that are marinated, coated in flour or potato starch, and deep-fried. {KJT} says it is usually boneless chicken, coated with flour, potato starch (<em>katakuriko</em>) or both, and that it has no batter, which is one reason some people write the first character as 空, "air." {KFJ} gives a typical marinade of soy sauce, sake, ginger and often garlic, and says the pieces are fried twice, first at a lower temperature and then hotter for the crust.</p>
+    {f_kara}
+    <p>The plate above shows the usual look: a tall heap of golden pieces with a pale, uneven coating, shredded cabbage underneath and a dab of mayonnaise at the side. Commons says it is a karaage set meal in the 鬼盛り (<em>oni-mori</em>) size, which I read as a very large serving, so a normal portion will be smaller.</p>
     <p>It shows up everywhere: convenience-store counters, izakaya, set meals and bento, and shops that sell it by weight. {KFJ} says it is usually served with lemon and shredded cabbage, and sometimes mayonnaise, especially in Kansai.</p>
     <h3>Where Did It Start?</h3>
     <p>{KJT} dates the first appearance of the dish to 1932, at Mikasa Kaikan, a chicken specialty restaurant in Ginza, but this comes from the Japan Karaage Association and the page gives no independent confirmation. {KFJ} calls it a frequently cited account. The city of Nakatsu in Oita calls itself the "sacred ground" of karaage, a claim made by the town itself, and the same page says local accounts trace boneless karaage to Chinese restaurants in nearby Usa after World War II.</p>
