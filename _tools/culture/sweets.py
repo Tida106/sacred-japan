@@ -12,6 +12,8 @@ JW=ext('https://jw-webmagazine.com/tips/best-japanese-snacks','JW Web Magazine',
 ZEN=ext('https://zenmarket.jp/en/blog/post/9219/best-japanese-snacks','ZenMarket','sweets_zenmarket')
 FUN=ext('https://www.fun-japan.jp/en/articles/14647','FUN! JAPAN','sweets_funjapan')
 SORA=ext('https://soranews24.com/2025/01/30/7-eleven-japans-most-popular-product-with-foreign-tourists-is-a-unique-chocolate-gummy/','SoraNews24','sweets_soranews')
+JPB=ext('https://japanese-products.blog/2017/03/29/the-2016-popularity-ranking-of-japanese-snacks-and-sweets','Japanese Products blog','sweets_jpblog')
+MG=ext('https://news.allabout.co.jp/articles/o/62538/','All About News','sweets_allabout')
 TV=ext('https://www.travelvoice.jp/english/sweets-become-popular-as-souvenirs-for-japan-among-international-visitors/print','Travel Voice','sweets_travelvoice')
 items=[
 ('pocky','Pocky','ポッキー','Glico makes Pocky: thin biscuit sticks coated in chocolate, with one end left bare so you can hold it. '+f'{TRIP} says it has been popular since 1966 and lists matcha, almond crush and cookies-and-cream among the flavors. {ZEN} names Glico as the maker and mentions Japan-only flavors. The same {TRIP} article puts a standard box at about $2-3 and gift boxes at $10-20, so it is an easy cheap present. Check the label if you buy a flavor you cannot read.'),
@@ -35,6 +37,7 @@ faqs=[
 ("Which Japanese sweets last the longest?","Packaged senbei, Pocky, Hi-Chew and Kit Kat keep well. Castella lasts about 2-3 weeks and packaged yatsuhashi 2-3 weeks according to Trip to Japan. Fresh daifuku lasts only 2-4 days."),
 ("Why is Kit Kat a good-luck gift in Japan?","The name sounds like kitto katsu, meaning you will surely win, so it is a popular gift for students taking exams."),
 ("Are these sweets ranked by sales?","No. They are my picks as a guide. Sales data I found covers only parts of the market, such as sweets at Tokyo Station and 7-Eleven Japan's best seller with foreign tourists."),
+("What do Japanese people themselves like to snack on?","Two surveys I found point to Calbee snacks such as Jagariko and potato chips, plus Meiji and Kit Kat items. One is a 2016 TV survey of 10,000 people and the other a 2023 survey of 1,000 people, so treat them as hints."),
 ("Can I bring Japanese sweets through customs at home?","Rules differ by country and by ingredients such as meat, dairy and eggs. Check your own country's customs rules before you travel."),
 ]
 faq_html=''.join(f'''      <details class="faq-item">
@@ -45,7 +48,7 @@ faq_html=''.join(f'''      <details class="faq-item">
 ''' for q,a in faqs)
 faq_ld=json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]},ensure_ascii=False,indent=2)
 TITLE="Japanese Sweets Souvenirs: 10 Cheap Favorites a Guide Recommends"
-DESC="A licensed guide's picks for 10 cheap, popular Japanese sweets to bring home: Pocky, Kit Kat, Hi-Chew, Tokyo Banana, Shiroi Koibito, yatsuhashi, dorayaki, daifuku, senbei and castella, with shelf-life tips."
+DESC="A licensed guide's picks for 10 cheap, popular Japanese sweets to bring home: Pocky, Kit Kat, Hi-Chew, Tokyo Banana, Shiroi Koibito, yatsuhashi, dorayaki, daifuku, senbei and castella, with shelf-life tips, plus what Japanese people snack on."
 URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-japanese-sweets.jpg"
 toc=''.join(f'<li><a href="#{k}">{n}</a></li>' for k,n,_,_ in items)
@@ -58,6 +61,7 @@ main=f'''<main>
       <li><a href="#opening">Opening: A Note from the Guide</a></li>
       <li><a href="#what-sells">What Sells to Visitors</a></li>
       <li><a href="#picks">The 10 Picks</a></li>
+      <li><a href="#locals">What Japanese People Snack On</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
     </ol>
@@ -76,6 +80,27 @@ main=f'''<main>
 
     <h2 id="picks">The 10 Picks<span class="h2-jp">お菓子10選</span></h2>
 {cards}
+    <h2 id="locals">What Japanese People Snack On<span class="h2-jp">日本人に人気のお菓子</span></h2>
+    <p>Souvenir sweets are not what people here eat every day. For everyday snacks, I found two surveys. Both are limited, so please read them as hints.</p>
+    <h3>A 2016 TV Survey of 10,000 People</h3>
+    <p>The {JPB} reports a survey run by a TV program, which it does not name. Voters chose their favorites from about 1,700 kinds of snacks and candies, 10,000 people took part, and it was held in November 2016. The top 10 were:</p>
+    <ol>
+      <li>Calbee Jagariko Salad</li>
+      <li>Calbee Potato Chips, lightly salted</li>
+      <li>Nestlé Japan Kit Kat Minis</li>
+      <li>Calbee Potato Chips Consommé Punch</li>
+      <li>Calbee Kappa Ebisen</li>
+      <li>Calbee Kata-Age Potato Chips, salt</li>
+      <li>Koikeya Potato Chips Nori-Shio</li>
+      <li>Meiji Takenoko no Sato</li>
+      <li>Meiji Kajyu Gummy, grape</li>
+      <li>Morinaga Hi-Chew</li>
+    </ol>
+    <p>That list is almost ten years old, so tastes may have moved.</p>
+    <h3>A 2023 Survey by Maker</h3>
+    <p>{MG} reports a survey by Model Hyakka (published on its MoneyGeek site) on April 24-25, 2023, of 1,000 people who said they always buy sweets when they buy food, chosen from a pre-survey of 6,000 people aged 17 to 84. The makers named were Calbee first (504 votes; Kappa Ebisen, potato chips, Jagariko and Jagabee), Meiji second (424 votes; Kajyu Gummy, chocolates, Kinoko no Yama and Takenoko no Sato) and Glico third. The page shows only part of the list.</p>
+    <p>Two items from my 10 also appear in the 2016 list: Kit Kat and Hi-Chew. If you want to snack like a local, add a can of Jagariko and a bag of Calbee potato chips. These are savory, cheap and found at any convenience store.</p>
+
     <h2 id="tips">Packing Tips<span class="h2-jp">持ち帰りのコツ</span></h2>
     <ol>
       <li><strong>Buy fresh sweets last.</strong> Daifuku and nama yatsuhashi are for the trip.</li>
@@ -118,7 +143,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> {TRIP}; {BYF}; {JW}; {ZEN}; {TV}; {FUN}; {SORA}. Product facts and prices come from these pages and may have changed, so check before you buy. The selection and order are the author's.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> {TRIP}; {BYF}; {JW}; {ZEN}; {TV}; {FUN}; {SORA}; {JPB}; {MG}. Product facts and prices come from these pages and may have changed, so check before you buy. The selection and order are the author's.</p>
 
   </article>
 
