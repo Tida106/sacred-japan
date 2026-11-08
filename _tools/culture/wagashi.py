@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='wagashi'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'ichigo':('5e10bb4f-image.jpg',1200),'strawberry':('36b6e7e3-image.jpg',1000),'yokan':('23068ad2-image.jpg',1000),'uiro':('270a1761-image.jpg',650),'almond':('15cb0b50-image.jpg',900),'taiyaki1':('12c12445-image.jpg',1000),'taiyaki2':('197c48c9-image.jpg',1000),'raindrop':('1869be0b-image.jpg',1000),'shitatari':('fba835fc-image.jpg',848),'dora1':('1bc0bab7-image.jpg',1100),'dora2':('fdf50475-image.jpg',1100),'dora3':('52b956d5-image.jpg',800),'dora4':('1b56ea3e-image.jpg',687),'warabi1':('f7fe7879-image.jpg',1000),'warabi2':('c5f3c8ca-image.jpg',640),'monaka1':('0bb91696-image.jpg',900),'monaka2':('65072675-image.jpg',472),'neri':('697ef1fb-image.jpg',760),'gohei1':('9231308e-image.jpg',1000),'gohei2':('7bd10290-image.jpg',1000),'daigaku':('a0220884-image.jpg',760)}
+photos={'ichigo':('5e10bb4f-image.jpg',1200),'strawberry':('36b6e7e3-image.jpg',1000),'yokan':('23068ad2-image.jpg',1000),'uiro':('270a1761-image.jpg',650),'almond':('15cb0b50-image.jpg',900),'taiyaki1':('12c12445-image.jpg',1000),'taiyaki2':('197c48c9-image.jpg',1000),'raindrop':('1869be0b-image.jpg',1000),'shitatari':('fba835fc-image.jpg',848),'dora1':('1bc0bab7-image.jpg',1100),'dora2':('fdf50475-image.jpg',1100),'dora3':('52b956d5-image.jpg',800),'dora4':('1b56ea3e-image.jpg',687),'warabi1':('f7fe7879-image.jpg',1000),'warabi2':('c5f3c8ca-image.jpg',640),'monaka1':('0bb91696-image.jpg',900),'monaka2':('65072675-image.jpg',472),'neri':('697ef1fb-image.jpg',760),'gohei1':('9231308e-image.jpg',1000),'gohei2':('7bd10290-image.jpg',1000),'daigaku':('a0220884-image.jpg',760),'anmitsu1':('e3ca2236-image.jpg',540),'anmitsu2':('972e7784-image.jpg',900),'kori':('e4f7430a-image.jpg',800),'kintsuba1':('65c43d2a-image.jpg',1000),'kintsuba2':('6f610507-image.jpg',900),'amanatto':('0062d3f2-image.jpg',1000),'mamedai':('2ec063c3-image.jpg',900),'nanbu':('b82643bb-image.jpg',900),'beika':('e72f0b09-image.jpg',900)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -26,6 +26,7 @@ BYSA2=lic('CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/')
 BYSA21=lic('CC BY-SA 2.1 JP','https://creativecommons.org/licenses/by-sa/2.1/jp/')
 BYSA4=lic('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/')
 BYSA3=lic('CC BY-SA 3.0','https://creativecommons.org/licenses/by-sa/3.0/')
+BY3=lic('CC BY 3.0','https://creativecommons.org/licenses/by/3.0/')
 VIA='via Wikimedia Commons (resized)'
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 def ext(href,txt,lab): return f'<a href="{href}" target="_blank" rel="noopener" onclick="trackEvent(\'click\',\'external\',\'{lab}\')">{txt}</a>'
@@ -41,6 +42,11 @@ JN=ext('https://www.jeepe.jp/en/articles/nerikiri-wagashi-guide-1756','Jeepe (ne
 FUN=ext('https://www.fun-japan.jp/en/articles/8192','FUN! JAPAN (Chubu local confectioneries)','wagashi_funjapan_gohei')
 MAFF=ext('https://local-cuisine.maff.go.jp/en/recipe/448/','MAFF (Aichi gohei-mochi)','wagashi_maff_gohei')
 FD=ext('https://foodinjapan.org/japan/daigaku-imo','Food in Japan (daigaku imo)','wagashi_foodinjapan_daigaku')
+FAN=ext('https://www.foodinjapan.org/japan/anmitsu','Food in Japan (anmitsu)','wagashi_foodinjapan_anmitsu')
+JPK=ext('https://japanese-products.blog/2018/12/26/kintsuba','Japanese Products blog (kintsuba)','wagashi_jp_kintsuba')
+JPA=ext('https://japanese-products.blog/2017/05/08/amanatto-sweet-beans-like-raisins','Japanese Products blog (amanatto)','wagashi_jp_amanatto')
+JPN=ext('https://japanese-products.blog/2019/04/09/nanbu-senbei','Japanese Products blog (nanbu senbei)','wagashi_jp_nanbu')
+SZK=ext('https://www.suzukake.co.jp/?p=4495','Suzukake (shiomame daifuku)','wagashi_suzukake_mamedaifuku')
 VI='https://www.viator.com/search/Japan+tea+ceremony?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
 
 f_ich=fig('ichigo','Two pale pink rice-cake sweets on a white plate; one is cut open to show a whole strawberry and dark bean paste inside','Ichigo daifuku, one cut open: a strawberry and bean paste inside soft pink mochi.',f'Photo: Ocdp, {CC0}, 5 December 2012. {VIA}',hero=True)
@@ -63,10 +69,19 @@ f_ne=fig('neri','Five small hand-shaped sweets on a silver tray: a white one wit
 f_g1=fig('gohei1','Close-up of round flat slices of grilled rice on bamboo skewers, with a glossy dark brown glaze and charred spots','Gohei mochi freshly grilled: flattened rice on skewers with a brown glaze.',f'Photo: Kunmap, {BYSA4}, 28 October 2013. {VIA}',maxw=700)
 f_g2=fig('gohei2','A single long oval gohei mochi on a flat bamboo skewer, resting on a white foam tray, with a dark glaze and burnt flecks','One oval skewer on a tray, the shape the MAFF page calls waraji.',f'Photo: 円周率３パーセント, {BYSA4}, 21 September 2024. {VIA}',maxw=760)
 f_da=fig('daigaku','Pieces of glazed sweet potato dusted with black sesame seeds in a white bowl with blue painted leaves','Daigaku imo: fried sweet potato pieces in a shiny syrup, with black sesame.',f'Photo: Ocdp, {CC0}, 3 July 2021. {VIA}',maxw=620)
+f_an1=fig('anmitsu1','A glass bowl on a wooden tray holding a scoop of ice cream, orange and yellow fruit and dark red bean paste, with a small glass of dark syrup beside it','Anmitsu with ice cream and fruit, and the dark syrup served on the side.',f'Photo: kumon (Flickr), {BY2}, 6 March 2005. {VIA}',maxw=540)
+f_an2=fig('anmitsu2','A glass bowl on a red lacquer tray: a scoop of red bean paste in the center, surrounded by clear jelly cubes, pink and white sweets, a white dumpling, a green ball, orange and yellow fruit and a few beans','A fuller anmitsu: bean paste in the middle, then jelly cubes, dumplings and fruit.',f'Photo: jetalone (Flickr), {BY2}, 23 May 2007. {VIA}',maxw=700)
+f_ko=fig('kori','A rustic bowl on a red lacquer tray, filled with bright green shaved ice with a patch of dark red bean paste and a white mochi piece at the front and a spoon resting on the rim','Green shaved ice with a mochi and bean-paste piece tucked in front.',f'Photo: 小太刀, {BYSA3}, 27 May 2007 (the original upload date). {VIA}',maxw=640)
+f_ki1=fig('kintsuba1','Two kintsuba on a black lacquer plate with a tea cup behind: one whole round, grilled disc with brown spots, and one broken open to show chunky red bean paste','Kintsuba: a grilled disc, and one broken open to show the chunky paste.',f'Photo: katorisi, {BY3}, 21 October 2007. {VIA}',maxw=620)
+f_ki2=fig('kintsuba2','A thick, dark round block of bean paste with a dusting of white and a few black sesame seeds on top, sitting on a white plate','A round, very dense kintsuba with black sesame on top.',f'Photo: Kawazure135, {BYSA4}, 15 April 2025. {VIA}',maxw=620)
+f_am=fig('amanatto','A long beige tray with four small piles of sugar-dusted sweets: green beans, reddish-brown beans, dark purple-red beans and pale amber slices','Amanatto on one plate: four colors, each coated in a frosting of sugar.',f'Photo: Ocdp, {CC0}, 10 February 2022. {VIA}',maxw=700)
+f_md=fig('mamedai','Two white mochi sweets on a blue-striped plate; the one on the right is cut open to show dark red bean paste and a large dark bean, and the one on the left shows dark beans under the flour-dusted skin','Mame daifuku, one cut open: mochi, paste and a whole bean.',f'Photo: Ocdp, {CC0}, 24 March 2022 (the file was re-shot in 2025). {VIA}',maxw=640)
+f_nb=fig('nanbu','A flat, round, thick-rimmed pale brown cracker with reddish peanuts pressed into the center, on a wooden surface','A nanbu senbei: a wheat cracker with peanuts set into the middle.',f'Photo: Quercus acuta, {BYSA4}, 25 August 2024. {VIA}',maxw=700)
+f_be=fig('beika','A rectangular baked rice cracker with a glossy pale surface and many brown roasted beans set into it','A bean-studded rice cracker.',f'Photo: Kropsoq, {BYSA3}, July 2005. {VIA}',maxw=640)
 f_alm=fig('almond','A white bowl of jelly-like white cubes topped with orange peach slices, a few green pieces and a red cherry','Homemade almond tofu with fruit.',f'Photo: King of Hearts, {BYSA4}, 20 June 2020. {VIA}',maxw=560)
 
 faqs=[
-("What is wagashi?","Wagashi means traditional Japanese sweets. It is a broad word, so this guide covers only a handful: ichigo daifuku, yokan, uiro, almond tofu, taiyaki, dorayaki, warabimochi, monaka, nerikiri, raindrop cake and shitatari, plus two snacks, gohei mochi and daigaku imo, the ones I could show with photographs. The Jeepe article says yokan is eaten with green tea or matcha, and the same pairing is common for other sweets of this kind."),
+("What is wagashi?","Wagashi means traditional Japanese sweets. It is a broad word, so this guide covers only a handful: ichigo daifuku, yokan, uiro, almond tofu, taiyaki, dorayaki, warabimochi, monaka, nerikiri, raindrop cake and shitatari, plus anmitsu, kintsuba, amanatto, mame daifuku, senbei and two snacks, gohei mochi and daigaku imo, the ones I could show with photographs. The Jeepe article says yokan is eaten with green tea or matcha, and the same pairing is common for other sweets of this kind."),
 ("Who invented ichigo daifuku?","Nobody can say for certain. Food in Japan says the strawberry version emerged in the 1980s and that several shops have been linked to its origin, and the Tamaya shop claims on its own website that it created the original. The same article credits Toraya in Ginza with fruit daifuku in general in 1974, and it does not reconcile the two dates. Take every date as a claim."),
 ("Is ichigo daifuku seasonal?","The Food in Japan article says fruit daifuku is often seasonal, but it does not name a season for strawberry. Shops that use fresh strawberries tend to sell it when strawberries are at their best, so ask the shop."),
 ("How do I eat yokan?","Jeepe suggests slicing the bar to about 1 to 1.5 cm, eating small pieces slowly with green tea or matcha, and using a wagashi pick if you have one. It says coffee also works."),
@@ -79,6 +94,10 @@ faqs=[
 ("What is nerikiri?","Jeepe describes nerikiri as a fresh sweet made mainly from white bean paste kneaded with a soft rice paste or yam, shaped by hand into seasonal motifs. It should be eaten the same day or the next, so it is a poor souvenir."),
 ("Is gohei mochi a wagashi?","Not in the tea-ceremony sense. It is a regional skewered rice snack grilled with a savory-sweet sauce, mostly from Nagano, Gifu and Aichi, according to FUN! JAPAN and the agriculture ministry. I include it because it is a traditional local sweet-and-savory snack."),
 ("Why is daigaku imo called university potato?","Nobody knows. Food in Japan lists theories about students, a shop near a university and a student selling it for tuition, and says none can be proven."),
+("What is anmitsu?","Food in Japan describes a chilled dessert of agar jelly cubes with red bean paste, fruit and shiratama dumplings, with black sugar syrup served alongside. Without the bean paste it is closer to mitsumame."),
+("What is kintsuba?","Sweet azuki paste, usually chunky, set with agar and wrapped in a thin wheat-flour dough, most often as a brick, according to the Japanese Products blog. Its mid-Edo history comes from that one page."),
+("Is amanatto related to natto?","No. Beans are simmered in sugar syrup, coated in sugar and dried, according to the Japanese Products blog, so it is a sweet and unrelated to fermented natto."),
+("Is nanbu senbei made of rice?","No, it is a wheat cracker from the Hachinohe area of Aomori, also made in Iwate, according to the Japanese Products blog. Aomori versions tend to be salty and Iwate versions sweeter."),
 ("Is uiro the same as yokan?","They look alike as small blocks, but I did not find a source comparing them, so I will not give you a rule. The photograph in this guide is labeled by its photographer as uiro from Osu, and the quickest answer is to ask at the shop."),
 ]
 faq_html=''.join(f'''      <details class="faq-item">
@@ -89,7 +108,7 @@ faq_html=''.join(f'''      <details class="faq-item">
 ''' for q,a in faqs)
 faq_ld=json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]},ensure_ascii=False,indent=2)
 TITLE="Wagashi Guide: Ichigo Daifuku, Yokan, Uiro and Other Japanese Sweets"
-DESC="A licensed guide's English introduction to wagashi, traditional Japanese sweets: ichigo daifuku (strawberry mochi), yokan, uiro, taiyaki, dorayaki, warabimochi, monaka, nerikiri, raindrop cake and almond tofu, plus gohei mochi and daigaku imo, with photographs and honest notes on what is claimed."
+DESC="A licensed guide's English introduction to wagashi, traditional Japanese sweets: ichigo daifuku (strawberry mochi), yokan, uiro, taiyaki, dorayaki, warabimochi, monaka, nerikiri, raindrop cake and almond tofu, plus anmitsu, kintsuba, amanatto, mame daifuku, senbei, gohei mochi and daigaku imo, with photographs and honest notes on what is claimed."
 URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-wagashi.jpg"
 main=f'''<main>
@@ -110,6 +129,10 @@ main=f'''<main>
       <li><a href="#warabimochi">Warabimochi</a></li>
       <li><a href="#monaka">Monaka</a></li>
       <li><a href="#water">Water Sweets: Raindrop Cake and Shitatari</a></li>
+      <li><a href="#anmitsu">Anmitsu</a></li>
+      <li><a href="#kintsuba">Kintsuba</a></li>
+      <li><a href="#beans">Beans and Mochi: Amanatto and Mame Daifuku</a></li>
+      <li><a href="#crackers">Senbei: The Salty-Sweet Crackers</a></li>
       <li><a href="#snacks">Not Quite Wagashi: Gohei Mochi and Daigaku Imo</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
@@ -201,6 +224,38 @@ main=f'''<main>
     {f_sh}
     <p>The Commons description (in Japanese) calls this <em>shitatari</em>, a sweet from the Kyoto wagashi shop Kamehiroei, and says it is linked to the Kikusui-hoko float of the Gion Festival. The photograph shows two amber, translucent blocks on a glass dish. I have not sourced the ingredients or the story behind the name, so all I can say is what the picture and the description say.</p>
 
+    <h2 id="anmitsu">Anmitsu<span class="h2-jp">あんみつ</span></h2>
+    <p>{FAN} describes anmitsu as a chilled dessert built on cubes of <em>kanten</em> (agar jelly), topped with sweet red bean paste, fruit and shiratama dumplings, with <em>kuromitsu</em> (black sugar syrup) on the side so you can set the sweetness yourself. It says mitsumame is the closest relative, and that mitsumame becomes anmitsu once bean paste is added. Summer is the classic season, but shops use strawberry in spring and chestnut in autumn.</p>
+    {f_an1}
+    <p>Here the bowl has a scoop of ice cream and fruit with the syrup in a small glass, which is the <em>cream anmitsu</em> style the page lists. The Commons file gives no shop for this one.</p>
+    {f_an2}
+    <p>A fuller bowl, with the paste in the middle and clear jelly cubes, pink and white sweets, a white dumpling, a green ball and fruit around it. I will not name the items, since the Commons description does not.</p>
+    {f_ko}
+    <p>Not anmitsu, but the same cold-sweet idea: green shaved ice with a piece of mochi and bean paste. The Commons description says the green syrup is matcha and that the piece inside is the shop's own mochi sweet. I leave the shop out because it is a brand name, and the description is the only source I have.</p>
+    <p>On origins, Food in Japan credits the Asakusa shop Funawa with the first mitsumame in 1903 and says "many sources" credit Ginza Wakamatsu with adding bean paste in 1930, with a rival claim from about 1938. It cites none of them clearly, so treat the story as uncertain. It also gives café prices of about ¥700 to 1,300.</p>
+
+    <h2 id="kintsuba">Kintsuba<span class="h2-jp">きんつば</span></h2>
+    <p>{JPK} describes kintsuba as sweet azuki paste, usually chunky, set with agar and wrapped in a thin layer of wheat-flour dough. The classic form is a brick, and the name is read as "gold sword guard," <em>tsuba</em> being the guard on a sword. It says the sweet began mid-Edo in Osaka with rice flour as <em>gintsuba</em> (silver), and that in Edo wheat flour replaced the rice flour and the name changed to kintsuba because gold is worth more. That history is the page's own account.</p>
+    {f_ki1}
+    <p>This disc is the round style, grilled on the flat faces, with one broken open so you can see the paste. The Commons file does not name the shop. I mention the shape because the brick form is the one the Japanese Products page calls most common.</p>
+    {f_ki2}
+    <p>A different look: a thick, dark, almost cake-like round with black sesame on top. The Commons file does not describe it, so I cannot say how it is made.</p>
+
+    <h2 id="beans">Beans and Mochi: Amanatto and Mame Daifuku<span class="h2-jp">甘納豆と豆大福</span></h2>
+    <p>{JPA} says amanatto is not related to natto: beans are simmered in sugar syrup, coated in sugar and dried. It lists azuki, broad beans, kidney beans, peanuts and black soybeans, and says it can replace raisins in bread or cake. It claims "over 150 years" of history in one place and "over a century" in another, and gives no origin for the name.</p>
+    {f_am}
+    <p>Four kinds on one plate, from left to right as I read them: a green bean, a reddish-brown bean, a dark purple-red bean and amber slices that I think are a root or a squash. The Commons file does not name them.</p>
+    <p>Mame daifuku is a daifuku with beans in the mochi itself.</p>
+    {f_md}
+    <p>The cut piece shows smooth red paste and one large dark bean, and the whole one shows dark beans under the dusting. The Commons file says this is a typical example. For a salty-sweet version, {SZK} sells a shiomame daifuku with salted red peas set into the paste, made only on the day, but that is one shop's product, not a rule for the sweet.</p>
+
+    <h2 id="crackers">Senbei: The Salty-Sweet Crackers<span class="h2-jp">せんべい</span></h2>
+    <p>Senbei sits next to wagashi on shop shelves. {JPN} describes nanbu senbei as a wheat cracker, not a rice one, from Hachinohe in Aomori, made mainly in Aomori and Iwate. It has a crisp rim and a thick center where sesame, peanuts or walnuts are often set. The page says it keeps well and was originally an emergency food, and that Aomori versions tend to be salty while Iwate versions lean sweet.</p>
+    {f_nb}
+    <p>A peanut nanbu senbei, per the Commons description, made in Iwate. The raised rim and the peanuts pressed into the middle match the page's description.</p>
+    {f_be}
+    <p>A rice cracker with beans, which the Commons file calls <em>beika</em>. It is from 2005, and I have no source on how it is made, so I show it only as a contrast with the wheat cracker above.</p>
+
     <h2 id="snacks">Not Quite Wagashi: Gohei Mochi and Daigaku Imo<span class="h2-jp">五平餅と大学芋</span></h2>
     <p>Two sweet-and-savory snacks come up in any talk of traditional sweets, and both are closer to street or regional food than to tea-ceremony wagashi. I include them because I was sent good photographs, and I would rather say plainly what they are.</p>
 
@@ -252,7 +307,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> ichigo daifuku from {FIJ}; yokan from {JY}; taiyaki from {TWK}; dorayaki from {JD}; warabimochi from {JW}; monaka from {FM}; nerikiri from {JN}; gohei mochi from {FUN} and {MAFF}; daigaku imo from {FD}; raindrop cake from {MT} and {SN}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details, prices or opening hours.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> ichigo daifuku from {FIJ}; yokan from {JY}; taiyaki from {TWK}; dorayaki from {JD}; warabimochi from {JW}; monaka from {FM}; nerikiri from {JN}; anmitsu from {FAN}; kintsuba from {JPK}; amanatto from {JPA}; mame daifuku from {SZK}; nanbu senbei from {JPN}; gohei mochi from {FUN} and {MAFF}; daigaku imo from {FD}; raindrop cake from {MT} and {SN}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details, prices or opening hours.</p>
 
   </article>
 
@@ -266,5 +321,5 @@ tail=tail.replace('<div class="hero-jp">茶道ガイド</div>','<div class="hero
 tail=tail.replace('What Happens, What to Do as a Guest, and Where to Try It','Ichigo Daifuku, Yokan, Uiro and Other Japanese Sweets')
 tail=tail.replace('Tea Ceremony Guide','Wagashi Guide')
 tail=tail.replace('guide_tea','guide_wagashi').replace('viator_guide_tea_sticky','viator_guide_wagashi_sticky')
-tail=re.sub(r'(<meta name="keywords" content=")[^"]*(")',r'\1wagashi, Japanese sweets, ichigo daifuku, yokan, uiro, almond tofu, dorayaki, warabimochi, monaka, nerikiri, gohei mochi, daigaku imo, Japanese confectionery\2',tail)
+tail=re.sub(r'(<meta name="keywords" content=")[^"]*(")',r'\1wagashi, Japanese sweets, ichigo daifuku, yokan, uiro, almond tofu, dorayaki, warabimochi, monaka, nerikiri, anmitsu, kintsuba, amanatto, senbei, gohei mochi, daigaku imo, Japanese confectionery\2',tail)
 exec(tail)
