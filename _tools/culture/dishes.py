@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='popular-dishes'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000),'karaage':('83219fff-image.jpg',1000),'tonkatsu':('819ef8f8-image.jpg',1000),'katsudon':('b63be16b-image.jpg',1000),'sushi':('5258f7c5-image.jpg',1200),'sushi2':('cc5994a3-image.jpg',1200)}
+photos={'sashimi':('db7f1645-image.jpg',1000),'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000),'karaage':('83219fff-image.jpg',1000),'tonkatsu':('819ef8f8-image.jpg',1000),'katsudon':('b63be16b-image.jpg',1000),'sushi':('5258f7c5-image.jpg',1200),'sushi2':('cc5994a3-image.jpg',1200)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -34,6 +34,7 @@ f_kara=fig('karaage','A tall heap of golden-brown fried chicken pieces dusted wi
 f_ton=fig('tonkatsu','Thick slices of golden-brown breaded pork cutlet standing on a wire rack over a glazed blue-green plate, with a mound of shredded cabbage and carrot behind and a dab of yellow mustard at the right edge','A thick-cut tonkatsu on a wire rack, with shredded cabbage and mustard.',f'Photo: ayustety, {BYSA2}, 20 April 2007 (Flickr, license reviewed on Commons). Commons describes it as a thick-cut tonkatsu at Hiraboku (平田牧場) in Tokyo. {VIA}',maxw=700)
 f_kats=fig('katsudon','A white bowl of fried pork cutlet pieces under a softly cooked egg and chopped green garnish on rice, with a bowl of miso soup at the right, on a pale wooden table','A katsudon bowl with a bowl of miso soup.',f'Photo: Chacmool, {BYSA4}, 23 July 2023. Commons describes it as the katsudon (梅, ume) at Katsuya, a chain restaurant. {VIA}',maxw=700)
 f_sushi=fig('sushi','A white rectangular plate of sushi: in front a shrimp, a pale scallop, salmon, a yellowtail-like slice and red tuna on rice; behind them tuna rolls, a yellow rolled omelet, salmon roe in a seaweed wrap with a green shiso leaf, and white-fish pieces, with pickled ginger at the left','A mixed sushi plate: nigiri, rolls, a rolled omelet and salmon roe.',f'Photo: t-mizo, {BY2}, 3 January 2013 (Flickr, license reviewed on Commons). Commons titles it "Sushi" and gives no venue. {VIA}',maxw=760)
+f_sashimi=fig('sashimi','A wooden serving board on short feet holding sliced raw fish on shredded white radish: deep-red tuna with a yellow chrysanthemum-shaped garnish, pale pink fatty tuna, translucent white fish, fish slices with the scaled skin left on, and a sprig of curly parsley','A sashimi set on a wooden board.',f'Photo: Ocdp, {CC0}, 24 July 2022. Commons describes it as a reference image of sashimi: a "kami-sashimi" set meal at 1,650 yen including tax at a restaurant called Yamata-kun in Choshi, Chiba. {VIA}',maxw=700)
 f_sushi2=fig('sushi2','A dark plum-blossom-shaped plate seen from above holding eleven pieces of sushi: a long glazed eel at the front, shrimp, squid topped with sea urchin, red tuna, scallop, several pieces of marbled and pale tuna and a silvery fish with ginger and green onion, plus two seaweed-wrapped pieces topped with minced tuna and a quail yolk and with salmon roe, with ginger at the right and a red lacquer bowl of miso soup beside it','An eleven-piece nigiri and gunkan set with miso soup.',f'Photo: N509FZ, {BYSA4}, 2 August 2023. Commons describes it as 11 pieces for JPY 3,520 and gives no venue. {VIA}',maxw=760)
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 def ext(href,txt,lab): return f'<a href="{href}" target="_blank" rel="noopener" onclick="trackEvent(\'click\',\'external\',\'{lab}\')">{txt}</a>'
@@ -172,6 +173,9 @@ main=f'''<main>
     <p><strong>Who made nigiri?</strong> Both articles credit Hanaya Yohei, but they disagree on the date: {TG} says 1800 and {SG} says around 1810, and neither gives a source. I would treat him as the traditional name attached to the start of nigiri and the date as approximate. Both also say the early pieces were larger than today's bite-sized ones; {SG} says about 2.5 times, again without a source.</p>
     <p><strong>Eating it.</strong> {TG} quotes a shop manager saying there is no special way to eat Edomae sushi, and that soy sauce is often unnecessary because the toppings are already seasoned. At a counter, I would ask the chef whether a piece is already brushed with sauce before dipping it.</p>
 
+    {f_sashimi}
+    <p>Sashimi is the sushi topping served without the rice: raw fish, sliced and laid on shredded white radish. This board is a set meal from a restaurant in Choshi, Chiba, at 1,650 yen with tax according to Commons, and the photo dates from July 2022, so the price is only a data point. As I read it, there is deep-red tuna with a chrysanthemum-shaped garnish, pale pink fatty tuna in the middle, translucent white fish at the left, and slices at the right with the scaled skin left on. I am not naming the fish beyond that, because Commons does not list them.</p>
+
     <h2 id="how">How to Order and Eat<span class="h2-jp">注文と食べ方</span></h2>
     <p>These are my own habits as a guide, not strict rules.</p>
     <ol>
@@ -203,6 +207,11 @@ main=f'''<main>
       <h2>Related Guides</h2>
       <span class="h2-jp">関連ガイド</span>
       <div class="related-grid">
+        <a class="related-card" href="/culture/yakitori/" onclick="trackEvent('click','internal','related_dishes_to_yakitori')">
+          <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
+          <div class="related-card-title">🍢 Yakitori Guide →</div>
+          <div class="related-card-desc">Cuts, salt versus sauce and ordering at an izakaya.</div>
+        </a>
         <a class="related-card" href="/culture/noodles/" onclick="trackEvent('click','internal','related_dishes_to_noodles')">
           <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
           <div class="related-card-title">🍜 Japanese Noodles Guide →</div>
