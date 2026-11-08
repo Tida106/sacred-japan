@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='wagashi'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'ichigo':('5e10bb4f-image.jpg',1200),'strawberry':('36b6e7e3-image.jpg',1000),'yokan':('23068ad2-image.jpg',1000),'uiro':('270a1761-image.jpg',650),'almond':('15cb0b50-image.jpg',900),'taiyaki1':('12c12445-image.jpg',1000),'taiyaki2':('197c48c9-image.jpg',1000),'raindrop':('1869be0b-image.jpg',1000),'shitatari':('fba835fc-image.jpg',848),'dora1':('1bc0bab7-image.jpg',1100),'dora2':('fdf50475-image.jpg',1100),'dora3':('52b956d5-image.jpg',800),'dora4':('1b56ea3e-image.jpg',687),'warabi1':('f7fe7879-image.jpg',1000),'warabi2':('c5f3c8ca-image.jpg',640),'monaka1':('0bb91696-image.jpg',900),'monaka2':('65072675-image.jpg',472)}
+photos={'ichigo':('5e10bb4f-image.jpg',1200),'strawberry':('36b6e7e3-image.jpg',1000),'yokan':('23068ad2-image.jpg',1000),'uiro':('270a1761-image.jpg',650),'almond':('15cb0b50-image.jpg',900),'taiyaki1':('12c12445-image.jpg',1000),'taiyaki2':('197c48c9-image.jpg',1000),'raindrop':('1869be0b-image.jpg',1000),'shitatari':('fba835fc-image.jpg',848),'dora1':('1bc0bab7-image.jpg',1100),'dora2':('fdf50475-image.jpg',1100),'dora3':('52b956d5-image.jpg',800),'dora4':('1b56ea3e-image.jpg',687),'warabi1':('f7fe7879-image.jpg',1000),'warabi2':('c5f3c8ca-image.jpg',640),'monaka1':('0bb91696-image.jpg',900),'monaka2':('65072675-image.jpg',472),'neri':('697ef1fb-image.jpg',760),'gohei1':('9231308e-image.jpg',1000),'gohei2':('7bd10290-image.jpg',1000),'daigaku':('a0220884-image.jpg',760)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -37,6 +37,10 @@ JW=ext('https://www.jeepe.jp/en/articles/warabi-mochi-guide-1563','Jeepe (warabi
 FM=ext('https://foodinjapan.org/japan/monaka/','Food in Japan (monaka)','wagashi_foodinjapan_monaka')
 TWK=ext('https://www.tokyoweekender.com/food-and-drink/history-of-taiyaki/','Tokyo Weekender (history of taiyaki)','wagashi_tw_taiyaki')
 JY=ext('https://www.jeepe.jp/en/articles/yokan-basic-guide-1564','Jeepe (yokan basics)','wagashi_jeepe_yokan')
+JN=ext('https://www.jeepe.jp/en/articles/nerikiri-wagashi-guide-1756','Jeepe (nerikiri)','wagashi_jeepe_nerikiri')
+FUN=ext('https://www.fun-japan.jp/en/articles/8192','FUN! JAPAN (Chubu local confectioneries)','wagashi_funjapan_gohei')
+MAFF=ext('https://local-cuisine.maff.go.jp/en/recipe/448/','MAFF (Aichi gohei-mochi)','wagashi_maff_gohei')
+FD=ext('https://foodinjapan.org/japan/daigaku-imo','Food in Japan (daigaku imo)','wagashi_foodinjapan_daigaku')
 VI='https://www.viator.com/search/Japan+tea+ceremony?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
 
 f_ich=fig('ichigo','Two pale pink rice-cake sweets on a white plate; one is cut open to show a whole strawberry and dark bean paste inside','Ichigo daifuku, one cut open: a strawberry and bean paste inside soft pink mochi.',f'Photo: Ocdp, {CC0}, 5 December 2012. {VIA}',hero=True)
@@ -55,10 +59,14 @@ f_wa1=fig('warabi1','A blue glass bowl of translucent grey-purple warabimochi pi
 f_wa2=fig('warabi2','A small square plate of brown warabimochi pieces coated in kinako and dark syrup, with a bamboo pick resting on it','Warabimochi on a small plate with a bamboo pick.',f'Photo: Ichiro Kamiko, {BYSA3}, 13 July 2011. {VIA}',maxw=520)
 f_mo1=fig('monaka1','A pale gold oval monaka shell with a patterned top, next to a half that is cut open to show smooth dark red bean paste inside a thin wafer','Monaka: the oval wafer shell, and a half cut to show the paste.',f'Photo: Ocdp, {CC0}, 28 June 2022. {VIA}',maxw=640)
 f_mo2=fig('monaka2','An open monaka: a pale gold wafer lid lifted slightly over a thick pile of whole dark red beans in paste, sitting on a thin wafer base','An open monaka, with the lid resting over a chunky paste.',f'Photo: nyanya, {BYSA3}, 13 May 2007. {VIA}',maxw=472)
+f_ne=fig('neri','Five small hand-shaped sweets on a silver tray: a white one with a yellow center and green leaf, a pink folded one, a green frilly one, a white one with purple grapes and a vine, a green striped watermelon, and a pink peach with a red dot','A tray of nerikiri-style sweets in a shop display, each shaped like a different flower or fruit.',f'Photo: Nesnad, {BY4}, 9 July 2021. {VIA}',maxw=640)
+f_g1=fig('gohei1','Close-up of round flat slices of grilled rice on bamboo skewers, with a glossy dark brown glaze and charred spots','Gohei mochi freshly grilled: flattened rice on skewers with a brown glaze.',f'Photo: Kunmap, {BYSA4}, 28 October 2013. {VIA}',maxw=700)
+f_g2=fig('gohei2','A single long oval gohei mochi on a flat bamboo skewer, resting on a white foam tray, with a dark glaze and burnt flecks','One oval skewer on a tray, the shape the MAFF page calls waraji.',f'Photo: 円周率３パーセント, {BYSA4}, 21 September 2024. {VIA}',maxw=760)
+f_da=fig('daigaku','Pieces of glazed sweet potato dusted with black sesame seeds in a white bowl with blue painted leaves','Daigaku imo: fried sweet potato pieces in a shiny syrup, with black sesame.',f'Photo: Ocdp, {CC0}, 3 July 2021. {VIA}',maxw=620)
 f_alm=fig('almond','A white bowl of jelly-like white cubes topped with orange peach slices, a few green pieces and a red cherry','Homemade almond tofu with fruit.',f'Photo: King of Hearts, {BYSA4}, 20 June 2020. {VIA}',maxw=560)
 
 faqs=[
-("What is wagashi?","Wagashi means traditional Japanese sweets. It is a broad word, so this guide covers only a handful: ichigo daifuku, yokan, uiro, almond tofu, taiyaki, dorayaki, warabimochi, monaka, raindrop cake and shitatari, the ones I could show with photographs. The Jeepe article says yokan is eaten with green tea or matcha, and the same pairing is common for other sweets of this kind."),
+("What is wagashi?","Wagashi means traditional Japanese sweets. It is a broad word, so this guide covers only a handful: ichigo daifuku, yokan, uiro, almond tofu, taiyaki, dorayaki, warabimochi, monaka, nerikiri, raindrop cake and shitatari, plus two snacks, gohei mochi and daigaku imo, the ones I could show with photographs. The Jeepe article says yokan is eaten with green tea or matcha, and the same pairing is common for other sweets of this kind."),
 ("Who invented ichigo daifuku?","Nobody can say for certain. Food in Japan says the strawberry version emerged in the 1980s and that several shops have been linked to its origin, and the Tamaya shop claims on its own website that it created the original. The same article credits Toraya in Ginza with fruit daifuku in general in 1974, and it does not reconcile the two dates. Take every date as a claim."),
 ("Is ichigo daifuku seasonal?","The Food in Japan article says fruit daifuku is often seasonal, but it does not name a season for strawberry. Shops that use fresh strawberries tend to sell it when strawberries are at their best, so ask the shop."),
 ("How do I eat yokan?","Jeepe suggests slicing the bar to about 1 to 1.5 cm, eating small pieces slowly with green tea or matcha, and using a wagashi pick if you have one. It says coffee also works."),
@@ -68,6 +76,9 @@ faqs=[
 ("Why is dorayaki called that?","Jeepe says the best-known theory ties the name to the dora, a bronze gong, because of the round shape, and that some shops tell a legend about batter cooked on a heated gong. It treats the legend as a legend, so I do the same."),
 ("What is warabimochi made from?","Traditionally from bracken starch, according to Jeepe, which also says most commercial versions use other starches such as sweet potato, tapioca or kudzu because pure bracken starch is rare and laborious to produce. The label on your purchase is the thing to read."),
 ("What is monaka made of?","Food in Japan says the shell is made from glutinous rice flour and water, baked thin in iron molds, and filled most often with sweet azuki paste. It also lists white bean paste, chestnut and matcha cream, plus ice cream fillings."),
+("What is nerikiri?","Jeepe describes nerikiri as a fresh sweet made mainly from white bean paste kneaded with a soft rice paste or yam, shaped by hand into seasonal motifs. It should be eaten the same day or the next, so it is a poor souvenir."),
+("Is gohei mochi a wagashi?","Not in the tea-ceremony sense. It is a regional skewered rice snack grilled with a savory-sweet sauce, mostly from Nagano, Gifu and Aichi, according to FUN! JAPAN and the agriculture ministry. I include it because it is a traditional local sweet-and-savory snack."),
+("Why is daigaku imo called university potato?","Nobody knows. Food in Japan lists theories about students, a shop near a university and a student selling it for tuition, and says none can be proven."),
 ("Is uiro the same as yokan?","They look alike as small blocks, but I did not find a source comparing them, so I will not give you a rule. The photograph in this guide is labeled by its photographer as uiro from Osu, and the quickest answer is to ask at the shop."),
 ]
 faq_html=''.join(f'''      <details class="faq-item">
@@ -78,7 +89,7 @@ faq_html=''.join(f'''      <details class="faq-item">
 ''' for q,a in faqs)
 faq_ld=json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]},ensure_ascii=False,indent=2)
 TITLE="Wagashi Guide: Ichigo Daifuku, Yokan, Uiro and Other Japanese Sweets"
-DESC="A licensed guide's English introduction to wagashi, traditional Japanese sweets: ichigo daifuku (strawberry mochi), yokan, uiro, taiyaki, dorayaki, warabimochi, monaka, raindrop cake and almond tofu, with photographs and honest notes on what is claimed."
+DESC="A licensed guide's English introduction to wagashi, traditional Japanese sweets: ichigo daifuku (strawberry mochi), yokan, uiro, taiyaki, dorayaki, warabimochi, monaka, nerikiri, raindrop cake and almond tofu, plus gohei mochi and daigaku imo, with photographs and honest notes on what is claimed."
 URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-wagashi.jpg"
 main=f'''<main>
@@ -93,11 +104,13 @@ main=f'''<main>
       <li><a href="#daifuku">Ichigo Daifuku</a></li>
       <li><a href="#yokan">Yokan</a></li>
       <li><a href="#more">Uiro and Almond Tofu</a></li>
+      <li><a href="#nerikiri">Nerikiri</a></li>
       <li><a href="#taiyaki">Taiyaki, the Griddle Sweet</a></li>
       <li><a href="#dorayaki">Dorayaki</a></li>
       <li><a href="#warabimochi">Warabimochi</a></li>
       <li><a href="#monaka">Monaka</a></li>
       <li><a href="#water">Water Sweets: Raindrop Cake and Shitatari</a></li>
+      <li><a href="#snacks">Not Quite Wagashi: Gohei Mochi and Daigaku Imo</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
     </ol>
@@ -133,6 +146,12 @@ main=f'''<main>
     {f_alm}
     <p>Soft white cubes with peach, a few green pieces and a cherry. The Commons description calls this homemade almond tofu with mixed fruit, peach slices and a maraschino cherry. It is a jelly-like dessert and you will see it on Japanese dessert menus, but I have not sourced where it sits in the wagashi category, so I list it as a neighbor, not a classic.</p>
     <p>If you would like to eat wagashi where it is meant to be eaten, a {ext(VI,'tea ceremony experience','wagashi_viator_tea')} is one way to do it.</p>
+
+    <h2 id="nerikiri">Nerikiri<span class="h2-jp">練り切り</span></h2>
+    <p>Nerikiri is the sweet shaped like a flower. {JN} describes it as a premium fresh sweet, <em>jo-namagashi</em>, made mainly from white bean paste kneaded with a binder, either <em>gyuhi</em> (a soft rice paste) or yam. Makers sculpt each piece by hand with small tools and give it a poetic name. It says pieces are typically 3 to 4 cm across and that the motifs follow the seasons: cherry blossoms in spring, hydrangeas and morning glories in summer, maple leaves and chrysanthemums in autumn, camellias in winter.</p>
+    {f_ne}
+    <p>This is a shop display, and the Commons description says only "wagashi," not what each piece is called. By eye I see a white piece with a yellow center and a green leaf, a pink folded one, a green frilly one with a dark curl, a white one with purple grapes and a vine, a green watermelon with dark stripes, and a pink peach with a red dot. The purple morning glories in the corner suggest a summer display, but I cannot confirm the season or the shop.</p>
+    <p>Jeepe says nerikiri is eaten before the matcha, which it says softens the bitterness, and that you should look at the whole piece first and then eat it in small bites. It lists ¥400 to 700 per piece, sometimes over ¥1,000 at specialty shops, and says to eat it the same day or the next. That makes it a poor souvenir for a long trip. Some claims on that page, such as a cultural-property registration and the poem behind one piece's name, have no sources, so I have left them out.</p>
 
     <h2 id="taiyaki">Taiyaki, the Griddle Sweet<span class="h2-jp">鯛焼き</span></h2>
     <p>Taiyaki is a fish-shaped griddle cake, usually filled with sweet red bean paste. It is a street-stall sweet rather than a tea-room one, so I list it as a neighbor of wagashi, not a strict member. {TWK} credits Seijiro Kobe, the first owner of the shop Naniwaya Sohonten, with inventing it. It says he opened an imagawayaki shop in 1909 (a thick round pancake with red bean paste), tried shapes such as turtles and airships that did not sell, and then settled on a fish mold. The article does not say that the 1909 shop was the exact birthplace, and it gives no date for the first taiyaki, so treat the story as a claim.</p>
@@ -182,6 +201,21 @@ main=f'''<main>
     {f_sh}
     <p>The Commons description (in Japanese) calls this <em>shitatari</em>, a sweet from the Kyoto wagashi shop Kamehiroei, and says it is linked to the Kikusui-hoko float of the Gion Festival. The photograph shows two amber, translucent blocks on a glass dish. I have not sourced the ingredients or the story behind the name, so all I can say is what the picture and the description say.</p>
 
+    <h2 id="snacks">Not Quite Wagashi: Gohei Mochi and Daigaku Imo<span class="h2-jp">五平餅と大学芋</span></h2>
+    <p>Two sweet-and-savory snacks come up in any talk of traditional sweets, and both are closer to street or regional food than to tea-ceremony wagashi. I include them because I was sent good photographs, and I would rather say plainly what they are.</p>
+
+    <h3>Gohei Mochi</h3>
+    <p>{FUN} places gohei mochi mainly in the Kiso and Ina districts of Nagano, in Gifu, and in the Mikawa district of Aichi. It says cooked non-glutinous rice is crushed, pierced onto a bamboo skewer and grilled with soy sauce, miso or sesame sauces, and that shapes (round, flat, tube) vary by family. One skewer is about ¥200 there.</p>
+    {f_g1}
+    <p>Flattened rounds with a glossy brown glaze and charred edges, still on the skewers. The Commons description just says "finished gohei mochi," so I cannot tell you the sauce.</p>
+    {f_g2}
+    <p>This one is the long oval form. {MAFF} calls the most common shape a flat oval, <em>waraji</em>, after the straw sandal, and says the rice is dipped in a miso sauce that households and shops mix their own way, sometimes with walnuts, sesame, peanuts or green onion. The photograph's description gives only a place name in Shinshiro, Aichi, and the Commons file does not name the sauce, so treat this as an example of the shape.</p>
+    <p>The MAFF page says it may date to the mid-Edo period, about 1700 to 1750, and that lumberjacks and hunters reportedly ate it before a mountain festival. It lists several theories for the name, so I will not pick one.</p>
+
+    <h3>Daigaku Imo</h3>
+    {f_da}
+    <p>Daigaku imo means "university potato." {FD} describes chunks of sweet potato fried and tossed in a sugar syrup, usually finished with black sesame, as in this photograph. It says the name has no confirmed origin: theories about student customers, a shop near a university and a student selling it to pay tuition are all unproven. It is a natural autumn and early-winter snack, sold at specialty shops, food halls and festival stalls, served warm or at room temperature.</p>
+
     <h2 id="faq">Frequently Asked Questions<span class="h2-jp">よくあるご質問</span></h2>
 
     <div class="faq-stack">
@@ -218,7 +252,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> ichigo daifuku from {FIJ}; yokan from {JY}; taiyaki from {TWK}; dorayaki from {JD}; warabimochi from {JW}; monaka from {FM}; raindrop cake from {MT} and {SN}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details, prices or opening hours.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> ichigo daifuku from {FIJ}; yokan from {JY}; taiyaki from {TWK}; dorayaki from {JD}; warabimochi from {JW}; monaka from {FM}; nerikiri from {JN}; gohei mochi from {FUN} and {MAFF}; daigaku imo from {FD}; raindrop cake from {MT} and {SN}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details, prices or opening hours.</p>
 
   </article>
 
@@ -232,5 +266,5 @@ tail=tail.replace('<div class="hero-jp">茶道ガイド</div>','<div class="hero
 tail=tail.replace('What Happens, What to Do as a Guest, and Where to Try It','Ichigo Daifuku, Yokan, Uiro and Other Japanese Sweets')
 tail=tail.replace('Tea Ceremony Guide','Wagashi Guide')
 tail=tail.replace('guide_tea','guide_wagashi').replace('viator_guide_tea_sticky','viator_guide_wagashi_sticky')
-tail=re.sub(r'(<meta name="keywords" content=")[^"]*(")',r'\1wagashi, Japanese sweets, ichigo daifuku, yokan, uiro, almond tofu, dorayaki, warabimochi, monaka, Japanese confectionery\2',tail)
+tail=re.sub(r'(<meta name="keywords" content=")[^"]*(")',r'\1wagashi, Japanese sweets, ichigo daifuku, yokan, uiro, almond tofu, dorayaki, warabimochi, monaka, nerikiri, gohei mochi, daigaku imo, Japanese confectionery\2',tail)
 exec(tail)
