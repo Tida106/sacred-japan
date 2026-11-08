@@ -8,7 +8,7 @@ os.makedirs(OUT+'/images',exist_ok=True)
 photos={
  'gokokuji':'f1e4ff89-image.jpg','water-set':'786e1ffa-image.jpg','portable-set':'a0f3fdef-image.jpg',
  'hamarikyu-tray':'4c70b749-image.jpg','bowl-served':'4557e7c9-image.jpg','bowls-line':'98dda4e7-image.jpg','nago-lesson':'bf25dac5-image.jpg',
- 'shofuso-room':'9fe4b79b-image.jpg','uji-tokonoma':'0ede41fb-image.jpg','nijiriguchi':'530e3b2e-image.jpg'}
+ 'shofuso-room':'9fe4b79b-image.jpg','uji-tokonoma':'0ede41fb-image.jpg','nijiriguchi':'530e3b2e-image.jpg','nezu-roji':'50839469-image.jpg'}
 for k,f in photos.items():
     im=Image.open(A+f).convert('RGB'); w,h=im.size
     if w>1200: im=im.resize((1200,round(h*1200/w)),Image.LANCZOS)
@@ -38,6 +38,7 @@ f_nago=fig('nago-lesson','A kimono-clad teacher kneeling beside three seated wom
 PDSELF='<a href="https://commons.wikimedia.org/wiki/Template:PD-self" target="_blank" rel="noopener" style="color:var(--enshu);">public domain</a>'
 f_shofu=fig('shofuso-room','A tea room with a woven-strip ceiling, a hanging scroll with one large character in the alcove, and a small vase of flowers on the alcove floor','The tea house at the Shofuso Japanese House and Garden, with its alcove on the right.',f'Photo: <a href="https://commons.wikimedia.org/wiki/User:Gryffindor" target="_blank" rel="noopener" style="color:var(--enshu);">Gryffindor</a>, {BYSA4}, 4 August 2017, {VIA}')
 f_uji=fig('uji-tokonoma','A tatami room with an alcove holding a tall calligraphy scroll and a small flower arrangement in a woven vase, with an iron kettle on a brazier and pale green utensils on the left','A tea room in Uji, set up for a gathering.',f'Photo: <a href="https://commons.wikimedia.org/wiki/User:Wicki" target="_blank" rel="noopener" style="color:var(--enshu);">Wicki</a>, {PDSELF}, 22 April 2009, {VIA}')
+f_nezu=fig('nezu-roji','A small tea house with a low shingled roof and a wooden plaque under the gable, seen across a mossy path of large stepping stones among green maples and shrubs','The garden path and tea house at the Nezu Museum in Tokyo.',f'Photo: Fukumoto, {BYSA4}, 9 May 2023, {VIA}',maxw=420)
 f_noji=fig('nijiriguchi','The inside of a small tea room with a low opening to a moss garden at left, shoji screens above it, and a taller sliding opening at right with a bamboo fence and stone lantern outside','Looking out of a small tea room (koma) at Shinkei-en, in Kurashiki.',f'Photo: <a href="https://commons.wikimedia.org/wiki/User:Miya" target="_blank" rel="noopener" style="color:var(--enshu);">Miya</a>, {BYSA4}, 27 July 2019, {VIA}')
 
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
@@ -122,6 +123,8 @@ main=f'''<main>
 
     <h2 id="room">The Room and the Garden<span class="h2-jp">茶室と露地</span></h2>
     <p>The ideal tea room (<em>chashitsu</em>) is small, about 4.5 tatami mats, with a low ceiling, a sunken hearth and an alcove for a hanging scroll or flowers. Around the house is a garden path, the <em>roji</em>, where guests rinse their hands and mouth at a stone basin before going in. How you get through the door is the next section.</p>
+    {f_nezu}
+    <p>Here is a <em>roji</em> in practice. Commons describes the building as a tea house in the garden of the Nezu Museum in Tokyo, named Konin-tei and Mujian. Large stepping stones cross the moss toward the veranda, and the maples overhead keep the path in shade. The path is part of the ceremony: it is meant to slow you down and leave the street behind before you reach the room. I cannot read the plaque under the gable, so I will not guess what it says.</p>
     {f_shofu}
     <p>This is a tea room in the form the books describe. According to the Commons description it is the tea house at the Shofuso Japanese House and Garden, which is in Philadelphia, not Japan. The alcove on the right is the <em>tokonoma</em>, the place of honor. It holds a hanging scroll with one large character that appears to read <span class="jp">麗</span> (<em>rei</em>, "beauty"), and a small vase of flowers on the alcove floor. Look up at the ceiling of woven strips and at the rough, unfinished log post beside the alcove. The wide-angle view bends the walls, so do not read the lean as the room's real shape.</p>
     {f_uji}
