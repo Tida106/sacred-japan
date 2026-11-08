@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='noodles'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'mori-soba':('8a68f241-image.jpg',1200),'cha-soba':('1f32f253-image.jpg',1000),'somen-ice':('afeac011-image.jpg',800),'hiyamugi-bowl':('066797f8-image.jpg',1000),'yakisoba-ota':('430b7bad-image.jpg',1000),'yaki-udon':('0d234ed1-image.jpg',1000),'kamaage-udon':('13f2d4de-image.jpg',1000),'miso-nikomi-udon':('4daefc97-image.jpg',1000)}
+photos={'mori-soba':('8a68f241-image.jpg',1200),'cha-soba':('1f32f253-image.jpg',1000),'somen-ice':('afeac011-image.jpg',800),'hiyamugi-bowl':('066797f8-image.jpg',1000),'yakisoba-ota':('430b7bad-image.jpg',1000),'yaki-udon':('0d234ed1-image.jpg',1000),'kamaage-udon':('13f2d4de-image.jpg',1000),'miso-nikomi-udon':('4daefc97-image.jpg',1000),'curry-udon':('ee50708d-image.jpg',1000)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -35,6 +35,7 @@ f_yakisoba=fig('yakisoba-ota','Dark brown stir-fried noodles with pieces of cabb
 f_yakiudon=fig('yaki-udon','Thick stir-fried udon noodles with cabbage, topped with shredded dark nori and a heap of bonito flakes, with a small pile of orange shredded carrot at the side, on a white speckled plate','Yaki udon topped with nori and bonito flakes.',f'Photo: jetalone, {BY2}, 15 May 2007 (Flickr, license reviewed on Commons). Commons notes it was taken at a restaurant in Tsukishima, Tokyo. {VIA}',maxw=640)
 f_kamaage=fig('kamaage-udon','A round wooden tub holding thick white udon noodles in hot water, on a black tray beside a small bowl of chopped green scallions and a black bowl of dark dipping sauce','Kamaage udon in its wooden tub, with scallions and dipping sauce.',f'Photo: Lombroso, {BYSA3}, 1 June 2013. Commons says it was taken at a Marugame Seimen shop. {VIA}',maxw=640)
 f_miso=fig('miso-nikomi-udon','Flat, wide udon noodles in a dark brown miso broth in a heavy clay pot, with a raw egg yolk in the middle, slices of pink-and-white fish cake, mushroom and green beans','Miso nikomi udon, with a raw egg in the middle.',f'Photo: ウィ貴公子, {BYSA4}, 3 September 2023, {VIA}',maxw=640)
+f_curry=fig('curry-udon','Thick udon noodles in a golden-yellow curry soup in a clay pot, with thin slices of beef, green scallions, bean sprouts and chunks of white leek','Udon in curry soup, served in a clay pot.',f'Photo: yoppy, {BY2}, 21 January 2007 (Flickr, license reviewed on Commons). Commons titles it "Udon in Curry Soup". {VIA}',maxw=640)
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 def ext(href,txt,lab): return f'<a href="{href}" target="_blank" rel="noopener" onclick="trackEvent(\'click\',\'external\',\'{lab}\')">{txt}</a>'
 VI='https://www.viator.com/search/Japan+food+tour?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
@@ -152,6 +153,9 @@ main=f'''<main>
     {f_kamaage}
     <h3>Sanuki and Kitsune</h3>
     <p>{JW} calls Kagawa Prefecture the capital of udon in Japan, and says Sanuki udon is characterized by a softer, watery texture compared with regular udon. It also lists kitsune udon, which is the plain udon in broth topped with <em>abura-age</em>, sweet fried tofu. For more on Sanuki udon as a regional dish, see our {link('/regional-food/','regional food guide','noodles_to_regional_food_udon')}.</p>
+    <h3>Curry Udon</h3>
+    <p>Curry udon is udon in a curry-flavored soup instead of the usual clear broth. The bowl in the photo, which Commons titles "Udon in Curry Soup", has golden broth with thin slices of beef, scallions, bean sprouts and leek, served in a clay pot. I have not found a source for where or when the dish began, so I will not guess at its history here. Toppings and thickness of the soup vary from shop to shop.</p>
+    {f_curry}
     <h3>Miso Nikomi Udon</h3>
     <p>{MN} describes miso nikomi udon as a Nagoya dish, one of the local specialties called <em>Nagoya meshi</em>. The noodles are simmered in a broth of <em>mame miso</em> (also called Hatcho miso or Nagoya miso), a dark miso made from soybeans, salt and water. The same source says the noodles are made without salt and may be round or flat, like kishimen, and lists chicken, egg, scallions, shiitake and fish cake as typical toppings. It arrives bubbling in its own pot, so let it cool a little before the first bite.</p>
     {f_miso}
