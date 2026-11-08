@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='popular-dishes'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000),'karaage':('83219fff-image.jpg',1000),'tonkatsu':('819ef8f8-image.jpg',1000),'katsudon':('b63be16b-image.jpg',1000)}
+photos={'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000),'karaage':('83219fff-image.jpg',1000),'tonkatsu':('819ef8f8-image.jpg',1000),'katsudon':('b63be16b-image.jpg',1000),'sushi':('5258f7c5-image.jpg',1200)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -33,6 +33,7 @@ f_oya=fig('oyakodon','A white bowl of chicken and softly set egg in a glossy bro
 f_kara=fig('karaage','A tall heap of golden-brown fried chicken pieces dusted with a pale coating, on a black plate with white Japanese lettering, with shredded cabbage and a dab of mayonnaise at the side','A heaped plate of karaage with cabbage and mayonnaise.',f'Photo: Ocdp, {CC0}, 5 July 2020. Commons describes it as a karaage set meal in a very large portion (鬼盛り) at a restaurant called Densetsu no Sutadonya, and titles it a reference image of chicken karaage. {VIA}',maxw=700)
 f_ton=fig('tonkatsu','Thick slices of golden-brown breaded pork cutlet standing on a wire rack over a glazed blue-green plate, with a mound of shredded cabbage and carrot behind and a dab of yellow mustard at the right edge','A thick-cut tonkatsu on a wire rack, with shredded cabbage and mustard.',f'Photo: ayustety, {BYSA2}, 20 April 2007 (Flickr, license reviewed on Commons). Commons describes it as a thick-cut tonkatsu at Hiraboku (平田牧場) in Tokyo. {VIA}',maxw=700)
 f_kats=fig('katsudon','A white bowl of fried pork cutlet pieces under a softly cooked egg and chopped green garnish on rice, with a bowl of miso soup at the right, on a pale wooden table','A katsudon bowl with a bowl of miso soup.',f'Photo: Chacmool, {BYSA4}, 23 July 2023. Commons describes it as the katsudon (梅, ume) at Katsuya, a chain restaurant. {VIA}',maxw=700)
+f_sushi=fig('sushi','A white rectangular plate of sushi: in front a shrimp, a pale scallop, salmon, a yellowtail-like slice and red tuna on rice; behind them tuna rolls, a yellow rolled omelet, salmon roe in a seaweed wrap with a green shiso leaf, and white-fish pieces, with pickled ginger at the left','A mixed sushi plate: nigiri, rolls, a rolled omelet and salmon roe.',f'Photo: t-mizo, {BY2}, 3 January 2013 (Flickr, license reviewed on Commons). Commons titles it "Sushi" and gives no venue. {VIA}',maxw=760)
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 def ext(href,txt,lab): return f'<a href="{href}" target="_blank" rel="noopener" onclick="trackEvent(\'click\',\'external\',\'{lab}\')">{txt}</a>'
 VI='https://www.viator.com/search/Japan+food+tour?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
@@ -42,6 +43,8 @@ TJ=ext('https://www.jeepe.jp/en/articles/tempura-basic-guide-1629','Jeepe','dish
 TK=ext('https://www.kikkoman.com/en/cookbook/glossary/tenpura.html','Kikkoman','dishes_kikkoman')
 TON=ext('https://gov-online.go.jp/eng/publicity/book/hlj/html/201810/201810_08_en.html','Highlighting Japan (Government of Japan)','dishes_hlj_tonkatsu')
 KJT=ext('https://japantimes.co.jp/life/2021/03/20/food/fried-chicken-kara-age-zangi','Japan Times','dishes_japantimes')
+SG=ext('https://sushiwalker.com/en/feature/85740/','Sushi Walker','dishes_sushiwalker')
+TG=ext('https://thegate12.com/article/258','The Gate','dishes_thegate')
 KFJ=ext('https://foodinjapan.org/japan/karaage','Food in Japan','dishes_foodinjapan')
 GYU=ext('https://gov-online.go.jp/eng/publicity/book/hlj/html/201202/201202_07.html','Highlighting Japan (Government of Japan)','dishes_hlj_gyudon')
 OYA=ext('https://en.wikipedia.org/wiki/Oyakodon','Wikipedia','dishes_wiki_oyakodon')
@@ -80,6 +83,7 @@ main=f'''<main>
       <li><a href="#tonkatsu">Tonkatsu: A Western Dish Made Japanese</a></li>
       <li><a href="#karaage">Karaage: Japanese Fried Chicken</a></li>
       <li><a href="#donburi">Rice Bowls: Gyudon, Oyakodon, Katsudon and Tendon</a></li>
+      <li><a href="#sushi">Sushi: Edomae and the Everyday Plate</a></li>
       <li><a href="#how">How to Order and Eat</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
@@ -99,6 +103,7 @@ main=f'''<main>
       <li><strong>Tempura (<span class="jp">天ぷら</span>):</strong> seafood and vegetables in a thin batter, deep-fried.</li>
       <li><strong>Tonkatsu (<span class="jp">とんかつ</span>):</strong> a breaded, deep-fried pork cutlet served with shredded cabbage.</li>
       <li><strong>Karaage (<span class="jp">唐揚げ</span>):</strong> marinated chicken pieces, lightly coated and deep-fried.</li>
+      <li><strong>Sushi (<span class="jp">寿司</span>):</strong> vinegared rice with fish or other toppings: nigiri, maki and gunkan, with Edomae as the Tokyo style.</li>
       <li><strong>Donburi (<span class="jp">丼</span>):</strong> a bowl of rice with a topping: gyudon (beef), oyakodon (chicken and egg), katsudon (pork cutlet) and tendon (tempura).</li>
     </ul>
 
@@ -156,6 +161,14 @@ main=f'''<main>
     <p>The bowl above is the katsudon from Katsuya, a chain, which Commons labels 梅 (<em>ume</em>). The cutlet pieces sit under a softly cooked egg with a green garnish, and a bowl of miso soup comes alongside. I cannot tell from the photo whether the topping was simmered in dashi or finished another way, so treat it as an example of the look, not a recipe.</p>
     <p>Tendon is covered in the tempura section above.</p>
 
+    <h2 id="sushi">Sushi: Edomae and the Everyday Plate<span class="h2-jp">寿司</span></h2>
+    <p>Sushi is vinegared rice with a topping, and it is the one dish on this page that needs a short vocabulary. <em>Nigiri</em> is a topping pressed onto a hand-formed mound of rice, <em>maki</em> is rice and filling rolled in seaweed, and <em>gunkan</em> ("battleship") wraps a soft topping such as salmon roe in a strip of seaweed.</p>
+    {f_sushi}
+    <p>The plate above shows most of that in one frame. At the front, as I read it, are shrimp, scallop, salmon, a pale-pink fish and red tuna. Behind them are tuna rolls, a rolled omelet, a salmon-roe gunkan with a shiso leaf, and white-fish pieces, with pickled ginger at the left. Commons gives only the title "Sushi" and no restaurant, so I am naming the toppings from the picture, not from a menu.</p>
+    <p><strong>What "Edomae" means.</strong> {SG} says it refers to the sea in front of Edo (now Tokyo), and that it names nigiri that originated there. {TG} says the label separated it from Kansai-style pressed and boxed sushi. Both say the toppings were often prepared first, for example cured with vinegar or salt, simmered or marinated in soy sauce, because fish spoiled quickly before refrigeration.</p>
+    <p><strong>Who made nigiri?</strong> Both articles credit Hanaya Yohei, but they disagree on the date: {TG} says 1800 and {SG} says around 1810, and neither gives a source. I would treat him as the traditional name attached to the start of nigiri and the date as approximate. Both also say the early pieces were larger than today's bite-sized ones; {SG} says about 2.5 times, again without a source.</p>
+    <p><strong>Eating it.</strong> {TG} quotes a shop manager saying there is no special way to eat Edomae sushi, and that soy sauce is often unnecessary because the toppings are already seasoned. At a counter, I would ask the chef whether a piece is already brushed with sauce before dipping it.</p>
+
     <h2 id="how">How to Order and Eat<span class="h2-jp">注文と食べ方</span></h2>
     <p>These are my own habits as a guide, not strict rules.</p>
     <ol>
@@ -205,7 +218,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> sukiyaki from {SA} and the {SW}; tempura from {TJ} and {TK}; tonkatsu from the {TON}; karaage from the {KJT} and {KFJ}; gyudon from the {GYU}; oyakodon and katsudon from Wikipedia ({OYA}, {KAT}). Photograph details come from the Wikimedia Commons descriptions. I have not verified current prices.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> sushi from {SG} and {TG}; sukiyaki from {SA} and the {SW}; tempura from {TJ} and {TK}; tonkatsu from the {TON}; karaage from the {KJT} and {KFJ}; gyudon from the {GYU}; oyakodon and katsudon from Wikipedia ({OYA}, {KAT}). Photograph details come from the Wikimedia Commons descriptions. I have not verified current prices.</p>
 
   </article>
 
