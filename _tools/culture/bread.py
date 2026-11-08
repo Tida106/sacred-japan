@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='bread'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'melon':('a979011d-image.jpg',1200),'anpan':('60f4abb2-image.jpg',1000),'curry':('5cbe84b8-image.jpg',1000),'yakisoba':('5b6ab78a-image.jpg',1000),'agepan':('c776a767-image.jpg',1000),'croquette':('923ce486-image.jpg',1000),'cornet':('0e15151b-image.jpg',700),'menchi':('e47dc74b-image.jpg',640),'tamago':('1cf92e48-image.jpg',1000),'fruit':('82f76ef5-image.jpg',689),'ogura':('896abc06-image.jpg',900)}
+photos={'melon':('a979011d-image.jpg',1200),'anpan':('60f4abb2-image.jpg',1000),'curry':('5cbe84b8-image.jpg',1000),'yakisoba':('5b6ab78a-image.jpg',1000),'agepan':('c776a767-image.jpg',1000),'croquette':('923ce486-image.jpg',1000),'cornet':('0e15151b-image.jpg',700),'menchi':('e47dc74b-image.jpg',640),'tamago':('1cf92e48-image.jpg',1000),'fruit':('82f76ef5-image.jpg',689),'ogura':('896abc06-image.jpg',900),'oyaki':('d1256580-image.jpg',1000),'satsuma':('6efa4385-image.jpg',1000),'raisin':('1c1c5aa4-image.jpg',1000)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -35,6 +35,9 @@ TW=ext('https://www.tokyoweekender.com/food-and-drink/melon-pan/','Tokyo Weekend
 FIJ=ext('https://www.foodinjapan.org/kanto/tokyo/curry-bread','Food in Japan (curry bread)','bread_foodinjapan_curry')
 FIK=ext('https://www.foodinjapan.org/kanto/tokyo-en/crockett-bread','Food in Japan (korokke pan)','bread_foodinjapan_korokke')
 TTK=ext('https://www.tastingtable.com/1165772/japans-korokke-pan-is-a-mashed-potato-hot-dog-sandwich-hybrid','Tasting Table (korokke pan)','bread_tt_korokke')
+MAFFO=ext('https://www.maff.go.jp/e/policies/market/k_ryouri/areastory/1360/index.html','MAFF (oyaki)','bread_maff_oyaki')
+FIO=ext('https://www.foodinjapan.org/chubu/nagano/oyaki/','Food in Japan (oyaki)','bread_foodinjapan_oyaki')
+JTM=ext('https://japanesetaste.com/blogs/japanese-taste-blog/how-to-make-mushi-pan-japanese-steamed-cake-recipe','Japanese Taste (mushi pan)','bread_jtaste_mushipan')
 TT=ext('https://www.tastingtable.com/stories/yakisoba-pan-is-the-japanese-noodle-sandwich-you-should-try/','Tasting Table (yakisoba pan)','bread_tt_yakisoba')
 NPL=ext('https://www.nippon.com/en/japan-topics/g02481/','Nippon.com (school lunches)','bread_nippon_lunch')
 JP=ext('https://www.jeepe.jp/fr/articles/nagoya-ogura-toast-1418','Jeepe (ogura toast)','bread_jeepe_ogura')
@@ -46,6 +49,9 @@ f_anpan=fig('anpan','Two round buns with seeds on top on a white background; the
 f_curry=fig('curry','Two halves of a golden, breadcrumb-coated fried bun, each opened to show a thick brown curry filling inside soft white bread','Curry bread, cut open: a breaded, deep-fried bun with curry inside.',f'Photo: Laitr Keiows, {BYSA3}, 7 August 2010. {VIA}')
 f_yaki=fig('yakisoba','A long, soft golden roll split open and packed with orange-tinged fried noodles, with red ginger and a sprinkle of green on top','Yakisoba-pan: fried noodles in a long roll.',f'Photo: Ocdp, {CC0}, 13 November 2016. {VIA}')
 f_age=fig('agepan','Two long, golden rolls on a cooling rack, one with a sugar-coated crust in front and one with a pale brown powder coating behind','Agepan: a fried roll coated in sugar or kinako.',f'Photo: Quercus acuta, {CC0}, 16 April 2017. {VIA}')
+f_oyaki=fig('oyaki','Two pale, round, flat dumplings on a white background, the left one cut open to show dark green filling','Two oyaki, one with nozawana greens and one with eggplant.',f'Photo: Ocdp, {CC0}, 27 November 2021. {VIA}')
+f_sat=fig('satsuma','Two pale yellow, fluffy steamed buns with golden chunks, in a clear plastic tray','Sweet-potato mushipan in a packaged tray.',f'Photo: KKPCW (Kyu3), {BYSA4}, 19 March 2023. {VIA}')
+f_rai=fig('raisin','A triangular wedge of light brown steamed cake with a raisin on top, on a blue-and-white patterned plate','Triangular raisin mushipan.',f'Photo: Kyu3a, {BYSA4}, 30 November 2023. {VIA}')
 f_croq=fig('croquette','A white plate with a round, dark, fried curry bread and a long korokke pan roll with a breaded croquette on it, next to a white mug of black coffee on a wooden slatted table','Curry bread (round, left) and korokke pan (the long roll) with coffee.',f'Photo: Ocdp, {CC0}, 21 May 2017. {VIA}')
 f_corn=fig('cornet','A glossy golden-brown spiral-shaped bun with a dark filling visible at the open end, in a clear wrapper','A chocolate cornet: a spiral bun with a dark filling.',f'Photo: yto (Flickr, uploaded by Psihedelisto), {BY2}, uploaded 8 October 2021. {VIA}',maxw=420)
 f_men=fig('menchi','An orange box holding a sandwich cut into pieces: thick breaded minced-meat patties with sauce between slices of white bread','A menchi-katsu sandwich in its box.',f'Photo: jetalone, {BY2}, 16 December 2006. {VIA}',maxw=560)
@@ -54,6 +60,7 @@ f_fru=fig('fruit','Sandwiches on a white plate cut to show cream with strawberri
 f_ogu=fig('ogura','Thick toast on a white plate with a mound of dark red bean paste topped with a pat of butter, a boiled egg beside it and butter portions at the lower left','Ogura toast with a boiled egg, a coffee-shop set.',f'Photo: akira yamada, {BYSA2}, 24 May 2013. {VIA}',maxw=620)
 
 faqs=[
+("What is mushipan, and what is oyaki?","Mushipan is a soft, sponge-like cake that is steamed instead of baked, usually made from flour, sugar, baking powder, oil and milk (Japanese Taste). Oyaki is a stuffed dumpling from Nagano Prefecture, made with seasonal fillings such as nozawana greens or eggplant, and it can be roasted, steamed or fried (MAFF)."),
 ("What is the most famous Japanese bread?","Anpan, a soft bun filled with sweet red bean paste, is often named as the first bread to become popular in Japan, and the JNTO article calls it that. Melonpan and curry bread are the other two names most visitors meet first."),
 ("Does melonpan taste like melon?","Usually not. Tokyo Weekender says it is named for its looks, since the cross-hatched crust resembles a muskmelon's skin, and that it is almost never flavored with melon. Some bakeries do add a melon flavor or fill it, so check the label."),
 ("Who invented curry bread?","Nobody can say for certain. Food in Japan lists several accounts: the Cattlea bakery in Tokyo (1927) is said to have invented it, a different Tokyo bakery filed a 1927 utility model for a fried bread idea that did not mention curry, and another bakery in Nerima says it fried curry sandwiches from 1934. Treat any single answer as a claim, not a fact."),
@@ -84,6 +91,7 @@ main=f'''<main>
       <li><a href="#opening">Opening: A Note from the Guide</a></li>
       <li><a href="#sweet">Sweet Buns: Anpan, Melonpan, Cornet</a></li>
       <li><a href="#savory">Savory and Fried: Curry Bread, Yakisoba-pan, Agepan, Korokke Pan</a></li>
+      <li><a href="#steamed">Steamed Breads and Oyaki</a></li>
       <li><a href="#sando">Sandwiches and Toast</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
@@ -135,6 +143,21 @@ main=f'''<main>
     <p>{FIK} describes it as a deep-fried korokke tucked into a soft, elongated roll called koppepan, and calls it a good example of <em>sozai pan</em>, the savory "side-dish" breads. The Japanese korokke is mainly mashed potato, often mixed with ground beef and vegetables, coated in panko and fried. It is a cheap, filling food, which is the reason it works so well inside bread. {TTK} describes the same idea as a mashed-potato hot dog, with a milk-bread bun.</p>
     <p>Sources differ on the finishing touches. {FIK} says the croquette gets a sweet, tangy sauce such as tonkatsu sauce, while {TTK} lists Worcestershire sauce, mayonnaise, and tomato or shredded cabbage. In practice it depends on the bakery, so look at what the counter shows. The same article says Choshiya, a Ginza shop founded in 1927 behind the Kabuki-za, claims to be the birthplace, and that the sandwich was invented in 1927. That is a single source and the shop's own claim, so I would treat it as the story told there, not settled history. Curry bread has a 1927 origin story too, so the date is not a clean marker for either bread.</p>
     <p>For a visitor the practical point is simple. Both are fried, both are cheap, and a bakery or convenience store will often have the pair. Korokke pan is the gentler choice if you want potato and crunch without any spice.</p>
+
+    <h2 id="steamed">Steamed Breads and Oyaki<span class="h2-jp">蒸しパンとおやき</span></h2>
+    <p>Not every bread in Japan is baked. Two steamed kinds turn up in homes and shops, and they are very different: <em>mushipan</em>, a sweet steamed cake, and <em>oyaki</em>, a stuffed dumpling from Nagano.</p>
+
+    <h3>Mushipan</h3>
+    <p>{JTM} describes mushi-pan as steamed, not baked, with a soft, sponge-like texture. Its recipe uses flour, sugar, baking powder, oil and milk, steamed in muffin cups for 10 to 15 minutes, and it lists flavors such as matcha with red bean, cheese, chocolate and pumpkin. The article gives no history for the name or the snack, so I will not guess one.</p>
+    {f_sat}
+    <p>The Commons description calls this one a mushipan with sweet potato in it, and the golden chunks in the crumb are visible in the photo. It is shown in a plastic tray, which is how these are usually sold.</p>
+    {f_rai}
+    <p>Commons describes this as a triangular raisin mushipan. The wedge shape and the single raisin on top make it look like a slice of cake, which is the closest English comparison, though it is steamed.</p>
+
+    <h3>Oyaki</h3>
+    <p>{MAFFO} calls oyaki the best-known local dish of Nagano Prefecture, a stuffed dumpling whose varieties differ so much by place that a map could be drawn from them. Wheat flour is the common dough, but the page also mentions rice flour and buckwheat in some areas. Fillings follow the seasons: pickled nozawana greens, dried daikon, wild spring plants, summer eggplant, and autumn sweet potato and squash. It adds that oyaki can be roasted, steamed or fried, and that oyaki, nozawana pickles and hand-cut soba have been on Nagano's register of selected intangible folk cultural properties since 1983.</p>
+    {f_oyaki}
+    <p>Commons describes the left oyaki as filled with nozawana and the right one with eggplant, which matches the dark green filling visible in the cut one. {FIO} says they were grilled or steamed depending on local and personal taste, and explains the name by the "yaki" that means to grill, from the open hearth. The same article ties oyaki to Nagano's cold, mountainous land where rice was hard to grow, but it does not source that account, so I treat it as the common story, not a documented fact.</p>
 
     <h2 id="sando">Sandwiches and Toast<span class="h2-jp">サンドイッチとトースト</span></h2>
     <p>Most Japanese sandwiches use shokupan, the soft, lightly sweet, rectangular loaf, usually with the crusts trimmed. {JTA} covers the main ones.</p>
@@ -195,7 +218,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> anpan from {NP} and {JT}; melonpan from {TW}; curry bread from {FIJ}; yakisoba-pan from {TT}; agepan from {NPL}; korokke pan from {FIK} and {TTK}; sandwiches from {JTA} and {TTF}; ogura toast from {JP}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details or prices.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> anpan from {NP} and {JT}; melonpan from {TW}; curry bread from {FIJ}; yakisoba-pan from {TT}; agepan from {NPL}; korokke pan from {FIK} and {TTK}; mushipan from {JTM}; oyaki from {MAFFO} and {FIO}; sandwiches from {JTA} and {TTF}; ogura toast from {JP}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details or prices.</p>
 
   </article>
 
