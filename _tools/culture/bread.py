@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='bread'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'melon':('a979011d-image.jpg',1200),'anpan':('60f4abb2-image.jpg',1000),'curry':('5cbe84b8-image.jpg',1000),'yakisoba':('5b6ab78a-image.jpg',1000),'agepan':('c776a767-image.jpg',1000),'croquette':('923ce486-image.jpg',1000),'cornet':('0e15151b-image.jpg',700),'menchi':('e47dc74b-image.jpg',640),'tamago':('1cf92e48-image.jpg',1000),'fruit':('82f76ef5-image.jpg',689),'ogura':('896abc06-image.jpg',900),'oyaki':('d1256580-image.jpg',1000),'satsuma':('6efa4385-image.jpg',1000),'raisin':('1c1c5aa4-image.jpg',1000),'yomogi':('31b925aa-image.jpg',1000),'oyaki2':('79370c3e-image.jpg',1000),'nikuman':('d6858203-image.jpg',1000)}
+photos={'melon':('a979011d-image.jpg',1200),'anpan':('60f4abb2-image.jpg',1000),'curry':('5cbe84b8-image.jpg',1000),'yakisoba':('5b6ab78a-image.jpg',1000),'agepan':('c776a767-image.jpg',1000),'croquette':('923ce486-image.jpg',1000),'cornet':('0e15151b-image.jpg',700),'menchi':('e47dc74b-image.jpg',640),'tamago':('1cf92e48-image.jpg',1000),'fruit':('82f76ef5-image.jpg',689),'ogura':('896abc06-image.jpg',900),'oyaki':('d1256580-image.jpg',1000),'satsuma':('6efa4385-image.jpg',1000),'raisin':('1c1c5aa4-image.jpg',1000),'yomogi':('4a470d29-image.jpg',1000),'oyaki2':('79370c3e-image.jpg',1000),'nikuman':('d6858203-image.jpg',1000)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
