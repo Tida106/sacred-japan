@@ -27,10 +27,21 @@ items=[
 ('senbei','Senbei','せんべい','Rice crackers, salty or sweet-salty. '+f'{ZEN} recommends black bean senbei, a salty, slightly sweet cracker with whole roasted black beans sold at most grocery and convenience stores. {BYF} notes regional types, such as Nambu senbei from Iwate, a thin salty cracker often with sesame or peanut bits. For a gift that lasts, this is the safest pick on the list.'),
 ('castella','Castella','カステラ','A moist, dense, honey-flavored sponge cake. '+f'{BYF} says the Portuguese introduced castella to Nagasaki in the 16th century. {TRIP} names Fukusaya and Bunmeido as makers, says it is often sold in wooden boxes, lasts about 2-3 weeks and packs well, and puts the price at about $15-25. It is the most expensive item on this list.'),
 ]
+OFF={
+'pocky':('https://www.pocky.com/','Pocky official site (Ezaki Glico USA)','official_pocky'),
+'hichew':('https://morinaga.co.jp/hi-chew/en','Morinaga: Hi-Chew (English)','official_hichew'),
+'tokyobanana':('https://www.tokyobanana.jp/language/en/','Tokyo Banana official site (English)','official_tokyobanana'),
+'shiroikoibito':('https://www.shiroikoibitopark.jp/en/','Shiroi Koibito Park website (listed as the official site by WAmazing)','official_shiroikoibito'),
+'yatsuhashi':('https://8284.co.jp/foreigners/en.pdf','Honke Nishio Yatsuhashi English brochure (PDF)','official_yatsuhashi'),
+}
 cards=''
 for i,(k,n,jp,txt) in enumerate(items,1):
+    off=''
+    if k in OFF:
+        u,l,t=OFF[k]
+        off=f'\n    <p><strong>Official link:</strong> {ext(u,l,t)}</p>'
     cards+=f'''    <h3 id="{k}">{i}. {n} <span class="jp">{jp}</span></h3>
-    <p>{txt}</p>
+    <p>{txt}</p>{off}
 '''
 faqs=[
 ("What is a good cheap Japanese sweet to bring home?","From the list in this guide, Pocky, Hi-Chew and Kit Kat are the easiest: small, light and sold at many shops. Trip to Japan puts a standard box of Pocky at about $2-3. Prices change, so check the label."),
@@ -143,7 +154,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> {TRIP}; {BYF}; {JW}; {ZEN}; {TV}; {FUN}; {SORA}; {JPB}; {MG}. Product facts and prices come from these pages and may have changed, so check before you buy. The selection and order are the author's.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> {TRIP}; {BYF}; {JW}; {ZEN}; {TV}; {FUN}; {SORA}; {JPB}; {MG}. Product facts and prices come from these pages and may have changed, so check before you buy. The selection and order are the author's. Product names are trademarks of their owners, so this page links to official sites and does not show product packaging.</p>
 
   </article>
 
