@@ -192,7 +192,7 @@ main=f'''<main>
 {faq_html}    </div>
 
     <h2 id="final">Final Thoughts<span class="h2-jp">むすびに</span></h2>
-    <p>The tea ceremony is easy to over-explain and hard to describe. What stays with visitors is rarely the rules. It is the quiet, the sweetness followed by bitterness, and the feeling that someone prepared one bowl just for you.</p>
+    <p>The tea ceremony is easy to over-explain and hard to describe. What stays with visitors is rarely the rules. It is the quiet, the sweetness followed by bitterness, and the feeling that someone prepared one bowl just for you. The flowers in the alcove have a tradition of their own, covered in our {link('/culture/ikebana/','ikebana guide','tea_to_ikebana')}.</p>
     <p>If you enjoy the tea, look for the bowls too. The same attention to humble, imperfect objects appears in the repair art of {link('/guides/kintsugi/','kintsugi','tea_to_kintsugi')} and in Japan's ceramic traditions such as {link('/guides/bizen-ware/','Bizen ware','tea_to_bizen')}.</p>
 
     <div class="closing-block">
