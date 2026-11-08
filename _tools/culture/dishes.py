@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='popular-dishes'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000),'karaage':('83219fff-image.jpg',1000)}
+photos={'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000),'karaage':('83219fff-image.jpg',1000),'tonkatsu':('819ef8f8-image.jpg',1000),'katsudon':('b63be16b-image.jpg',1000)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -21,6 +21,7 @@ def fig(k,alt,cap,credit,hero=False,maxw=760):
 def lic(n,u): return f'<a href="{u}" target="_blank" rel="noopener" style="color:var(--enshu);">{n}</a>'
 CC0=lic('CC0','https://creativecommons.org/publicdomain/zero/1.0/')
 BY2=lic('CC BY 2.0','https://creativecommons.org/licenses/by/2.0/')
+BYSA4=lic('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/')
 BYSA2=lic('CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/')
 VIA='via Wikimedia Commons (resized)'
 f_suki=fig('sukiyaki','A shallow iron pot with raw marbled beef slices, napa cabbage, pale grilled tofu, halved leeks, thin clear noodles, green leaves and two golden rectangular pieces, sitting in dark sauce on a round metal ring','Sukiyaki in its shallow iron pot, before the cooking is finished.',f'Photo: pelican, {BYSA2}, 1 June 2012 (Flickr, license reviewed on Commons). Commons titles it "Sukiyaki". {VIA}',hero=True)
@@ -30,6 +31,8 @@ f_tendon=fig('tendon','A round bowl with a dark blue rim holding rice topped wit
 f_gyu=fig('gyudon','Sliced beef and onion in brown sauce on rice in a white bowl with a blue pattern, topped with a pile of red pickled ginger, with a small cup holding a raw egg in the upper right','Gyudon with red pickled ginger and a raw egg on the side.',f'Photo: jetalone, {BY2}, 2 October 2006 (Flickr, license reviewed on Commons). Commons says it is a regular-size bowl with an egg at a Yoshinoya near Higashi-Ginza, Tokyo. {VIA}',maxw=640)
 f_oya=fig('oyakodon','A white bowl of chicken and softly set egg in a glossy brown sauce, topped with a three-leaf green garnish and chopped green onion, on a wooden tray with a small dish of pickles','Oyakodon: chicken and egg over rice.',f'Photo: Ocdp, {CC0}, 7 June 2019. Commons describes it as a Suigo chicken oyakodon at a restaurant called Suigo no Toriyasan in Katori, Chiba. {VIA}',maxw=640)
 f_kara=fig('karaage','A tall heap of golden-brown fried chicken pieces dusted with a pale coating, on a black plate with white Japanese lettering, with shredded cabbage and a dab of mayonnaise at the side','A heaped plate of karaage with cabbage and mayonnaise.',f'Photo: Ocdp, {CC0}, 5 July 2020. Commons describes it as a karaage set meal in a very large portion (鬼盛り) at a restaurant called Densetsu no Sutadonya, and titles it a reference image of chicken karaage. {VIA}',maxw=700)
+f_ton=fig('tonkatsu','Thick slices of golden-brown breaded pork cutlet standing on a wire rack over a glazed blue-green plate, with a mound of shredded cabbage and carrot behind and a dab of yellow mustard at the right edge','A thick-cut tonkatsu on a wire rack, with shredded cabbage and mustard.',f'Photo: ayustety, {BYSA2}, 20 April 2007 (Flickr, license reviewed on Commons). Commons describes it as a thick-cut tonkatsu at Hiraboku (平田牧場) in Tokyo. {VIA}',maxw=700)
+f_kats=fig('katsudon','A white bowl of fried pork cutlet pieces under a softly cooked egg and chopped green garnish on rice, with a bowl of miso soup at the right, on a pale wooden table','A katsudon bowl with a bowl of miso soup.',f'Photo: Chacmool, {BYSA4}, 23 July 2023. Commons describes it as the katsudon (梅, ume) at Katsuya, a chain restaurant. {VIA}',maxw=700)
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 def ext(href,txt,lab): return f'<a href="{href}" target="_blank" rel="noopener" onclick="trackEvent(\'click\',\'external\',\'{lab}\')">{txt}</a>'
 VI='https://www.viator.com/search/Japan+food+tour?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
@@ -125,6 +128,8 @@ main=f'''<main>
 
     <h2 id="tonkatsu">Tonkatsu: A Western Dish Made Japanese<span class="h2-jp">とんかつ</span></h2>
     <p>Tonkatsu is a breaded, deep-fried pork cutlet, usually served with a heap of shredded cabbage. The {TON} says it was created at Rengatei, a Western-style restaurant in Ginza that opened in 1895, and that "pork cutlet" appeared on its menu in 1899. It descends from the French <em>côtelette</em> of veal, which Rengatei found too oily for Japanese tastes, so the chef deep-fried the breaded cutlet as in tempura and switched to soft fresh panko.</p>
+    {f_ton}
+    <p>The plate above shows the classic look: thick slices of golden cutlet standing on a wire rack, shredded cabbage and carrot behind, and a dab of mustard at the right edge. Commons says it is a thick-cut tonkatsu at Hiraboku in Tokyo, and the photo dates from 2007, so the restaurant's menu may have changed. The cut face looks pale pink-white to me, and I will not say more about the cut of pork, because Commons does not.</p>
     <p>The cabbage has a story too. The same article says Rengatei replaced the hand-cut potatoes and carrots that came with the meat by finely chopped cabbage, to deal with a lack of cooks. The demi-glace was replaced by a mix of two imported Worcestershire sauces, which suited Japanese tastes better. The article also says tonkatsu led to the <em>katsu</em> sandwich and katsu curry.</p>
 
     <h2 id="karaage">Karaage: Japanese Fried Chicken<span class="h2-jp">唐揚げ</span></h2>
@@ -147,6 +152,8 @@ main=f'''<main>
     {f_oya}
     <h3>Katsudon: Pork Cutlet Bowl</h3>
     <p>In the standard version described on {KAT}, a tonkatsu cutlet is sliced and simmered in a broth of dashi, soy sauce and onion with beaten egg, then served over rice. The page gives no date or inventor for the dish. It lists regional sauce versions instead, with tonkatsu or Worcestershire sauce, in places such as Fukui, Kofu, Gunma, Aizuwakamatsu and Komagane. The same page says students eat katsudon before exams because <em>katsu</em> sounds like 勝つ, "to win," and presents this as a modern tradition.</p>
+    {f_kats}
+    <p>The bowl above is the katsudon from Katsuya, a chain, which Commons labels 梅 (<em>ume</em>). The cutlet pieces sit under a softly cooked egg with a green garnish, and a bowl of miso soup comes alongside. I cannot tell from the photo whether the topping was simmered in dashi or finished another way, so treat it as an example of the look, not a recipe.</p>
     <p>Tendon is covered in the tempura section above.</p>
 
     <h2 id="how">How to Order and Eat<span class="h2-jp">注文と食べ方</span></h2>
