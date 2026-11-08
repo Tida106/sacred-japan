@@ -34,6 +34,8 @@ VI='https://www.viator.com/search/Japan+food+tour?pid=P00298374&amp;mcid=42383&a
 JG=ext('https://www.japan-guide.com/r/e104.html','japan-guide','noodles_japanguide')
 NIP=ext('https://www.nippon.com/en/japan-data/h02034/somen-and-hiyamugi-defining-japanese-summer-noodles.html','Nippon.com','noodles_nippon')
 WK=ext('https://en.wikipedia.org/wiki/Ramen','Wikipedia','noodles_wiki_ramen')
+TT=ext('https://tokyotreat.com/blog/yakisoba-a-festival-street-food-classic','TokyoTreat','noodles_tokyotreat')
+JC=ext('https://japanesecooking101.com/?p=4427','Japanese Cooking 101','noodles_jc101')
 RTE=ext('https://japan.recipetineats.com/hiyashi-chuka-cold-ramen/','RecipeTin Japan','noodles_rte')
 PRODBLOG=ext('https://japanese-products.blog/2018/03/22/zaru-soba-mori-soba-seiro-soba','Japanese Products blog','noodles_products')
 faqs=[
@@ -69,6 +71,7 @@ main=f'''<main>
       <li><a href="#summer">Somen and Hiyamugi: Summer Wheat Noodles</a></li>
       <li><a href="#hiyashi">Hiyashi Chuka: Chilled Ramen Noodles</a></li>
       <li><a href="#chuka-soba">Chuka Soba: A Name for Ramen</a></li>
+      <li><a href="#yakisoba">Yakisoba: Stir-Fried Festival Noodles</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
     </ol>
@@ -89,6 +92,7 @@ main=f'''<main>
       <li><strong>Hiyamugi (<span class="jp">冷麦</span>):</strong> thin wheat noodles, slightly thicker than somen.</li>
       <li><strong>Hiyashi chuka (<span class="jp">冷やし中華</span>):</strong> chilled ramen-style noodles with cold toppings.</li>
       <li><strong>Chuka soba (<span class="jp">中華そば</span>):</strong> a name for ramen, often the classic style.</li>
+      <li><strong>Yakisoba (<span class="jp">焼きそば</span>):</strong> stir-fried wheat noodles with a sweet-savory sauce, the festival-stall classic.</li>
     </ul>
 
     <h2 id="soba">Soba: Buckwheat Noodles<span class="h2-jp">蕎麦</span></h2>
@@ -119,6 +123,12 @@ main=f'''<main>
     <h2 id="chuka-soba">Chuka Soba: A Name for Ramen<span class="h2-jp">中華そば</span></h2>
     <p>The {WK} notes that ramen was renamed <em>shina soba</em> in 1910, and that after World War II the word <em>shina</em> became pejorative and was replaced by <em>chuka</em> in many terms. Chuka soba and ramen can be used interchangeably, though chuka soba is often used for more classic styles, and it remains common in places such as Takayama.</p>
     <p>So if you see 中華そば on a sign, expect a bowl of ramen, not soba made from buckwheat. For the four main ramen flavors, see our {link('/culture/ramen/','ramen guide','noodles_to_ramen')}. The shoyu bowl at the top of that guide was photographed at a shop called Chukasoba in Aomori.</p>
+
+    <h2 id="yakisoba">Yakisoba: Stir-Fried Festival Noodles<span class="h2-jp">焼きそば</span></h2>
+    <p>Despite the name, yakisoba is not made from buckwheat. {TT} says it is made with Chinese wheat noodles (<em>chuka soba</em>), boiled first and then stir-fried with cabbage, onion, carrot and usually pork. {JC} explains that the noodles are made with an alkaline solution, which gives them a yellow tint and a springy, chewy bite, and that they are sold pre-steamed so they fry without breaking apart.</p>
+    <p>The flavor comes from a sweet, thick sauce that is often compared to Worcestershire sauce. Classic toppings are <em>aonori</em> (green seaweed flakes), red pickled ginger and bonito flakes, and some cooks add mayonnaise. {TT} says it is most common at festival stalls, where vendors cook on iron grills, and also sells as microwave boxes at convenience stores and supermarkets.</p>
+    <p>On its history, {TT} says the origin is unclear but that Asakusa was known for sauce yakisoba in the 1930s, and that the dish was a typical light meal before World War II. {JC} traces it to Chinese stir-fried noodles that reached Japan more than a hundred years ago, and says postwar shortages made it a cheap, filling staple. Treat the dates as approximate, since the two sources tell the story differently.</p>
+    <p>One more thing to look for is <em>yakisoba-pan</em>, a bread roll filled with yakisoba, which {TT} says turns up at bakeries, convenience stores and school lunches. It also notes variations such as <em>yaki udon</em> in the Kitakyushu/Kokura area, made with udon instead.</p>
 
     <h2 id="how">How to Order and Eat<span class="h2-jp">注文と食べ方</span></h2>
     <p>These are my own habits as a guide, not strict rules.</p>
