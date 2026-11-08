@@ -5,7 +5,7 @@ A='/mnt/user-data/attachments/fd332c08-3f6b-545a-883b-83277e19ff52/'
 S='wagashi'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
-photos={'ichigo':('5e10bb4f-image.jpg',1200),'strawberry':('36b6e7e3-image.jpg',1000),'yokan':('23068ad2-image.jpg',1000),'uiro':('270a1761-image.jpg',650),'almond':('15cb0b50-image.jpg',900)}
+photos={'ichigo':('5e10bb4f-image.jpg',1200),'strawberry':('36b6e7e3-image.jpg',1000),'yokan':('23068ad2-image.jpg',1000),'uiro':('270a1761-image.jpg',650),'almond':('15cb0b50-image.jpg',900),'taiyaki1':('12c12445-image.jpg',1000),'taiyaki2':('197c48c9-image.jpg',1000),'raindrop':('1869be0b-image.jpg',1000),'shitatari':('fba835fc-image.jpg',848)}
 for k,(f,mw) in photos.items():
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -30,6 +30,9 @@ VIA='via Wikimedia Commons (resized)'
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 def ext(href,txt,lab): return f'<a href="{href}" target="_blank" rel="noopener" onclick="trackEvent(\'click\',\'external\',\'{lab}\')">{txt}</a>'
 FIJ=ext('https://www.foodinjapan.org/japan/fruit-daifuku','Food in Japan (fruit daifuku)','wagashi_foodinjapan_daifuku')
+MT=ext('https://www.mlit.go.jp/tagengo-db/en/R2-01316.html','MLIT multilingual database (Kinseiken Daigahara shop)','wagashi_mlit_kinseiken')
+SN=ext('https://soranews24.com/2014/06/04/this-amazing-water-cake-just-may-be-the-most-delicate-sweet-ever-created/','SoraNews24 (2014)','wagashi_soranews_raindrop')
+TWK=ext('https://www.tokyoweekender.com/food-and-drink/history-of-taiyaki/','Tokyo Weekender (history of taiyaki)','wagashi_tw_taiyaki')
 JY=ext('https://www.jeepe.jp/en/articles/yokan-basic-guide-1564','Jeepe (yokan basics)','wagashi_jeepe_yokan')
 VI='https://www.viator.com/search/Japan+tea+ceremony?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
 
@@ -37,14 +40,20 @@ f_ich=fig('ichigo','Two pale pink rice-cake sweets on a white plate; one is cut 
 f_str=fig('strawberry','Two halves of a white mochi sweet cut open, each showing a red strawberry cross-section ringed by dark bean paste','The cross-section: strawberry, then a ring of paste, then mochi.',f'Photo: Janine (Flickr), {BY2}, 10 February 2008. {VIA}',maxw=620)
 f_yok=fig('yokan','Two smooth, dark reddish-brown blocks of yokan stacked on a blue-and-white patterned plate','Two slices of yokan on a blue-and-white plate.',f'Photo: Ocdp, {CC0}, 10 March 2025. {VIA}')
 f_uir=fig('uiro','Two small rectangular blocks, one pale brown and one darker reddish brown, on a green-and-brown glazed plate','Bite-size uiro, with the cut face shown.',f'Photo: 小太刀, {BYSA3}, 8 June 2006. {VIA}',maxw=650)
+f_ta1=fig('taiyaki1','A golden fish-shaped griddle cake with scales and fins pressed into the crust, on a white plate with black calligraphy','Taiyaki, the fish-shaped griddle cake.',f'Photo: Ocdp, {CC0}, 3 November 2014. {VIA}',maxw=620)
+f_ta2=fig('taiyaki2','A fish-shaped cake torn open on a white napkin and black plate, showing a dark red bean paste filling inside the golden shell','A taiyaki torn open to show the bean paste.',f'Photo: Andy Li, {CC0}, 23 September 2025. {VIA}',maxw=560)
+f_rd=fig('raindrop','Top view of a clear, dome-shaped jelly in a wooden boat-shaped tray, with a pile of light brown powder on one side and dark syrup on the other','Raindrop cake with kinako and syrup.',f'Photo: T.Tseng (Flickr), {BY2}, 19 June 2016. {VIA}',maxw=760)
+f_sh=fig('shitatari','Two translucent amber blocks of jelly on a clear glass dish placed on a pale wooden board','Two blocks of an amber water sweet.',f'Photo: Kykk wiki, {CC0}, 8 September 2023. {VIA}',maxw=640)
 f_alm=fig('almond','A white bowl of jelly-like white cubes topped with orange peach slices, a few green pieces and a red cherry','Homemade almond tofu with fruit.',f'Photo: King of Hearts, {BYSA4}, 20 June 2020. {VIA}',maxw=560)
 
 faqs=[
-("What is wagashi?","Wagashi means traditional Japanese sweets. It is a broad word, so this guide covers only four things: ichigo daifuku, yokan, uiro and almond tofu, the ones I could show with photographs. The Jeepe article says yokan is eaten with green tea or matcha, and the same pairing is common for other sweets of this kind."),
+("What is wagashi?","Wagashi means traditional Japanese sweets. It is a broad word, so this guide covers only four things: ichigo daifuku, yokan, uiro, almond tofu, taiyaki, raindrop cake and shitatari, the ones I could show with photographs. The Jeepe article says yokan is eaten with green tea or matcha, and the same pairing is common for other sweets of this kind."),
 ("Who invented ichigo daifuku?","Nobody can say for certain. Food in Japan says the strawberry version emerged in the 1980s and that several shops have been linked to its origin, and the Tamaya shop claims on its own website that it created the original. The same article credits Toraya in Ginza with fruit daifuku in general in 1974, and it does not reconcile the two dates. Take every date as a claim."),
 ("Is ichigo daifuku seasonal?","The Food in Japan article says fruit daifuku is often seasonal, but it does not name a season for strawberry. Shops that use fresh strawberries tend to sell it when strawberries are at their best, so ask the shop."),
 ("How do I eat yokan?","Jeepe suggests slicing the bar to about 1 to 1.5 cm, eating small pieces slowly with green tea or matcha, and using a wagashi pick if you have one. It says coffee also works."),
 ("How long does yokan keep?","Jeepe says unopened neri-yokan can often keep for several months to about a year at room temperature, while mizu-yokan and mushi-yokan generally keep for less time. The label on your purchase is the thing to trust."),
+("Why is taiyaki shaped like a fish?","Tokyo Weekender says the fish is a sea bream (tai), a symbol of good fortune, and that sea bream was once an expensive treat, so a cheap sweet in its shape had appeal. The same article credits Seijiro Kobe of Naniwaya Sohonten with the invention after an imagawayaki shop opened in 1909, but it gives no date for the first taiyaki, so the origin is a claim."),
+("How long does raindrop cake last?","Very briefly. The MLIT page on Kinseiken says the cake melts after about 30 minutes at room temperature, and Kinseiken's original has been reported as an eat-in sweet. Eat it right away and check the shop's rules."),
 ("Is uiro the same as yokan?","They look alike as small blocks, but I did not find a source comparing them, so I will not give you a rule. The photograph in this guide is labeled by its photographer as uiro from Osu, and the quickest answer is to ask at the shop."),
 ]
 faq_html=''.join(f'''      <details class="faq-item">
@@ -55,7 +64,7 @@ faq_html=''.join(f'''      <details class="faq-item">
 ''' for q,a in faqs)
 faq_ld=json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]},ensure_ascii=False,indent=2)
 TITLE="Wagashi Guide: Ichigo Daifuku, Yokan, Uiro and Other Japanese Sweets"
-DESC="A licensed guide's English introduction to wagashi, traditional Japanese sweets: ichigo daifuku (strawberry mochi), yokan, uiro and almond tofu, with photographs and honest notes on what is claimed."
+DESC="A licensed guide's English introduction to wagashi, traditional Japanese sweets: ichigo daifuku (strawberry mochi), yokan, uiro, taiyaki, raindrop cake and almond tofu, with photographs and honest notes on what is claimed."
 URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-wagashi.jpg"
 main=f'''<main>
@@ -70,6 +79,8 @@ main=f'''<main>
       <li><a href="#daifuku">Ichigo Daifuku</a></li>
       <li><a href="#yokan">Yokan</a></li>
       <li><a href="#more">Uiro and Almond Tofu</a></li>
+      <li><a href="#taiyaki">Taiyaki, the Griddle Sweet</a></li>
+      <li><a href="#water">Water Sweets: Raindrop Cake and Shitatari</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
     </ol>
@@ -79,7 +90,7 @@ main=f'''<main>
 
     <section id="opening">
       <p class="opening">Cut an ichigo daifuku in half and the strawberry shows up like a small red sun inside a ring of dark bean paste.</p>
-      <p>As a licensed guide, I send visitors to wagashi counters for exactly that kind of surprise. This guide covers four sweets I can show you in photographs, and it says plainly where the origin stories disagree. Wagashi pairs naturally with tea, so if you want to see it in its home setting, read our {link('/culture/tea-ceremony/','tea ceremony guide','wagashi_to_tea')} too.</p>
+      <p>As a licensed guide, I send visitors to wagashi counters for exactly that kind of surprise. This guide covers a handful of sweets I can show you in photographs, and it says plainly where the origin stories disagree. Wagashi pairs naturally with tea, so if you want to see it in its home setting, read our {link('/culture/tea-ceremony/','tea ceremony guide','wagashi_to_tea')} too.</p>
     </section>
 
     <h2 id="daifuku">Ichigo Daifuku<span class="h2-jp">いちご大福</span></h2>
@@ -105,6 +116,25 @@ main=f'''<main>
     {f_alm}
     <p>Soft white cubes with peach, a few green pieces and a cherry. The Commons description calls this homemade almond tofu with mixed fruit, peach slices and a maraschino cherry. It is a jelly-like dessert and you will see it on Japanese dessert menus, but I have not sourced where it sits in the wagashi category, so I list it as a neighbor, not a classic.</p>
     <p>If you would like to eat wagashi where it is meant to be eaten, a {ext(VI,'tea ceremony experience','wagashi_viator_tea')} is one way to do it.</p>
+
+    <h2 id="taiyaki">Taiyaki, the Griddle Sweet<span class="h2-jp">鯛焼き</span></h2>
+    <p>Taiyaki is a fish-shaped griddle cake, usually filled with sweet red bean paste. It is a street-stall sweet rather than a tea-room one, so I list it as a neighbor of wagashi, not a strict member. {TWK} credits Seijiro Kobe, the first owner of the shop Naniwaya Sohonten, with inventing it. It says he opened an imagawayaki shop in 1909 (a thick round pancake with red bean paste), tried shapes such as turtles and airships that did not sell, and then settled on a fish mold. The article does not say that the 1909 shop was the exact birthplace, and it gives no date for the first taiyaki, so treat the story as a claim.</p>
+    <p>The fish is a sea bream (<em>tai</em>), a symbol of good fortune. The same article says sea bream was an expensive delicacy in the early 1900s, which made a cheap sweet in its shape appealing.</p>
+    {f_ta1}
+    <p>Scales, a fin and a round eye are pressed into the crust, and the edges show the thin, crisp ring where batter met the mold. The Commons description (in Japanese) places this one at Taiyaki Wakaba in Yotsuya, Tokyo, and calls it a <em>tennen</em> taiyaki. I have not sourced what that term means, so I will only repeat the label.</p>
+    {f_ta2}
+    <p>Torn open, the shell is thin and golden outside, with a layer of soft cake inside and a dark band of bean paste in the middle. The Commons description gives no shop for this one, so I will not name one.</p>
+
+    <h2 id="water">Water Sweets: Raindrop Cake and Shitatari<span class="h2-jp">水信玄餅としたたり</span></h2>
+
+    <h3>Raindrop Cake</h3>
+    <p>This is the clear dome that went viral abroad as raindrop cake. In Japan the best-known version is Kinseiken's <em>mizu shingen mochi</em> from Yamanashi. The {MT} says it is made from two things, Yamanashi water and agar, and is served with kuromitsu (black sugar syrup) and kinako (roasted soybean flour). It also says the cake melts after about 30 minutes at room temperature. That page gives no creation date, only that the Daigahara shop opened in 1902.</p>
+    {f_rd}
+    <p>The photograph shows the dome in a wooden tray with a pile of light brown powder on one side and dark syrup on the other, which matches that pairing. The Commons description places it in Los Angeles, and its source line names mizu shingen mochi with black syrup, so this is not the Yamanashi original. {SN} reported in 2014 that the Kinseiken original was sold on weekends and holidays from June to the end of September, and only to eat in. That is an old report, so check the shop before you plan a trip around it.</p>
+
+    <h3>Shitatari</h3>
+    {f_sh}
+    <p>The Commons description (in Japanese) calls this <em>shitatari</em>, a sweet from the Kyoto wagashi shop Kamehiroei, and says it is linked to the Kikusui-hoko float of the Gion Festival. The photograph shows two amber, translucent blocks on a glass dish. I have not sourced the ingredients or the story behind the name, so all I can say is what the picture and the description say.</p>
 
     <h2 id="faq">Frequently Asked Questions<span class="h2-jp">よくあるご質問</span></h2>
 
@@ -142,7 +172,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> ichigo daifuku from {FIJ}; yokan from {JY}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details, prices or opening hours.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> ichigo daifuku from {FIJ}; yokan from {JY}; taiyaki from {TWK}; raindrop cake from {MT} and {SN}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details, prices or opening hours.</p>
 
   </article>
 
