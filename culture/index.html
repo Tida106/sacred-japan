@@ -388,6 +388,13 @@ text-decoration: none;
 border-radius: 2px;
 transition: background 0.2s, transform 0.15s;
 }
+.hub-card.has-ph{display:block;padding:0;overflow:hidden}
+.hub-card.has-ph .hc-ph{aspect-ratio:16/10;background:#e8dfe1;overflow:hidden}
+.hub-card.has-ph .hc-ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.hub-card.has-ph:hover .hc-ph img{transform:scale(1.04)}
+.hub-card.has-ph .hc-body{padding:16px 20px 20px}
+.hub-card.has-ph .hub-card-title{font-size:18px}
+.hub-card.has-ph .hub-card-desc{font-size:15px}
 .hub-card:hover { background: var(--washi-dark); transform: translateY(-1px); }
 .hub-card-label {
 font-family: 'Noto Serif JP', serif;
@@ -667,29 +674,29 @@ main { max-width: 1100px; }
   </div>
   <div class="group-grid">
 
-    <a class="hub-card" href="/castles/" onclick="trackEvent('click','internal','culture_hub_to_castles')" style="border-top:3px solid var(--kon);">
+    <a class="hub-card has-ph" href="/castles/" onclick="trackEvent('click','internal','culture_hub_to_castles')" style="border-top:3px solid var(--kon);"><div class="hc-ph"><picture><source srcset="/images/hub/culture-castles.webp" type="image/webp"><img src="/images/hub/culture-castles.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--kon);">CULTURE 01 ／ 日本の城</div>
       <div class="hub-card-title">🏯 Japan's 12 Surviving Original Castles →</div>
       <div class="hub-card-desc">Of Japan's hundreds of castles, only 12 still have their original wooden keeps — the 5 National Treasures and 7 Important Cultural Properties.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/crafts/" onclick="trackEvent('click','internal','culture_hub_to_crafts')" style="border-top:3px solid var(--bronze);">
+    <a class="hub-card has-ph" href="/crafts/" onclick="trackEvent('click','internal','culture_hub_to_crafts')" style="border-top:3px solid var(--bronze);"><div class="hc-ph"><picture><source srcset="/images/hub/culture-crafts.webp" type="image/webp"><img src="/images/hub/culture-crafts.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--bronze);">CULTURE 02 ／ 伝統工芸</div>
       <div class="hub-card-title">🎨 Japan's 18 Traditional Crafts →</div>
       <div class="hub-card-desc">A guided tour of 18 crafts across 9 regions — from Ainu wood carving and Nambu ironware to Wajima lacquer, Kyoto silks, and Ryukyu Bingata.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/anime/" onclick="trackEvent('click','internal','culture_hub_to_anime')" style="border-top:3px solid var(--beni-light);">
+    <a class="hub-card has-ph" href="/anime/" onclick="trackEvent('click','internal','culture_hub_to_anime')" style="border-top:3px solid var(--beni-light);"><div class="hc-ph"><picture><source srcset="/images/hub/culture-anime.webp" type="image/webp"><img src="/images/hub/culture-anime.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--beni-light);">CULTURE 03 ／ アニメ聖地</div>
       <div class="hub-card-title">🌸 Anime Pilgrimage: 18 Sacred Spots →</div>
       <div class="hub-card-desc">A pilgrimage guide to 18 of Japan's most beloved anime locations — from <em>Your Name</em>'s Tokyo staircase and Lake Suwa to <em>Demon Slayer</em>'s Kamado Shrine in Fukuoka.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/regional-food/" onclick="trackEvent('click','internal','culture_hub_to_food')" style="border-top:3px solid var(--kin);">
+    <a class="hub-card has-ph" href="/regional-food/" onclick="trackEvent('click','internal','culture_hub_to_food')" style="border-top:3px solid var(--kin);"><div class="hc-ph"><picture><source srcset="/images/hub/culture-food.webp" type="image/webp"><img src="/images/hub/culture-food.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--kin);">CULTURE 04 ／ 郷土料理</div>
       <div class="hub-card-title">🍜 Japan's Regional Cuisine →</div>
       <div class="hub-card-desc">A culinary journey through 9 regions and 24 signature dishes — from Sapporo miso ramen and Sendai gyutan to Hakata tonkotsu and Okinawa goya champuru.</div>
-    </a>
+    </div></a>
 
   </div>
 
@@ -701,65 +708,65 @@ main { max-width: 1100px; }
   </div>
   <div class="group-grid">
 
-    <a class="hub-card" href="/culture/what-is-shinto/" onclick="trackEvent('click','internal','culture_hub_to_what_is_shinto')" style="border-top:3px solid var(--beni);">
+    <a class="hub-card has-ph" href="/culture/what-is-shinto/" onclick="trackEvent('click','internal','culture_hub_to_what_is_shinto')" style="border-top:3px solid var(--beni);"><div class="hc-ph"><picture><source srcset="/images/hub/what-is-shinto.webp" type="image/webp"><img src="/images/hub/what-is-shinto.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--beni);">GUIDE 01 ／ 神道入門</div>
       <div class="hub-card-title">⛩️ What Is Shinto? →</div>
       <div class="hub-card-desc">A religion without a holy book — eight million gods, the mechanics of purity, and the invisible operating system of Japan.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/culture/shrine-etiquette/" onclick="trackEvent('click','internal','culture_hub_to_shrine_etiquette')" style="border-top:3px solid var(--kon);">
+    <a class="hub-card has-ph" href="/culture/shrine-etiquette/" onclick="trackEvent('click','internal','culture_hub_to_shrine_etiquette')" style="border-top:3px solid var(--kon);"><div class="hc-ph"><picture><source srcset="/images/hub/shrine-etiquette.webp" type="image/webp"><img src="/images/hub/shrine-etiquette.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--kon);">GUIDE 02 ／ 参拝の作法</div>
       <div class="hub-card-title">🙏 How to Visit a Japanese Shrine →</div>
       <div class="hub-card-desc">The torii gate, the purification basin, the prayer ritual, offerings, omamori, goshuin, and what not to do.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/culture/shrine-vs-temple/" onclick="trackEvent('click','internal','culture_hub_to_shrine_vs_temple')" style="border-top:3px solid var(--bronze);">
+    <a class="hub-card has-ph" href="/culture/shrine-vs-temple/" onclick="trackEvent('click','internal','culture_hub_to_shrine_vs_temple')" style="border-top:3px solid var(--bronze);"><div class="hc-ph"><picture><source srcset="/images/hub/shrine-vs-temple.webp" type="image/webp"><img src="/images/hub/shrine-vs-temple.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--bronze);">GUIDE 03 ／ 神社とお寺</div>
       <div class="hub-card-title">🏛️ Shrine vs Temple in Japan →</div>
       <div class="hub-card-desc">The visual differences, prayer rituals, and history — and how to tell a shrine from a temple in three seconds.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/culture/goshuin-guide/" onclick="trackEvent('click','internal','culture_hub_to_goshuin_guide')" style="border-top:3px solid var(--kin);">
+    <a class="hub-card has-ph" href="/culture/goshuin-guide/" onclick="trackEvent('click','internal','culture_hub_to_goshuin_guide')" style="border-top:3px solid var(--kin);"><div class="hc-ph"><picture><source srcset="/images/hub/goshuin-guide.webp" type="image/webp"><img src="/images/hub/goshuin-guide.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--kin);">GUIDE 04 ／ 御朱印</div>
       <div class="hub-card-title">📖 The Complete Goshuin Guide →</div>
       <div class="hub-card-desc">Japan's sacred temple and shrine stamps — step-by-step process, etiquette, kanji reading, and FAQ.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/culture/omamori-guide/" onclick="trackEvent('click','internal','culture_hub_to_omamori_guide')" style="border-top:3px solid var(--beni-light);">
+    <a class="hub-card has-ph" href="/culture/omamori-guide/" onclick="trackEvent('click','internal','culture_hub_to_omamori_guide')" style="border-top:3px solid var(--beni-light);"><div class="hc-ph"><picture><source srcset="/images/hub/omamori-guide.webp" type="image/webp"><img src="/images/hub/omamori-guide.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--beni-light);">GUIDE 05 ／ お守り</div>
       <div class="hub-card-title">🧿 The Complete Omamori Guide →</div>
       <div class="hub-card-desc">Choosing, carrying, and returning Japan's sacred protective charms.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/culture/three-sacred-treasures/" onclick="trackEvent('click','internal','culture_hub_to_three_sacred_treasures')" style="border-top:3px solid var(--kon);">
+    <a class="hub-card has-ph" href="/culture/three-sacred-treasures/" onclick="trackEvent('click','internal','culture_hub_to_three_sacred_treasures')" style="border-top:3px solid var(--kon);"><div class="hc-ph"><picture><source srcset="/images/hub/three-sacred-treasures.webp" type="image/webp"><img src="/images/hub/three-sacred-treasures.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--kon);">GUIDE 06 ／ 三種の神器</div>
       <div class="hub-card-title">🪞 The Three Sacred Treasures →</div>
       <div class="hub-card-desc">Japan's Imperial Regalia — the mirror, the sword, and the jewel — and the shrines where you can still visit them.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/culture/sacred-animals/" onclick="trackEvent('click','internal','culture_hub_to_sacred_animals')" style="border-top:3px solid var(--bronze);">
+    <a class="hub-card has-ph" href="/culture/sacred-animals/" onclick="trackEvent('click','internal','culture_hub_to_sacred_animals')" style="border-top:3px solid var(--bronze);"><div class="hc-ph"><picture><source srcset="/images/hub/sacred-animals.webp" type="image/webp"><img src="/images/hub/sacred-animals.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--bronze);">GUIDE 07 ／ 神使</div>
       <div class="hub-card-title">🦊 Japan's Sacred Animals →</div>
       <div class="hub-card-desc">The divine messengers of Shinto — the fox, deer, pigeon, crow, and ox — and the myths behind them.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/culture/kamidana/" onclick="trackEvent('click','internal','culture_hub_to_kamidana')" style="border-top:3px solid var(--beni);">
+    <a class="hub-card has-ph" href="/culture/kamidana/" onclick="trackEvent('click','internal','culture_hub_to_kamidana')" style="border-top:3px solid var(--beni);"><div class="hc-ph"><picture><source srcset="/images/hub/kamidana.webp" type="image/webp"><img src="/images/hub/kamidana.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--beni);">GUIDE 08 ／ 神棚</div>
       <div class="hub-card-title">🏠 What Is a Kamidana? →</div>
       <div class="hub-card-desc">Japan's household Shinto altar — what's inside, where it's placed, and how it differs from a butsudan.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/culture/tea-ceremony/" onclick="trackEvent('click','internal','culture_hub_to_tea_ceremony')" style="border-top:3px solid var(--matcha);">
+    <a class="hub-card has-ph" href="/culture/tea-ceremony/" onclick="trackEvent('click','internal','culture_hub_to_tea_ceremony')" style="border-top:3px solid var(--matcha);"><div class="hc-ph"><picture><source srcset="/images/hub/tea-ceremony.webp" type="image/webp"><img src="/images/hub/tea-ceremony.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--matcha);">GUIDE 09 ／ 茶道</div>
       <div class="hub-card-title">🍵 The Japanese Tea Ceremony Guide →</div>
       <div class="hub-card-desc">What happens, what to do as a guest, and where to try it — from Rikyu to a bowl in your hands.</div>
-    </a>
+    </div></a>
 
-    <a class="hub-card" href="/culture/ikebana/" onclick="trackEvent('click','internal','culture_hub_to_ikebana')" style="border-top:3px solid var(--matcha);">
+    <a class="hub-card has-ph" href="/culture/ikebana/" onclick="trackEvent('click','internal','culture_hub_to_ikebana')" style="border-top:3px solid var(--matcha);"><div class="hc-ph"><picture><source srcset="/images/hub/ikebana.webp" type="image/webp"><img src="/images/hub/ikebana.jpg" alt="" loading="lazy" width="640" height="400"></picture></div><div class="hc-body">
       <div class="hub-card-label" style="color:var(--matcha);">GUIDE 10 ／ 生け花</div>
       <div class="hub-card-title">🌸 The Japanese Art of Ikebana →</div>
       <div class="hub-card-desc">Flower arranging in Japan: its history, the main schools, how to look at an arrangement, and where to try it.</div>
-    </a>
+    </div></a>
 
   </div>
 
