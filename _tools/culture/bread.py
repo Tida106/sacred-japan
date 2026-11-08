@@ -33,6 +33,8 @@ NP=ext('https://www.nippon.com/en/guide-to-japan/cs00023/','Nippon.com (anpan)',
 JT=ext('https://www.japan.travel/en/gastronomy/article-bread-evolved-in-japan/','Japan National Tourism Organization (bread in Japan)','bread_jnto')
 TW=ext('https://www.tokyoweekender.com/food-and-drink/melon-pan/','Tokyo Weekender (melon pan)','bread_tw_melon')
 FIJ=ext('https://www.foodinjapan.org/kanto/tokyo/curry-bread','Food in Japan (curry bread)','bread_foodinjapan_curry')
+FIK=ext('https://www.foodinjapan.org/kanto/tokyo-en/crockett-bread','Food in Japan (korokke pan)','bread_foodinjapan_korokke')
+TTK=ext('https://www.tastingtable.com/1165772/japans-korokke-pan-is-a-mashed-potato-hot-dog-sandwich-hybrid','Tasting Table (korokke pan)','bread_tt_korokke')
 TT=ext('https://www.tastingtable.com/stories/yakisoba-pan-is-the-japanese-noodle-sandwich-you-should-try/','Tasting Table (yakisoba pan)','bread_tt_yakisoba')
 NPL=ext('https://www.nippon.com/en/japan-topics/g02481/','Nippon.com (school lunches)','bread_nippon_lunch')
 JP=ext('https://www.jeepe.jp/fr/articles/nagoya-ogura-toast-1418','Jeepe (ogura toast)','bread_jeepe_ogura')
@@ -44,7 +46,7 @@ f_anpan=fig('anpan','Two round buns with seeds on top on a white background; the
 f_curry=fig('curry','Two halves of a golden, breadcrumb-coated fried bun, each opened to show a thick brown curry filling inside soft white bread','Curry bread, cut open: a breaded, deep-fried bun with curry inside.',f'Photo: Laitr Keiows, {BYSA3}, 7 August 2010. {VIA}')
 f_yaki=fig('yakisoba','A long, soft golden roll split open and packed with orange-tinged fried noodles, with red ginger and a sprinkle of green on top','Yakisoba-pan: fried noodles in a long roll.',f'Photo: Ocdp, {CC0}, 13 November 2016. {VIA}')
 f_age=fig('agepan','Two long, golden rolls on a cooling rack, one with a sugar-coated crust in front and one with a pale brown powder coating behind','Agepan: a fried roll coated in sugar or kinako.',f'Photo: Quercus acuta, {CC0}, 16 April 2017. {VIA}')
-f_croq=fig('croquette','A white plate with a round, dark, fried bun and a long roll topped with a breaded croquette-like piece, next to a white mug of black coffee on a wooden slatted table','Two fried-style savory breads with coffee.',f'Photo: Ocdp, {CC0}, 21 May 2017. {VIA}')
+f_croq=fig('croquette','A white plate with a round, dark, fried curry bread and a long korokke pan roll with a breaded croquette on it, next to a white mug of black coffee on a wooden slatted table','Curry bread (round, left) and korokke pan (the long roll) with coffee.',f'Photo: Ocdp, {CC0}, 21 May 2017. {VIA}')
 f_corn=fig('cornet','A glossy golden-brown spiral-shaped bun with a dark filling visible at the open end, in a clear wrapper','A chocolate cornet: a spiral bun with a dark filling.',f'Photo: yto (Flickr, uploaded by Psihedelisto), {BY2}, uploaded 8 October 2021. {VIA}',maxw=420)
 f_men=fig('menchi','An orange box holding a sandwich cut into pieces: thick breaded minced-meat patties with sauce between slices of white bread','A menchi-katsu sandwich in its box.',f'Photo: jetalone, {BY2}, 16 December 2006. {VIA}',maxw=560)
 f_tam=fig('tamago','A tray of sandwiches on white bread cut to show a bright yellow filling, with a small green garnish at the lower left','Tamago sando: a soft, bright yellow egg filling in white bread.',f'Photo: くろふね (Jranar), {BYSA4}, 8 May 2019. {VIA}')
@@ -81,7 +83,7 @@ main=f'''<main>
     <ol>
       <li><a href="#opening">Opening: A Note from the Guide</a></li>
       <li><a href="#sweet">Sweet Buns: Anpan, Melonpan, Cornet</a></li>
-      <li><a href="#savory">Savory and Fried: Curry Bread, Yakisoba-pan, Agepan</a></li>
+      <li><a href="#savory">Savory and Fried: Curry Bread, Yakisoba-pan, Agepan, Korokke Pan</a></li>
       <li><a href="#sando">Sandwiches and Toast</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
@@ -127,9 +129,12 @@ main=f'''<main>
     {f_age}
     <p>Commons describes this pair as deep-fried koppe-pan, sugar on the front one and kinako on the back one, and the two powdery coats are easy to tell apart in the photograph.</p>
 
-    <h3>Two More Fried Breads</h3>
+    <h3>Korokke Pan, with Curry Bread Beside It</h3>
     {f_croq}
-    <p>This plate has a round, dark, fried bun and a long roll with a croquette-style piece on top, set beside black coffee. The photographer's description is not visible to me, so I will not name either bread. It is an example of the kind of lunch a bakery counter can build in two items.</p>
+    <p>The round, dark bun on this plate is curry bread. The long roll with the breaded piece on it is <strong>korokke pan</strong>, croquette bread, and it is the plainer of the two to explain: a fried potato croquette served in a soft roll.</p>
+    <p>{FIK} describes it as a deep-fried korokke tucked into a soft, elongated roll called koppepan, and calls it a good example of <em>sozai pan</em>, the savory "side-dish" breads. The Japanese korokke is mainly mashed potato, often mixed with ground beef and vegetables, coated in panko and fried. It is a cheap, filling food, which is the reason it works so well inside bread. {TTK} describes the same idea as a mashed-potato hot dog, with a milk-bread bun.</p>
+    <p>Sources differ on the finishing touches. {FIK} says the croquette gets a sweet, tangy sauce such as tonkatsu sauce, while {TTK} lists Worcestershire sauce, mayonnaise, and tomato or shredded cabbage. In practice it depends on the bakery, so look at what the counter shows. The same article says Choshiya, a Ginza shop founded in 1927 behind the Kabuki-za, claims to be the birthplace, and that the sandwich was invented in 1927. That is a single source and the shop's own claim, so I would treat it as the story told there, not settled history. Curry bread has a 1927 origin story too, so the date is not a clean marker for either bread.</p>
+    <p>For a visitor the practical point is simple. Both are fried, both are cheap, and a bakery or convenience store will often have the pair. Korokke pan is the gentler choice if you want potato and crunch without any spice.</p>
 
     <h2 id="sando">Sandwiches and Toast<span class="h2-jp">サンドイッチとトースト</span></h2>
     <p>Most Japanese sandwiches use shokupan, the soft, lightly sweet, rectangular loaf, usually with the crusts trimmed. {JTA} covers the main ones.</p>
@@ -190,7 +195,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> anpan from {NP} and {JT}; melonpan from {TW}; curry bread from {FIJ}; yakisoba-pan from {TT}; agepan from {NPL}; sandwiches from {JTA} and {TTF}; ogura toast from {JP}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details or prices.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> anpan from {NP} and {JT}; melonpan from {TW}; curry bread from {FIJ}; yakisoba-pan from {TT}; agepan from {NPL}; korokke pan from {FIK} and {TTK}; sandwiches from {JTA} and {TTF}; ogura toast from {JP}. Photograph details come from the Wikimedia Commons descriptions. I have not verified current shop details or prices.</p>
 
   </article>
 
