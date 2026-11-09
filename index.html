@@ -2643,6 +2643,16 @@ transition: background 0.15s, color 0.15s;
 <style>
 #start-here .start-btn{display:inline-block;margin:0 8px 8px 0;padding:8px 15px;background:linear-gradient(135deg,#f9e9a8 0%,#e6c45a 28%,#c9971c 52%,#f3d77c 78%,#d6a92b 100%);color:#1a1a1a;font-weight:700;font-size:15px;letter-spacing:.02em;text-decoration:none;border-radius:3px;border:1px solid #b8860b;box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 1px 3px rgba(120,80,0,.35);text-shadow:0 1px 0 rgba(255,245,200,.6);transition:filter .2s,transform .2s,box-shadow .2s;}
 #start-here .start-btn:hover{filter:brightness(1.07) saturate(1.1);transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 3px 8px rgba(160,110,0,.45);}
+#start-here .start-btn.sb-red{background:linear-gradient(135deg,#f7a39b 0%,#f47d71 28%,#da6055 52%,#f6978e 78%,#ed695c 100%);border-color:#a94b42;text-shadow:0 1px 0 rgba(255,255,255,.45);}
+#start-here .start-btn.sb-olive{background:linear-gradient(135deg,#c9ce8f 0%,#b2b960 28%,#979e43 52%,#c2c880 78%,#a5ac49 100%);border-color:#767b34;text-shadow:0 1px 0 rgba(255,255,255,.45);}
+#start-here .start-btn.sb-mauve{background:linear-gradient(135deg,#deb7d1 0%,#cf99be 28%,#b57da3 52%,#d9aecb 78%,#c588b1 100%);border-color:#8d617f;text-shadow:0 1px 0 rgba(255,255,255,.45);}
+#start-here .start-btn.sb-lavender{background:linear-gradient(135deg,#d4c6f6 0%,#c1aef2 28%,#a693d8 52%,#cebff4 78%,#b5a0eb 100%);border-color:#8272a8;text-shadow:0 1px 0 rgba(255,255,255,.45);}
+#start-here .start-btn.sb-khaki{background:linear-gradient(135deg,#e1dcb0 0%,#d5ce8e 28%,#bab372 52%,#ddd8a5 78%,#cbc37c 100%);border-color:#918b59;text-shadow:0 1px 0 rgba(255,255,255,.45);}
+#start-here .start-btn.sb-teal{background:linear-gradient(135deg,#88d1c4 0%,#56beab 28%,#39a390 52%,#79cbbc 78%,#3eb19d 100%);border-color:#2c7f70;text-shadow:0 1px 0 rgba(255,255,255,.45);}
+#start-here .start-btn.sb-fuchsia{background:linear-gradient(135deg,#f1b5e2 0%,#eb95d6 28%,#d17abb 52%,#efabde 78%,#e384cc 100%);border-color:#a25e92;text-shadow:0 1px 0 rgba(255,255,255,.45);}
+#start-here .start-btn.sb-denim{background:linear-gradient(135deg,#a3baec 0%,#7c9ce4 28%,#5f81ca 52%,#97b1e9 78%,#688cdc 100%);border-color:#4a649d;text-shadow:0 1px 0 rgba(255,255,255,.45);}
+#start-here .start-btn.sb-ice{background:linear-gradient(135deg,#d0eef9 0%,#bde6f6 28%,#a2ccdc 52%,#caebf8 78%,#b0def0 100%);border-color:#7e9fac;text-shadow:0 1px 0 rgba(255,255,255,.45);}
+#start-here .start-btn.sb-honey{background:linear-gradient(135deg,#efd18f 0%,#e8be60 28%,#cea343 52%,#edcb80 78%,#e0b149 100%);border-color:#a07f34;text-shadow:0 1px 0 rgba(255,255,255,.45);}
 #start-here .start-btn.sb-coral{background:linear-gradient(135deg,#f6ada5 0%,#f28a7f 28%,#d86e63 52%,#f4a29a 78%,#eb786c 100%);border-color:#a8554d;text-shadow:0 1px 0 rgba(255,255,255,.45);}
 #start-here .start-btn.sb-sky{background:linear-gradient(135deg,#a6d0f4 0%,#80bcf0 28%,#64a1d6 52%,#9acaf3 78%,#6dafe9 100%);border-color:#4e7da7;text-shadow:0 1px 0 rgba(255,255,255,.45);}
 #start-here .start-btn.sb-lemon{background:linear-gradient(135deg,#f7e28f 0%,#f4d761 28%,#dabc44 52%,#f6df81 78%,#edcd4a 100%);border-color:#a99234;text-shadow:0 1px 0 rgba(255,255,255,.45);}
@@ -2697,6 +2707,24 @@ transition: background 0.15s, color 0.15s;
         <h2 style="font-family:'Shippori Mincho',serif;font-size:22px;font-weight:400;color:var(--kon);margin:0 0 8px;line-height:1.4;">Where to See the Colours</h2>
         <p style="font-size:17px;line-height:1.7;color:var(--kon);margin:0 0 14px;">From Kyoto's famous temples to quieter sanctuaries, with illuminations after dark.</p>
         <div><a href="/guides/autumn-sanctuaries/" onclick="trackEvent('click','internal','home_start_autumn')" class="start-btn sb-raspberry">Autumn guide</a><a href="/guides/kyoto-illuminations/" onclick="trackEvent('click','internal','home_start_illuminations')" class="start-btn sb-cornflower">Kyoto illuminations</a><a href="/guides/tofukuji/" onclick="trackEvent('click','internal','home_start_tofukuji')" class="start-btn sb-mint">Tofuku-ji</a></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e8d8c4;border-left:4px solid #3FB5A0;border-radius:4px;padding:22px 24px;">
+        <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 8px;">Food</p>
+        <h2 style="font-family:'Shippori Mincho',serif;font-size:22px;font-weight:400;color:var(--kon);margin:0 0 8px;line-height:1.4;">What to Eat in Japan</h2>
+        <p style="font-size:17px;line-height:1.7;color:var(--kon);margin:0 0 14px;">Regional specialties, popular dishes, ramen and Japanese sweets, with real photos and how to order.</p>
+        <div><a href="/regional-food/" onclick="trackEvent('click','internal','home_start_regional_food')" class="start-btn sb-teal">Regional food</a><a href="/culture/popular-dishes/" onclick="trackEvent('click','internal','home_start_popular_dishes')" class="start-btn sb-honey">Popular dishes</a><a href="/culture/ramen/" onclick="trackEvent('click','internal','home_start_ramen')" class="start-btn sb-ice">Ramen</a><a href="/culture/wagashi/" onclick="trackEvent('click','internal','home_start_wagashi')" class="start-btn sb-khaki">Wagashi</a></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e8d8c4;border-left:4px solid #B9A3F0;border-radius:4px;padding:22px 24px;">
+        <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 8px;">Culture</p>
+        <h2 style="font-family:'Shippori Mincho',serif;font-size:22px;font-weight:400;color:var(--kon);margin:0 0 8px;line-height:1.4;">Tea, Flowers and Etiquette</h2>
+        <p style="font-size:17px;line-height:1.7;color:var(--kon);margin:0 0 14px;">The tea ceremony, ikebana and the customs behind shrine and temple visits, explained for first-timers.</p>
+        <div><a href="/culture/tea-ceremony/" onclick="trackEvent('click','internal','home_start_tea')" class="start-btn sb-lavender">Tea ceremony</a><a href="/culture/ikebana/" onclick="trackEvent('click','internal','home_start_ikebana')" class="start-btn sb-fuchsia">Ikebana</a><a href="/culture/" onclick="trackEvent('click','internal','home_start_culture_hub')" class="start-btn sb-denim">All culture guides</a></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e8d8c4;border-left:4px solid #F26B5E;border-radius:4px;padding:22px 24px;">
+        <p style="font-family:'EB Garamond',serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);margin:0 0 8px;">Festivals</p>
+        <h2 style="font-family:'Shippori Mincho',serif;font-size:22px;font-weight:400;color:var(--kon);margin:0 0 8px;line-height:1.4;">Matsuri Through the Year</h2>
+        <p style="font-size:17px;line-height:1.7;color:var(--kon);margin:0 0 14px;">Japan's biggest festivals and the seasonal rituals behind them, from summer fireworks to New Year at the shrine.</p>
+        <div><a href="/festivals/" onclick="trackEvent('click','internal','home_start_festivals')" class="start-btn sb-red">Festivals</a><a href="/guides/seasonal-traditions/" onclick="trackEvent('click','internal','home_start_seasonal_traditions')" class="start-btn sb-olive">Seasonal traditions</a><a href="/festivals/autumn-winter-festivals/" onclick="trackEvent('click','internal','home_start_autumn_winter_festivals')" class="start-btn sb-mauve">Autumn &amp; winter</a></div>
       </div>
     </div>
   </div>
