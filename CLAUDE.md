@@ -415,3 +415,7 @@
 - 写真本体はあるが未使用：おしるこ（木椀）・かりんとう風の揚げ菓子（作者・ライセンスのスクショ待ち）、ちんすこう（包装に店名が写るため不使用）、金平糖・厚い丸い餡菓子（スクショ待ち）
 - 城ピン：ユーザーの手元にフォルダがあるのは17（名古屋・姫路・彦根・備中松山・二条・大阪・松本・松山・松江・高知・弘前・犬山・熊本・丸亀・丸岡・宇和島＋城リール）。残り15城（江戸・岡山・広島・萩・津山・金沢・首里・竹田・小田原・会津若松・五稜郭・仙台・和歌山・高遠・岐阜）は画像が無いため、サイトの写真から作り直す候補。城シリーズの型＝1ページ目に城名ピン、2ページ目に「Main Keep／天守閣」ピン、帯は城ごとの色、崩れた石垣などネガティブな写真は使わない
 - 他チャットに渡した画像はこちらから取り出せない（過去チャットは文章のみ参照可）。写真と作者・ライセンスはリポジトリ（PHOTO-CREDITS.csv）から再利用できる
+- 【2026-11-11 実施】忍者と侍の特集を新規作成：culture/samurai-and-ninja/（ハブ）、culture/samurai/、culture/ninja/。ビルダー＝_tools/culture/shinobi_common.py（共通）／samurai.py／ninja.py／samurai_ninja.py（再ビルド：`python3 _tools/culture/NAME.py`）。反映済み：culture/index.html（カード3枚・モバイルナビ・フッター）、sitemap.xml、OGP（images/og/og-culture-*.jpg）、ハブ画像（images/hub/samurai*.jpg）、PHOTO-CREDITS.csv。写真は岡山城・松山城・松江城ページの甲冑／刀／兜を再利用（ninjaページは写真なし）
+- 事実の出典：侍の歴史＝The Collector／武家屋敷＝Kyuhoshi／侍ミュージアム＝Travel Caffeine（2018）／相馬野馬追＝Nippon.com（2018）／忍者＝JNTO・伊賀流忍者博物館公式・japan-guide・GLTJP（甲賀の里 2026-05更新）・Kids Web Japan・Time Out Tokyo（2021）／忍者フェスタ＝Wikipedia／漫画＝公式サイト・ANN・Japan Times。料金・時間は出典間で食い違う（忍者博物館：公式1,000円／japan-guide 800円）ため「公式で確認」表記
+- アフィリエイト：Viator検索リンク（Japan+samurai+experience／Japan+ninja+experience、PID P00298374）を各ページ本文とスティッキーバーに設置
+- 【未対応】ninjaページの写真（伊賀流忍者博物館・甲賀の里・忍者屋敷・忍者フェスタなど）／体験施設の追加（京都・大阪など）／漫画・アニメの追加作品（銀魂・サムライチャンプルー等は未検証のため未掲載）／城ガイドや anime/ からの内部リンク／Search Consoleインデックス登録（3URL）
