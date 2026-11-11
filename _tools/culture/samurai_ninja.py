@@ -74,6 +74,7 @@ main = f'''<main>
       <li><strong>Mounted-warrior festival:</strong> Soma Nomaoi in Minamisoma, Fukushima, at the end of July.</li>
       <li><strong>Ninja training in Tokyo:</strong> the Ninja Information Centre Tokyo &amp; Dojo in Asakusa (a 2021 report; check current courses).</li>
       <li><strong>Ninja festival:</strong> the Iga Ueno Ninja Festa, about April 1 to May 6.</li>
+      <li><strong>NARUTO x BORUTO village:</strong> Shinobi-zato at Nijigen no Mori on Awaji Island, with tickets, rules and access in our {link('/culture/nijigen-no-mori/', 'Nijigen no Mori guide', 'hub_to_nijigen')}.</li>
       <li><strong>Booked experiences:</strong> compare current {aff(VI_SAM, 'samurai experiences', 'hub_viator_samurai')} and {aff(VI_NIN, 'ninja experiences', 'hub_viator_ninja')} on Viator.</li>
     </ul>
 
@@ -87,7 +88,7 @@ main = f'''<main>
 
     <h2 id="media">Manga and Anime to Read First<span class="h2-jp">漫画・アニメ</span></h2>
     <ul>
-      <li><strong>Naruto</strong> (Masashi Kishimoto, 1999 to 2014): an outcast ninja who wants to become Hokage. See the {link('/culture/ninja/#media', 'ninja guide', 'hub_media_naruto')}.</li>
+      <li><strong>Naruto</strong> (Masashi Kishimoto, 1999 to 2014): an outcast ninja who wants to become Hokage. See the {link('/culture/ninja/#media', 'ninja guide', 'hub_media_naruto')}, and visit its village at {link('/culture/nijigen-no-mori/', 'Nijigen no Mori', 'hub_media_naruto_nijigen')}.</li>
       <li><strong>Basilisk</strong> (from Futaro Yamada's 1959 novel): the Iga and Kouga clans fight over the Tokugawa succession. See the {link('/culture/ninja/#media', 'ninja guide', 'hub_media_basilisk')}.</li>
       <li><strong>Rurouni Kenshin</strong> (Nobuhiro Watsuki, from 1994): a wandering former assassin in 1878. See the {link('/culture/samurai/#media', 'samurai guide', 'hub_media_kenshin')}.</li>
       <li><strong>Vagabond</strong> (Takehiko Inoue, from 1998): the life of the swordsman Miyamoto Musashi. See the {link('/culture/samurai/#media', 'samurai guide', 'hub_media_vagabond')}.</li>

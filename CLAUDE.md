@@ -419,3 +419,4 @@
 - 事実の出典：侍の歴史＝The Collector／武家屋敷＝Kyuhoshi／侍ミュージアム＝Travel Caffeine（2018）／相馬野馬追＝Nippon.com（2018）／忍者＝JNTO・伊賀流忍者博物館公式・japan-guide・GLTJP（甲賀の里 2026-05更新）・Kids Web Japan・Time Out Tokyo（2021）／忍者フェスタ＝Wikipedia／漫画＝公式サイト・ANN・Japan Times。料金・時間は出典間で食い違う（忍者博物館：公式1,000円／japan-guide 800円）ため「公式で確認」表記
 - アフィリエイト：Viator検索リンク（Japan+samurai+experience／Japan+ninja+experience、PID P00298374）を各ページ本文とスティッキーバーに設置
 - 【未対応】ninjaページの写真（伊賀流忍者博物館・甲賀の里・忍者屋敷・忍者フェスタなど）／体験施設の追加（京都・大阪など）／漫画・アニメの追加作品（銀魂・サムライチャンプルー等は未検証のため未掲載）／城ガイドや anime/ からの内部リンク／Search Consoleインデックス登録（3URL）
+- 【2026-11-11 追加】culture/nijigen-no-mori/（ニジゲンノモリ：NARUTO×BORUTO 忍里＋ドラゴンクエストアイランド）を新規作成。ビルダー＝_tools/culture/nijigen.py。ルート直下の nijigen-no-mori.md（2026-09-19の原稿）は公開ページではなかったため、料金・所要時間・アクセスは公式（nijigennomori.com／Pasona／Hyogo Tourism）で確認し直して書き換え（原稿のALL Inclusive 30,800円・オープン年2017・堀井雄二の出身地・伝説の洞窟撮影禁止・Luida's Tavern価格・GRAND CHARIOT詳細は未確認のため不掲載）。忍者ガイド・特集ハブ・culture/index・sitemap・OGPに反映。写真なし（必要：忍里・火影岩・DQアイランド等）
