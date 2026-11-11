@@ -420,3 +420,5 @@
 - アフィリエイト：Viator検索リンク（Japan+samurai+experience／Japan+ninja+experience、PID P00298374）を各ページ本文とスティッキーバーに設置
 - 【未対応】ninjaページの写真（伊賀流忍者博物館・甲賀の里・忍者屋敷・忍者フェスタなど）／体験施設の追加（京都・大阪など）／漫画・アニメの追加作品（銀魂・サムライチャンプルー等は未検証のため未掲載）／城ガイドや anime/ からの内部リンク／Search Consoleインデックス登録（3URL）
 - 【2026-11-11 追加】culture/nijigen-no-mori/（ニジゲンノモリ：NARUTO×BORUTO 忍里＋ドラゴンクエストアイランド）を新規作成。ビルダー＝_tools/culture/nijigen.py。ルート直下の nijigen-no-mori.md（2026-09-19の原稿）は公開ページではなかったため、料金・所要時間・アクセスは公式（nijigennomori.com／Pasona／Hyogo Tourism）で確認し直して書き換え（原稿のALL Inclusive 30,800円・オープン年2017・堀井雄二の出身地・伝説の洞窟撮影禁止・Luida's Tavern価格・GRAND CHARIOT詳細は未確認のため不掲載）。忍者ガイド・特集ハブ・culture/index・sitemap・OGPに反映。写真なし（必要：忍里・火影岩・DQアイランド等）
+
+- 2026-11-11 culture/ninja：写真9枚＋解説を追加（家 z tanuki CC BY 3.0・2013-10-06＝ヒーロー／装束 Jeremy Hall CC BY 2.0・2006-02-25／入口の標石 Hide-sp CC BY-SA 3.0・2007-09-05／広場パノラマ z tanuki／忍者ショー・演者 John Gillespie CC BY-SA 2.0・2012-05-17／手裏剣の板 specialoperations CC BY-SA 2.0・同／伊賀上野城に見える遠景・石垣 carloshonda CC BY 3.0・2014-04-12、透かしあり・『私の読み』と明記）。写真とスクショは寸法・縦横比・内容で対応（Gillespie2枚・carloshonda2枚の取り違えは不確かだが作者・ライセンス同一）。文化ハブの忍者カードを写真化（images/hub/ninja.*）。【未対応】インデックス登録（4URL）、samurai・nijigenの写真

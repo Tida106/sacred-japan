@@ -21,6 +21,9 @@ CC0 = lic('CC0', 'https://creativecommons.org/publicdomain/zero/1.0/')
 BYSA4 = lic('CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/')
 BYSA3 = lic('CC BY-SA 3.0', 'https://creativecommons.org/licenses/by-sa/3.0/')
 BY4 = lic('CC BY 4.0', 'https://creativecommons.org/licenses/by/4.0/')
+BY3 = lic('CC BY 3.0', 'https://creativecommons.org/licenses/by/3.0/')
+BY2 = lic('CC BY 2.0', 'https://creativecommons.org/licenses/by/2.0/')
+BYSA2 = lic('CC BY-SA 2.0', 'https://creativecommons.org/licenses/by-sa/2.0/')
 PDM = lic('Public Domain Mark', 'https://creativecommons.org/publicdomain/mark/1.0/')
 
 
@@ -60,7 +63,7 @@ def copy_photos(S, photos, maxw=1200):
     out = f'{R}/culture/{S}/images'
     os.makedirs(out, exist_ok=True)
     for k, src in photos.items():
-        im = Image.open(f'{R}/{src}').convert('RGB')
+        im = Image.open(src if src.startswith('/') else f'{R}/{src}').convert('RGB')
         w, h = im.size
         if w > maxw:
             im = im.resize((maxw, round(h * maxw / w)), Image.LANCZOS)

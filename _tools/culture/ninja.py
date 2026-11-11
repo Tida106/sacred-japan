@@ -3,7 +3,29 @@ sys.path.insert(0, '/home/claude/sacred-japan/_tools/culture')
 from shinobi_common import *
 
 S = 'ninja'
-# No photos yet: the repo has no ninja photographs. Add them here (copy_photos + fig) when sent.
+A = '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/'
+copy_photos(S, {'house': A+'26326240-image.jpg', 'costume': A+'060f8788-image.png', 'sign': A+'40ec3ad8-image.jpg',
+                'panorama': A+'42e85883-image.jpg', 'show': A+'20cb774e-image.jpg', 'performer': A+'7ffdb7fc-image.jpg',
+                'shuriken': A+'b0b747c1-image.jpg', 'castle1': A+'6c278486-image.jpg', 'castle2': A+'a434f596-image.jpg'})
+fig = make_fig(S)
+f_house = fig('house', 'A thatched-roof house behind pruned pines and a gravel path, with a low gate and tiled wall in front',
+  'A thatched house in the grounds of the Ninja Museum of Igaryu, Iga Ueno.', f'Photo: z tanuki, {BY3}, 6 October 2013, {VIA}', hero=True)
+f_costume = fig('costume', 'A museum case with dark ninja clothing, a hooded garment, straw sandals and a straw hat, with explanatory labels',
+  'Ninja clothing and gear on display at the museum.', f'Photo: Jeremy Hall, {BY2}, 25 February 2006, {VIA}')
+f_sign = fig('sign', 'A stone sign reading Igaryu Ninja Museum in front of a thatched building among tall pines',
+  'The stone sign at the museum entrance.', f'Photo: Hide-sp, {BYSA3}, 5 September 2007, {VIA}')
+f_pano = fig('panorama', 'A wide view of a gravel plaza with a red shrine gate at the left and a low tiled building with an awning at the right',
+  'The plaza near the museum entrance, in a wide view.', f'Photo: z tanuki, {BY3}, {VIA}', maxw=900)
+f_show = fig('show', 'An audience seated on benches watches a performer on a stage with red ninja characters on the backdrop',
+  'The ninja show at the Iga museum.', f'Photo: John Gillespie, {BYSA2}, 17 May 2012, {VIA}')
+f_perf = fig('performer', 'A performer in a brown ninja costume holds a sword and points ahead, in front of a red ninja character',
+  'A performer during the show.', f'Photo: John Gillespie, {BYSA2}, 17 May 2012, {VIA}')
+f_shuri = fig('shuriken', 'A smiling guide in a light costume holds a board showing eight throwing-star shapes, a ring and a spike',
+  'A guide with a board of throwing tools.', f'Photo: specialoperations, {BYSA2}, 17 May 2012, {VIA}', maxw=420)
+f_c1 = fig('castle1', 'A wide dusk view over green trees and a town toward a small white castle keep, with mountains behind',
+  'A distant view toward what appears to be Iga Ueno Castle.', f'Photo: carloshonda, {BY3}, 12 April 2014, {VIA}')
+f_c2 = fig('castle2', 'A castle keep on a hill above a high stone wall and a moat, with cherry trees and flat land beyond',
+  'The keep and its high stone wall, from above.', f'Photo: carloshonda, {BY3}, 12 April 2014, {VIA}')
 
 JTR = ext('https://www.japan.travel/en/japan-magazine/discover-origins-ninja-iga-koka/', 'Japan National Tourism Organization (JNTO)', 'ninja_src_jnto')
 IGA = ext('https://iganinja.jp/en/museum', 'the museum\'s official English page', 'ninja_src_iga_official')
@@ -37,6 +59,8 @@ faq_html, faq_ld = faq_blocks(faqs)
 
 main = f'''<main>
 
+  {f_house}
+
   <aside class="toc" aria-label="Table of contents">
     <div class="toc-label">TABLE OF CONTENTS ／ 目次</div>
     <div class="toc-title">In This Guide</div>
@@ -62,6 +86,8 @@ main = f'''<main>
     <h2 id="who">Who the Ninja Were<span class="h2-jp">忍者とは</span></h2>
     <p>Ninja (<span class="jp">忍者</span>), also called shinobi, were covert operatives. {JTR} describes them as covert warriors who came to prominence in the Sengoku period (1467 to 1568), working in espionage and other secret operations for their lords. It names the Fujibayashi family as specialists in fire and gunpowder-related techniques.</p>
     <p>A word on that source: it is a tourism-promotion page, and it hedges many claims with "said to." For example, it says the famous manual <em>Bansenshukai</em> is "said to have been written" in 1676. I will not repeat the more colorful claims, because I cannot confirm them. What the page, and the museums it points to, do agree on is the picture below: houses built to defend against intruders and a culture of information gathering.</p>
+    <p>The museum's cases show the working side of that picture: dark, plain clothing, a hooded garment, straw sandals and a straw hat, each with a label in Japanese and English. Notice how ordinary most of it looks.</p>
+    {f_costume}
 
     <h2 id="iga-koka">Iga and Koka<span class="h2-jp">伊賀と甲賀</span></h2>
     <p>{JTR} says Iga City (Mie) and Koka City (Shiga) sit next to each other in the Kinki region, with Koka to the north, and calls them the birthplaces of the ninja. It also says the two areas were self-governing in the Sengoku period, run by local families and samurai without a daimyo's authority, and that village codes called for deciding things by discussion. The two regions are also recognized as a Japan Heritage site with the name "Exploring the Birthplace of the Real Ninja."</p>
@@ -75,6 +101,13 @@ main = f'''<main>
       <li><strong>Hours:</strong> 10:00 to 16:00 on weekdays (last entry 15:30) and 10:00 to 16:30 on weekends and holidays (last entry 16:00), per the official page. It lists a closure from December 29 to January 1.</li>
       <li><strong>Admission:</strong> adults 1,000 yen and children 700 yen, with the show at 600 yen and six shuriken throws at 300 yen, according to the official page. japan-guide.com gives lower figures (800 yen and 500 yen), so please confirm before you go.</li>
     </ul>
+    <p>The entrance is marked by a stone sign reading Igaryu Ninja Museum, set among tall pines in front of a thatched building. Beyond it a gravel plaza opens up, with a small red shrine gate on one side and a low tiled building with an awning on the other.</p>
+    {f_sign}
+    {f_pano}
+    <p>The ninja show is performed on an open stage with benches, under a backdrop of red ninja characters, and the audience sits close. The performer shows weapons and moves with a sword, and the pointing gesture in the second photo shows how near the action is. A guide also explains throwing tools on a board; one of the shapes is a manji (卍), the swastika-like symbol used in Buddhism in Japan. Sources say the show is in Japanese, but the action is easy to follow.</p>
+    {f_show}
+    {f_perf}
+    {f_shuri}
 
     <h3>Koka Ninja Village (Koka, Shiga)</h3>
     <p>{GLT} (listing updated in May 2026) describes a village at the foot of the Suzuka Mountains with a ninjutsu museum in a thatched house believed to have belonged to Koka ninja, a trick house that is the relocated home of the Fujibayashi family, with a flipping wall, hidden stairs and an escape hole under a hearth, and a ninja dojo with nine practice places.</p>
@@ -89,6 +122,9 @@ main = f'''<main>
 
     <h3>Other places in Iga and Koka</h3>
     <p>{JTR} also lists Iga Ueno Castle, whose reconstructed keep stands behind a stone wall about 30 meters high; Matsumoto-in Temple in Iga (built 1616, a Shugendo temple); and Aburahi Shrine in Koka, where a corridor built in 1566 was once a meeting place for Koka samurai. These are good additions if you stay overnight in the area.</p>
+    <p>These two aerial views, taken in April, show what appears to be Iga Ueno Castle: a small white keep over the town in the first, and the high stone wall and moat in the second. The photos carry a photographer's watermark, and Commons does not name the viewpoint, so treat the building as my reading.</p>
+    {f_c1}
+    {f_c2}
 
     <h2 id="experience">Experiences and the Ninja Festa<span class="h2-jp">体験とお祭り</span></h2>
     <ul>
