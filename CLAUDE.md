@@ -407,3 +407,11 @@
 - インデックス登録バックログ（1日の上限あり・数本ずつ依頼）：culture/yakitori／popular-dishes／bread／wagashi／noodles／japanese-sweets／ramen／ikebana／tea-ceremony、/culture/、/guides/、/regional-food/、/、城：sendai／tsuyama／hagi／hiroshima／okayama／edo／nagoya／osaka／kochi／wakayama／takato／gifu／best-castles-japan／kumamoto／matsumoto、アニメ・shrines系（kifune／nonomiya／kamidana／hokakuji／katsuragawa）
 - 未着手の候補：モバイルナビへの茶道・華道・食ガイド追加／お好み焼きの扱い／AI生成の食品画像（food-*.jpg）の実写真置換／アニメ記事の巡礼プラン化（fruits-basket／kusunoki-tei／inuyasha／demon-slayer／noragami）／工芸記事の残り13／城の次候補（福岡城跡・上田城・浜松城・小倉城・今帰仁城）／弘前城（2027年春）・岐阜城（2027年11月）の更新／背景ピンク案の決定
 - 要確認の記述：shrines/nonomiya-shrine の「黒木鳥居は20年ごとに建て替え」「ノコギリガシ」、guides/hokakuji の廃墟か否か
+
+## 【引き継ぎ・最新】2026-11-11（新チャット用。上の2026-11-09版より優先）
+- 次の作業：忍者と侍の特集を作る（新チャットで開始）
+- 2026-11-10 ピン・リール作成（スイーツ）：ピンは**1写真1ピン**（コラージュ不可）、帯の色は毎回変える。デザイン＝クリーム背景・藍の大きなセリフ体タイトル・その下に金色の漢字・二重の金枠・色付き帯（サブタイトル＋sacred-japan.net）・左下に小さな金の龍ロゴ。1000×1500。作成スクリプトはscratchpad（make1.py／make2.py＝ピン、reel.py／reel2.py＝リール）で使い捨て
+- 作成済み（culture/wagashi 系、ピン30枚）：どら焼き4／いちご大福2／最中2（monaka2・monaka1）／きんつば2／水信玄餅／甘納豆／あんみつ2／せんべい／かき氷／ういろう／大学芋／杏仁豆腐／豆大福／したたり／鯛焼き2／羊羹／練り切り／わらび餅2／蓬蒸しパン（リンクはculture/bread/）／五平餅2。リール8本（1リール3〜4項目、1ページ3秒、冒頭コラージュ＋最後にサイト案内、音楽なし）：dorayaki／daifuku／beans／summer／snacks／cool／classic／more
+- 写真本体はあるが未使用：おしるこ（木椀）・かりんとう風の揚げ菓子（作者・ライセンスのスクショ待ち）、ちんすこう（包装に店名が写るため不使用）、金平糖・厚い丸い餡菓子（スクショ待ち）
+- 城ピン：ユーザーの手元にフォルダがあるのは17（名古屋・姫路・彦根・備中松山・二条・大阪・松本・松山・松江・高知・弘前・犬山・熊本・丸亀・丸岡・宇和島＋城リール）。残り15城（江戸・岡山・広島・萩・津山・金沢・首里・竹田・小田原・会津若松・五稜郭・仙台・和歌山・高遠・岐阜）は画像が無いため、サイトの写真から作り直す候補。城シリーズの型＝1ページ目に城名ピン、2ページ目に「Main Keep／天守閣」ピン、帯は城ごとの色、崩れた石垣などネガティブな写真は使わない
+- 他チャットに渡した画像はこちらから取り出せない（過去チャットは文章のみ参照可）。写真と作者・ライセンスはリポジトリ（PHOTO-CREDITS.csv）から再利用できる
