@@ -15,6 +15,8 @@ copy_photos(S, {'koka_village': A+'856ded55-image.jpg', 'yashiki_2009': A+'ee494
     'ks_small': A+'7acbcbfd-image.jpg', 'ks_rope': A+'3cf919e3-image.jpg', 'ks_hooks': A+'cb0a8f41-image.jpg',
     'ks_chain': A+'0c9db564-image.jpg', 'ks_bow': A+'39aeb925-image.jpg', 'ks_pipe': A+'e745feb3-image.jpg',
     'plala_gun': A+'9e86584b-image.jpg', 'plala_mail': A+'2c738889-image.jpg', 'aburahi': A+'7cb318fc-image.jpg'})
+copy_photos(S, {'ueno_bus': A+'05126d83-image.jpg', 'ueno_interior': A+'119b9747-image.jpg', 'ueno_below': A+'f47ffcc0-image.jpg',
+    'ueno_2005': A+'07ababac-image.jpg', 'ueno_moat': A+'41bf2334-image.jpg'})
 PD_SELF = 'public domain (released by the author)'
 MOT = lambda d: f'Photo: Motokoka, {BYSA4}, {d}, {VIA}'
 f_kv = fig('koka_village', 'A thatched house with a white wall, a gravel path and a small stone stair among trees, with a person on the stair',
@@ -71,6 +73,17 @@ f_c1 = fig('castle1', 'A wide dusk view over green trees and a town toward a sma
   'A distant view toward what appears to be Iga Ueno Castle.', f'Photo: carloshonda, {BY3}, 12 April 2014, {VIA}')
 f_c2 = fig('castle2', 'A castle keep on a hill above a high stone wall and a moat, with cherry trees and flat land beyond',
   'The keep and its high stone wall, from above.', f'Photo: carloshonda, {BY3}, 12 April 2014, {VIA}')
+
+f_ubus = fig('ueno_bus', 'A green highway bus with ninja cartoons along its side and the words Highway Express Iga Liner, parked at a stop',
+  'The Iga Liner bus, decorated with ninja cartoons.', f'Photo: 伊賀上野ニンニン, {BYSA4}, 1 October 2017, {VIA}')
+f_uint = fig('ueno_interior', 'A wide view of a wooden floor inside a castle keep with display cases along the walls and a lattice ceiling above',
+  'What appears to be the interior of a keep, in a wide view.', f'Photo: z tanuki, {BY3}, 6 October 2013, {VIA}', maxw=900)
+f_ubelow = fig('ueno_below', 'A white castle keep and a smaller turret seen from below above a stone wall and green trees',
+  'The keep and a turret, seen from below.', f'Photo: Asturio Cantabrio, {BYSA4}, February 2020, {VIA}')
+f_u2005 = fig('ueno_2005', 'A white castle keep with tiled roofs under a blue sky, with trees at the bottom of the frame',
+  'The keep under a blue sky, in a photo from 2005.', f'Photo: T@ka, {BYSA3}, 20 August 2005, {VIA}', maxw=600)
+f_umoat = fig('ueno_moat', 'A long stone wall rising straight from a moat, with trees and a pale sky behind',
+  'The stone wall rising from the moat.', f'Photo: MemColorLab, {BYSA4}, 5 May 2014, {VIA}')
 
 JTR = ext('https://www.japan.travel/en/japan-magazine/discover-origins-ninja-iga-koka/', 'Japan National Tourism Organization (JNTO)', 'ninja_src_jnto')
 IGA = ext('https://iganinja.jp/en/museum', 'the museum\'s official English page', 'ninja_src_iga_official')
@@ -137,6 +150,8 @@ main = f'''<main>
     <h2 id="iga-koka">Iga and Koka<span class="h2-jp">伊賀と甲賀</span></h2>
     <p>{JTR} says Iga City (Mie) and Koka City (Shiga) sit next to each other in the Kinki region, with Koka to the north, and calls them the birthplaces of the ninja. It also says the two areas were self-governing in the Sengoku period, run by local families and samurai without a daimyo's authority, and that village codes called for deciding things by discussion. The two regions are also recognized as a Japan Heritage site with the name "Exploring the Birthplace of the Real Ninja."</p>
     <p>If you are planning a trip, the same page says day trips are possible from Osaka or Kyoto by train. For Iga you can take the Tokaido Shinkansen to Nagoya, and for Koka to Kyoto, and it mentions a Ninja Train on the Iga Railway from Kintetsu Iga-Kambe or JR Iga-Ueno.</p>
+    <p>One more way in is by bus. This photo shows a green highway bus with ninja cartoons and the words "Highway Express Iga Liner", which Commons titles as a ninja liner. I have not checked its route, timetable or fares, so confirm them with the operator (Mie Kotsu appears on the bus) before you plan around it.</p>
+    {f_ubus}
 
     <h2 id="visit">Places to Visit<span class="h2-jp">見学先</span></h2>
 
@@ -207,6 +222,14 @@ main = f'''<main>
     <p>These two aerial views, taken in April, show what appears to be Iga Ueno Castle: a small white keep over the town in the first, and the high stone wall and moat in the second. The photos carry a photographer's watermark, and Commons does not name the viewpoint, so treat the building as my reading.</p>
     {f_c1}
     {f_c2}
+    <p>From ground level, the next photo looks up at the white keep and a smaller turret above the stone wall. It is a February 2020 photo, and Commons labels it as Iga Ueno Castle.</p>
+    {f_ubelow}
+    <p>This older photo from August 2005 shows the keep with its tiled roofs under a blue sky. It is small (800 pixels wide), so I have not enlarged it, and the castle may look different today.</p>
+    {f_u2005}
+    <p>The wall is what {JTR} singles out, and this photo of the moat side, titled "Stone wall at Iga Ueno Castle" on Commons, shows how it rises straight from the water. I cannot confirm the height from the photo, so I rely on the roughly 30 meters stated by the JNTO page.</p>
+    {f_umoat}
+    <p>Inside, the photo below looks like a keep interior: a wide wooden floor, display cases along the walls and a lattice ceiling. Commons titles it "Iga Ueno Castle" and gives no room name, so I do not name the floor. Exhibits and opening hours can change, so check before you go.</p>
+    {f_uint}
     <p>In Koka, the cloister of Aburahi Shrine shown below is described on Commons as a place where ninja are said to have met, which matches the corridor built in 1566 that {JTR} mentions. It is a long, covered wooden walkway with thick round pillars and a plank floor, open to the trees on one side.</p>
     {f_abu}
 
