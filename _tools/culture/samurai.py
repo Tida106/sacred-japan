@@ -10,6 +10,16 @@ copy_photos(S, {
     'helmet-horned': 'guides/matsue-castle/images/helmet-horned.jpg',
     'sword': 'guides/okayama-castle/images/sword.jpg',
     'shiomi-nawate': 'guides/matsue-castle/images/shiomi-nawate.jpg',
+    'odachi': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/5414e4b3-image.png',
+    'iwate_sword': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/a70b17c3-image.jpg',
+    'shosoin_copy': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/ffc15e14-image.jpg',
+    'lacma_swords': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/27090b42-image.jpg',
+    'met_wakizashi': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/ecbeae21-image.png',
+    'auckland_scabbard': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/9663fdf1-image.jpg',
+    'tsuba_brass': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/26b7086d-image.jpg',
+    'tsuba_fuji': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/97b36e84-image.jpg',
+    'tsuba_dragon': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/a5324179-image.jpg',
+    'tsuba_cranes': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/2bf15f46-image.jpg',
     'met_front': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/747a0622-image.jpg',
     'met_back': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/0467600e-image.jpg',
     'met_side': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/912c8c39-image.jpg',
@@ -79,6 +89,17 @@ f_m1 = fig('met_front', 'A seated suit of armor with a gold dragon-faced helmet 
 f_m2 = fig('met_back', 'The back of the same armor, with a large orange knot and tassels below the helmet, seen from behind on a wooden stand', 'The same armor from behind.', f'Photo: The Metropolitan Museum of Art (Open Access), {CC0}, accession 36.25.43a–o, Bequest of George C. Stone, 1935. {VIA}', maxw=420)
 f_m3 = fig('met_side', 'A three-quarter view of the seated armor with gold horned crest, striped lacing and fur-covered boots', 'The same armor from the side.', f'Photo: The Metropolitan Museum of Art (Open Access), {CC0}, accession 36.25.43a–o, Bequest of George C. Stone, 1935. {VIA}', maxw=420)
 f_m4 = fig('met_close', 'A close-up of a helmet with a gold dragon face between two gold horns and a gold fan-shaped crest, above a mustache mask and orange cords', 'A close-up of the helmet crest and face mask.', f'Photo: The Metropolitan Museum of Art (Open Access), {CC0}, accession 36.25.43a–o, Bequest of George C. Stone, 1935. {VIA}', maxw=640)
+
+f_s1 = fig('odachi', 'A very long sword with a wooden hilt lies on a wooden stand in a display case at a shrine', 'The Odachi Masayoshi, a very long sword displayed at Yahiko Shrine, Niigata.', f'Photo: Artanisen, {BYSA4}, 16 October 2019. {VIA}', maxw=760)
+f_s2 = fig('iwate_sword', 'A sword with a plain wooden hilt rests on a white-draped stand with the blade fully visible', 'A sword in the Iwate Prefectural Museum, a work of Miyagawa Shuichi (Keio 3, 1867).', f'Photo: 掬茶, {BYSA4}, 3 November 2023. {VIA}', maxw=760)
+f_s3 = fig('shosoin_copy', 'A sword in a dark red scabbard with silver openwork fittings set with red, blue and green stones, and two purple straps hanging above', 'A 19th-century copy of a Shosoin sword, with gilded silver fittings and inlay.', f'Photo: Tamura Sokichi (maker, 19th century), via ColBase: Integrated Collections Database of the National Museums, Japan, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:var(--enshu);">CC BY 4.0</a>. {VIA}', maxw=760)
+f_s4 = fig('lacma_swords', 'A long sword and a short sword, each shown with its blade above its black lacquer scabbard decorated with gold leaves and flecks', 'Swords and scabbards, Los Angeles County Museum of Art (AC1999.186.1.1–.16).', f'Photo: Los Angeles County Museum of Art, public domain (LACMA mark), uploaded to Wikimedia Commons by Fæ, 19 July 2013. {VIA}', maxw=760)
+f_s5 = fig('met_wakizashi', 'A bare blade on a black background above a mounted sword with a blue hilt wrapping and a gold-brown scabbard with chrysanthemum patterns', 'A wakizashi blade and its mounting, Metropolitan Museum of Art.', f'Photo: The Metropolitan Museum of Art (Open Access), {CC0}, uploaded 16 December 2020. {VIA}', maxw=760)
+f_s6 = fig('auckland_scabbard', 'A long, slightly curved wooden sheath covered in small pale rounded dots, photographed on a white background', 'A sword sheath covered in a pale dotted skin, Auckland Museum.', f'Photo: Auckland Museum, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:var(--enshu);">CC BY 4.0</a>, uploaded to Wikimedia Commons by Fæ, 27 October 2019. {VIA}', maxw=760)
+f_t1 = fig('tsuba_brass', 'A brass-colored sword guard with a raised oval ring at the top, cloud patterns and three small feet at the bottom', 'A jar-shaped tsuba of copper alloy, Metropolitan Museum of Art (33.40.26).', f'Photo: The Metropolitan Museum of Art (Open Access), {CC0}, uploaded 26 December 2017. {VIA}', maxw=420)
+f_t2 = fig('tsuba_fuji', 'A round dark sword guard showing a snow-capped mountain at the top and a bald figure resting against a large gold-colored disc at the bottom right', 'A round tsuba with a mountain and a figure, Aberdeen Art Gallery & Museums.', f'Photo: Aberdeen Art Gallery & Museums (Aberdeen City Council), {CC0}, as a digital reproduction of a public-domain work. {VIA}', maxw=330)
+f_t3 = fig('tsuba_dragon', 'A dark iron sword guard with scalloped edges, a gold dragon among clouds at the upper right, and two gold patterned panels', 'An iron tsuba with a gold dragon, Metropolitan Museum of Art (33.40.44).', f'Photo: The Metropolitan Museum of Art (Open Access), {CC0}, uploaded 31 December 2017. {VIA}', maxw=420)
+f_t4 = fig('tsuba_cranes', 'A dark rounded-square sword guard showing two gold cranes flying over water and grasses', 'A tsuba with two flying cranes, Aberdeen Art Gallery & Museums.', f'Photo: Aberdeen Art Gallery & Museums (Aberdeen City Council), {CC0}, as a digital reproduction of a public-domain work. {VIA}', maxw=330)
 
 faqs = [
     ("When did the samurai era end?",
@@ -221,6 +242,44 @@ main = f'''<main>
 
     {f_m4}
     <p>The helmet carries a gold dragon-like face between two horns, and below it the mask has a gray mustache of hair. I match this close-up to the same armor by its crest and cords, so treat that pairing as likely.</p>
+
+
+    <h3>Swords in Japan and Abroad</h3>
+    <p>Swords are shown in several ways. Some are bare blades on stands, and some are whole sets with their scabbards. I use the Commons descriptions for names and dates and mark what I am reading from the photo myself.</p>
+
+    {f_s1}
+    <p>The Commons description calls this the Odachi Masayoshi, one of the longest surviving Japanese swords, on display at Yahiko Shrine in Niigata. It says it was forged by the swordsmith Sanke Masayoshi in 1844, with a blade of about 225 cm. In the photo you can see how far the blade curves across the whole case.</p>
+
+    {f_s2}
+    <p>A bare blade on a white-draped stand in the Iwate Prefectural Museum. The Commons description says it is a sword held by the Morioka domain, made by Miyagawa Shuichi in Keio 3 (1867). With the blade shown alone on a stand, you can follow its gentle curve from tip to tang.</p>
+
+    {f_s3}
+    <p>This is a copy, not an original: the Commons record calls it a 19th-century copy of the "kara-tachi sword with gilded silver fittings and inlay" among the Shosoin Imperial Treasures. The scabbard is dark red, the silver-colored fittings are openwork set with red, blue and green stones, and two purple-and-white straps hang above it.</p>
+
+    {f_s4}
+    <p>The Commons record credits the maker as Yokoyama Sukenaga (active 1830 to 1851) and gives the museum number AC1999.186.1.1–.16. The photo shows a long and a short sword, each with its blade above its scabbard. The dark lacquer scabbards carry gold leaf shapes and flecks, and the hilts are wrapped in brown cord. I read them as a matched pair, but that is my reading.</p>
+
+    {f_s5}
+    <p>The Met's record says the wakizashi blade was made by Soshu Fusamune in the late 15th to early 16th century, and the mounting is 18th century. Above is the bare blade on black. Below is the mounted sword, with a blue hilt wrapping and gold chrysanthemum-like round motifs on the scabbard.</p>
+
+    {f_s6}
+    <p>The Commons record credits Auckland Museum (object number 1934.316). The object looks like a sword sheath covered in a pale, finely dotted skin, perhaps ray skin, but that is my reading of the photo, not a label.</p>
+
+
+    <h3>Tsuba: The Sword Guards</h3>
+    <p>A tsuba is the guard between the blade and the hilt. In the Edo period, when sword carrying was a mark of rank, tsuba became small canvases for metalwork. These four are in museums abroad, and the Commons records give the dates and materials.</p>
+
+    {f_t1}
+    <p>The Met's record lists copper alloy (sentoku), copper and gold. A raised oval ring sits at the top, with cloud scrolls below and three small feet along the bottom edge. The overall shape looks like a jar or gourd.</p>
+
+    {f_t2}
+    <p>Aberdeen's record says late Edo period, possibly 19th century, bronze (ABDMS024836). The plate is round. A snow-capped mountain sits at the top, and at the lower right a bald figure rests against a large gold-colored disc. I will not name the subject, because the record gives only a general description.</p>
+
+    {f_t3}
+    <p>The Met's record (33.40.44) describes an iron plate with gold. A gold dragon curls through carved clouds on one side, and two gold panels with a textured pattern flank the central hole.</p>
+
+    {f_t4}
+    <p>Aberdeen dates this one (ABDMS024059) to the late Edo period, 19th century, bronze. Two gold cranes fly over engraved water and grasses on a dark ground.</p>
 
 
     <h2 id="towns">Samurai Towns to Walk Through<span class="h2-jp">武家屋敷</span></h2>
