@@ -10,6 +10,21 @@ copy_photos(S, {
     'helmet-horned': 'guides/matsue-castle/images/helmet-horned.jpg',
     'sword': 'guides/okayama-castle/images/sword.jpg',
     'shiomi-nawate': 'guides/matsue-castle/images/shiomi-nawate.jpg',
+    'chiba_stripe': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/2f0de62d-image.jpg',
+    'chiba_crescent': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/72e35561-image.jpg',
+    'chiba_horned': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/937f7e63-image.jpg',
+    'chiba_vcrest': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/4cdecf07-image.jpg',
+    'chiba_flame': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/6f9b711b-image.jpg',
+    'chiba_dragon': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/40819a22-image.jpg',
+    'chiba_oyoroi': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/59088d76-image.jpg',
+    'chiba_domaru': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/2cef16e5-image.jpg',
+    'guimet_helm': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/0dc6caa3-image.jpg',
+    'met_five': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/12fbffa0-image.jpg',
+    'dallas_three': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/5e2a97e3-image.jpg',
+    'glenbow_helm': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/0a86e424-image.jpg',
+    'glenbow_seated': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/bce0f820-image.jpg',
+    'guimet_purple': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/397d0659-image.jpg',
+    'lacma_antler': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/0b1f948f-image.jpg',
 })
 fig = make_fig(S)
 
@@ -39,6 +54,22 @@ f_sword = fig('sword', 'A long sword in a gold-fitted scabbard wrapped with bead
 f_town = fig('shiomi-nawate', 'A quiet road beside a long white-and-dark-wood wall of old houses, with large pine trees at left and two visitors looking up at the right',
              'Shiomi Nawate, the old samurai street along the moat in Matsue.',
              f'Photo: 663highland, {BYSA3}, March 2015. {VIA}', maxw=760)
+
+f_c1 = fig('chiba_stripe', 'A suit of armor with horizontal stripes of lacing stands on a wooden stand', 'Armor with horizontal lacing on a stand, Chiba City Folk Museum.', f'Photo: Gary Todd, {CC0}, 1 October 2016. Chiba City Folk Museum. {VIA}', maxw=420)
+f_c2 = fig('chiba_crescent', 'Armor with a large crescent-moon ornament on the helmet stands in a glass case', 'Armor with a crescent-moon helmet ornament, Chiba City Folk Museum.', f'Photo: Gary Todd, {CC0}, 1 October 2016. Chiba City Folk Museum. {VIA}', maxw=420)
+f_c3 = fig('chiba_horned', 'A horned helmet with a red face mask above a green chest piece', 'A horned helmet with a red mask, Chiba City Folk Museum.', f'Photo: Gary Todd, {CC0}, 1 October 2016. Chiba City Folk Museum. {VIA}', maxw=420)
+f_c4 = fig('chiba_vcrest', 'Black armor with a V-shaped crest on the helmet, with a sign on the wall behind', 'Black armor with a V-shaped crest, Chiba City Folk Museum.', f'Photo: Gary Todd, {CC0}, 1 October 2016. Chiba City Folk Museum. {VIA}', maxw=420)
+f_c5 = fig('chiba_flame', 'A helmet with a red ring and flame-shaped ornament', 'A helmet with a red ring and flame-shaped ornament, Chiba City Folk Museum.', f'Photo: Gary Todd, {CC0}, 1 October 2016. Chiba City Folk Museum. {VIA}', maxw=760)
+f_c6 = fig('chiba_dragon', 'A close-up of a helmet with a dragon-shaped crest', 'A helmet with a dragon-shaped crest, Chiba City Folk Museum.', f'Photo: Gary Todd, {CC0}, 1 October 2016. Chiba City Folk Museum. {VIA}', maxw=760)
+f_c7 = fig('chiba_oyoroi', 'A suit of red-laced armor with a label reading Aka-ito-odoshi O-yoroi', 'A red-laced great armor (ō-yoroi) with its label, Chiba City Folk Museum.', f'Photo: Gary Todd, {CC0}, 1 October 2016. Chiba City Folk Museum. {VIA}', maxw=420)
+f_c8 = fig('chiba_domaru', 'Armor with orange and purple lacing, with a label in Japanese', 'A multicolor-laced domaru armor, labeled as a reproduction, Chiba City Folk Museum.', f'Photo: Gary Todd, {CC0}, 1 October 2016. Chiba City Folk Museum. {VIA}', maxw=420)
+f_g1 = fig('guimet_helm', 'A helmet with a leaf-shaped crest on a white background', 'A helmet with a leaf-shaped crest (displayed at the Guimet Museum, Paris, per the file name).', f'Photo: Pom², {BYSA3}, 4 September 2008 (edited by ish ishwar). {VIA}', maxw=480)
+f_g2 = fig('met_five', 'Five suits of armor lit in orange light', 'Several gusoku-style armors at the Metropolitan Museum of Art, New York.', f'Photo: Lord Biro, {BYSA2}, 28 May 2008. {VIA}', maxw=760)
+f_g3 = fig('dallas_three', 'Three suits of armor in a dark room', 'Armors at The Samurai Collection, Dallas.', f'Photo: Michael Barera, {BYSA4}, 15 September 2018. {VIA}', maxw=760)
+f_g4 = fig('glenbow_helm', 'A gold dragon helmet against an orange background', 'A gold dragon helmet at the Glenbow Museum, Calgary.', f'Photo: Daderot, {CC0}, 21 September 2013. {VIA}', maxw=760)
+f_g5 = fig('glenbow_seated', 'A seated suit of armor with a mustached face mask and a label', 'A seated armor at the Glenbow Museum, Calgary.', f'Photo: Daderot, {CC0}, 21 September 2013. {VIA}', maxw=420)
+f_g6 = fig('guimet_purple', 'A suit of armor with purple lacing against a gray gradient', 'A purple-laced armor, Guimet Museum, Paris (MA 8102, 18th century).', f'Photo: Ash_Crow, {BYSA4}, 1 July 2018. {VIA}', maxw=420)
+f_g7 = fig('lacma_antler', 'A suit of armor with an antler-shaped helmet crest', 'A gusoku-type armor, 18th century, Los Angeles County Museum of Art.', f'Photo: Team_A (Wikipedia Loves Art; photo by howcheng), <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank" rel="noopener" style="color:var(--enshu);">CC BY-SA 2.5</a>, February 2009. {VIA}', maxw=420)
 
 faqs = [
     ("When did the samurai era end?",
@@ -98,7 +129,7 @@ main = f'''<main>
     <p>I have only this one source for the sequence, so if you need exact dates for a school paper or a talk, please check a second one.</p>
 
     <h2 id="armor">Armor and Swords<span class="h2-jp">甲冑と刀</span></h2>
-    <p>A castle is the easiest place to see the gear. The pieces on this page come from three of our castle guides, and I describe only what the photos show.</p>
+    <p>A castle is the easiest place to see the gear. The first pieces come from three of our castle guides, followed by museum photos from Chiba and from collections abroad. I describe only what the photos show.</p>
 
     {f_red}
     <p>This red-laced armor from Okayama Castle is the kind of piece that reads as "samurai" at a glance: a gold crescent rises from a black helmet, and the cords on the chest and skirt are a deep orange-red. Behind it is a painted screen of a battle with banners.</p>
@@ -113,6 +144,59 @@ main = f'''<main>
     <p>This sword at Okayama Castle sits in a scabbard fitted with gold, wrapped in beaded cord, with a large ring at the hilt end. I cannot read its label with confidence from the photo, so I will not give its age or owner. In Japanese museums the displayed blade is often in its mounting, so the fittings may be the part that catches your eye.</p>
 
     <p>For more cases like these, see our {link('/guides/matsue-castle/', 'Matsue Castle', 'samurai_to_matsue')}, {link('/guides/matsuyama-castle/', 'Matsuyama Castle', 'samurai_to_matsuyama')} and {link('/guides/okayama-castle/', 'Okayama Castle', 'samurai_to_okayama')} guides, or the overview in {link('/guides/best-castles-japan/', 'Best Castles in Japan', 'samurai_to_best_castles')}.</p>
+
+    <h3>Armor at the Chiba City Folk Museum</h3>
+    <p>These eight photos were taken on 1 October 2016 at the Chiba City Folk Museum, whose Commons description says it is built in the style of Chiba Castle. The labels do not name owners, so I describe the pieces by what you can see.</p>
+
+    {f_c1}
+    <p>Horizontal bands of lacing run across the chest and skirt of this armor, which stands on a plain wooden stand.</p>
+
+    {f_c2}
+    <p>A large crescent-moon ornament rises from the helmet of this armor, shown in a glass case.</p>
+
+    {f_c3}
+    <p>This helmet has horns and a red face mask, set above a green chest piece. It shows how much color armor makers were willing to use.</p>
+
+    {f_c4}
+    <p>Black armor with a V-shaped crest on the helmet. A sign behind it appears to read 千葉氏の興亡と妙見信仰, about the Chiba clan and Myoken worship, but that is my reading of the photo.</p>
+
+    {f_c5}
+    <p>A helmet with a red ring and a flame-shaped ornament, photographed from the side.</p>
+
+    {f_c6}
+    <p>A close-up of a helmet crest shaped like a dragon, where you can see the sculpted details.</p>
+
+    {f_c7}
+    <p>The label reads 赤糸威大鎧 (aka-ito-odoshi ō-yoroi), meaning a great armor laced in red cord. Ō-yoroi is the large, boxy style associated with mounted warriors of earlier centuries.</p>
+
+    {f_c8}
+    <p>The label reads 色々縅胴丸（復元）, a multicolor-laced dōmaru that is marked as a reproduction. Reproductions are common in regional museums, so the label is worth reading.</p>
+
+
+    <h3>Samurai Armor in Museums Abroad</h3>
+    <p>Many fine suits sit in overseas collections. These are displayed in museums outside Japan, so you do not need a flight to see how varied the armor is.</p>
+
+    {f_g1}
+    <p>A helmet with a leaf-shaped crest on a white background. The file name points to the Guimet Museum in Paris.</p>
+
+    {f_g2}
+    <p>Five gusoku-style armors lit in warm light at the Metropolitan Museum of Art. Gusoku is the general term for a full set of armor.</p>
+
+    {f_g3}
+    <p>Three armors in a dark room. The Commons description for this photographer's Dallas photo names The Samurai Collection, but I matched this file to it by elimination, so please treat the location as likely, not certain.</p>
+
+    {f_g4}
+    <p>A gold dragon helmet on an orange background, photographed at the Glenbow Museum in Calgary.</p>
+
+    {f_g5}
+    <p>A seated armor with a mustached face mask and a label, probably the same armor as the helmet above.</p>
+
+    {f_g6}
+    <p>Purple lacing on a gray gradient. The Commons record gives the Guimet Museum, MA 8102, 18th century.</p>
+
+    {f_g7}
+    <p>This armor has an antler-shaped crest. The Commons title calls it a gusoku-type armor of the 18th century at the Los Angeles County Museum of Art.</p>
+
 
     <h2 id="towns">Samurai Towns to Walk Through<span class="h2-jp">武家屋敷</span></h2>
     <p>A castle shows you the lord; the districts around it show you where his retainers lived. {KY} lists these:</p>
