@@ -8,6 +8,51 @@ copy_photos(S, {'house': A+'26326240-image.jpg', 'costume': A+'060f8788-image.pn
                 'panorama': A+'42e85883-image.jpg', 'show': A+'20cb774e-image.jpg', 'performer': A+'7ffdb7fc-image.jpg',
                 'shuriken': A+'b0b747c1-image.jpg', 'castle1': A+'6c278486-image.jpg', 'castle2': A+'a434f596-image.jpg'})
 fig = make_fig(S)
+
+copy_photos(S, {'koka_village': A+'856ded55-image.jpg', 'yashiki_2009': A+'ee4942b0-image.jpg', 'yashiki_pano': A+'0754f8a7-image.jpg',
+    'yashiki_attic': A+'6e896a39-image.jpg', 'ks_armor': A+'4e2bf04e-image.jpg', 'ks_haidate': A+'63962e40-image.jpg',
+    'ks_gauntlet': A+'4363cbca-image.jpg', 'ks_fundo': A+'23d85393-image.jpg', 'ks_jitte_black': A+'6cc77561-image.jpg',
+    'ks_small': A+'7acbcbfd-image.jpg', 'ks_rope': A+'3cf919e3-image.jpg', 'ks_hooks': A+'cb0a8f41-image.jpg',
+    'ks_chain': A+'0c9db564-image.jpg', 'ks_bow': A+'39aeb925-image.jpg', 'ks_pipe': A+'e745feb3-image.jpg',
+    'plala_gun': A+'9e86584b-image.jpg', 'plala_mail': A+'2c738889-image.jpg', 'aburahi': A+'7cb318fc-image.jpg'})
+PD_SELF = 'public domain (released by the author)'
+MOT = lambda d: f'Photo: Motokoka, {BYSA4}, {d}, {VIA}'
+f_kv = fig('koka_village', 'A thatched house with a white wall, a gravel path and a small stone stair among trees, with a person on the stair',
+  'The Koga-no-sato ninja village, as labeled on Commons.', f'Photo: z tanuki, {BY3}, 25 August 2012, {VIA}', maxw=900)
+f_y09 = fig('yashiki_2009', 'A large thatched building with a tiled roof, two painted cut-out ninja boards and parked cars in front',
+  'The entrance of the Koka-ryu Ninjutsu Yashiki in 2009.', f'Photo: Mocchy, {PD_SELF}, 23 August 2009, {VIA}')
+f_ypano = fig('yashiki_pano', 'A wide view of a thatched house behind a wooden gate frame and a low wall, with a pink ninja cut-out board at the right',
+  'A wide view of the same house from the gravel yard.', f'Photo: z tanuki, {BY3}, 25 August 2012, {VIA}', maxw=900)
+f_att = fig('yashiki_attic', 'A dim attic under a thatched roof, where a masked visitor steps down through an opening in a wooden floor',
+  'Inside the thatched house, April 2023.', f'Photo: m-louis, {BYSA2}, 1 April 2023, {VIA}')
+f_arm = fig('ks_armor', 'A display case with a folded portable armor of dark lacquered plates joined by chain mail, with blue cords and red lacquered lower plates',
+  'Portable ninja armor at the Kusuri Gakushukan, Koka.', MOT('15 September 2019'))
+f_hai = fig('ks_haidate', 'A thigh guard made of chain mail on cloth, in three panels, with a small label reading haidate',
+  'A haidate, a thigh guard, from the same set.', MOT('15 September 2019'))
+f_gau = fig('ks_gauntlet', 'Two chain-mail gauntlets and a pair of shin guards with lacquered plates, in a red-lined case',
+  'Chain gauntlets and shin guards.', MOT('15 September 2019'))
+f_fun = fig('ks_fundo', 'A gourd-shaped iron weight on a dark cord, with a label reading nuke-fundo',
+  'A gourd-shaped weight on a cord.', MOT('15 September 2019'))
+f_jb = fig('ks_jitte_black', 'A black three-pronged jitte and a blade-shaped portable spear head on a red cloth, with two labels',
+  'A black jitte and a portable spear.', MOT('15 September 2019'))
+f_sm = fig('ks_small', 'A case with a four-point shuriken, a spiked iron ball on a wooden block, a kunai and a caltrop, each with a label',
+  'Throwing and scattering tools.', MOT('15 September 2019'))
+f_rope = fig('ks_rope', 'A case with a coiled rope and hook, a spiked finger lock, a long awl, a hand-worn blade and a scroll of rope-binding figures',
+  'Rope, hook and hand tools.', MOT('15 September 2019'))
+f_hook = fig('ks_hooks', 'A case with a forked hook, a jitte with a long tassel and a copy of a scroll with binding figures',
+  'Hooks and a jitte.', MOT('15 September 2019'))
+f_chain = fig('ks_chain', 'A case with a folding multi-bladed hook on a cord and a chain sickle with a weight, with labels',
+  'A chain sickle and a collapsible hook.', MOT('15 September 2019'))
+f_bow = fig('ks_bow', 'A case with a short bow wrapped in dark bands, a plain arrow and an arrow with a paper tube tied to the shaft',
+  'A small bow and arrows.', MOT('15 September 2019'))
+f_pipe = fig('ks_pipe', 'A slightly blurred photo of a long brass-ended pipe in a case, with a diagram card and three small iron balls',
+  'A ninja pipe, with a diagram card.', MOT('15 September 2019'))
+f_gun = fig('plala_gun', 'A dagger-like hilt and sheath on orange cloth, a bullet mold, a small ball and caltrops with labels',
+  'A concealed gun, a bullet mold and caltrops at Shinobi no sato PLALA.', MOT('21 February 2016'))
+f_mail = fig('plala_mail', 'A mannequin head in a chain-mail hood over a patterned cloth, with a mail shirt and gauntlets on a red display',
+  'Chain mail at Shinobi no sato PLALA.', MOT('21 February 2016'))
+f_abu = fig('aburahi', 'A long covered wooden corridor with thick round pillars and a plank floor, open to trees on one side',
+  'The cloister of Aburahi Shrine in Koka.', MOT('15 September 2019'))
 f_house = fig('house', 'A thatched-roof house behind pruned pines and a gravel path, with a low gate and tiled wall in front',
   'A thatched house in the grounds of the Ninja Museum of Igaryu, Iga Ueno.', f'Photo: z tanuki, {BY3}, 6 October 2013, {VIA}', hero=True)
 f_costume = fig('costume', 'A museum case with dark ninja clothing, a hooded garment, straw sandals and a straw hat, with explanatory labels',
@@ -116,15 +161,54 @@ main = f'''<main>
       <li><strong>Admission:</strong> 2,000 yen for adults and 1,500 yen for children. Credit cards are not accepted, so bring cash.</li>
       <li><strong>Getting there:</strong> a free shuttle of about 5 minutes from Koka Station on the JR Kusatsu Line.</li>
     </ul>
+    <p>Commons labels this photo "Koga-no-sato Ninja village" (甲賀の里 忍術村). It shows a thatched house with a white wall, a gravel path and a small stone stair among trees, with one visitor coming down the stair. It is a 2012 photo, so details may have changed.</p>
+    {f_kv}
 
     <h3>Koka-ryu Ninjutsu Yashiki (Koka, Shiga)</h3>
     <p>{KWJ} describes a samurai residence built about 300 years ago that looks like a single-story thatched house but has three stories, with a pitfall trap, a revolving wall for vanishing quickly and a rope ladder from the third floor to the ground-floor entrance. {JTR} dates it to the Genroku era and says it is within walking distance of Konan Station, and the Kids Web Japan page gives the route as the JR Tokaido Line from Kyoto, changing at Kusatsu to the Kusatsu Line.</p>
+    <p>From the street the house looks like a large thatched farmhouse. In a 2009 photo, two painted cut-out boards of ninja stand in the gravel yard for visitors to pose behind, and a small stone nearby reads "entrance" (入口). Wooden posts carry the name Koka-ryu Ninjutsu Yashiki (甲賀流 忍術屋敷).</p>
+    {f_y09}
+    <p>A wider 2012 view shows the whole front: a thatched main roof with tiled eaves, a low wall and a wooden gate frame.</p>
+    {f_ypano}
+    <p>The interior photo below was taken in April 2023 and shows an attic space under the thatch, where a masked visitor steps down through an opening in the plank floor. It looks like a floor hatch, but Commons gives no explanation, so I will not claim how it was used.</p>
+    {f_att}
+
+    <h3>Ninja Tools in Koka: Kusuri Gakushukan and PLALA</h3>
+    <p>Many of the photos of Koka ninja tools on Wikimedia Commons come from the Kusuri Gakushukan (甲賀市くすり学習館, a medicine museum) in Koka, and two more from Shinobi no sato PLALA. I have not verified the opening hours or admission of either place, so please check before you go. The labels in the cases end with a line reading 澤田平氏蔵, which I read as crediting the owner of the item, but I have not confirmed that. Every item below is described from its label, and the labels use short, practical wording.</p>
+    <p><strong>Armor that folds.</strong> The label for this armor says it folds to about the size of one floor cushion (zabuton) and can be carried. The photo shows dark lacquered plates joined by chain mail, blue cords and red lacquered plates at the bottom.</p>
+    {f_arm}
+    <p>A haidate (佩盾) is a thigh guard. This one is chain mail on cloth in three panels, and it sits in the same case as the gauntlets.</p>
+    {f_hai}
+    <p>The label calls the set "Shinobi Sangu": chain gauntlets, haidate and shin guards (臑当), and says the set folds to the size of one floor cushion. On the left are lacquered shin guards joined by cord, and on the right two chain-mail gauntlets.</p>
+    {f_gau}
+    <p><strong>Hooks, jitte and binding.</strong> The label for the nanban-kagi says it is a ninja-specific weapon used to gouge eyes or hold down a wrist, and the label for the jitte says it is used to fight enemies and often appears in period dramas as a police tool. Behind them is a copy of a scroll, labeled as a document for passing on rope-binding methods.</p>
+    {f_hook}
+    <p>This case shows the hayanawa (a rope for binding criminals or enemies), the shinobi-kagi (a hook thrown and pulled when entering a building), the tsubokiri (an awl that makes holes in wooden houses and storehouses, labeled ninja-specific), the haya-tejo (a finger lock for gripping an opponent's wrist) and the shuto-ken (worn on the palm as a bare-hand weapon).</p>
+    {f_rope}
+    <p>The black jitte label says it defends against sword and spear attacks and can also serve as a weapon, since its tips are sharp. The "shinobi Kikuchi spear" next to it is labeled as a portable spear that you can tie to a stick or a branch with cord.</p>
+    {f_jb}
+    <p>The chain sickle is labeled as a farm sickle with a chain weight, used to tangle an opponent's weapon and then strike with the sickle. The folding tool on the left is labeled "Marohoshi" (an assembled jitte), described as a tool for catching an opponent's weapon and used in Miyamoto Musashi's two-sword style.</p>
+    {f_chain}
+    <p>The nuke-fundo is labeled as a gourd-shaped weight used by tangling it around a building or branch, with the advantage that it can be untied easily afterward.</p>
+    {f_fun}
+    <p><strong>Small things you throw or scatter.</strong> The case shows an itomaki shuriken (heavy, so labeled destructive), a spiked iron ball called tetsumari (thrown to hurt or stop an opponent), a kunai (for removing doors and shutters, also a weapon) and a makibishi (scattered so pursuers cannot follow; the label says its shape resembles a water-chestnut fruit).</p>
+    {f_sm}
+    <p>Caltrops are also on show at Shinobi no sato PLALA in the photo below, next to a dagger-like hilt that Commons describes as a knife concealing a gun, and a bullet mold. The labels read shikomi teppo (concealed gun), dangan igata (bullet mold), tetsubishi and shizenbishi, the last being natural caltrops made from plants.</p>
+    {f_gun}
+    <p><strong>Bow and arrows, and a pipe.</strong> The labels say the ninja bow and arrows are small because they were used to attack from the shadows, and that the "flying fire arrow" carries an explosive set alight and shot far by bow.</p>
+    {f_bow}
+    <p>The pipe photo is blurred, so I cannot read its label with confidence. Commons calls it a ninja pipe, and the diagram card beside it shows the inner shape of the pipe.</p>
+    {f_pipe}
+    <p>A last photo from PLALA shows a chain-mail hood on a mannequin, a mail shirt and gauntlets, called "kusari katabira" (鎖帷子, chain mail) on Commons.</p>
+    {f_mail}
 
     <h3>Other places in Iga and Koka</h3>
     <p>{JTR} also lists Iga Ueno Castle, whose reconstructed keep stands behind a stone wall about 30 meters high; Matsumoto-in Temple in Iga (built 1616, a Shugendo temple); and Aburahi Shrine in Koka, where a corridor built in 1566 was once a meeting place for Koka samurai. These are good additions if you stay overnight in the area.</p>
     <p>These two aerial views, taken in April, show what appears to be Iga Ueno Castle: a small white keep over the town in the first, and the high stone wall and moat in the second. The photos carry a photographer's watermark, and Commons does not name the viewpoint, so treat the building as my reading.</p>
     {f_c1}
     {f_c2}
+    <p>In Koka, the cloister of Aburahi Shrine shown below is described on Commons as a place where ninja are said to have met, which matches the corridor built in 1566 that {JTR} mentions. It is a long, covered wooden walkway with thick round pillars and a plank floor, open to the trees on one side.</p>
+    {f_abu}
 
     <h2 id="experience">Experiences and the Ninja Festa<span class="h2-jp">体験とお祭り</span></h2>
     <ul>
