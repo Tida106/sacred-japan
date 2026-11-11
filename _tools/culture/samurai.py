@@ -10,6 +10,10 @@ copy_photos(S, {
     'helmet-horned': 'guides/matsue-castle/images/helmet-horned.jpg',
     'sword': 'guides/okayama-castle/images/sword.jpg',
     'shiomi-nawate': 'guides/matsue-castle/images/shiomi-nawate.jpg',
+    'met_front': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/747a0622-image.jpg',
+    'met_back': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/0467600e-image.jpg',
+    'met_side': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/912c8c39-image.jpg',
+    'met_close': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/f8b71ca8-image.jpg',
     'chiba_stripe': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/2f0de62d-image.jpg',
     'chiba_crescent': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/72e35561-image.jpg',
     'chiba_horned': '/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/937f7e63-image.jpg',
@@ -70,6 +74,11 @@ f_g4 = fig('glenbow_helm', 'A gold dragon helmet against an orange background', 
 f_g5 = fig('glenbow_seated', 'A seated suit of armor with a mustached face mask and a label', 'A seated armor at the Glenbow Museum, Calgary.', f'Photo: Daderot, {CC0}, 21 September 2013. {VIA}', maxw=420)
 f_g6 = fig('guimet_purple', 'A suit of armor with purple lacing against a gray gradient', 'A purple-laced armor, Guimet Museum, Paris (MA 8102, 18th century).', f'Photo: Ash_Crow, {BYSA4}, 1 July 2018. {VIA}', maxw=420)
 f_g7 = fig('lacma_antler', 'A suit of armor with an antler-shaped helmet crest', 'A gusoku-type armor, 18th century, Los Angeles County Museum of Art.', f'Photo: Team_A (Wikipedia Loves Art; photo by howcheng), <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank" rel="noopener" style="color:var(--enshu);">CC BY-SA 2.5</a>, February 2009. {VIA}', maxw=420)
+
+f_m1 = fig('met_front', 'A seated suit of armor with a gold dragon-faced helmet crest, a gray mustache mask, and white and green lacing, on a wooden stand', 'Armor (haramaki), front view, Metropolitan Museum of Art.', f'Photo: The Metropolitan Museum of Art (Open Access), {CC0}, accession 36.25.43a–o, Bequest of George C. Stone, 1935. {VIA}', maxw=420)
+f_m2 = fig('met_back', 'The back of the same armor, with a large orange knot and tassels below the helmet, seen from behind on a wooden stand', 'The same armor from behind.', f'Photo: The Metropolitan Museum of Art (Open Access), {CC0}, accession 36.25.43a–o, Bequest of George C. Stone, 1935. {VIA}', maxw=420)
+f_m3 = fig('met_side', 'A three-quarter view of the seated armor with gold horned crest, striped lacing and fur-covered boots', 'The same armor from the side.', f'Photo: The Metropolitan Museum of Art (Open Access), {CC0}, accession 36.25.43a–o, Bequest of George C. Stone, 1935. {VIA}', maxw=420)
+f_m4 = fig('met_close', 'A close-up of a helmet with a gold dragon face between two gold horns and a gold fan-shaped crest, above a mustache mask and orange cords', 'A close-up of the helmet crest and face mask.', f'Photo: The Metropolitan Museum of Art (Open Access), {CC0}, accession 36.25.43a–o, Bequest of George C. Stone, 1935. {VIA}', maxw=640)
 
 faqs = [
     ("When did the samurai era end?",
@@ -196,6 +205,22 @@ main = f'''<main>
 
     {f_g7}
     <p>This armor has an antler-shaped crest. The Commons title calls it a gusoku-type armor of the 18th century at the Los Angeles County Museum of Art.</p>
+
+
+    <h3>One Armor, Four Views: A Haramaki at the Met</h3>
+    <p>The Metropolitan Museum of Art titles this piece "Armor (Haramaki)," dated late 18th to 19th century, made of iron, lacquer, leather, gilt copper, silk and hair. A haramaki is a body armor that wraps around the torso. The four photos below are the museum's open-access images, so the front, back, side and a close-up are all available.</p>
+
+    {f_m1}
+    <p>From the front, the armor sits on a wooden stand. White and green lacing runs in bands across the chest and skirt, and fur-covered boots finish the figure.</p>
+
+    {f_m2}
+    <p>From behind, an orange cord is tied in a large knot with tassels, a detail you rarely see in a castle case, where armor usually faces the front.</p>
+
+    {f_m3}
+    <p>At an angle you can see the gilt horns and fan-shaped crest rising from the helmet, and how deep the skirt layers are.</p>
+
+    {f_m4}
+    <p>The helmet carries a gold dragon-like face between two horns, and below it the mask has a gray mustache of hair. I match this close-up to the same armor by its crest and cords, so treat that pairing as likely.</p>
 
 
     <h2 id="towns">Samurai Towns to Walk Through<span class="h2-jp">武家屋敷</span></h2>
