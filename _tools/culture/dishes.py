@@ -6,8 +6,11 @@ S='popular-dishes'
 OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
 photos={'kushiage':('c68f2df6-image.jpg',1000),'sashimi':('db7f1645-image.jpg',1000),'sukiyaki':('49dfefd0-image.jpg',1200),'tempura-shrimp':('ccf78fa5-image.jpg',1000),'tempura-kappo':('b94fcb14-image.jpg',1000),'tendon':('d724f688-image.jpg',800),'gyudon':('e6bfb76d-image.jpg',640),'oyakodon':('a0369d50-image.jpg',1000),'karaage':('83219fff-image.jpg',1000),'tonkatsu':('819ef8f8-image.jpg',1000),'katsudon':('b63be16b-image.jpg',1000),'sushi':('5258f7c5-image.jpg',1200),'sushi2':('cc5994a3-image.jpg',1200)}
+photos['korokke']=('/mnt/user-data/attachments/10bb6ae3-4ce9-510b-a21d-16a428fc4d73/243d0468-image.jpg',1200)
 for k,(f,mw) in photos.items():
-    im=Image.open(A+f).convert('RGB');w,h=im.size
+    fp=f if f.startswith('/') else A+f
+    if not os.path.exists(fp): continue
+    im=Image.open(fp).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
     im.save(f'{OUT}/images/{k}.jpg',quality=84,optimize=True); im.save(f'{OUT}/images/{k}.webp',quality=80)
 def fig(k,alt,cap,credit,hero=False,maxw=760):
@@ -24,6 +27,7 @@ BY2=lic('CC BY 2.0','https://creativecommons.org/licenses/by/2.0/')
 BYSA4=lic('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/')
 BYSA2=lic('CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/')
 VIA='via Wikimedia Commons (resized)'
+PAC='<a href="https://www.photo-ac.com/" target="_blank" rel="noopener" style="color:var(--enshu);">photo AC</a>'
 f_suki=fig('sukiyaki','A shallow iron pot with raw marbled beef slices, napa cabbage, pale grilled tofu, halved leeks, thin clear noodles, green leaves and two golden rectangular pieces, sitting in dark sauce on a round metal ring','Sukiyaki in its shallow iron pot, before the cooking is finished.',f'Photo: pelican, {BYSA2}, 1 June 2012 (Flickr, license reviewed on Commons). Commons titles it "Sukiyaki". {VIA}',hero=True)
 f_t1=fig('tempura-shrimp','A heap of golden tempura on white paper: a large shrimp with its tail up, a purple eggplant cut into a fan, a green pepper and a piece with a red coating, against a dark background','A tempura plate with shrimp, eggplant and a green pepper.',f'Photo: Nesnad, {CC0}, 31 December 2007. Commons says it was shared as a free-use image of tempura. {VIA}',maxw=700)
 f_t2=fig('tempura-kappo','Tempura on a blue-and-white scalloped plate lined with white paper: shrimp with tails up, long slices of vegetable and a frilly green piece, with a small dish of dark dipping sauce behind','Mixed tempura with a small dish of dipping sauce.',f'Photo: Norio NAKAYAMA, {BYSA2}, 24 February 2014 (Flickr, license reviewed on Commons). Commons gives the venue as Kappo Uosen in Nagaoka, Niigata. {VIA}',maxw=700)
@@ -34,6 +38,7 @@ f_kara=fig('karaage','A tall heap of golden-brown fried chicken pieces dusted wi
 f_ton=fig('tonkatsu','Thick slices of golden-brown breaded pork cutlet standing on a wire rack over a glazed blue-green plate, with a mound of shredded cabbage and carrot behind and a dab of yellow mustard at the right edge','A thick-cut tonkatsu on a wire rack, with shredded cabbage and mustard.',f'Photo: ayustety, {BYSA2}, 20 April 2007 (Flickr, license reviewed on Commons). Commons describes it as a thick-cut tonkatsu at Hiraboku (平田牧場) in Tokyo. {VIA}',maxw=700)
 f_kats=fig('katsudon','A white bowl of fried pork cutlet pieces under a softly cooked egg and chopped green garnish on rice, with a bowl of miso soup at the right, on a pale wooden table','A katsudon bowl with a bowl of miso soup.',f'Photo: Chacmool, {BYSA4}, 23 July 2023. Commons describes it as the katsudon (梅, ume) at Katsuya, a chain restaurant. {VIA}',maxw=700)
 f_sushi=fig('sushi','A white rectangular plate of sushi: in front a shrimp, a pale scallop, salmon, a yellowtail-like slice and red tuna on rice; behind them tuna rolls, a yellow rolled omelet, salmon roe in a seaweed wrap with a green shiso leaf, and white-fish pieces, with pickled ginger at the left','A mixed sushi plate: nigiri, rolls, a rolled omelet and salmon roe.',f'Photo: t-mizo, {BY2}, 3 January 2013 (Flickr, license reviewed on Commons). Commons titles it "Sushi" and gives no venue. {VIA}',maxw=760)
+f_kor=fig('korokke','A white plate with three golden breaded croquettes, one broken in two to show a pale, creamy filling flecked with red and green, with shredded cabbage and tomatoes behind and a fork at the left','A crab cream croquette broken open, with shredded cabbage on the side.',f'Photo: スタジオAM, via {PAC} (title: カニクリームコロッケ), used under photo AC\'s terms of use. Resized.',maxw=760)
 f_kush=fig('kushiage','A steel tray with a wire rack holding several skewers of breaded, deep-fried pieces and, at the right, a round slice with holes in it','Kushiage: breaded, deep-fried skewers.',f'Photo: Ocdp, {CC0}, 8 April 2017. Commons describes it as assorted kushiage (各種串揚げ) and gives no venue. The round slice with holes at the right looks like lotus root to me. {VIA}',maxw=700)
 f_sashimi=fig('sashimi','A wooden serving board on short feet holding sliced raw fish on shredded white radish: deep-red tuna with a yellow chrysanthemum-shaped garnish, pale pink fatty tuna, translucent white fish, fish slices with the scaled skin left on, and a sprig of curly parsley','A sashimi set on a wooden board.',f'Photo: Ocdp, {CC0}, 24 July 2022. Commons describes it as a reference image of sashimi: a "kami-sashimi" set meal at 1,650 yen including tax at a restaurant called Yamata-kun in Choshi, Chiba. {VIA}',maxw=700)
 f_sushi2=fig('sushi2','A dark plum-blossom-shaped plate seen from above holding eleven pieces of sushi: a long glazed eel at the front, shrimp, squid topped with sea urchin, red tuna, scallop, several pieces of marbled and pale tuna and a silvery fish with ginger and green onion, plus two seaweed-wrapped pieces topped with minced tuna and a quail yolk and with salmon roe, with ginger at the right and a red lacquer bowl of miso soup beside it','An eleven-piece nigiri and gunkan set with miso soup.',f'Photo: N509FZ, {BYSA4}, 2 August 2023. Commons describes it as 11 pieces for JPY 3,520 and gives no venue. {VIA}',maxw=760)
@@ -47,6 +52,8 @@ TK=ext('https://www.kikkoman.com/en/cookbook/glossary/tenpura.html','Kikkoman','
 TON=ext('https://gov-online.go.jp/eng/publicity/book/hlj/html/201810/201810_08_en.html','Highlighting Japan (Government of Japan)','dishes_hlj_tonkatsu')
 KJT=ext('https://japantimes.co.jp/life/2021/03/20/food/fried-chicken-kara-age-zangi','Japan Times','dishes_japantimes')
 KFO=ext('https://foodinjapan.org/kansai/kushi-katsu/','Food in Japan','dishes_foodinjapan_kushikatsu')
+KRF=ext('https://www.foodinjapan.org/japan/korokke','Food in Japan','dishes_foodinjapan_korokke')
+KRW=ext('https://en.wikipedia.org/wiki/Korokke','Wikipedia (Korokke)','dishes_wikipedia_korokke')
 KJE=ext('https://www.jeepe.jp/en/articles/osaka-kushikatsu-1426','Jeepe','dishes_jeepe_kushikatsu')
 SG=ext('https://sushiwalker.com/en/feature/85740/','Sushi Walker','dishes_sushiwalker')
 TG=ext('https://thegate12.com/article/258','The Gate','dishes_thegate')
@@ -55,6 +62,7 @@ GYU=ext('https://gov-online.go.jp/eng/publicity/book/hlj/html/201202/201202_07.h
 OYA=ext('https://en.wikipedia.org/wiki/Oyakodon','Wikipedia','dishes_wiki_oyakodon')
 KAT=ext('https://en.wikipedia.org/wiki/Katsudon','Wikipedia','dishes_wiki_katsudon')
 faqs=[
+("What is kani cream korokke?","It is a croquette with a creamy white-sauce filling made with crab meat or crab sticks, coated in panko and deep-fried. Food in Japan lists crab cream among the common korokke types, next to potato, beef and pumpkin.") ,
 ("What is the difference between tempura and karaage?","Tempura is seafood or vegetables coated in a thin batter of wheat flour, egg and cold water, and then deep-fried, according to Jeepe. Karaage is usually boneless chicken that is marinated, coated with flour or potato starch and deep-fried, and the Japan Times notes there is no batter."),
 ("Is tempura really from Portugal?","It is often said to be. Jeepe says tempura is said to trace back to the 16th century, when Portuguese traders introduced deep-frying, and presents this as tradition. Kikkoman says a predecessor first appeared in Nagasaki in the early Momoyama period (1568-1600) and later reached Osaka and then Edo, where it became street food. The origin of the name is uncertain."),
 ("What is the difference between Kanto and Kansai sukiyaki?","In the Kanto style, a sauce called warishita (soy sauce, sugar, sake and mirin) is heated first and everything is simmered in it. In the Kansai style, the beef is seared first and the sugar, sake and soy sauce go in afterward, with the vegetables added last. Both styles dip the cooked food in raw beaten egg."),
@@ -89,6 +97,7 @@ main=f'''<main>
       <li><a href="#tonkatsu">Tonkatsu: A Western Dish Made Japanese</a></li>
       <li><a href="#karaage">Karaage: Japanese Fried Chicken</a></li>
       <li><a href="#kushiage">Kushiage: Breaded Skewers</a></li>
+      <li><a href="#korokke">Korokke: The Japanese Croquette</a></li>
       <li><a href="#donburi">Rice Bowls: Gyudon, Oyakodon, Katsudon and Tendon</a></li>
       <li><a href="#sushi">Sushi: Edomae and the Everyday Plate</a></li>
       <li><a href="#how">How to Order and Eat</a></li>
@@ -111,6 +120,7 @@ main=f'''<main>
       <li><strong>Tonkatsu (<span class="jp">とんかつ</span>):</strong> a breaded, deep-fried pork cutlet served with shredded cabbage.</li>
       <li><strong>Karaage (<span class="jp">唐揚げ</span>):</strong> marinated chicken pieces, lightly coated and deep-fried.</li>
       <li><strong>Kushiage (<span class="jp">串揚げ</span>):</strong> meat, seafood or vegetables on a skewer, breaded and deep-fried, often with a shared dipping sauce.</li>
+      <li><strong>Korokke (<span class="jp">コロッケ</span>):</strong> a breaded, deep-fried croquette, most often mashed potato, with cream and crab-cream versions.</li>
       <li><strong>Sushi (<span class="jp">寿司</span>):</strong> vinegared rice with fish or other toppings: nigiri, maki and gunkan, with Edomae as the Tokyo style.</li>
       <li><strong>Donburi (<span class="jp">丼</span>):</strong> a bowl of rice with a topping: gyudon (beef), oyakodon (chicken and egg), katsudon (pork cutlet) and tendon (tempura).</li>
     </ul>
@@ -160,6 +170,17 @@ main=f'''<main>
     <p>The tray holds an assortment, with golden crumb coatings and, at the right, a round slice with holes that looks like lotus root. Commons gives no venue. {KFO} and {KJE} list beef, pork with onion, shrimp, quail egg, lotus root and shiitake among the usual choices.</p>
     <p><strong>The double-dipping rule.</strong> At many shops the sauce is a shared container, so you dip each skewer once and never put a bitten one back. Both articles describe this, though neither cites a source. If you need more sauce, {KJE} says you can scoop some onto the skewer with the free cabbage.</p>
     <p><strong>Where it started.</strong> Both say Shinsekai in Osaka is the home of kushikatsu, and that it spread there in the early Showa era as cheap food for workers. {KFO} puts it around 1929, and {KJE} says the shop Kushikatsu Daruma "claims" 1929 as its founding year. Neither gives a source, so I would treat the date as the shop's own claim. Prices are not worth quoting: {KJE} gives a figure without a source and says they vary by shop.</p>
+
+    <h2 id="korokke">Korokke: The Japanese Croquette<span class="h2-jp">コロッケ</span></h2>
+    <p>Korokke is a croquette: a filling shaped into an oval, coated in flour, egg and panko, and deep-fried. {KRF} calls it a standard dish of Western-style Japanese food, and says the potato version is considered a Japanese creation, since the French croquette it comes from does not contain potatoes. It is cheap, sold everywhere, and one of the easiest fried foods to try.</p>
+    {f_kor}
+    <p>This is a crab cream croquette, as the photo's title says: the crumb coating is deep orange, and the broken piece shows a soft, pale filling with small flecks of red and green. The shredded cabbage and tomatoes behind it are the usual side. The cream filling is what you would eat with a fork, and I would pick it if you want something richer than potato.</p>
+    <h3>Potato, Cream and Beyond</h3>
+    <p>{KRF} lists potato (the most familiar), beef, crab cream, pumpkin, and meat, vegetable and cream croquettes. {KRW} adds <em>guratan</em> (white sauce with macaroni), tuna, curry, and okara, and notes that a meat-only version is called <em>menchi-katsu</em>. If a menu says <em>kani cream korokke</em>, it is the kind in the photo.</p>
+    <h3>Where It Came From</h3>
+    <p>{KRF} says korokke began to appear in restaurants and cookbooks in the Meiji period, and that during the Taisho era croquettes were one of three main Western foods along with curry rice and tonkatsu, most of them cream croquettes. The potato version is believed to have arisen later, as British potato dishes became popular. {KRW} dates the French croquette's arrival to 1887 and suggests potatoes took over because dairy products were not yet widespread. The two pages do not agree on the details, so I would treat the exact years as approximate.</p>
+    <h3>Where to Buy and How to Eat It</h3>
+    <p>{KRW} says korokke is found in almost every supermarket and convenience store, often sold wrapped in paper, and that it also turns up in bento, with curry, and in a bread roll as <em>korokke pan</em>; see the <a href="/culture/bread/" class="inline-link">bread guide</a>. {KRF} names butcher shops as a key source and quotes 2022 prices of about 110 to 130 yen at the Tokyo shops it lists, which may have changed, and suggests demi-glace or tomato sauce for crab cream croquettes. Fresh from a butcher's counter, eaten standing up, is the way many people do it.</p>
 
     <h2 id="donburi">Rice Bowls: Gyudon, Oyakodon, Katsudon and Tendon<span class="h2-jp">丼</span></h2>
     <p><em>Donburi</em> means a bowl of rice with a topping. It is the dish you can eat alone, quickly and cheaply, and many chains specialize in one bowl.</p>
@@ -248,7 +269,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> sushi from {SG} and {TG}; sukiyaki from {SA} and the {SW}; tempura from {TJ} and {TK}; tonkatsu from the {TON}; karaage from the {KJT} and {KFJ}; gyudon from the {GYU}; oyakodon and katsudon from Wikipedia ({OYA}, {KAT}). Photograph details come from the Wikimedia Commons descriptions. I have not verified current prices.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> sushi from {SG} and {TG}; sukiyaki from {SA} and the {SW}; tempura from {TJ} and {TK}; tonkatsu from the {TON}; karaage from the {KJT} and {KFJ}; gyudon from the {GYU}; oyakodon and katsudon from Wikipedia ({OYA}, {KAT}). korokke from {KRF} and {KRW}. Photograph details come from the Wikimedia Commons descriptions; the korokke photo is from photo AC. I have not verified current prices.</p>
 
   </article>
 
