@@ -44,6 +44,10 @@ def viator(term):
     return f'https://www.viator.com/search/{term}?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
 
 
+def vtour(path):
+    return f'https://www.viator.com/tours/{path}?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
+
+
 def make_fig(S):
     """Return fig() bound to the culture/<S>/ images folder."""
     def fig(k, alt, cap, credit, hero=False, maxw=760):

@@ -238,7 +238,12 @@ main = f'''<main>
       <li><strong>Ninja training in Tokyo.</strong> {TO} reported in July 2021 that the Japan Ninja Council runs courses at the Ninja Information Centre Tokyo &amp; Dojo in Asakusa: a 40-minute experience (shuriken, hand signs, an explanation of spy gear) at 2,200 yen, with costume rental at 1,100 yen extra, and longer courses of 60 and 90 minutes at 7,700 and 9,900 yen. It recommends booking. That report is old, so confirm current courses and prices.</li>
       <li><strong>Iga Ueno Ninja Festa.</strong> {FESTA} describes an annual family-friendly festival in Iga running from April 1 to May 6, with ninja-themed performances and contests. It says passengers in ninja costume ride Iga train lines free, and that since 2001 the mayor and city council have held a yearly session dressed as ninja. Treat the dates as a guide and confirm locally.</li>
       <li><strong>The NARUTO x BORUTO village on Awaji Island.</strong> For the fictional side, Nijigen no Mori in Hyogo recreates the Hidden Leaf Village with the 11-meter Hokage Rock, a three-story Heavenly Scroll attraction and a night projection show. Park entry is free and each attraction is ticketed; see our {link('/culture/nijigen-no-mori/', 'Nijigen no Mori guide', 'ninja_to_nijigen')} for tickets, rules and access.</li>
-      <li><strong>Guided or hands-on tours.</strong> If you prefer a booked, English-language option, you can compare current {aff(VI_NIN, 'ninja experiences on Viator', 'ninja_viator_experience')}. I have not tried them myself, so please read recent reviews.</li>
+      <li><strong>Bookable ninja experiences on Viator.</strong> These are listings I found on Viator; I have not tried them, so please check each page for what is included, the price and recent reviews.
+        <ul>
+          <li>Tokyo (Asakusa): {aff(vtour('Kyoto/Samurai-Experience-and-Guided-Tour-of-Samurai-Ninja-Museum/d332-51440P80'), 'Basic Ticket at Samurai Ninja Museum Tokyo', 'ninja_viator_tokyo_museum')}</li>
+          <li>Kyoto: {aff(vtour('Kyoto/Samurai-and-Ninja-Museum-Tour-in-Kyoto/d332-51440P49'), 'Basic Ticket at Samurai Ninja Museum Kyoto', 'ninja_viator_kyoto_museum')}</li>
+        </ul>
+        To compare more, see all {aff(VI_NIN, 'ninja experiences on Viator', 'ninja_viator_experience')}.</li>
     </ul>
 
     <h2 id="media">Ninja in Manga and Anime<span class="h2-jp">漫画・アニメ</span></h2>

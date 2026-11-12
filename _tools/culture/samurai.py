@@ -302,7 +302,14 @@ main = f'''<main>
     <ul>
       <li><strong>The Samurai Museum, Shinjuku (Tokyo).</strong> A 2018 {CAF} review places it in Kabukicho, with a 45-minute guided tour of about 700 years of history, a sword demonstration and an armor try-on, and an admission of 1,800 yen at the time. It adds that most of the armor and swords are reproductions. That review is old, so check the museum's current prices and programs.</li>
       <li><strong>Soma Nomaoi (Minamisoma, Fukushima).</strong> {SOMA} describes a three-day festival held on the last weekend of July, with about 500 riders in warrior dress, an armed horse race and a sacred-flag contest that is the climax. It says the festival is designated an Important Intangible Folk Cultural Property and that tickets were required only on the second day in 2018.</li>
-      <li><strong>Guided samurai experiences.</strong> Several operators run sword and armor sessions in Tokyo and Kyoto. If you want a booked, English-language option, you can compare current {aff(VI_SAM, 'samurai experiences on Viator', 'samurai_viator_experience')}; I have not tested any of them myself, so please read the reviews.</li>
+      <li><strong>Bookable samurai experiences on Viator.</strong> These are listings I found on Viator; I have not tried them, so please check each page for the current program, price, meeting point and reviews.
+        <ul>
+          <li>Kyoto: {aff(vtour('Kyoto/Small-Group-Samurai-Experience-in-Kyoto/d332-44484P1'), 'Small-Group Samurai Experience with Training Sword', 'samurai_viator_kyoto_small')}</li>
+          <li>Kyoto: {aff(vtour('Kyoto/Samurai-School-Samurai-for-a-Day/d332-6911KYOPACK_C_A'), 'Samurai School: Samurai for a Day', 'samurai_viator_kyoto_school')}</li>
+          <li>Kyoto: {aff(vtour('Kyoto/Samurai-Sword-Experience-in-Kyoto-Tameshigiri/d332-51440P52'), 'Samurai Sword Experience (Tameshigiri), with museum ticket', 'samurai_viator_kyoto_sword')}</li>
+          <li>Tokyo: {aff(vtour('Tokyo/Kyoto-Samurai-Show-and-Samurai-Sword-Experience-in-Kyoto/d334-51440P77'), 'Samurai Sword Experience in Tokyo', 'samurai_viator_tokyo_sword')}</li>
+        </ul>
+        To compare more, see all {aff(VI_SAM, 'samurai experiences on Viator', 'samurai_viator_experience')}.</li>
     </ul>
 
     <h2 id="media">Samurai in Manga and Anime<span class="h2-jp">漫画・アニメ</span></h2>
