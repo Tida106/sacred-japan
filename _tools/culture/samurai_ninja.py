@@ -75,7 +75,7 @@ main = f'''<main>
       <li><strong>Ninja training in Tokyo:</strong> the Ninja Information Centre Tokyo &amp; Dojo in Asakusa (a 2021 report; check current courses).</li>
       <li><strong>Ninja festival:</strong> the Iga Ueno Ninja Festa, about April 1 to May 6.</li>
       <li><strong>NARUTO x BORUTO village:</strong> Shinobi-zato at Nijigen no Mori on Awaji Island, with tickets, rules and access in our {link('/culture/nijigen-no-mori/', 'Nijigen no Mori guide', 'hub_to_nijigen')}.</li>
-      <li><strong>Booked experiences:</strong> compare current {aff(VI_SAM, 'samurai experiences', 'hub_viator_samurai')} and {aff(VI_NIN, 'ninja experiences', 'hub_viator_ninja')} on Viator.</li>
+      <li><strong>Booked experiences:</strong> try a {aff(vtour('Kyoto/Small-Group-Samurai-Experience-in-Kyoto/d332-44484P1'), 'small-group samurai experience in Kyoto', 'hub_viator_kyoto_samurai')} or the {aff(vtour('Kyoto/Samurai-Experience-and-Guided-Tour-of-Samurai-Ninja-Museum/d332-51440P80'), 'Samurai Ninja Museum in Asakusa, Tokyo', 'hub_viator_tokyo_museum')}, or compare all {aff(VI_SAM, 'samurai experiences', 'hub_viator_samurai')} and {aff(VI_NIN, 'ninja experiences', 'hub_viator_ninja')} on Viator. I have not tried these myself, so please check each listing.</li>
     </ul>
 
     <h2 id="when">When to Go<span class="h2-jp">時期</span></h2>
