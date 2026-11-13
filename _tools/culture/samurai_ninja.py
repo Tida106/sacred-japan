@@ -23,7 +23,68 @@ faqs = [
 ]
 faq_html, faq_ld = faq_blocks(faqs)
 
+CSS = """<style>
+.sn-h{font-family:inherit;margin:0 0 4px;font-size:30px;line-height:1.2}
+.sn-sub{margin:0 0 20px;color:var(--enshu);font-size:14px;letter-spacing:.08em}
+.sn-grid{display:grid;gap:18px;margin:0 0 44px}
+.sn-grid.two{grid-template-columns:1fr 1fr}
+.sn-grid.three{grid-template-columns:repeat(3,1fr)}
+.sn-card{position:relative;display:block;overflow:hidden;border-radius:6px;border:2px solid #c9971c;background:#2a1a1a;text-decoration:none;color:#fff;box-shadow:0 3px 12px rgba(80,40,20,.25);transition:transform .2s,box-shadow .2s}
+.sn-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(80,40,20,.35)}
+.sn-card .ph{aspect-ratio:4/3;overflow:hidden}
+.sn-card.big .ph{aspect-ratio:16/11}
+.sn-card .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.sn-card:hover .ph img{transform:scale(1.05)}
+.sn-card .ov{position:absolute;left:0;right:0;bottom:0;padding:48px 18px 16px;background:linear-gradient(to top,rgba(20,8,8,.92) 0%,rgba(20,8,8,.6) 55%,rgba(20,8,8,0) 100%)}
+.sn-card .kj{display:block;font-size:13px;letter-spacing:.3em;color:#f3d77c}
+.sn-card .tt{display:block;font-size:26px;font-weight:700;line-height:1.2;margin:2px 0 4px;color:#fff;font-family:'Lora',serif}
+.sn-card.big .tt{font-size:32px}
+.sn-card .ds{display:block;font-size:14px;line-height:1.45;color:#f3e8dc;margin-bottom:10px}
+.sn-btn{display:inline-block;padding:8px 16px;background:linear-gradient(135deg,#f9e9a8 0%,#e6c45a 28%,#c9971c 52%,#f3d77c 78%,#d6a92b 100%);color:#1a1a1a;font-weight:700;font-size:15px;border-radius:3px;border:1px solid #b8860b;box-shadow:inset 0 1px 0 rgba(255,255,255,.7);text-shadow:0 1px 0 rgba(255,245,200,.6)}
+.sn-card.kanji{background:linear-gradient(135deg,#7a1f2b,#3b1020);min-height:100%}
+.sn-card.kanji .bgk{position:absolute;right:10px;top:-8px;font-size:130px;color:rgba(243,215,124,.18);line-height:1}
+.sn-card.kanji .ov{position:relative;background:none;padding:36px 18px 18px}
+.sn-note{font-size:12px;color:var(--enshu);margin:-30px 0 40px;text-align:right}
+@media(max-width:780px){.sn-grid.two,.sn-grid.three{grid-template-columns:1fr}.sn-card .ph,.sn-card.big .ph{aspect-ratio:16/10}.sn-card.big .tt{font-size:28px}}
+</style>"""
+
+def card(href, img, kj, title, desc, btn, lab, big=False, aff_=False, alt=''):
+    rel = ' target="_blank" rel="noopener sponsored"' if aff_ else ''
+    kind = 'affiliate' if aff_ else 'internal'
+    return f"""<a class="sn-card{' big' if big else ''}" href="{href}"{rel} onclick="trackEvent('click','{kind}','{lab}')">
+        <div class="ph"><picture><source srcset="{img}.webp" type="image/webp"><img src="{img}.jpg" alt="{alt}" loading="lazy"></picture></div>
+        <div class="ov"><span class="kj">{kj}</span><span class="tt">{title}</span><span class="ds">{desc}</span><span class="sn-btn">{btn}</span></div>
+      </a>"""
+
+cards_html = CSS + f"""
+  <h2 class="sn-h" id="start">Start Here</h2>
+  <p class="sn-sub">侍と忍者 ／ PICK YOUR PATH</p>
+  <div class="sn-grid two">
+      {card('/culture/samurai/','/images/hub/samurai','侍','Samurai Guide','Armor, swords, samurai towns and the festival where riders still gallop.','Read the Samurai Guide →','hub_card_samurai',True,alt='Samurai armor on display')}
+      {card('/culture/ninja/','/images/hub/ninja','忍者','Ninja Guide','Iga and Koka, trick houses, real tools and a festival.','Read the Ninja Guide →','hub_card_ninja',True,alt='A ninja house in Iga')}
+  </div>
+
+  <h2 class="sn-h">Try It Yourself</h2>
+  <p class="sn-sub">体験 ／ BOOK AN EXPERIENCE</p>
+  <div class="sn-grid three">
+      {card(vtour('Kyoto/Small-Group-Samurai-Experience-in-Kyoto/d332-44484P1'),'/culture/samurai/images/armor-red','KYOTO','Samurai Experience','Small-group samurai session in Kyoto.','Check Dates on Viator →','hub_card_viator_kyoto',aff_=True,alt='Red samurai armor')}
+      {card(vtour('Kyoto/Samurai-Experience-and-Guided-Tour-of-Samurai-Ninja-Museum/d332-51440P80'),'/culture/samurai/images/sword','TOKYO','Samurai Ninja Museum','Guided tour of the museum in Asakusa.','Check Dates on Viator →','hub_card_viator_tokyo',aff_=True,alt='A sword on display')}
+      {card(VI_NIN,'/culture/ninja/images/shuriken','NINJA','Ninja Experiences','Compare current ninja activities on Viator.','See All Options →','hub_card_viator_ninja',aff_=True,alt='Shuriken throwing stars')}
+  </div>
+  <p class="sn-note">Photos are illustrative; credits are on the full guides. I have not tried these tours myself, so please read each listing.</p>
+
+  <h2 class="sn-h">Keep Exploring</h2>
+  <p class="sn-sub">もっと ／ CASTLES, ANIME AND THE NARUTO VILLAGE</p>
+  <div class="sn-grid three">
+      {card('/guides/best-castles-japan/','/images/hub/best-castles-japan','城','Best Castles in Japan','30 castles in photos, ranked.','See the Castles →','hub_card_castles',alt='Japanese castle')}
+      {card('/anime/','/images/hub/culture-anime','聖地','Anime Pilgrimage','Real places behind favorite series.','Explore the Hub →','hub_card_anime',alt='Anime pilgrimage location')}
+      <a class="sn-card kanji" href="/culture/nijigen-no-mori/" onclick="trackEvent('click','internal','hub_card_nijigen')"><span class="bgk">忍</span><div class="ov"><span class="kj">NARUTO × BORUTO</span><span class="tt">Nijigen no Mori</span><span class="ds">Walk through the Shinobi village on Awaji Island.</span><span class="sn-btn">Visit the Village →</span></div></a>
+  </div>
+"""
+
 main = f'''<main>
+
+  {cards_html}
 
   {f_hero}
 
@@ -105,33 +166,6 @@ main = f'''<main>
       <span class="torii">⚔️</span>
       <p>Two worlds, one trip.</p>
     </div>
-
-    <section class="related-section">
-      <h2>Related Guides</h2>
-      <span class="h2-jp">関連ガイド</span>
-      <div class="related-grid">
-        <a class="related-card" href="/culture/samurai/" onclick="trackEvent('click','internal','related_hub_to_samurai')">
-          <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
-          <div class="related-card-title">⚔️ Samurai Guide →</div>
-          <div class="related-card-desc">History, armor, samurai towns and festivals.</div>
-        </a>
-        <a class="related-card" href="/culture/ninja/" onclick="trackEvent('click','internal','related_hub_to_ninja')">
-          <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
-          <div class="related-card-title">🥷 Ninja Guide →</div>
-          <div class="related-card-desc">Iga and Koka, museums, a festival and the manga.</div>
-        </a>
-        <a class="related-card" href="/guides/best-castles-japan/" onclick="trackEvent('click','internal','related_hub_to_castles')">
-          <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
-          <div class="related-card-title">🏯 Best Castles in Japan →</div>
-          <div class="related-card-desc">Original keeps and where to see them.</div>
-        </a>
-        <a class="related-card" href="/anime/" onclick="trackEvent('click','internal','related_hub_to_anime')">
-          <div class="related-card-label">SACRED JAPAN ／ HUB</div>
-          <div class="related-card-title">🎬 Anime Pilgrimage →</div>
-          <div class="related-card-desc">Real places behind favorite series.</div>
-        </a>
-      </div>
-    </section>
 
     <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> see the sources lists in our {link('/culture/samurai/', 'samurai guide', 'hub_src_samurai')} and {link('/culture/ninja/', 'ninja guide', 'hub_src_ninja')}. I have not verified current prices, hours or event dates.</p>
 
