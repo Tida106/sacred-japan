@@ -202,6 +202,22 @@ main=f'''<!-- ── MAIN ── -->
 </main>
 
 '''
+
+# ---------- photos ----------
+import sys; sys.path.insert(0,R+'/_tools/anime')
+import gk_photos as G
+def ins(after,keys):
+    global main
+    assert main.count(after)==1,after
+    main=main.replace(after,after+'\n\n'+''.join(G.fig(k) for k in keys))
+main=main.replace('    <section id="opening">',G.fig('otaru-hero',hero=True)+'\n    <section id="opening">',1)
+ins('Otaru buildings.</p>',['otaru-dusk','otaru-night'])
+ins('does not give them.</p>',['otaru-snow','otaru-lights'])
+ins('check the official page for the bus route and tickets.</p>',['hv-entrance','hv-studio','hv-barn'])
+ins('a page of the manga.</p>',['hv-tram','hv-entrance2'])
+ins('the labor was real.</p>',['ab-bridge','ab-bridge-snow','ab-gate','ab-front','ab-statue','ab-snow-front'])
+ins('a night or two in the area.</p>',['ab-corridor1','ab-corridor2','ab-watch','ab-meal'])
+
 tail=T[T.index('<!-- ── AI IMAGERY NOTE'):]
 tail=tail.replace('lucky_star','golden_kamuy')
 out=head+nav+hero+'\n'+main+tail
