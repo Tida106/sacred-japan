@@ -15,8 +15,15 @@ photos={ # key: (file, maxwidth, crop)
  'black-cabinet':('dd3870d0-image.jpg',900,None),
  'exhibition-room':('477348a0-image.jpg',1200,(0,0,2200,1319)),
 }
+U='/mnt/user-data/uploads/'
+photos.update({
+ 'home-tools':('59a998e1-image.jpg',1200,None),
+ 'home-hands':('4dc0c549-image.jpg',1200,None),
+})
 for k,(f,mw,crop) in photos.items():
-    im=Image.open(A+f).convert('RGB')
+    src=U+f if k.startswith('home-') else A+f
+    if not os.path.exists(src): continue
+    im=Image.open(src).convert('RGB')
     if crop: im=im.crop(crop)
     w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
@@ -33,6 +40,8 @@ def fig(k,alt,cap,credit,hero=False,maxw=760,pos=None):
     </figure>'''
 CC0='<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener" style="color:var(--enshu);">CC0</a>'
 GRY='<a href="https://commons.wikimedia.org/wiki/User:Gryffindor" target="_blank" rel="noopener" style="color:var(--enshu);">Gryffindor</a>'
+HK='<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" style="color:var(--enshu);">CC BY-SA 4.0</a>'
+def crh(date): return f'Photo: Henry Kellner, {HK}, {date}, via Wikimedia Commons (resized)'
 def cr(date,extra=''): return f'Photo: {GRY}, {CC0}, {date}{extra}, via Wikimedia Commons (resized)'
 
 f_gold=fig('gold-screen','A tall arrangement of white-painted bare branches, orange flowers and red berries in a rugged blue-grey vase, in front of a gold folding screen on a red carpet','A large arrangement in front of a gold screen, shown at the Meguro Gajoen exhibition.',cr('13 November 2018'),hero=True,pos='50% 34%')
@@ -43,6 +52,9 @@ f_pill=fig('shelf-pillar','A shelf unit with several small arrangements, among t
 f_gal=fig('gallery-piece','A tall arrangement of red berries, white chrysanthemums, maple-like leaves and curved bamboo strips in two vases, one of them woven bamboo, on a white plinth','A modern piece in a gallery, from the Shinsei-ryu.',cr('4 November 2018'),maxw=640)
 f_cab=fig('black-cabinet','A colorful porcelain vase on a carved stand holding purple and dark red orchids and pine branches, on a black lacquer cabinet inlaid with birds and flowers, in front of a dark wooden lattice','Orchids and pine in a painted vase on a lacquer cabinet.',cr('13 November 2018'),maxw=420)
 f_room=fig('exhibition-room','A tatami room with fan-shaped flower paintings along the upper walls, carved log pillars, several alcoves with flower arrangements, and green bamboo bars laid on the floor','A wide view of the exhibition room, with arrangements in the alcoves and bamboo bars on the floor (cropped at the right edge).',cr('13 November 2018'))
+
+f_tools=fig('home-tools','A wooden table with three bowls (pale grey, brown-glazed and black on a foot), a round pin holder, a cup of water, a leafy branch with buds, and red-handled shears on a white cloth','The basic kit laid out: three bowls, a pin holder, water, a branch and shears.',crh('3 November 2017'))
+f_hands=fig('home-hands','Two hands pressing the stem of a cream-and-peach rose onto a pin holder in a brown bowl, beside a leafy branch already standing upright, with shears on a white cloth and fallen leaves on the table','Adding a rose to the pin holder after the branch is in place.',crh('3 November 2017'))
 
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 def ext(href,txt,lab): return f'<a href="{href}" target="_blank" rel="noopener" onclick="trackEvent(\'click\',\'external\',\'{lab}\')">{txt}</a>'
@@ -55,6 +67,7 @@ faqs=[
 ("What do heaven, human and earth mean in ikebana?","In some arrangements the main stems form a scalene triangle of three points that stand for heaven, human and earth (or sun, moon and earth). In the seika style they are called ten, chi and jin. Not every school or style uses this."),
 ("How is ikebana related to the tea ceremony?","Both belong to the alcove (tokonoma) tradition, and the flowers used in a tea room are called chabana. Wikipedia describes chabana as separate from ikebana, but notes that its simplicity helped create the nageire style."),
 ("Do I need experience to try a lesson?","The visitor trial lesson that Ikenobo lists on its English page is aimed at visitors and offers a guide in English or Chinese. The page does not state any experience requirement. Please check the current details before you book."),
+("What do I need to try ikebana at home?","The photographs in this guide show a simple setup: a bowl, a pin holder (kenzan) to hold the stems, water, sharp shears, a cloth and a branch or two. Schools differ in their tools and rules, so a lesson is the best way to learn the forms."),
 ("Where can I see ikebana without taking a lesson?","Exhibitions are the easiest way. The photographs in this guide were taken at exhibitions at Meguro Gajoen in Tokyo and in Nagoya in 2018. Those were temporary shows, so check what is on when you travel.")]
 faq_html=''.join(f'''      <details class="faq-item">
         <summary>{q}</summary>
@@ -86,6 +99,7 @@ main=f'''<main>
       <li><a href="#schools">The Schools</a></li>
       <li><a href="#look">Seven Arrangements to Look At</a></li>
       <li><a href="#how">How to Look at an Arrangement</a></li>
+      <li><a href="#home">Try It at Home: The Basic Kit</a></li>
       <li><a href="#try">Where to See and Try Ikebana</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
@@ -161,6 +175,13 @@ main=f'''<main>
       <li><strong>Read the name card.</strong> It usually gives the school and the maker. You can see one in the photographs of the gold screen and the gallery piece.</li>
     </ol>
 
+    <h2 id="home">Try It at Home: The Basic Kit<span class="h2-jp">用具と生け方</span></h2>
+    <p>Not every arrangement needs a gallery. These two photographs by Henry Kellner show a simple home setup. Commons describes both only as "Ikebana", so I treat them as a demonstration of the basic method and do not attach them to any school.</p>
+    {f_tools}
+    <p>Here is the kit laid out on a pale wooden table. Along the top are three bowls: a pale grey one, a brown one with a green-edged glaze, and a black one on a small foot. In front of them sits a round <strong>pin holder</strong>, called a <em>kenzan</em> in Japanese, a dense bed of metal pins that holds stems upright. To its right are a clear cup of water and a pair of red-handled shears resting on a white cloth. The branch lying across the middle, with leaves and small buds, is the raw material. Choosing which bowl suits the branch is the first decision.</p>
+    {f_hands}
+    <p>In the second photograph the work has started. The pin holder sits in the brown bowl with a little water, and the leafy branch already stands on the pins. Two hands are pressing the stem of a cream-and-peach rose onto them, with a small bud on a short side stem still to place. The shears and cloth are within reach at the upper right, and cut leaves and a few petals lie on the table. This is what I mean by looking at the line: the tall branch sets the line, and the rose is added low and close to it.</p>
+
     <h2 id="try">Where to See and Try Ikebana<span class="h2-jp">鑑賞・体験するには</span></h2>
     <h3>Meguro Gajoen's Hyakudan Kaidan, Tokyo</h3>
     <p>Most of the photographs above were taken in the Hyakudan Kaidan ("hundred-step staircase") at Meguro Gajoen. {ext('https://en.japantravel.com/tokyo/meguro-gajoen-and-the-hyakudan-kaidan/60386','Japan Travel','ikebana_japantravel_gajoen')} says it was built as a wedding hall in the 1930s, is registered as a Tangible Cultural Asset of Tokyo, and has 99 wooden steps and seven function rooms. A recent {ext('https://www.timeout.com/tokyo/news/the-extravagant-hyakudan-kaidan-in-meguro-has-reopened-after-a-yearlong-closure-101626','Time Out Tokyo','ikebana_timeout_gajoen')} report says it reopened on October 1 after a year-long closure, with daytime tickets from ¥1,800. Please check the official site before you go, because prices, hours and exhibitions change. The ikebana exhibition in my photographs was a temporary event in 2018, so do not expect to find those arrangements today.</p>
@@ -228,4 +249,5 @@ tail=tail.replace('What Happens, What to Do as a Guest, and Where to Try It','Hi
 tail=tail.replace('Tea Ceremony Guide','Ikebana Guide')
 tail=tail.replace('guide_tea','guide_ikebana').replace('viator_guide_tea_sticky','viator_guide_ikebana_sticky').replace('japanese+tea+ceremony','ikebana+flower+arranging')
 tail=re.sub(r'(<meta name="keywords" content=")[^"]*(")',r'\1Ikebana, Japanese flower arranging, kado, Ikenobo, Ohara, Sogetsu, rikka, chabana, ikebana lesson Kyoto, Meguro Gajoen\2',tail)
+tail=tail.replace('"dateModified":"2026-11-08"','"dateModified":"2026-11-13"')
 exec(tail)
