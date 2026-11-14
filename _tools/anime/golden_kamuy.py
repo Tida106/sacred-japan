@@ -217,7 +217,7 @@ ins('check the official page for the bus route and tickets.</p>',['hv-entrance',
 ins('a page of the manga.</p>',['hv-tram','hv-entrance2'])
 ins('the labor was real.</p>',['ab-bridge','ab-bridge-snow','ab-gate','ab-front','ab-statue','ab-snow-front'])
 ins('a night or two in the area.</p>',['ab-corridor1','ab-corridor2','ab-watch','ab-meal'])
-ins('Please go as a guest and listen first.</p>',['up-exterior','up-chise','up-chise-inside','up-room','up-hearth-wide','up-hearth','up-sword','up-basin','up-bark','up-grass','up-meal'])
+ins('Please go as a guest and listen first.</p>',['up-exterior','up-chise','up-chise-inside','up-room','up-hearth-wide','up-hearth','up-sword','up-makiri','up-basin','up-bark','up-grass','up-meal'])
 
 tail=T[T.index('<!-- ── AI IMAGERY NOTE'):]
 tail=tail.replace('lucky_star','golden_kamuy')

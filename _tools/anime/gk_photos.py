@@ -67,6 +67,8 @@ add('up-chise-inside','42f1ec1a-image.jpg','Interior_of_traditional_Ainu-style_h
  "The inside of a chise, as Commons titles the file. The walls are lined with woven mats in black, red and natural reed, and bundles hang from the roof beams; the Commons description calls them inau. Imagine this lit by the fire and you have the room the manga's Ainu characters sit in. The light is dim, so expect something like this rather than a bright exhibition hall.")
 add('up-sword','c12b6b65-image.jpg','Ainu_ritual_sword_National_Ainu_Museum_and_Park.jpg','Hiart','cc0','2025','A dark curved sword in an ornate scabbard on a clear stand, with a label reading Emushi, Ritual Sword','National Ainu Museum, ritual sword',
  "A ritual sword in the museum, with the label reading \u30a8\u30e0\u30b7 (<em>emushi</em>) and Ritual Sword in four languages. Its scabbard is dark and finely worked with pierced metal panels. The label calls it a ritual sword, not a weapon, so I would not read it as one.")
+add('up-makiri','413d56b2-image.jpg','Ainu_knife_makiri.jpg','\u30bf\u30af\u30ca\u30ef\u30f3 (Takunawan)','bysa4','2023-07-20','A small knife with a carved wooden handle beside its matching carved wooden sheath with a red cord and an antler toggle, on a dark display board in a glass case','Upopoy, Ainu knife (makiri)',
+ "An Ainu knife, <em>makiri</em>, photographed at Upopoy according to Commons. The label reads \u30de\u30ad\u30ea (<em>makiri</em>) and \u5c0f\u5200 (small sword), and appears to name the maker as \u30cf\u30e0\u30a2\u30ad (\u725f\u7530\u7ae0\u79cb), so this is a modern work, not an old heirloom. The handle and sheath are carved with scrolls and fine cross-hatching, and a red cord ties the sheath to a pale antler toggle. I have not checked how this knife relates to any scene in the story, so take it as an example of the craft.")
 add('up-basin','717e8268-image.jpg','Ainu_four-handled_basin_National_Ainu_Museum_and_Park.jpg','Hiart','cc0','2025','A dark wide bowl with four long handles tipped with metal caps, on a white display surface','National Ainu Museum, four-handled basin',
  "A wide dark basin with four long handles tipped with metal, as Commons titles it. It is carved with fine patterns on the sides. I cannot tell you its use or age from the photo, so check the label in the museum.")
 add('up-bark','16585125-image.jpg','Bark_fiber_garment_National_Ainu_Museum_and_Park.jpg','Hiart','cc0','2025','A brown woven garment with dark blue appliqu\u00e9 bands and fine white stitched lines in a glass case','National Ainu Museum, bark fiber garment',
@@ -79,6 +81,8 @@ add('up-meal','7129329f-image.jpg','Seasonal_Ohaw_set_meal_Umizora-no-Haru.jpg',
 def build(k):
     p=P[k]
     os.makedirs(OUT,exist_ok=True)
+    if not os.path.exists(U+p['up']) and os.path.exists(OUT+k+'.jpg'):
+        im=Image.open(OUT+k+'.jpg'); p['w'],p['h']=im.size; return
     im=Image.open(U+p['up']).convert('RGB')
     w=min(1200,im.width)
     if im.width>w: im=im.resize((w,round(im.height*w/im.width)),Image.LANCZOS)
