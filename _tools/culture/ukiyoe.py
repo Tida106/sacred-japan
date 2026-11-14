@@ -14,6 +14,25 @@ FAA='https://blog.fineartamerica.com/what-is-ukiyo-e/'
 WB='https://www.woodblock-print.eu/what-is-japanese-woodblock-printing.html'
 LT='https://human.libretexts.org/Bookshelves/Art/Art_History_and_Theory/Asian_Art_History_(Gustlin_and_Gustlin)/10%3A_Global_Impact_(1700_CE__1900_CE)/10.3%3A_Ukiyo-e_(1636-1911)'
 
+
+CAPST='font-size:13px;color:var(--enshu);margin-top:10px;text-align:center;line-height:1.6;'
+LA='style="color:var(--enshu);"'
+CMB='https://commons.wikimedia.org/wiki/File:'
+def lk(t,u): return f'<a href="{u}" target="_blank" rel="noopener" {LA}>{t}</a>'
+def ufig(src,alt,desc,by,fn,extra=''):
+    cred=f'{by}, {lk("public domain","https://commons.wikimedia.org/wiki/Commons:Public_domain")}{extra}, via {lk("Wikimedia Commons",CMB+fn)} (resized)'
+    return (f'<figure style="margin:36px auto;max-width:760px;">\n      <picture><source srcset="/culture/ukiyo-e/images/{src}.webp" type="image/webp"><img src="/culture/ukiyo-e/images/{src}.jpg" alt="{alt}" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;"></picture>\n      <figcaption style="{CAPST}">{desc}<br>{cred}</figcaption>\n    </figure>')
+FN_WAVE='Tsunami_by_hokusai_19th_century.jpg'
+FN_FUJI='Red_Fuji_southern_wind_clear_morning.jpg'
+FN_YOSH='Yoshiwara,_Station_15,_from_the_Fifty-Three_Stations_of_the_Tokaido_Road_(Reisho_edition),_by_Utagawa_Hiroshige,_1848-1849,_from_the_Hood_Museum_of_Art_-_PR.972.64.15.tif'
+FN_SANJ='Print,_Sanjo_Bridge,_Kyoto,_in_The_Fifty-Three_Stations_of_the_Tokaido_Road_(Tokaido_Gojusan_Tsugi-no_Uchi),_ca._1834_(CH_18608919).jpg'
+FN_SUSA='Yoshitoshi_Nihon-ryakushi_Susanoo-no-mikoto.jpg'
+f_wave=ufig('wave','Woodblock print of a huge dark-blue wave with claw-like white foam curling over three narrow boats, with a small snow-capped Mount Fuji in the trough between the waves','The Great Wave off Kanagawa, from <em>Thirty-six Views of Mount Fuji</em>. The Metropolitan Museum of Art copy, JP1847.','Katsushika Hokusai',FN_WAVE,'; first published about 1830-1832 according to the Commons record')
+f_fuji=ufig('redfuji','Woodblock print of a red-brown Mount Fuji with white snow streaks against a blue sky full of white cloud strips, with a dark green forest at the foot of the mountain','South Wind, Clear Sky (<em>Gaifu kaisei</em>), the "Red Fuji", from <em>Thirty-six Views of Mount Fuji</em>. This copy is an edition made around 1930, according to the Commons description.','Katsushika Hokusai',FN_FUJI,'; design first published about 1830')
+f_yosh=ufig('yoshiwara','Woodblock print of travelers on a road under tall pine trees, with a white-capped Mount Fuji behind them, a woman riding a horse led by a boy, and two straw stacks in the fields to the left','Yoshiwara, Station 15 of the Tokaido, from the Fifty-Three Stations of the Tokaido Road (Reisho edition), 1848-1849. Hood Museum of Art, Dartmouth College, PR.972.64.15.','Utagawa Hiroshige',FN_YOSH,'; uploaded to Commons by Daderot in 2024')
+f_sanj=ufig('sanjo','Woodblock print of a long wooden trestle bridge across a river with travelers, porters and women with umbrellas crossing it, and a town and many-peaked hills behind under an orange band of sky','Sanjo Bridge, Kyoto, from the Fifty-Three Stations of the Tokaido Road, about 1834. Cooper Hewitt, Smithsonian Design Museum, 1948-134-55 (gift of Mary Rutherford Jay).','Utagawa Hiroshige',FN_SANJ,'; the Commons record notes a Hoeido seal')
+f_susa=ufig('susanoo','Dark woodblock triptych of a wild-haired warrior in torn white robes with a sword in his right hand, standing in white-capped waves in front of a blue serpent with an open red mouth','A triptych from the series <em>Nihon ryakushi</em> (日本略史), "Outline History of Japan", showing Susanoo and the eight-headed serpent.','Yoshitoshi (as named in the Commons file title)',FN_SUSA,'; Commons says the copyright term has expired in Japan; higher-resolution upload by Artanisen, 2020')
+
 faqs=[
 ("What does ukiyo-e mean?","Ukiyo-e (浮世絵) means \"pictures of the floating world.\" The \"floating world\" was the city life of the Edo period: theaters, teahouses, fashion and the pleasure quarters. The prints were made for ordinary townspeople, not for temples or the court."),
 ("Is ukiyo-e a painting or a print?","Mostly a print. Some artists did paint, but most ukiyo-e that survive and travel are woodblock prints, made by a team and sold in editions. The Great Wave, for example, is a color woodblock print, not a painting."),
@@ -36,6 +55,8 @@ URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-ukiyoe.jpg"
 
 main=f'''<main>
+
+  {f_wave}
 
   <!-- TABLE OF CONTENTS -->
   <aside class="toc" aria-label="Table of contents">
@@ -118,11 +139,21 @@ main=f'''<main>
 
     <h3>Utagawa Hiroshige (1797-1858): The Poet of Travel</h3>
     <p>Hiroshige is known for the serene, atmospheric landscape, and for <em>The Fifty-three Stations of the Tokaido</em>, the road between Edo and Kyoto. Nippon.com notes that journeys and pilgrimages became popular from the early nineteenth century, and the landscape prints of Hokusai and Hiroshige grew out of that boom.</p>
+    {f_yosh}
+    <p>This is Yoshiwara, the fifteenth station of the Tokaido, from a later edition of the Fifty-Three Stations dated 1848-1849 in the Hood Museum of Art. Do not confuse it with Edo's pleasure quarter of the same name; here it is a post town on the road, and what the picture sells is Mount Fuji. White-capped Fuji stands behind tall, twisted pines. A woman in a flat hat rides a horse led by a boy, a traveler with a staff turns to look back, and a man with a pack walks on at the right. Two straw stacks sit in the fields at the left. The pines frame the mountain so that you look through the trees to it, as a real traveler would.</p>
+    {f_sanj}
+    <p>The road ended in Kyoto. In this print the last scene is the long wooden trestle bridge at Sanjo, with porters carrying boxes on poles, women under umbrellas and travelers in hats streaming across it. Behind the river lie the city roofs and, as the Commons record puts it, a range of many-peaked hills. I read the characters 大尾 near the title, which I take to mean "the end" of the series, but that is my reading, not the museum's. The record also lists a Hoeido seal, the publisher whose name is linked to this famous set.</p>
     <p>Utagawa Kuniyoshi (1798-1861) deserves a mention too. The woodblock prints of the Dan-no-ura sea battle in our {link('/culture/three-sacred-treasures/','guide to the Three Sacred Treasures','ukiyoe_to_treasures')} come from the same print tradition, although I cannot say which artists made those particular sheets.</p>
+    {f_susa}
+    <p>Many prints retell the myths too. This dark triptych shows the storm god Susanoo in the middle of the sheet, wild-haired and in torn white robes, with a sword in his right hand, while an enormous blue serpent rears at the right with its mouth wide open. The white wave crests that fill the bottom remind me of Hokusai's style. At the upper left, a smaller figure in red and white seems to be wrapped in pine boughs and rope; I think it may be the princess of the story, but I cannot confirm it from the print. The label at the upper right appears to give Susanoo's name and the words "eight-headed serpent"; I am reading that, not translating it from a catalogue. You can read the story behind it in our {link('/culture/three-sacred-treasures/#serpent','guide to the Three Sacred Treasures','ukiyoe_to_orochi')}.</p>
 
     <h2 id="wave">The Great Wave<span class="h2-jp">神奈川沖浪裏</span></h2>
-    <p>The wave is a print, not a painting. A print-dealer's blog says it comes from Hokusai's series <em>Thirty-six Views of Mount Fuji</em>, published around 1831, and that thousands of impressions were pulled over the years; I found that edition claim in only one source, so I treat it as likely rather than proven.</p>
+    <p>The wave is a print, not a painting. The museum record that Wikimedia Commons quotes dates its first publication to between about 1830 and 1832 and lists it as part of Hokusai's series <em>Thirty-six Views of Mount Fuji</em>. A print-dealer's blog adds that thousands of impressions were pulled over the years; I found that edition claim in only one source, so I treat it as likely rather than proven.</p>
+    <p>The same Commons description corrects a popular idea. The wave is often used in books about tsunami, but it says there is no reason to think Hokusai meant it that way, and that the waves are more accurately <em>okinami</em> (<span class="jp">沖波</span>), great waves out at sea. Look at the three boats at the bottom and the right: crouching figures hug the hulls, and the sea is about to fall on them.</p>
     <p>If you see it in Japan, notice how small the boats and the mountain are. The sea takes up the page. I think that choice, with the mountain far away and the water in front, is why the picture still works as well as a poster as it did as a print.</p>
+    <p>Hokusai's other great Fuji design is the opposite mood. <em>South Wind, Clear Sky</em>, nicknamed the "Red Fuji", shows the mountain in clear morning light.</p>
+    {f_fuji}
+    <p>The color is the whole story here: a red-brown mountain, a deep blue sky broken into white strips of cloud, and a green forest at the foot that fades into the red. Because this is a copy printed around 1930, it is a good reminder that these designs were printed again and again. A Commons note on this file says the skill and care of an edition from about 1930 were the same as around 1830, that the woodcutter and printer matter as much as the artist, and that only experts can tell the many versions apart, mainly by differences in the frame around the title.</p>
 
     <h2 id="west">How the Prints Reached the West<span class="h2-jp">西洋への影響</span></h2>
     <p>While interest dropped inside Japan in the Meiji period, japan-guide says the prints gained prominence in Europe, where they influenced Impressionist painters. A history of the genre adds the names Vincent van Gogh and Henri de Toulouse-Lautrec, and calls the fashion for Japanese art Japonisme.</p>
