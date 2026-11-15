@@ -69,6 +69,13 @@ f_roof=pfig('satomi-roof','Woodblock print of two men fighting with swords acros
 f_neko1=pfig('nekomata-1','Three-sheet woodblock print of three actors in a row in front of a gold and black background, a man in a purple robe at the left with a sword, an old woman in a patterned robe seated in the middle with two white and spotted cats at her feet, and a man in grey at the right','One of two triptychs from the same July 1847 production of <em>Onoe Kikugoro uchidai banashi</em> at the Ichimura theatre. Commons lists the actors from the left as Ichimura Uzaemon XII, Onoe Baijiu (Onoe Kikugoro III) and Sawamura Sojuro V. The cats on the floor are what I notice first.',f'Utagawa Kunisada (signed Toyokuni), {PDL}, via {cm("Kunisada+triptych+Ichimura+Uzaemon+XII+Onoe+Baijiu+Sawamura+Sojuro+V+1847")} (resized); uploaded by Horst Gr&auml;ber, 2012')
 f_neko2=pfig('nekomata-2','Three-sheet woodblock print with a figure in blue crouched at the left, a seated figure in a patterned robe in the middle with red flames rising behind, and another figure in a grey robe at the right, under a gold curtain','The second triptych of the same July 1847 production. This one is dated the same way but the order of the actors is reversed in Commons (from the left: Sawamura Sojuro V, Onoe Baijiu, Ichimura Uzaemon XII). The flames behind the middle figure suggest a ghost or spirit scene; that is my reading, not Commons.',f'Utagawa Kunisada (signed Toyokuni), {PDL}, via {cm("Kunisada+triptych+Sawamura+Sojuro+V+Onoe+Baijiu+Ichimura+Uzaemon+XII+1847")} (resized); uploaded by Horst Gr&auml;ber, 2012')
 
+f_kz=pfig('kabukiza','Front of the Kabukiza theatre in Ginza on a clear day, a white building with a curved gabled entrance roof, tall red and purple banners, a wall of sake barrels at the left and a purple curtain with round crests over the doors, with cars on the street in front','The Kabukiza in Ginza, Tokyo, photographed on 24 February 2008 (Commons), before the current building opened in 2013, so the facade today looks different.',f'Shakher59, {lk("CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0/")}, via {cm("Tokyo+Ginza+Kabukiza+theatre+Shakher59")} (resized)',760)
+BNF=lambda n: f'Bibliotheque nationale de France, Arts du spectacle, RESERVE 16-EGC-3489 ({n}/43); {PDL}, via {cm("kumadori+sanjunana+zu+btv1b53125171j")} (resized)'
+f_k14=pfig('kumadori-14','Woodblock-style print of a bald head seen from the front with bold red curved bands across the forehead, red around the eyes and nose and a red wavy line under the lips, with handwritten Japanese notes on both sides','A kumadori model with broad red bands across the forehead and a wavy line under the mouth. From the album <em>Kumadori sanjunana zu</em> (37 kumadori patterns), dated 1886 on Commons; the cursive notes are beyond my reading, so I describe only the face.',BNF(14))
+f_k21=pfig('kumadori-21','Print of a bald head seen from the front with red lines sweeping up from the nose and eyes to the forehead like horns, red lines running out across the cheeks and a red V under the lips, with handwritten Japanese notes at both sides','A second pattern from the same album, with red lines sweeping up and out across the face. The first line of the notes appears to read as the origin of the <em>aragoto</em> style and the first Ichikawa Danjuro, but I am not sure of my reading.',BNF(21))
+f_k28=pfig('kumadori-28','Print of a bald head from the front with blue and brown lines around the staring eyes and forehead, a large black beard-shaped area over the lower face and a red mouth, with handwritten notes at the sides','The third pattern, in blue, brown and black. It shows how the colors work together: here there is no red at all, which fits the guide on the colors above (blue and brown for villains and non-human roles). The notes are beyond my reading.',BNF(28))
+f_osh=pfig('oshimodoshi','Woodblock print of an actor shown from the chest up with a red-lined white face, a wild black wig, a green bamboo stalk in his fist, a straw hat and bamboo leaves behind him and a red robe with yellow dots, under a black title banner','<em>Oshimodoshi</em> from the series <em>The Eighteen Great Kabuki Plays</em>: Ichikawa Danjuro IX as Aotake Goro, 27 May 1896 (Commons). A woodblock color print, Museum of Fine Arts, Boston.',f'Torii Tadakiyo (Hasegawa Kanbei XIV, 1847-1929), {PDL}, via {cm("Oshimodoshi+Ichikawa+Danjuro+IX+Aotake+Goro+Eighteen+Great+Kabuki+Plays")} (resized); uploaded by Tak1701d, 2015',420)
+
 main=f"""<main>
 
   <!-- TABLE OF CONTENTS -->
@@ -134,10 +141,14 @@ main=f"""<main>
     </ul>
     <p>Other sites give longer lists, with pink for youth or purple for nobility, but I found those in less careful sources, so I keep to the three that several agree on. The rule of thumb is simple: red is good, blue is bad, brown is not human.</p>
 
+    {f_k14}
+    {f_k21}
+    {f_k28}
     {f_ebizo}
     {f_shib1}
     {f_shib2}
     {f_yura}
+    {f_osh}
 
     <h2 id="plays">Three Kinds of Play<span class="h2-jp">時代物・世話物・所作事</span></h2>
     <p>The Web Japan introduction divides the repertoire into three main genres, each with an example it names:</p>
@@ -155,6 +166,7 @@ main=f"""<main>
     {f_neko2}
 
     <h2 id="where">Where to See Kabuki<span class="h2-jp">劇場ガイド</span></h2>
+    {f_kz}
     <ul>
       <li><strong>Kabukiza, Ginza, Tokyo:</strong> the main venue. The Gate says the first Kabukiza opened in 1889 and the fifth, current one in 2013, with quakeproof construction and barrier-free access. Seating is reported at roughly 1,800 (JAPN) or 1,900 (Facts and Details), so I give no exact figure. Higashi-Ginza Station Exit 3 connects to the theater directly.</li>
       <li><strong>Minami-za, Kyoto:</strong> described as the oldest kabuki theater in Japan and the only one left in Kyoto, in the Gion area and near the Kamo River; Kanpai Japan says it was renovated in 2016. Both it and Kabukiza are run by Shochiku.</li>
