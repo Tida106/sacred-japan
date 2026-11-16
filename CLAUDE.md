@@ -477,3 +477,4 @@
 - 2026-11-16 culture/popular-dishes：すき焼きの写真をヒーローから外し、すき焼き節（#sukiyaki）の1段落目の後に移動（ビルダー _tools/culture/dishes.py）。ページ冒頭は食ガイド一覧のみでヒーロー写真なし。【未対応】新しいヒーロー写真（検討中）
 - 2026-11-16 castles/ハブ：ヒーロー内（統計の上）に金ボタン「See the Castle Ranking: 30 Castles in Photos」を追加（→/guides/best-castles-japan/、イベント castles_hero_to_ranking）
 - 2026-11-17 名称整理：wagashi→「Japanese Sweets (Wagashi)」、japanese-sweets→「Japanese Snacks & Sweets Souvenirs」（URLは変更なし）。両ページ冒頭に相互リンクの一文、関連カードに相互リンク追加。全ページのモバイルナビ（—Wagashi→—Japanese Sweets (Wagashi)／—Japanese Sweets→—Snacks & Souvenirs）、文化・ガイドハブのカードとJSON-LD、フッター、ホームのピンクボタン（→wagashiへ）、食ガイド一覧（土産タイルはどら焼き写真をやめ「お土産」文字タイルに）、OGP2枚を更新。ビルダー wagashi.py/sweets.py/food_nav.py に反映済み（wagashi.pyは元写真が無くても動くよう修正）。【未対応】土産タイルに使える実写真（商標のないお土産売り場など）、インデックス登録
+- 2026-11-17 お土産ページのカード写真：写真AC（happy16）の和菓子詰め合わせ写真を、食ガイド一覧のタイルと文化・ガイドハブのカードに設置（images/hub/japanese-sweets.*、元画像 japanese-sweets-src.jpg）。クレジットはsweetsページ末尾に記載。【要確認】写真ACの規約（サイト掲載・商用）。【未対応】インデックス登録

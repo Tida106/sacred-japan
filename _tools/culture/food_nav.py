@@ -14,7 +14,7 @@ ITEMS=[
  ('yakitori','/culture/yakitori/','Yakitori',f'{R}/images/hub/yakitori.jpg'),
  ('bread','/culture/bread/','Bread',f'{R}/images/hub/bread.jpg'),
  ('wagashi','/culture/wagashi/','Japanese Sweets',f'{R}/images/hub/wagashi.jpg'),
- ('japanese-sweets','/culture/japanese-sweets/','Snacks &amp; Souvenirs',None),
+ ('japanese-sweets','/culture/japanese-sweets/','Snacks &amp; Souvenirs',f'{R}/images/hub/japanese-sweets-src.jpg'),
  ('regional-food','/regional-food/','Regional',f'{R}/images/hub/culture-food.jpg'),
 ]
 os.makedirs(f'{R}/images/food-nav',exist_ok=True)

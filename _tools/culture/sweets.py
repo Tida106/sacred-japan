@@ -165,7 +165,7 @@ main=f'''<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> {TRIP}; {BYF}; {JW}; {ZEN}; {TV}; {FUN}; {SORA}; {JPB}; {MG}. Product facts and prices come from these pages and may have changed, so check before you buy. The selection and order are the author's. Product names are trademarks of their owners, so this page links to official sites and does not show product packaging.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> {TRIP}; {BYF}; {JW}; {ZEN}; {TV}; {FUN}; {SORA}; {JPB}; {MG}. Product facts and prices come from these pages and may have changed, so check before you buy. The selection and order are the author's. Product names are trademarks of their owners, so this page links to official sites and does not show product packaging. Guide-page thumbnail: photo by happy16 via <a href="https://www.photo-ac.com/" target="_blank" rel="noopener">photo-ac.com</a>.</p>
 
   </article>
 
