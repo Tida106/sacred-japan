@@ -174,6 +174,28 @@ f_ur9=mf2('udo-romon-2009','Red two-storey tower gate with a grey-green roof, a 
  'The same gate a year later, May 2009, with the ox plaque. Several of these photographs are from different years, so colours of paint and fences may not match a visit today.',
  f'z tanuki, 2 May 2009, {CCBY3}, via {cm("Udo Shrine Nichinan Miyazaki")} (resized)',mw=700)
 
+f_usg=mf2('udo-romon-sign-2009','Wide view of a red tower gate with a dark curved roof, a thick rope across the opening, stone lanterns on both sides, a few visitors walking through and a tall white signboard with large black characters at the right',
+ 'The Udo Shrine gate area in a May 2009 panorama. The tall board on the right reads 鵜戸神宮 in large characters. As I read the smaller text, it gives the festival day as 1 February and names the deity as Ugayafukiaezu, described as the father of Emperor Jimmu. A &ldquo;no smoking&rdquo; sign stands at the far left. Please check the festival day with the shrine.',
+ f'z tanuki, 16 May 2009, {CCBY3}, via {cm("Udo Shrine Nichinan Miyazaki")} (resized)',mw=900)
+g_boat=mf2('gorge-boat-2007','Narrow green gorge with tall dark rock walls on both sides, a thin waterfall dropping into a calm green pool in the middle, and moss covering the lower rocks',
+ 'Takachiho Gorge, seen from a hire boat in June 2007 (Commons description). The waterfall drops straight into the pool from the cleft; the walls on both sides close in as the boat nears it.',
+ f'Max Smith, June 2007, {PDL}, via {cm("Takachiho Gorge boat")} (resized)')
+g_fall=mf2('gorge-boats-fall-2022','View down a green, fern-covered gorge with a waterfall on the left, blue rowing boats on dark water, and a bridge faintly visible far above',
+ 'Rowing boats on the river beneath the waterfall, in May 2022. Each blue boat carries a number, and you can see how small the boats look against the walls.',
+ f'Raita Futo, 29 May 2022, {CCBY2}, via {cm("Takachiho Gorge")} (resized)')
+g_num=mf2('gorge-boats-numbered-2022','Two numbered blue rowing boats in the foreground on green water, more boats further back near a waterfall, tall pale rock walls and trees overhead',
+ 'Closer to the fall, also in May 2022. The tall pale columns of the walls and the numbered boats make a good sense of scale; pale specks float on the water, which I take to be fallen petals or seeds, though I could not confirm it.',
+ f'Raita Futo, 29 May 2022, {CCBY2}, via {cm("Takachiho Gorge")} (resized)')
+g_bridge=mf2('gorge-bridge-2022','Waterfall on the left and a tall rock wall on the right, with a stone arch bridge crossing high above and bright green forest beyond',
+ 'Looking up at the waterfall and the arch bridge across the gorge, from near the water, in May 2022. The same bridge appears in the boat photographs above.',
+ f'Raita Futo, 29 May 2022, {CCBY2}, via {cm("Takachiho Gorge")} (resized)')
+g_above=mf2('gorge-above-boats','Tall view straight down into a gorge from above, with five small boats on green water, a thin waterfall at the right and thick foliage framing the top and sides',
+ 'The gorge seen from above, with boats on the water below. Commons gives the date as January 2012, though the leaves look summery to me, so I would not rely on that date. The photograph was originally posted on Flickr by mk_is_here.',
+ f'Thomas Au, via {cm("Takachiho Gorge")}, {CCBY2} (resized)',mw=420)
+g_col=mf2('gorge-columns-2009','Green water below a cliff of vertical stone columns on the right, with a thin waterfall at the far end of the channel on the left and ferns in the foreground',
+ 'Tall vertical columns of rock on the gorge wall, with the waterfall at the far end, in March 2009. The photograph is taken from a viewpoint above the river.',
+ f'TANAKA Juuyoh, 28 March 2009, {CCBY2} (Flickr-reviewed), via {cm("Takachiho Gorge")} (resized)')
+
 main=f"""<main>
 
   {f_hero}
@@ -312,11 +334,20 @@ main=f"""<main>
     {f_ugc}
     {f_ur8}
     {f_ur9}
+    {f_usg}
 
     <h2 id="trip">Planning a Myth Trip<span class="h2-jp">旅のモデルコース</span></h2>
     <p>My suggestion for a first trip is Takachiho, because the cave myth is spread over a few kilometers. Japan-guide says Amano Iwato Shrine is about ten kilometers outside central Takachiho, with a bus from Takachiho Bus Center (15 minutes, 200 yen one way, one bus every one to two hours) and a taxi at about 2,700 yen one way. Amano Yasukawara, the cave where the gods met, is a ten-minute walk along the river, and japan-guide says the stone piles become thousands as you approach it. Japan Experience says admission is free and that if you knock a pile over, tradition says you build two to make up for it.</p>
     <p>JAL's guide says you cannot actually go to the cave where Amaterasu hid; the shrine's west sanctuary gives a view toward it. On timing, one source (Japan Activity) says Takachiho Shrine in town stages a 50-minute evening kagura at 20:00 with four dances, and Tokyo Weekender mentions a 33-dance night kagura; schedules and seasons differ, so check the current program.</p>
     <p>The second trip I would suggest is Shimane: Izumo Taisha, then Iya and Yaegaki, which Tsunagu Japan lists as nearby shrines in the same prefecture. Tottori's Hakuto Shrine can be added from Tottori City. Awaji, for the creation story, is a day trip I would leave for a Kansai stay.</p>
+    <h3>Takachiho Gorge</h3>
+    <p>Takachiho Gorge is one more stop near town. These photographs show the waterfall, the walls and the hire boats; I include them for atmosphere, and I have not added boat prices or hours, which you should check locally.</p>
+    {g_boat}
+    {g_fall}
+    {g_num}
+    {g_bridge}
+    {g_above}
+    {g_col}
     <div class="key-callout" style="background:#fff8e6;border-left:4px solid var(--kin);padding:16px 20px;margin:28px 0;border-radius:2px;">
       <p style="margin:0;">&#9961;&#65039; <strong>Plan your trip:</strong> Browse Takachiho tours, or find a stay in Izumo. <a href="{VI}" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_mythology_local')">Browse Takachiho tours on Viator</a> &middot; <a href="{EX}" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','expedia_mythology_local')">Find hotels in Izumo</a></p>
     </div>
