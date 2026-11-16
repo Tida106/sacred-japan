@@ -28,7 +28,7 @@ BYSA4=lic('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/')
 BYSA2=lic('CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/')
 VIA='via Wikimedia Commons (resized)'
 PAC='<a href="https://www.photo-ac.com/" target="_blank" rel="noopener" style="color:var(--enshu);">photo AC</a>'
-f_suki=fig('sukiyaki','A shallow iron pot with raw marbled beef slices, napa cabbage, pale grilled tofu, halved leeks, thin clear noodles, green leaves and two golden rectangular pieces, sitting in dark sauce on a round metal ring','Sukiyaki in its shallow iron pot, before the cooking is finished.',f'Photo: pelican, {BYSA2}, 1 June 2012 (Flickr, license reviewed on Commons). Commons titles it "Sukiyaki". {VIA}',hero=True)
+f_suki=fig('sukiyaki','A shallow iron pot with raw marbled beef slices, napa cabbage, pale grilled tofu, halved leeks, thin clear noodles, green leaves and two golden rectangular pieces, sitting in dark sauce on a round metal ring','Sukiyaki in its shallow iron pot, before the cooking is finished.',f'Photo: pelican, {BYSA2}, 1 June 2012 (Flickr, license reviewed on Commons). Commons titles it "Sukiyaki". {VIA}',maxw=760)
 f_t1=fig('tempura-shrimp','A heap of golden tempura on white paper: a large shrimp with its tail up, a purple eggplant cut into a fan, a green pepper and a piece with a red coating, against a dark background','A tempura plate with shrimp, eggplant and a green pepper.',f'Photo: Nesnad, {CC0}, 31 December 2007. Commons says it was shared as a free-use image of tempura. {VIA}',maxw=700)
 f_t2=fig('tempura-kappo','Tempura on a blue-and-white scalloped plate lined with white paper: shrimp with tails up, long slices of vegetable and a frilly green piece, with a small dish of dark dipping sauce behind','Mixed tempura with a small dish of dipping sauce.',f'Photo: Norio NAKAYAMA, {BYSA2}, 24 February 2014 (Flickr, license reviewed on Commons). Commons gives the venue as Kappo Uosen in Nagaoka, Niigata. {VIA}',maxw=700)
 f_tendon=fig('tendon','A round bowl with a dark blue rim holding rice topped with a large shrimp tempura, slices of pumpkin and a green vegetable, all glazed in brown sauce','A tendon bowl: tempura glazed with sauce on rice.',f'Photo: 毒島みるく, {CC0}, 4 January 2019. Commons describes it as the tendon from Tenya, priced at 540 yen. {VIA}',maxw=520)
@@ -84,8 +84,6 @@ URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-popular-dishes.jpg"
 main=f'''<main>
 
-  {f_suki}
-
   <aside class="toc" aria-label="Table of contents">
     <div class="toc-label">TABLE OF CONTENTS ／ 目次</div>
     <div class="toc-title">In This Guide</div>
@@ -127,7 +125,8 @@ main=f'''<main>
 
     <h2 id="sukiyaki">Sukiyaki: The Hot Pot with a Raw Egg<span class="h2-jp">すき焼き</span></h2>
     <p>Sukiyaki is thinly sliced beef cooked at the table in a shallow iron pot with other ingredients, then dipped into a bowl of beaten raw egg. The {SW} lists the usual ingredients as seared tofu, <em>negi</em> (a type of scallion), Chinese cabbage, <em>shungiku</em> (garland chrysanthemum leaves), shiitake and enokitake mushrooms, and <em>shirataki</em> noodles. The sauce is a mix of soy sauce, sugar and mirin, with sake and dashi added in the Kanto version.</p>
-    <p>The photograph at the top of this page shows a pot before the cooking is done. Commons titles it simply "Sukiyaki." On the left are slices of well-marbled beef, then napa cabbage, pale blocks that look like grilled tofu, two halves of leek, clear noodles that look like shirataki and a sprig of green leaves. I cannot tell what the two golden rectangles with a stamped pattern are, so I will not guess.</p>
+    {f_suki}
+    <p>The photograph above shows a pot before the cooking is done. Commons titles it simply "Sukiyaki." On the left are slices of well-marbled beef, then napa cabbage, pale blocks that look like grilled tofu, two halves of leek, clear noodles that look like shirataki and a sprig of green leaves. I cannot tell what the two golden rectangles with a stamped pattern are, so I will not guess.</p>
     <h3>Kanto and Kansai</h3>
     <p>The two regions cook it differently. In the Kanto style, a sauce called <em>warishita</em> (soy sauce, sugar, sake and mirin) is heated first and the meat and vegetables simmer in it from the start. In the Kansai style, the beef is seared first, then sugar, sake and soy sauce are added, and the vegetables go in later. {SA} describes the Kansai way as searing the beef in a lightly greased pan and letting the sugar and soy sauce form a glaze directly on the meat.</p>
     <p>Both styles dip the cooked food in raw beaten egg. {SA} says the egg cools the seared meat and adds a creamy coating in Kansai, and softens the sweetness of the broth in Kanto. If you do not eat raw egg, say so when you order.</p>
