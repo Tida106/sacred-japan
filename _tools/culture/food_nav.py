@@ -13,13 +13,21 @@ ITEMS=[
  ('noodles','/culture/noodles/','Noodles',f'{R}/images/hub/noodles.jpg'),
  ('yakitori','/culture/yakitori/','Yakitori',f'{R}/images/hub/yakitori.jpg'),
  ('bread','/culture/bread/','Bread',f'{R}/images/hub/bread.jpg'),
- ('wagashi','/culture/wagashi/','Wagashi',f'{R}/images/hub/wagashi.jpg'),
- ('japanese-sweets','/culture/japanese-sweets/','Sweets',f'{R}/culture/wagashi/images/dora1.jpg'),
+ ('wagashi','/culture/wagashi/','Japanese Sweets',f'{R}/images/hub/wagashi.jpg'),
+ ('japanese-sweets','/culture/japanese-sweets/','Snacks &amp; Souvenirs',None),
  ('regional-food','/regional-food/','Regional',f'{R}/images/hub/culture-food.jpg'),
 ]
 os.makedirs(f'{R}/images/food-nav',exist_ok=True)
 for slug,_,_,src in ITEMS:
-    im=Image.open(src).convert('RGB'); w,h=im.size; tw=int(h*4/3)
+    if src is None:
+        from PIL import ImageDraw, ImageFont
+        im=Image.new('RGB',(320,240),(252,240,242)); d=ImageDraw.Draw(im)
+        d.rectangle([8,8,311,231],outline=(201,151,28),width=3); d.rectangle([14,14,305,225],outline=(201,151,28),width=1)
+        f1=ImageFont.truetype('/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc',84); f2=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf',26)
+        d.text((160,98),'お土産',font=f1,fill=(139,32,48),anchor='mm'); d.text((160,178),'SOUVENIRS',font=f2,fill=(160,110,0),anchor='mm')
+    else:
+        im=Image.open(src).convert('RGB')
+    w,h=im.size; tw=int(h*4/3)
     im=im.crop(((w-tw)//2,0,(w-tw)//2+tw,h)) if tw<=w else im.crop((0,(h-int(w*3/4))//2,w,(h-int(w*3/4))//2+int(w*3/4)))
     im=im.resize((160,120),Image.LANCZOS); im.save(f'{R}/images/food-nav/{slug}.jpg',quality=82); im.save(f'{R}/images/food-nav/{slug}.webp',quality=78)
 CSS='''<style>

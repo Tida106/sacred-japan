@@ -7,6 +7,7 @@ OUT=f'{R}/culture/{S}'
 os.makedirs(OUT+'/images',exist_ok=True)
 photos={'ichigo':('5e10bb4f-image.jpg',1200),'strawberry':('36b6e7e3-image.jpg',1000),'yokan':('23068ad2-image.jpg',1000),'uiro':('270a1761-image.jpg',650),'almond':('15cb0b50-image.jpg',900),'taiyaki1':('12c12445-image.jpg',1000),'taiyaki2':('197c48c9-image.jpg',1000),'raindrop':('1869be0b-image.jpg',1000),'shitatari':('fba835fc-image.jpg',848),'dora1':('1bc0bab7-image.jpg',1100),'dora2':('fdf50475-image.jpg',1100),'dora3':('52b956d5-image.jpg',800),'dora4':('1b56ea3e-image.jpg',687),'warabi1':('f7fe7879-image.jpg',1000),'warabi2':('c5f3c8ca-image.jpg',640),'monaka1':('0bb91696-image.jpg',900),'monaka2':('65072675-image.jpg',472),'neri':('697ef1fb-image.jpg',760),'gohei1':('9231308e-image.jpg',1000),'gohei2':('7bd10290-image.jpg',1000),'daigaku':('a0220884-image.jpg',760),'anmitsu1':('e3ca2236-image.jpg',540),'anmitsu2':('972e7784-image.jpg',900),'kori':('e4f7430a-image.jpg',800),'kintsuba1':('65c43d2a-image.jpg',1000),'kintsuba2':('6f610507-image.jpg',900),'amanatto':('0062d3f2-image.jpg',1000),'mamedai':('2ec063c3-image.jpg',900),'nanbu':('b82643bb-image.jpg',900),'beika':('e72f0b09-image.jpg',900)}
 for k,(f,mw) in photos.items():
+    if not os.path.exists(A+f): continue
     im=Image.open(A+f).convert('RGB');w,h=im.size
     if w>mw: im=im.resize((mw,round(h*mw/w)),Image.LANCZOS)
     im.save(f'{OUT}/images/{k}.jpg',quality=84,optimize=True); im.save(f'{OUT}/images/{k}.webp',quality=80)
@@ -107,8 +108,8 @@ faq_html=''.join(f'''      <details class="faq-item">
 
 ''' for q,a in faqs)
 faq_ld=json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]},ensure_ascii=False,indent=2)
-TITLE="Wagashi Guide: Ichigo Daifuku, Yokan, Uiro and Other Japanese Sweets"
-DESC="A licensed guide's English introduction to wagashi, traditional Japanese sweets: ichigo daifuku (strawberry mochi), yokan, uiro, taiyaki, dorayaki, warabimochi, monaka, nerikiri, raindrop cake and almond tofu, plus anmitsu, kintsuba, amanatto, mame daifuku, senbei, gohei mochi and daigaku imo, with photographs and honest notes on what is claimed."
+TITLE="Japanese Sweets (Wagashi) Guide: Ichigo Daifuku, Yokan, Uiro, Dorayaki and More"
+DESC="A licensed guide's English introduction to Japanese sweets (wagashi), the traditional kind: ichigo daifuku (strawberry mochi), yokan, uiro, taiyaki, dorayaki, warabimochi, monaka, nerikiri, raindrop cake and almond tofu, plus anmitsu, kintsuba, amanatto, mame daifuku, senbei, gohei mochi and daigaku imo, with photographs and honest notes on what is claimed."
 URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-wagashi.jpg"
 main=f'''<main>
@@ -278,7 +279,7 @@ main=f'''<main>
 {faq_html}    </div>
 
     <h2 id="final">Final Thoughts<span class="h2-jp">むすびに</span></h2>
-    <p>Start with an ichigo daifuku in the season it was made for, then try a slice of yokan with tea. For sweets you can bring home, see our {link('/culture/japanese-sweets/','Japanese sweets souvenirs guide','wagashi_to_sweets')}, and for soft buns with bean paste, our {link('/culture/bread/','bread guide','wagashi_to_bread')}.</p>
+    <p>Start with an ichigo daifuku in the season it was made for, then try a slice of yokan with tea. For sweets you can bring home, see our {link('/culture/japanese-sweets/','Japanese snacks and sweets souvenirs guide','wagashi_to_sweets')}, and for soft buns with bean paste, our {link('/culture/bread/','bread guide','wagashi_to_bread')}.</p>
 
     <div class="closing-block">
       <span class="torii">🍵</span>
@@ -291,7 +292,7 @@ main=f'''<main>
       <div class="related-grid">
         <a class="related-card" href="/culture/japanese-sweets/" onclick="trackEvent('click','internal','related_wagashi_to_sweets')">
           <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
-          <div class="related-card-title">🍬 Japanese Sweets Souvenirs →</div>
+          <div class="related-card-title">🍬 Japanese Snacks &amp; Sweets Souvenirs →</div>
           <div class="related-card-desc">Ten inexpensive favorites a guide recommends bringing home.</div>
         </a>
         <a class="related-card" href="/culture/tea-ceremony/" onclick="trackEvent('click','internal','related_wagashi_to_tea')">
@@ -316,10 +317,10 @@ main=f'''<main>
 t=open(f'{R}/_tools/culture/tea.py',encoding='utf-8').read()
 tail=t[t.index("s=open(f'{R}/culture/omamori-guide"):]
 tail=tail.replace('<div class="hero-bg-kanji">茶道</div>','<div class="hero-bg-kanji">和菓子</div>')
-tail=tail.replace('<h1>The Japanese <em>Tea Ceremony</em> Guide</h1>','<h1>The <em>Wagashi</em> Guide</h1>')
+tail=tail.replace('<h1>The Japanese <em>Tea Ceremony</em> Guide</h1>','<h1>The <em>Japanese Sweets</em> (Wagashi) Guide</h1>')
 tail=tail.replace('<div class="hero-jp">茶道ガイド</div>','<div class="hero-jp">和菓子ガイド</div>')
-tail=tail.replace('What Happens, What to Do as a Guest, and Where to Try It','Ichigo Daifuku, Yokan, Uiro and Other Japanese Sweets')
-tail=tail.replace('Tea Ceremony Guide','Wagashi Guide')
+tail=tail.replace('What Happens, What to Do as a Guest, and Where to Try It','Ichigo Daifuku, Yokan, Uiro, Dorayaki and More')
+tail=tail.replace('Tea Ceremony Guide','Japanese Sweets (Wagashi)')
 tail=tail.replace('guide_tea','guide_wagashi').replace('viator_guide_tea_sticky','viator_guide_wagashi_sticky')
-tail=re.sub(r'(<meta name="keywords" content=")[^"]*(")',r'\1wagashi, Japanese sweets, ichigo daifuku, yokan, uiro, almond tofu, dorayaki, warabimochi, monaka, nerikiri, anmitsu, kintsuba, amanatto, senbei, gohei mochi, daigaku imo, Japanese confectionery\2',tail)
+tail=re.sub(r'(<meta name="keywords" content=")[^"]*(")',r'\1Japanese sweets, wagashi, traditional Japanese sweets, ichigo daifuku, yokan, uiro, almond tofu, dorayaki, warabimochi, monaka, nerikiri, anmitsu, kintsuba, amanatto, senbei, gohei mochi, daigaku imo, Japanese confectionery\2',tail)
 exec(tail)

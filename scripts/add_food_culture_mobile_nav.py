@@ -19,8 +19,8 @@ ITEMS = [
     ("noodles", "noodles", "Noodles"),
     ("yakitori", "yakitori", "Yakitori"),
     ("bread", "bread", "Japanese Bread"),
-    ("wagashi", "wagashi", "Wagashi"),
-    ("japanese-sweets", "japanese_sweets", "Japanese Sweets"),
+    ("wagashi", "wagashi", "Japanese Sweets (Wagashi)"),
+    ("japanese-sweets", "japanese_sweets", "Snacks &amp; Souvenirs"),
 ]
 
 

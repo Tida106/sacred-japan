@@ -62,12 +62,14 @@ faq_html=''.join(f'''      <details class="faq-item">
 
 ''' for q,a in faqs)
 faq_ld=json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faqs]},ensure_ascii=False,indent=2)
-TITLE="Japanese Sweets Souvenirs: 10 Cheap Favorites a Guide Recommends"
-DESC="A licensed guide's picks for 10 cheap, popular Japanese sweets to bring home: Pocky, Kit Kat, Hi-Chew, Tokyo Banana, Shiroi Koibito, yatsuhashi, dorayaki, daifuku, senbei and castella, with shelf-life tips, plus what Japanese people snack on."
+TITLE="Japanese Snacks & Sweets Souvenirs: 10 Cheap Favorites a Guide Recommends"
+DESC="A licensed guide's picks for 10 cheap, popular Japanese snacks and sweets to bring home: Pocky, Kit Kat, Hi-Chew, Tokyo Banana, Shiroi Koibito, yatsuhashi, dorayaki, daifuku, senbei and castella, with shelf-life tips, plus what Japanese people snack on."
 URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-japanese-sweets.jpg"
 toc=''.join(f'<li><a href="#{k}">{n}</a></li>' for k,n,_,_ in items)
 main=f'''<main>
+
+  <p style="margin:0 0 28px;padding:12px 16px;border-left:3px solid var(--kin);background:var(--washi);font-size:16px;line-height:1.7;">This guide covers <strong>snacks and sweets to bring home</strong>. For traditional Japanese sweets like ichigo daifuku, yokan and dorayaki, see <a href="/culture/wagashi/" class="inline-link">Japanese Sweets (Wagashi)</a>.</p>
 
   <aside class="toc" aria-label="Table of contents">
     <div class="toc-label">TABLE OF CONTENTS ／ 目次</div>
@@ -145,6 +147,11 @@ main=f'''<main>
       <h2>Related Guides</h2>
       <span class="h2-jp">関連ガイド</span>
       <div class="related-grid">
+        <a class="related-card" href="/culture/wagashi/" onclick="trackEvent('click','internal','related_sweets_to_wagashi')">
+          <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
+          <div class="related-card-title">🍡 Japanese Sweets (Wagashi) Guide →</div>
+          <div class="related-card-desc">Ichigo daifuku, yokan, dorayaki and other traditional sweets, with photos.</div>
+        </a>
         <a class="related-card" href="/regional-food/" onclick="trackEvent('click','internal','related_sweets_to_food')">
           <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
           <div class="related-card-title">🍽️ Japan's Regional Cuisine →</div>
@@ -166,10 +173,10 @@ main=f'''<main>
 t=open(f'{R}/_tools/culture/tea.py',encoding='utf-8').read()
 tail=t[t.index("s=open(f'{R}/culture/omamori-guide"):]
 tail=tail.replace('<div class="hero-bg-kanji">茶道</div>','<div class="hero-bg-kanji">菓子</div>')
-tail=tail.replace('<h1>The Japanese <em>Tea Ceremony</em> Guide</h1>','<h1>Japanese <em>Sweets</em> to Bring Home</h1>')
+tail=tail.replace('<h1>The Japanese <em>Tea Ceremony</em> Guide</h1>','<h1>Japanese <em>Snacks &amp; Sweets</em> to Bring Home</h1>')
 tail=tail.replace('<div class="hero-jp">茶道ガイド</div>','<div class="hero-jp">お土産お菓子ガイド</div>')
 tail=tail.replace('What Happens, What to Do as a Guest, and Where to Try It','10 Cheap Favorites a Guide Recommends')
-tail=tail.replace('Tea Ceremony Guide','Sweets Guide')
+tail=tail.replace('Tea Ceremony Guide','Snacks and Souvenirs')
 tail=tail.replace('guide_tea','guide_sweets').replace('viator_guide_tea_sticky','viator_guide_sweets_sticky').replace('japanese+tea+ceremony','Japan+food+tour')
 tail=re.sub(r'(<meta name="keywords" content=")[^"]*(")',r'\1Japanese sweets, Japanese souvenirs, omiyage, Pocky, Kit Kat Japan, Hi-Chew, Tokyo Banana, Shiroi Koibito, yatsuhashi, castella, cheap souvenirs Japan\2',tail)
 exec(tail)
