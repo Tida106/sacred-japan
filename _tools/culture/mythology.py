@@ -57,7 +57,64 @@ DESC="A licensed guide's English introduction to Japanese mythology: the Kojiki 
 URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-japanese-mythology.jpg"
 
+CAPST='font-size:13px;color:var(--enshu);margin-top:10px;text-align:center;line-height:1.6;'
+LA='style="color:var(--enshu);"'
+def lk(t,u): return f'<a href="{u}" target="_blank" rel="noopener" {LA}>{t}</a>'
+def csearch(q): return 'https://commons.wikimedia.org/w/index.php?search='+q+'&title=Special:MediaSearch&type=image'
+def cm(q): return lk("Wikimedia Commons",csearch(q))
+PDL=lk("public domain","https://commons.wikimedia.org/wiki/Commons:Public_domain")
+CC0L=lk("CC0","https://creativecommons.org/publicdomain/zero/1.0/")
+CCBYSA4=lk("CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0/")
+KOK='https://d-museum.kokugakuin.ac.jp/eos/detail/?id=9351'
+def mfig(src,alt,desc,cred,mw=760,hero=False):
+    ld='eager' if hero else 'lazy'
+    mg='0 auto 48px' if hero else '36px auto'
+    return (f'<figure style="margin:{mg};max-width:{mw}px;">\n      <picture><source srcset="/culture/japanese-mythology/images/{src}.webp" type="image/webp"><img src="/culture/japanese-mythology/images/{src}.jpg" alt="{alt}" loading="{ld}" style="width:100%;height:auto;border-radius:4px;display:block;"></picture>\n      <figcaption style="{CAPST}">{desc}<br>{cred}</figcaption>\n    </figure>')
+
+f_hero=mfig('cave-dance-triptych','Three-panel colour woodblock print on a red ground: at the centre a woman in orange and white dances on an upturned tub with orange rays fanning out behind her, while gods in armour, robes and long hair crowd both side panels, laughing and cheering',
+ 'The cave story as a Meiji-era triptych, <em>Origin of the Cave Door Dance</em> (1889). Ame no Uzume dances in the middle, and the gods around her are in an uproar; the sun goddess, hiding behind the stone door, is about to look out. The full story is in the cave section below.',
+ f'Shunsai Toshimasa, 1889, MAK (Museum of Applied Arts), Vienna. {PDL}, via {cm("Shunsai Toshimasa Origin of the cave door dance")} (resized)',mw=900,hero=True)
+f_suke=mfig('sukenobu-izanagi-izanami','Hanging scroll painting of two figures in white robes standing on a swirl of golden cloud above a pale sea, with a tiny dark island below them, framed by a patterned textile mount',
+ 'Izanagi and Izanami on the clouds, painted in the early 1700s. The island below is the small first land of the myth. Note how calm it is: the Edo painter shows two courtly figures, not a creation battle.',
+ f'Nishikawa Sukenobu, <em>The God Izanagi and Goddess Izanami</em>, c. 1700&ndash;1750, The Metropolitan Museum of Art (2015.300.115). {PDL}, via {cm("Nishikawa Sukenobu Izanagi Izanami Metropolitan Museum")} (resized)')
+f_kyo=mfig('kyosai-island-birth','Painting of a bearded god in white robes and orange armour plates striding over churning waves and rocks with a long spear, while a woman in a pink robe clings behind him; stormy dark clouds fill the background',
+ 'Izanagi and Izanami stirring the sea with the jewelled spear, after Kawanabe Kyosai (about 1870). The Commons description says the spear is Ame no Nuboko and that the image reached us through a 1925 magazine reproduction, so treat the colours as the printer&rsquo;s, not necessarily the painter&rsquo;s.',
+ f'After Kawanabe Kyosai, c. 1870, reproduced in <em>The Connoisseur</em>, 1925. {PDL}, via {cm("Izanagi and Izanami giving birth to Japan Kawanabe Kyosai")} (resized)',mw=420)
+f_susa=mfig('chikanobu-susanoo-kushinada','Colour woodblock print: a bearded god in a pale robe with a sword at his hip kneels beside a woman in a bright pink kimono and an older figure in green, while a small inset at the top shows a green dragon thrashing in a stormy sea',
+ 'Susanoo rescues Princess Kushinada from the dragon, 1886. The dragon is the Yamata no Orochi; here it appears in the small panel at the top. The Commons description gives this as one print in a series on the Contest of Day and Night.',
+ f'Toyohara Chikanobu, 1886, San Diego Museum of Art (1966.202.11). {PDL}, via {cm("Susanoo rescues Kushinada Hime from the dragon Chikanobu")} (resized)',mw=420)
+f_state=mfig('chikanobu-1878-state-shinto','Wide three-panel colour woodblock print on a red ground showing many figures in Western chairs, court robes and armour grouped across the panels, with golden sunrays at the upper right',
+ 'A Meiji print that puts the myths and the monarchy in one picture. According to the Commons description, the central panel shows Emperor Meiji and Empress Shoken in Western-style chairs, with the kami Izanami, Kunitokotachi and Izanagi behind them, and the side panels group other emperors with Amaterasu and Ninigi. This is the &ldquo;divine origins&rdquo; idea in visual form.',
+ f'Toyohara Chikanobu, 1878 (higher-quality version, uploaded 2020). {PDL}, via {cm("Chikanobu 1878 State Shinto Meiji emperor Izanagi Izanami Amaterasu")} (resized)',mw=900)
+IZ='Izanagi Jingu Awaji'
+f_otorii19=mfig('izanagi-otorii-2019','Pale stone torii with two crossbars standing in a gravel forecourt beside a tall stone pillar carved with the shrine name, with a small stone lantern, a roofed water pavilion and green trees behind',
+ 'The big torii and shrine-name pillar at Izanagi Jingu in April 2019. The long banner on the right pillar reads, as far as I can tell, &ldquo;celebrating the 30th year of His Majesty&rsquo;s reign&rdquo;, which fits that year.',
+ f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZ+" otorii Saigen Jiro")} (resized)')
+f_torii09=mfig('izanagi-torii-2009','Wide view of a pale stone torii with a vertical banner on its right pillar, stone lanterns and komainu guardian lions on either side, and a long gravel approach leading to a second torii in the distance',
+ 'The same approach in April 2009, looking down the path toward a second torii. The banner on the pillar appears to read &ldquo;20th year of His Majesty&rsquo;s accession&rdquo;, the 2009 counterpart of the 2019 banner above, so the two photos are almost exactly ten years apart. The shrine has not moved, but street fittings and signs may have changed.',
+ f'弥 (Wikimedia Commons user), 12 April 2009, {PDL}, via {cm(IZ+" torii 2009")} (resized)')
+f_shinmon19=mfig('izanagi-shinmon-2019','Front gate of a shrine with a deep brown tiled roof, a thick rope across the opening, white paper streamers hanging from it, white and blue banners and a bright sky above',
+ 'The front gate (<em>omote shinmon</em>), the gate between the forecourt and the inner shrine. The shimenawa rope and white streamers mark the passage from the everyday world into sacred ground, which is the same border the Yomi story is about, only dressed for living people.',
+ f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZ+" omote shinmon Saigen Jiro")} (resized)')
+f_gate26=mfig('izanagi-gate-2026','Looking through the shaded wooden front gate of a shrine: a thick shimenawa rope with white streamers hangs above, round lanterns with chrysanthemum crests hang on both sides, and visitors walk toward a distant hall',
+ 'The same gate seen from the inside edge, in April 2026. The round lanterns carry a chrysanthemum crest, as far as I can see, and through the opening you can see people walking up the white-paved path toward the worship hall.',
+ f'明芳 松岡, 5 April 2026, {CCBYSA4}, via {cm(IZ+" front gate 2026")} (resized)')
+f_haiden19=mfig('izanagi-haiden-2019','Wide, symmetrical view of a worship hall with a long green-grey roof and dark wooden walls, approached by a straight white stone path across an open gravel yard, with trees on both sides and a blue sky',
+ 'The worship hall (<em>haiden</em>) in April 2019. This is where you stand to bow and pray; the long straight path is a good place to slow down before reaching the hall.',
+ f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZ+" haiden Saigen Jiro")} (resized)')
+f_haiden09=mfig('izanagi-haiden-2009','A worship hall with a wide green-grey roof seen from the side across a gravel yard, with a large drum on the ground at the left, stone and bronze lanterns on both sides and tall trees behind',
+ 'The haiden from a different angle in April 2009, with a large drum on the ground at the left and a few people near the steps. The photo is old, so details may differ from what you will find today.',
+ f'弥 (Wikimedia Commons user), 12 April 2009, {PDL}, via {cm(IZ+" haiden 2009")} (resized)')
+f_honden19=mfig('izanagi-honden-2019','Small wooden shrine building with a layered tiled roof, a thick rope with white streamers across its front, a short flight of stone steps and a low white fence, surrounded by trees',
+ 'The main sanctuary (<em>honden</em>), as the Commons description labels it. Jinja Journey says Izanagi built a hidden palace on Awaji, and the shrine presents itself as his place of rest; I could not confirm what visitors can enter, so treat this as a look from the outside.',
+ f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZ+" honden Saigen Jiro")} (resized)')
+f_amulet=mfig('izanagi-amulet-office-2026','The wooden counter of a shrine office with several visitors queuing, a dark wooden sign above reading the shrine name, and a long white board of amulet names and prices fixed under the eaves',
+ 'The amulet and charm office in April 2026. On the price board I can make out a &ldquo;peach-fruit amulet&rdquo; (<em>momo no mi omamori</em>) and other items with the character 桃 (peach). That would suit the myth: Kokugakuin&rsquo;s Encyclopedia of Shinto says Izanagi threw three peaches at his pursuers from Yomi, and gave the peach a divine name. Please check items and prices at the office, since the board is only a snapshot.',
+ f'明芳 松岡, 5 April 2026, {CCBYSA4}, via {cm(IZ+" amulet office 2026")} (resized)')
+
 main=f"""<main>
+
+  {f_hero}
 
   <!-- TABLE OF CONTENTS -->
   <aside class="toc" aria-label="Table of contents">
@@ -90,10 +147,13 @@ main=f"""<main>
     <p>Almost everything below comes from two works. {ext(COL,'The Collector','myth_collector_books')} says most of what we know about Shinto belief traces back to two documents commissioned in 712 and 720: the Kojiki (Record of Ancient Matters) and the Nihon Shoki (Chronicle of Japan). {ext(WH,'World History Encyclopedia','myth_worldhistory_kojiki')} calls the Kojiki the oldest book of Japanese history and the oldest text of any kind from Japan, written in Chinese characters with some Japanese adaptations, and with poems and songs inserted into the prose.</p>
     <p>The Nihon Shoki came later, written by a committee of court scholars in 720. The same source says it repeats many of the Kojiki's myths but often from a different viewpoint and with changed details. {ext(FUN,'Fun! JAPAN','myth_funjapan_books')} adds that it is the oldest official history of the nation, running from mythical beginnings to the year 697. That is why you will see two versions of some stories, and why I note below where they split.</p>
     <p>One more point of context: {ext(NWE,'New World Encyclopedia','myth_nwe_origin')} notes that the myths gave Japan a creation story and attributed divine origins to the Imperial family. Keep that in mind when you read them; they are religion, literature and a family tree at the same time.</p>
+    {f_state}
 
     <h2 id="creation">A Spear, a Drop and the First Island<span class="h2-jp">国生み</span></h2>
     <p>Before Japan there was, in {ext(COL,'The Collector','myth_collector_chaos')}'s words, undifferentiated chaos, from which a line of gods appeared. The last pair were Izanagi and Izanami, whose names Fun! JAPAN translates as "he who invites" and "she who invites". The other gods handed them a spear and told them to consolidate the world, according to a Kojiki summary on {ext(BISH,"James Bishop's blog",'myth_bishop_spear')}. They stood on the Floating Bridge of Heaven and stirred.</p>
+    {f_suke}
     <p>The result, in the Kojiki passage quoted by World History Encyclopedia, is that the spear's drips piled up and became the island of Onogoro. The couple then produced the islands of the archipelago; Fun! JAPAN counts eight children. Izanagi greeted Izanami first, in the Collector's retelling, and that is why the next children were the other islands, a detail that says a lot about what the compilers thought of correct manners.</p>
+    {f_kyo}
     <p>Where was Onogoro? The myth does not say, but tradition points to Awaji Island in Hyogo, and several shrines there claim the story, as the map below shows.</p>
 
     <h2 id="yomi">Yomi and the Three Children<span class="h2-jp">黄泉の国と三貴子</span></h2>
@@ -105,6 +165,7 @@ main=f"""<main>
     <p>The Collector says the two siblings Amaterasu and Susanoo had a rivalry, and that the Kojiki and Nihon Shoki differ in their versions, but the gist is a dispute over which gods spawned from her sword and his necklace would serve whom. The sun goddess withdrew into a cave and the world went dark.</p>
     <p>The ministry's multilingual guide (MLIT) tells the rescue clearly. The gods gathered, made a mirror from heavenly metal, and one of them, Ame no Uzume, began a dance that so pleased the assembly that they filled the air with laughter. Amaterasu, puzzled, opened the stone door a crack to ask why. Japan Experience adds that the strongman Tajikarao then pulled the rock aside. The dance is said to be the first kagura, the sacred dance still performed at shrines, which is why the story is told every night in Takachiho (more below).</p>
     <p>Susanoo, banished, goes down to Izumo and kills the eight-headed serpent. In the Kojiki as quoted by World History Encyclopedia, his sword broke on the middle tail, and when he cut into the flesh he found "a sharp great sword". That sword becomes part of the regalia; the full story is in our {link('/culture/three-sacred-treasures/','Three Sacred Treasures guide','myth_sun_to_treasures')}, and Tsunagu Japan says it is kept at {link('/guides/atsuta-shrine/','Atsuta Shrine','myth_to_atsuta')}.</p>
+    {f_susa}
 
     <h2 id="okuninushi">Okuninushi, the White Hare and the Land Transfer<span class="h2-jp">大国主と因幡の白兎</span></h2>
     <p>The next hero is a kind one. In the Kojiki, Okuninushi (called Onamuji then) trails behind his eighty brothers on the way to court Princess Yagami of Inaba, as Wikipedia puts it. Fun! JAPAN calls him a kind-hearted descendant of Susanoo; the sources differ on how many generations. On the beach they find a flayed hare.</p>
@@ -130,6 +191,19 @@ main=f"""<main>
       <li><strong>Onokoro Shrine:</strong> honors Izanagi and Izanami and the first island they made, per Tsunagu Japan. Yuugen Guide describes Onokorojima Jinja as in Minamiawaji, in the middle of the island.</li>
       <li><strong>Izanagi Jingu:</strong> in Taga on Awaji Island. Jinja Journey says Izanagi chose this first island for his last years and built a hidden palace here. KIJI describes it as the only grand shrine (<em>jingu</em>) in Hyogo. Yuugen Guide could find no firm record of when it was built.</li>
     </ul>
+    <h3>A Closer Look at Izanagi Jingu</h3>
+    <p>Because the shrine on Awaji is the one place on this map that claims to be Izanagi's own, I want to walk you through it in the order you would meet it. The Commons descriptions of the photos below name each building; the comments on them are mine. Jinja Journey says Izanagi chose Awaji for his last years and built a hidden palace here, and that is the story the shrine tells about itself.</p>
+    {f_otorii19}
+    {f_torii09}
+    <p>Start at the big torii. The next two photos show the front gate, with its rope and white streamers.</p>
+    {f_shinmon19}
+    {f_gate26}
+    <p>Past the gate, a straight path leads to the worship hall. This is the place to bow, and behind it stands the main sanctuary.</p>
+    {f_haiden19}
+    {f_haiden09}
+    {f_honden19}
+    <p>Last, the office where amulets are given out. The board in this photo lists charms for matchmaking, safe birth, exams and travel, among others.</p>
+    {f_amulet}
     <h3>The underworld and the washing</h3>
     <ul>
       <li><strong>Iya Shrine (Shimane):</strong> said to mark Yomi Tsuhirasaka, the boundary between the living and the dead (Tsunagu Japan).</li>
@@ -197,7 +271,7 @@ main=f"""<main>
       </div>
     </section>
 
-    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> {ext(WH,'World History Encyclopedia: Kojiki','myth_src_wh')}; {ext(COL,'The Collector: Six Foundational Shinto Myths','myth_src_col')}; {ext(FUN,'Fun! JAPAN: Japanese Mythology','myth_src_fun')}; {ext(NWE,'New World Encyclopedia','myth_src_nwe')}; {ext(BISH,'Kojiki creation summary','myth_src_bishop')}; {ext(TSU,'Tsunagu Japan: 12 shrines','myth_src_tsunagu')}; {ext(JT,'Japanese Taste: 10 Shinto gods','myth_src_jt')}; {ext(MLITIW,'MLIT: Opening Amano Iwato','myth_src_mlit_iwato')}; {ext(MLITKA,'MLIT: Kamiarizuki','myth_src_mlit_kami')}; {ext(JNTOKA,'JNTO: Kamiari Festival','myth_src_jnto')}; {ext(WATA,'Watabi: Kamiarizuki 2026','myth_src_watabi')}; {ext(WIKIHARE,'Wikipedia: White Hare of Inaba','myth_src_wikihare')}; {ext(FUNHARE,'Fun! JAPAN: White Rabbit of Inaba','myth_src_funhare')}; {ext(HAK,'Japan Experience: Hakuto Shrine','myth_src_hakuto')}; {ext(JGIW,'japan-guide: Amano Iwato','myth_src_jg')}; {ext(JEIW,'Japan Experience: Amano Iwato','myth_src_jeiw')}; {ext(JALIW,'JAL Japan Travel: Amano Iwato','myth_src_jal')}; {ext(JAL,'JAL: Miyazaki land of mythology','myth_src_jalmiya')}; {ext(JJ,'Jinja Journey: Izanagi Jingu','myth_src_jj')}; {ext(KIJI,'KIJI: Izanagi Shrine','myth_src_kiji')}; {ext(YUU,'Yuugen Guide: Awaji Island','myth_src_yuugen')}; {ext(JACT,'Japan Activity: Amano Iwato','myth_src_jact')}. Prices, bus times and festival dates are as reported at the time of writing; please check official pages before you travel.</p>
+    <p style="font-size:14px;color:var(--enshu);line-height:1.7;margin-top:32px;"><strong>Sources:</strong> {ext(WH,'World History Encyclopedia: Kojiki','myth_src_wh')}; {ext(COL,'The Collector: Six Foundational Shinto Myths','myth_src_col')}; {ext(FUN,'Fun! JAPAN: Japanese Mythology','myth_src_fun')}; {ext(NWE,'New World Encyclopedia','myth_src_nwe')}; {ext(BISH,'Kojiki creation summary','myth_src_bishop')}; {ext(TSU,'Tsunagu Japan: 12 shrines','myth_src_tsunagu')}; {ext(JT,'Japanese Taste: 10 Shinto gods','myth_src_jt')}; {ext(MLITIW,'MLIT: Opening Amano Iwato','myth_src_mlit_iwato')}; {ext(MLITKA,'MLIT: Kamiarizuki','myth_src_mlit_kami')}; {ext(JNTOKA,'JNTO: Kamiari Festival','myth_src_jnto')}; {ext(WATA,'Watabi: Kamiarizuki 2026','myth_src_watabi')}; {ext(WIKIHARE,'Wikipedia: White Hare of Inaba','myth_src_wikihare')}; {ext(FUNHARE,'Fun! JAPAN: White Rabbit of Inaba','myth_src_funhare')}; {ext(HAK,'Japan Experience: Hakuto Shrine','myth_src_hakuto')}; {ext(JGIW,'japan-guide: Amano Iwato','myth_src_jg')}; {ext(JEIW,'Japan Experience: Amano Iwato','myth_src_jeiw')}; {ext(JALIW,'JAL Japan Travel: Amano Iwato','myth_src_jal')}; {ext(JAL,'JAL: Miyazaki land of mythology','myth_src_jalmiya')}; {ext(JJ,'Jinja Journey: Izanagi Jingu','myth_src_jj')}; {ext(KIJI,'KIJI: Izanagi Shrine','myth_src_kiji')}; {ext(YUU,'Yuugen Guide: Awaji Island','myth_src_yuugen')}; {ext(JACT,'Japan Activity: Amano Iwato','myth_src_jact')}; {ext(KOK,'Kokugakuin Encyclopedia of Shinto: Ōkamuzumi (peaches)','myth_src_kok')}. Prices, bus times and festival dates are as reported at the time of writing; please check official pages before you travel.</p>
 
   </article>
 
