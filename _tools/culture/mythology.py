@@ -117,6 +117,63 @@ f_yasu=mfig('yasukawara-torii','Dark cave mouth framing a small wooden torii wit
  'Amano Yasukawara, the riverside cave in Takachiho where, in the story, the gods gathered to plan how to bring Amaterasu out. The small stacks of stones across the slope are placed by visitors; I could not confirm how or when that custom began. The cave of the myth itself is not open to visitors (see the FAQ).',
  f'beauty-box, via {PHAC} (&ldquo;Takachiho mysterious cave, Amano Yasukawara&rdquo;). Used under Photo AC&rsquo;s terms',mw=900)
 
+CCBYSA3=lk("CC BY-SA 3.0","https://creativecommons.org/licenses/by-sa/3.0/")
+CCBYSA2=lk("CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0/")
+CCBY3=lk("CC BY 3.0","https://creativecommons.org/licenses/by/3.0/")
+CCBY2=lk("CC BY 2.0","https://creativecommons.org/licenses/by/2.0/")
+def mf2(src,alt,desc,cred,mw=760): return mfig(src,alt,desc,cred,mw=mw)
+f_aw18=mf2('amano-iwato-west-2018','Wide view of a long, dark wooden shrine hall with a green-grey roof, seen from a gravel yard, with a low fence and trees closing in on both sides',
+ 'The west main hall (<em>nishi hongu</em>) of Amano Iwato Shrine in July 2018. This is the hall that faces the gorge where, according to the shrine, the cave of the myth lies. Visitors worship here and ask to be shown the cave from a separate viewing place.',
+ f'Big Ben in Japan, 10 July 2018, {CCBYSA2}, via {cm("Amanoiwato Shrine west main hall")} (resized)')
+f_aw12=mf2('amano-iwato-west-2012','Front of a shrine hall with a dark roof, white and yellow curtains hung across the front, and stacked sake barrels beside the stairs',
+ 'The same hall from the front, in a 2012 photograph. The curtains and stacked sake barrels are offerings; sake barrels at shrines are usually gifts from donors. This is an older, smaller image, so details such as the curtains may differ today.',
+ f'Muzinabear, 11 March 2012, {CCBYSA3}, via {cm("Amanoiwato Shrine west main hall")} (resized)',mw=640)
+f_akag=mf2('amano-iwato-kagura','Open-fronted wooden hall with a curved, ornately carved roof gable, shimenawa and paper streamers hanging inside, set on a gravel yard under green trees',
+ 'The kagura hall (<em>kagura-den</em>) at Amano Iwato Shrine, photographed in May 2014. A board on the right-hand pillar reads, as far as I can tell, 天安河原遠拝所, the &ldquo;viewing place for Amano Yasukawara&rdquo;. The hall&rsquo;s name fits the story: the myth&rsquo;s dance in front of the cave is the origin tale of kagura.',
+ f'sk01, 22 May 2014, {CCBYSA3}, via {cm("Amanoiwato Shrine kagura-den")} (resized)')
+f_aam=mf2('amano-iwato-amulets','Small wooden shrine-like hut open at the front, with colourful paper cranes and charms visible inside, a wooden box in front, a traffic cone beside it, and a stone-lined base on gravel',
+ 'The place where old amulets and talismans are returned at Amano Iwato Shrine (Commons description), photographed in November 2024. The signboard above reads, as I make it out, a name meaning &ldquo;old charm storage shrine&rdquo;. A small notice asks visitors not to leave stuffed toys or stone statues here; please read the notices on site.',
+ f'Sanjo, 4 November 2024, {CCBYSA4} (the file is dual-licensed GFDL / CC BY-SA 4.0), via {cm("Amanoiwato Shrine old amulets talismans")} (resized)')
+f_y95=mf2('yasukawara-1995','Cave mouth with a small wooden torii and a tiny shrine inside, a rope with paper streamers across the opening, and a bed of thousands of small stones in front',
+ 'Amano Yasukawara in 1995, seen from outside the cave mouth: a small torii and a tiny shrine under the overhang, a rope with paper streamers, and a bed of small stones in front. I take it to be the same cave as in the colour photograph above, though the angle differs and I could not confirm it.',
+ f'Fg2, 1995, {PDL}, via {cm("Amano Yasukawara Takachiho")} (resized)',mw=640)
+f_hh=mf2('hakuto-haiden','Front of a small shrine hall with a huge twisted rope hung across it under the eaves, and a gold-lettered plaque above it reading the shrine name',
+ 'The worship hall of Hakuto Shrine in Tottori, with a thick shimenawa rope hung across the front and the gold plaque with the shrine&rsquo;s name. This is the shrine tied to the white hare of Inaba.',
+ f'Cheetah.in.mac, 16 August 2009, {PDL}, via {cm("Hakuto Shrine Tottori")} (resized)',mw=500)
+f_hap=mf2('hakuto-approach','Straight stone-paved path up a gentle slope between green hedges, with small white rabbit figures on short stone posts along both sides leading to a distant torii',
+ 'The approach to Hakuto Shrine in December 2010. Small stone posts with white rabbits line the path, which matches what Japan Experience describes: rabbit statues standing in and around the shrine.',
+ f'tme181, 5 December 2010, {CCBY3}, via {cm("Hakuto Shrine Tottori approach")} (resized)')
+f_hsg=mf2('hakuto-sign','Large grey wooden signboard under a green roof with big white painted characters reading the shrine name, and smaller text in columns below',
+ 'The shrine&rsquo;s explanatory board. From what I can read, it gives the main deity as the white hare god, lists the address in Tottori City, and mentions an annual festival on the 17th of April. It retells the hare story, then says the shrine is known for medicine and for matchmaking with Okuninushi and Princess Yagami. Check the shrine for current festival dates.',
+ f'tme181, 5 December 2010, {CCBY3}, via {cm("Hakuto Shrine Tottori sign")} (resized)')
+f_hyz=mf2('hakuto-yazu','Small wooden shrine on a stone platform in the middle of rice fields, with two grey stone rabbits on pedestals at the steps, one standing on its hind legs, and bare trees and a village behind',
+ 'A small shrine with stone rabbits at its steps. The Commons title places it in Yazu Town, Tottori, so this appears to be a different, much smaller white-hare shrine inland, not the coastal Hakuto Shrine above. I include it because Tottori has more than one place that claims the hare, and I could not confirm which tradition this one follows.',
+ f'Msht05, 25 December 2024, {CC0L}, via {cm("Tottori Yazu Hakuto Shrine rabbit")} (resized)')
+f_upn=mf2('udo-panorama','Very wide panorama of a rocky sea coast: red-railed steps and a small shrine under a cliff overhang on the left, dark spiky rock stacks in the middle and the open ocean beyond',
+ 'A panorama of Udo Shrine and its sea cliff in May 2009. The shrine sits in the cliff overhang at the left, and the stepped rock stacks lie in front of the ocean.',
+ f'z tanuki, 16 May 2009, {CCBY3}, via {cm("Udo Shrine Nichinan panorama")} (resized)',mw=900)
+f_utb=mf2('udo-tamabashi','Red-railed stone-paved path leading to a green-roofed shrine hall under a cliff overhang, with a few visitors, waves breaking on dark rocks to the right and a sago palm in the lower corner',
+ 'Udo Shrine seen from the Tamabashi bridge direction (Commons title), April 2008. The red railings follow the cliff and lead to the cave shrine.',
+ f'Sanjo, 20 April 2008, dual-licensed GFDL / {CCBYSA3}, via {cm("Udo Jingu from Tamabashi")} (resized)')
+f_ust=mf2('udo-stairs','Looking down a long stone staircase with bright orange railings and stone lanterns toward a small green-roofed hall tucked under a rock overhang beside the sea',
+ 'The staircase down to the cave shrine at Udo Shrine. The walk is a descent toward the sea, which is unusual: most shrine approaches climb up. The footing of old stone steps can be slippery in wet weather.',
+ f'Raita Futo, 4 May 2020, {CCBY2}, via {cm("Udo Shrine Nichinan Miyazaki")} (resized)')
+f_uov=mf2('udo-overlook','Aerial-style view down onto a paved yard with orange railings, trunks of sago palms in the foreground and a pair of rocks and the sea beyond',
+ 'The shrine yard seen from above, with the burnt-looking trunks of sago palms in the foreground. I read the dark, shaggy trunks as cycads; I did not confirm the species. The railed yard lets you stand a few meters above the sea.',
+ f'Raita Futo, 4 May 2020, {CCBY2}, via {cm("Udo Shrine Nichinan Miyazaki")} (resized)')
+f_umh=mf2('udo-main-hall','Red and turquoise-green shrine hall built right under a huge overhanging cliff, with painted decorations and carved details, a curtain, a drum and a blue banner at the front',
+ 'The main hall built inside the sea cave (Commons description: Udo Shrine main hall in sea cave), May 2023. This is the hall of the story in which Toyotama gave birth, as Tsunagu Japan puts it; the rock roof is right above the tiles.',
+ f'MaedaAkihiko, 13 May 2023, {CCBYSA4}, via {cm("Udo Shrine main hall sea cave")} (resized)')
+f_ugc=mf2('udo-gate-ceremony','Red wooden gate with a curved copper-looking roof framing a view of white-walled courtyard, orange railings and the grey ocean behind, with stone walls and bushes on both sides',
+ 'The gate in front of the ceremony hall (Commons title: Gate in front of the Gishikiden Hall) at Udo Shrine, photographed in March 2017.',
+ f'そらみみ, 18 March 2017, {CCBYSA4}, via {cm("Gate in front of Gishikiden Hall of Udo Shrine")} (resized)')
+f_ur8=mf2('udo-romon-2008','Large red two-storey tower gate with a grey roof, a framed picture of a white rat on a gold ground hung under the upper floor, stone lanterns on both sides and visitors walking up the steps',
+ 'The tower gate (<em>romon</em>) of Udo Shrine in August 2008. The painted plaque under the upper floor shows a rat; in the 2009 photograph below it shows an ox, so it looks like a yearly zodiac picture, which I have not confirmed.',
+ f'TAKA@P.P.R.S, 16 August 2008, {CCBYSA2}, via {cm("Udo Shrine gate Nichinan Miyazaki")} (resized)')
+f_ur9=mf2('udo-romon-2009','Red two-storey tower gate with a grey-green roof, a framed picture of a black ox under the upper floor, visitors on the stone path in front and blue sky behind',
+ 'The same gate a year later, May 2009, with the ox plaque. Several of these photographs are from different years, so colours of paint and fences may not match a visit today.',
+ f'z tanuki, 2 May 2009, {CCBY3}, via {cm("Udo Shrine Nichinan Miyazaki")} (resized)',mw=700)
+
 main=f"""<main>
 
   {f_hero}
@@ -225,13 +282,36 @@ main=f"""<main>
       <li><strong>Amano Iwato Shrine (Takachiho, Miyazaki):</strong> the cave where Amaterasu hid. See the trip section below.</li>
       <li><strong>Atsuta Shrine (Aichi):</strong> the sword found in the serpent, per Tsunagu Japan. Our {link('/guides/atsuta-shrine/','Atsuta guide','myth_map_atsuta')} has the visit.</li>
     </ul>
+    <h3>A Closer Look at Amano Iwato and Amano Yasukawara</h3>
+    <p>These photographs show the shrine halls and the riverside cave in Takachiho. The cave itself is not open to visitors (see the FAQ).</p>
+    {f_aw18}
+    {f_aw12}
+    {f_akag}
+    {f_aam}
     {f_yasu}
+    {f_y95}
     <h3>Okuninushi and the descent</h3>
     <ul>
       <li><strong>Hakuto Shrine (Tottori):</strong> the white hare. Japan Experience says it is 40 minutes by bus from Tottori Station, and that small rabbit statues stand around it and nearby.</li>
       <li><strong>Izumo Taisha (Shimane):</strong> Okuninushi and the annual gods' meeting. See our {link('/guides/izumo-taisha/','Izumo Taisha guide','myth_map_izumo')}.</li>
       <li><strong>Takachiho Shrine (Miyazaki), Fujisan Hongu Sengen Taisha (Shizuoka), Udo Shrine (Miyazaki):</strong> Ninigi, Konohanasakuya and Toyotama, as above.</li>
     </ul>
+    <h3>A Closer Look at Hakuto Shrine</h3>
+    <p>Hakuto Shrine is on the Tottori coast, and it is the place most people connect with the white hare. Here are the hall, the approach and the signboard, and one small rabbit shrine inland.</p>
+    {f_hh}
+    {f_hap}
+    {f_hsg}
+    {f_hyz}
+    <h3>A Closer Look at Udo Shrine</h3>
+    <p>Udo Shrine is on the Miyazaki coast, with its hall built inside a sea cave. I keep it to what the photographs show: red railings, steps, the cave hall and the tower gate.</p>
+    {f_upn}
+    {f_utb}
+    {f_ust}
+    {f_uov}
+    {f_umh}
+    {f_ugc}
+    {f_ur8}
+    {f_ur9}
 
     <h2 id="trip">Planning a Myth Trip<span class="h2-jp">旅のモデルコース</span></h2>
     <p>My suggestion for a first trip is Takachiho, because the cave myth is spread over a few kilometers. Japan-guide says Amano Iwato Shrine is about ten kilometers outside central Takachiho, with a bus from Takachiho Bus Center (15 minutes, 200 yen one way, one bus every one to two hours) and a taxi at about 2,700 yen one way. Amano Yasukawara, the cave where the gods met, is a ten-minute walk along the river, and japan-guide says the stone piles become thousands as you approach it. Japan Experience says admission is free and that if you knock a pile over, tradition says you build two to make up for it.</p>
