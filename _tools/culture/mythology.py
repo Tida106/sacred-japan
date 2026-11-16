@@ -86,31 +86,36 @@ f_susa=mfig('chikanobu-susanoo-kushinada','Colour woodblock print: a bearded god
 f_state=mfig('chikanobu-1878-state-shinto','Wide three-panel colour woodblock print on a red ground showing many figures in Western chairs, court robes and armour grouped across the panels, with golden sunrays at the upper right',
  'A Meiji print that puts the myths and the monarchy in one picture. According to the Commons description, the central panel shows Emperor Meiji and Empress Shoken in Western-style chairs, with the kami Izanami, Kunitokotachi and Izanagi behind them, and the side panels group other emperors with Amaterasu and Ninigi. This is the &ldquo;divine origins&rdquo; idea in visual form.',
  f'Toyohara Chikanobu, 1878 (higher-quality version, uploaded 2020). {PDL}, via {cm("Chikanobu 1878 State Shinto Meiji emperor Izanagi Izanami Amaterasu")} (resized)',mw=900)
-IZ='Izanagi Jingu Awaji'
+IZQ='Izanagi Jingu Awaji'
 f_otorii19=mfig('izanagi-otorii-2019','Pale stone torii with two crossbars standing in a gravel forecourt beside a tall stone pillar carved with the shrine name, with a small stone lantern, a roofed water pavilion and green trees behind',
  'The big torii and shrine-name pillar at Izanagi Jingu in April 2019. The long banner on the right pillar reads, as far as I can tell, &ldquo;celebrating the 30th year of His Majesty&rsquo;s reign&rdquo;, which fits that year.',
- f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZ+" otorii Saigen Jiro")} (resized)')
+ f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZQ+" otorii Saigen Jiro")} (resized)')
 f_torii09=mfig('izanagi-torii-2009','Wide view of a pale stone torii with a vertical banner on its right pillar, stone lanterns and komainu guardian lions on either side, and a long gravel approach leading to a second torii in the distance',
  'The same approach in April 2009, looking down the path toward a second torii. The banner on the pillar appears to read &ldquo;20th year of His Majesty&rsquo;s accession&rdquo;, the 2009 counterpart of the 2019 banner above, so the two photos are almost exactly ten years apart. The shrine has not moved, but street fittings and signs may have changed.',
- f'弥 (Wikimedia Commons user), 12 April 2009, {PDL}, via {cm(IZ+" torii 2009")} (resized)')
+ f'弥 (Wikimedia Commons user), 12 April 2009, {PDL}, via {cm(IZQ+" torii 2009")} (resized)')
 f_shinmon19=mfig('izanagi-shinmon-2019','Front gate of a shrine with a deep brown tiled roof, a thick rope across the opening, white paper streamers hanging from it, white and blue banners and a bright sky above',
  'The front gate (<em>omote shinmon</em>), the gate between the forecourt and the inner shrine. The shimenawa rope and white streamers mark the passage from the everyday world into sacred ground, which is the same border the Yomi story is about, only dressed for living people.',
- f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZ+" omote shinmon Saigen Jiro")} (resized)')
+ f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZQ+" omote shinmon Saigen Jiro")} (resized)')
 f_gate26=mfig('izanagi-gate-2026','Looking through the shaded wooden front gate of a shrine: a thick shimenawa rope with white streamers hangs above, round lanterns with chrysanthemum crests hang on both sides, and visitors walk toward a distant hall',
  'The same gate seen from the inside edge, in April 2026. The round lanterns carry a chrysanthemum crest, as far as I can see, and through the opening you can see people walking up the white-paved path toward the worship hall.',
- f'明芳 松岡, 5 April 2026, {CCBYSA4}, via {cm(IZ+" front gate 2026")} (resized)')
+ f'明芳 松岡, 5 April 2026, {CCBYSA4}, via {cm(IZQ+" front gate 2026")} (resized)')
 f_haiden19=mfig('izanagi-haiden-2019','Wide, symmetrical view of a worship hall with a long green-grey roof and dark wooden walls, approached by a straight white stone path across an open gravel yard, with trees on both sides and a blue sky',
  'The worship hall (<em>haiden</em>) in April 2019. This is where you stand to bow and pray; the long straight path is a good place to slow down before reaching the hall.',
- f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZ+" haiden Saigen Jiro")} (resized)')
+ f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZQ+" haiden Saigen Jiro")} (resized)')
 f_haiden09=mfig('izanagi-haiden-2009','A worship hall with a wide green-grey roof seen from the side across a gravel yard, with a large drum on the ground at the left, stone and bronze lanterns on both sides and tall trees behind',
  'The haiden from a different angle in April 2009, with a large drum on the ground at the left and a few people near the steps. The photo is old, so details may differ from what you will find today.',
- f'弥 (Wikimedia Commons user), 12 April 2009, {PDL}, via {cm(IZ+" haiden 2009")} (resized)')
+ f'弥 (Wikimedia Commons user), 12 April 2009, {PDL}, via {cm(IZQ+" haiden 2009")} (resized)')
 f_honden19=mfig('izanagi-honden-2019','Small wooden shrine building with a layered tiled roof, a thick rope with white streamers across its front, a short flight of stone steps and a low white fence, surrounded by trees',
  'The main sanctuary (<em>honden</em>), as the Commons description labels it. Jinja Journey says Izanagi built a hidden palace on Awaji, and the shrine presents itself as his place of rest; I could not confirm what visitors can enter, so treat this as a look from the outside.',
- f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZ+" honden Saigen Jiro")} (resized)')
+ f'Saigen Jiro, 27 April 2019, {CC0L}, via {cm(IZQ+" honden Saigen Jiro")} (resized)')
 f_amulet=mfig('izanagi-amulet-office-2026','The wooden counter of a shrine office with several visitors queuing, a dark wooden sign above reading the shrine name, and a long white board of amulet names and prices fixed under the eaves',
  'The amulet and charm office in April 2026. On the price board I can make out a &ldquo;peach-fruit amulet&rdquo; (<em>momo no mi omamori</em>) and other items with the character 桃 (peach). That would suit the myth: Kokugakuin&rsquo;s Encyclopedia of Shinto says Izanagi threw three peaches at his pursuers from Yomi, and gave the peach a divine name. Please check items and prices at the office, since the board is only a snapshot.',
- f'明芳 松岡, 5 April 2026, {CCBYSA4}, via {cm(IZ+" amulet office 2026")} (resized)')
+ f'明芳 松岡, 5 April 2026, {CCBYSA4}, via {cm(IZQ+" amulet office 2026")} (resized)')
+
+PHAC=lk("Photo AC","https://www.photo-ac.com/")
+f_yasu=mfig('yasukawara-torii','Dark cave mouth framing a small wooden torii with a rope and hanging paper strips across it, a bright green mossy gorge with a river beyond, and thousands of small stacked stones covering the ground and slope in the foreground',
+ 'Amano Yasukawara, the riverside cave in Takachiho where, in the story, the gods gathered to plan how to bring Amaterasu out. The small stacks of stones across the slope are placed by visitors; I could not confirm how or when that custom began. The cave of the myth itself is not open to visitors (see the FAQ).',
+ f'beauty-box, via {PHAC} (&ldquo;Takachiho mysterious cave, Amano Yasukawara&rdquo;). Used under Photo AC&rsquo;s terms',mw=900)
 
 main=f"""<main>
 
@@ -170,7 +175,7 @@ main=f"""<main>
     <h2 id="okuninushi">Okuninushi, the White Hare and the Land Transfer<span class="h2-jp">大国主と因幡の白兎</span></h2>
     <p>The next hero is a kind one. In the Kojiki, Okuninushi (called Onamuji then) trails behind his eighty brothers on the way to court Princess Yagami of Inaba, as Wikipedia puts it. Fun! JAPAN calls him a kind-hearted descendant of Susanoo; the sources differ on how many generations. On the beach they find a flayed hare.</p>
     <p>Wikipedia says the hare had tricked sharks (in the San'in region, <em>wani</em> means the common shark) into lining up as a bridge from the island of Oki to Cape Keta, and the last shark tore off its fur. The brothers' advice makes it worse, and Onamuji's kindness cures it. Cape Keta is now identified with the Hakuto Coast in Tottori. Fun! JAPAN reads the tale as a sign of Okuninushi's medical skill, and says Hakuto Shrine is believed to help with skin diseases and burns. Japan Experience describes it as a favorite for matchmaking, noting the claim that this is the first love story in Japan's ancient myths. The hare prophesies that Yagami will choose him, and she does.</p>
-    <p>The jealous brothers then try to kill him more than once; in the Fun! JAPAN version one trap is a split tree, and he is sent to Susanoo for trials. The story ends in what the MLIT database calls <em>kuni-yuzuri</em>, "relinquishing the land": Okuninushi hands the country to Amaterasu's line. Tsunagu Japan says Izumo Taisha was built as a condition of that handover. It is the founding bargain of Japanese mythology: the visible world goes to the sun goddess's family, and the hidden world, in later tradition, stays with Okuninushi.</p>
+    <p>The jealous brothers then try to kill him more than once; in the Fun! JAPAN version one trap is a split tree, and he is sent to Susanoo for trials. The story ends in what the MLIT database calls <em>kuni-yuzuri</em>, "relinquishing the land": Okuninushi hands the country to Amaterasu's line. For the shrine itself, its grounds and photos, see our {link('/guides/izumo-taisha/','Izumo Taisha guide','myth_okuninushi_to_izumo')}. Tsunagu Japan says Izumo Taisha was built as a condition of that handover. It is the founding bargain of Japanese mythology: the visible world goes to the sun goddess's family, and the hidden world, in later tradition, stays with Okuninushi.</p>
     <p>That hidden world is the matchmaking job. The next section shows what happens in Izumo when the gods report to him.</p>
 
     <h2 id="descent">The Descent to Takachiho<span class="h2-jp">天孫降臨</span></h2>
@@ -220,6 +225,7 @@ main=f"""<main>
       <li><strong>Amano Iwato Shrine (Takachiho, Miyazaki):</strong> the cave where Amaterasu hid. See the trip section below.</li>
       <li><strong>Atsuta Shrine (Aichi):</strong> the sword found in the serpent, per Tsunagu Japan. Our {link('/guides/atsuta-shrine/','Atsuta guide','myth_map_atsuta')} has the visit.</li>
     </ul>
+    {f_yasu}
     <h3>Okuninushi and the descent</h3>
     <ul>
       <li><strong>Hakuto Shrine (Tottori):</strong> the white hare. Japan Experience says it is 40 minutes by bus from Tottori Station, and that small rabbit statues stand around it and nearby.</li>
