@@ -1121,6 +1121,21 @@ article ul li, article ol li { font-size: 19px; }
 
 <!-- ── MAIN ── -->
 <main>
+<!--FOODNAV--><style>
+.food-nav{margin:0 0 36px;padding:16px 18px 6px;background:var(--washi);border:1px solid var(--border-strong);border-left:3px solid var(--kin);border-radius:2px;}
+.food-nav-h{font-family:'Noto Serif JP',serif;font-size:11px;letter-spacing:3px;color:var(--beni);margin:0 0 12px;}
+.food-nav-list{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none;}
+.food-nav-list li{margin:0;padding:0;}
+.food-nav-a{display:flex;align-items:center;gap:10px;padding:5px 14px 5px 5px;background:#fff;border:1px solid var(--border-strong);border-radius:3px;text-decoration:none;color:var(--sumi);font-family:'Shippori Mincho',serif;font-size:16px;line-height:1.2;transition:background .2s,transform .15s;}
+a.food-nav-a:hover{background:var(--washi-dark);transform:translateY(-1px);}
+.food-nav-a img{width:48px;height:36px;object-fit:cover;border-radius:2px;display:block;flex:none;}
+.food-nav-a.is-here{background:linear-gradient(135deg,#f9e9a8 0%,#e6c45a 40%,#d6a92b 100%);border-color:#b8860b;font-weight:600;}
+.food-nav-list{margin-bottom:10px;}
+.related-card.has-thumb{display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.related-card.has-thumb .rc-text{flex:1;min-width:0;}
+.related-card.has-thumb .rc-thumb{width:120px;height:90px;object-fit:cover;border-radius:3px;flex:none;display:block;}
+@media(max-width:600px){.food-nav-list{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch;}.food-nav-a{white-space:nowrap;}.related-card.has-thumb .rc-thumb{width:84px;height:63px;}.related-card.has-thumb{gap:14px;}}
+</style><div class="food-nav" role="group" aria-label="Japanese food guides"><p class="food-nav-h">JAPANESE FOOD GUIDES ／ 日本の食ガイド</p><ul class="food-nav-list"><li><span class="food-nav-a is-here" aria-current="page"><picture><source srcset="/images/food-nav/popular-dishes.webp" type="image/webp"><img src="/images/food-nav/popular-dishes.jpg" alt="" width="48" height="36" loading="lazy"></picture>Dishes</span></li><li><a class="food-nav-a" href="/culture/ramen/" onclick="trackEvent('click','internal','food_nav_popular-dishes_to_ramen')"><picture><source srcset="/images/food-nav/ramen.webp" type="image/webp"><img src="/images/food-nav/ramen.jpg" alt="" width="48" height="36" loading="lazy"></picture>Ramen</a></li><li><a class="food-nav-a" href="/culture/noodles/" onclick="trackEvent('click','internal','food_nav_popular-dishes_to_noodles')"><picture><source srcset="/images/food-nav/noodles.webp" type="image/webp"><img src="/images/food-nav/noodles.jpg" alt="" width="48" height="36" loading="lazy"></picture>Noodles</a></li><li><a class="food-nav-a" href="/culture/yakitori/" onclick="trackEvent('click','internal','food_nav_popular-dishes_to_yakitori')"><picture><source srcset="/images/food-nav/yakitori.webp" type="image/webp"><img src="/images/food-nav/yakitori.jpg" alt="" width="48" height="36" loading="lazy"></picture>Yakitori</a></li><li><a class="food-nav-a" href="/culture/bread/" onclick="trackEvent('click','internal','food_nav_popular-dishes_to_bread')"><picture><source srcset="/images/food-nav/bread.webp" type="image/webp"><img src="/images/food-nav/bread.jpg" alt="" width="48" height="36" loading="lazy"></picture>Bread</a></li><li><a class="food-nav-a" href="/culture/wagashi/" onclick="trackEvent('click','internal','food_nav_popular-dishes_to_wagashi')"><picture><source srcset="/images/food-nav/wagashi.webp" type="image/webp"><img src="/images/food-nav/wagashi.jpg" alt="" width="48" height="36" loading="lazy"></picture>Wagashi</a></li><li><a class="food-nav-a" href="/culture/japanese-sweets/" onclick="trackEvent('click','internal','food_nav_popular-dishes_to_japanese-sweets')"><picture><source srcset="/images/food-nav/japanese-sweets.webp" type="image/webp"><img src="/images/food-nav/japanese-sweets.jpg" alt="" width="48" height="36" loading="lazy"></picture>Sweets</a></li><li><a class="food-nav-a" href="/regional-food/" onclick="trackEvent('click','internal','food_nav_popular-dishes_to_regional-food')"><picture><source srcset="/images/food-nav/regional-food.webp" type="image/webp"><img src="/images/food-nav/regional-food.jpg" alt="" width="48" height="36" loading="lazy"></picture>Regional</a></li></ul></div><!--/FOODNAV-->
 
   <figure style="margin:0 0 48px;">
       <picture><source srcset="/culture/popular-dishes/images/sukiyaki.webp" type="image/webp"><img src="/culture/popular-dishes/images/sukiyaki.jpg" alt="A shallow iron pot with raw marbled beef slices, napa cabbage, pale grilled tofu, halved leeks, thin clear noodles, green leaves and two golden rectangular pieces, sitting in dark sauce on a round metal ring" loading="eager" style="width:100%;max-height:420px;object-fit:cover;border-radius:4px;display:block;"></picture>
@@ -1361,31 +1376,31 @@ article ul li, article ol li { font-size: 19px; }
       <h2>Related Guides</h2>
       <span class="h2-jp">関連ガイド</span>
       <div class="related-grid">
-        <a class="related-card" href="/culture/yakitori/" onclick="trackEvent('click','internal','related_dishes_to_yakitori')">
+        <a class="related-card has-thumb" href="/culture/yakitori/" onclick="trackEvent('click','internal','related_dishes_to_yakitori')"><div class="rc-text">
           <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
           <div class="related-card-title">🍢 Yakitori Guide →</div>
           <div class="related-card-desc">Cuts, salt versus sauce and ordering at an izakaya.</div>
-        </a>
-        <a class="related-card" href="/culture/bread/" onclick="trackEvent('click','internal','related_dishes_to_bread')">
+        </div><picture><source srcset="/images/food-nav/yakitori.webp" type="image/webp"><img class="rc-thumb" src="/images/food-nav/yakitori.jpg" alt="" width="120" height="90" loading="lazy"></picture></a>
+        <a class="related-card has-thumb" href="/culture/bread/" onclick="trackEvent('click','internal','related_dishes_to_bread')"><div class="rc-text">
           <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
           <div class="related-card-title">🥐 Japanese Bread Guide →</div>
           <div class="related-card-desc">Anpan, melonpan, curry bread, sandwiches and ogura toast.</div>
-        </a>
-        <a class="related-card" href="/culture/noodles/" onclick="trackEvent('click','internal','related_dishes_to_noodles')">
+        </div><picture><source srcset="/images/food-nav/bread.webp" type="image/webp"><img class="rc-thumb" src="/images/food-nav/bread.jpg" alt="" width="120" height="90" loading="lazy"></picture></a>
+        <a class="related-card has-thumb" href="/culture/noodles/" onclick="trackEvent('click','internal','related_dishes_to_noodles')"><div class="rc-text">
           <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
           <div class="related-card-title">🍜 Japanese Noodles Guide →</div>
           <div class="related-card-desc">Soba, udon, yakisoba, somen and cold ramen, with photos.</div>
-        </a>
-        <a class="related-card" href="/culture/ramen/" onclick="trackEvent('click','internal','related_dishes_to_ramen')">
+        </div><picture><source srcset="/images/food-nav/noodles.webp" type="image/webp"><img class="rc-thumb" src="/images/food-nav/noodles.jpg" alt="" width="120" height="90" loading="lazy"></picture></a>
+        <a class="related-card has-thumb" href="/culture/ramen/" onclick="trackEvent('click','internal','related_dishes_to_ramen')"><div class="rc-text">
           <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
           <div class="related-card-title">🍥 Japanese Ramen Guide →</div>
           <div class="related-card-desc">Shoyu, miso, shio and tonkotsu explained, with a photo of each bowl.</div>
-        </a>
-        <a class="related-card" href="/regional-food/" onclick="trackEvent('click','internal','related_dishes_to_food')">
+        </div><picture><source srcset="/images/food-nav/ramen.webp" type="image/webp"><img class="rc-thumb" src="/images/food-nav/ramen.jpg" alt="" width="120" height="90" loading="lazy"></picture></a>
+        <a class="related-card has-thumb" href="/regional-food/" onclick="trackEvent('click','internal','related_dishes_to_food')"><div class="rc-text">
           <div class="related-card-label">SACRED JAPAN ／ GUIDE</div>
           <div class="related-card-title">🍽️ Japan's Regional Cuisine →</div>
           <div class="related-card-desc">Dishes from Hokkaido to Okinawa.</div>
-        </a>
+        </div><picture><source srcset="/images/food-nav/regional-food.webp" type="image/webp"><img class="rc-thumb" src="/images/food-nav/regional-food.jpg" alt="" width="120" height="90" loading="lazy"></picture></a>
       </div>
     </section>
 
