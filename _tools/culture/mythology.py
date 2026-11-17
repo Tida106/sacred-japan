@@ -163,6 +163,9 @@ f_hc1=mf2('hakuto-coast-2012','Long sandy beach with waves rolling in under a cl
 f_hc2=mf2('hakuto-coast-sunrise','Wide view of a curving beach with turquoise waves and white surf, heavy dark clouds above and a band of golden light at the horizon, pine branches in the lower left and a few buildings on the far shore',
  'The Hakuto Coast in the morning light, from the FIND/47 project in Tottori (Commons description, January 2020). The clouds are dark and the light is low, so this is a good picture of how the coast looks in winter, when the Japan Sea is at its roughest.',
  f'rikky_photography (uploaded by Bioika0201), 25 January 2020, {CCBY4}, via {cm("Hakuto Coast morning Tottori")} (resized)',mw=900)
+f_hc3=mf2('hakuto-okinoshima','Dark rock island in a pale blue sea, with white surf swirling around it in a long exposure and a small light-coloured torii standing on its top beside a few pine branches',
+ 'The rock the Commons title calls 淤岐ノ島 (<em>Oki no Shima</em>), just off the Hakuto Coast, photographed in a long exposure so the surf looks like mist. A small torii stands on top. The name echoes the island of Oki in the hare story, but I could not confirm how local tradition links the two, so I show it as a place to look at rather than a proven site of the myth.',
+ f'rikky_photography (uploaded by Bioika0201), 25 January 2020, {CCBY4}, via {cm("Hakuto Coast Okinoshima Tottori")} (resized)',mw=900)
 f_hyz=mf2('hakuto-yazu','Small wooden shrine on a stone platform in the middle of rice fields, with two grey stone rabbits on pedestals at the steps, one standing on its hind legs, and bare trees and a village behind',
  'A small shrine with stone rabbits at its steps. The Commons title places it in Yazu Town, Tottori, so this appears to be a different, much smaller white-hare shrine inland, not the coastal Hakuto Shrine above. I include it because Tottori has more than one place that claims the hare, and I could not confirm which tradition this one follows.',
  f'Msht05, 25 December 2024, {CC0L}, via {cm("Tottori Yazu Hakuto Shrine rabbit")} (resized)')
@@ -345,6 +348,7 @@ main=f"""<main>
     {f_hr3}
     {f_hc1}
     {f_hc2}
+    {f_hc3}
     {f_hyz}
     <h3>A Closer Look at Udo Shrine</h3>
     <p>Udo Shrine is on the Miyazaki coast, with its hall built inside a sea cave. I keep it to what the photographs show: red railings, steps, the cave hall and the tower gate.</p>
