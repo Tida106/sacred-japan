@@ -120,6 +120,8 @@ f_yasu=mfig('yasukawara-torii','Dark cave mouth framing a small wooden torii wit
 CCBYSA3=lk("CC BY-SA 3.0","https://creativecommons.org/licenses/by-sa/3.0/")
 CCBYSA2=lk("CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0/")
 CCBY3=lk("CC BY 3.0","https://creativecommons.org/licenses/by/3.0/")
+CCBY4=lk("CC BY 4.0","https://creativecommons.org/licenses/by/4.0/")
+CCBY21JP=lk("CC BY 2.1 JP","https://creativecommons.org/licenses/by/2.1/jp/")
 CCBY2=lk("CC BY 2.0","https://creativecommons.org/licenses/by/2.0/")
 def mf2(src,alt,desc,cred,mw=760): return mfig(src,alt,desc,cred,mw=mw)
 f_aw18=mf2('amano-iwato-west-2018','Wide view of a long, dark wooden shrine hall with a green-grey roof, seen from a gravel yard, with a low fence and trees closing in on both sides',
@@ -146,6 +148,21 @@ f_hap=mf2('hakuto-approach','Straight stone-paved path up a gentle slope between
 f_hsg=mf2('hakuto-sign','Large grey wooden signboard under a green roof with big white painted characters reading the shrine name, and smaller text in columns below',
  'The shrine&rsquo;s explanatory board. From what I can read, it gives the main deity as the white hare god, lists the address in Tottori City, and mentions an annual festival on the 17th of April. It retells the hare story, then says the shrine is known for medicine and for matchmaking with Okuninushi and Princess Yagami. Check the shrine for current festival dates.',
  f'tme181, 5 December 2010, {CCBY3}, via {cm("Hakuto Shrine Tottori sign")} (resized)')
+f_hr1=mf2('hakuto-rabbit-run','Grey granite rabbit in a stretched, leaping pose on a square stone post, with white pebbles marked in red characters and a few small coins scattered on the post, dark grass behind',
+ 'One of the small granite rabbits at Hakuto Shrine, caught in a stretching, leaping pose. White pebbles marked in red are laid on the post. The character on the larger ones looks like 縁 (<em>en</em>, &ldquo;bond&rdquo; or &ldquo;connection&rdquo;), as far as I can read it, which would fit the matchmaking reputation Japan Experience describes. I could not confirm how the pebbles are meant to be used.',
+ f'tme181, 5 December 2010, {CCBY3}, via {cm("Hakuto Shrine Tottori rabbit")} (resized)')
+f_hr2=mf2('hakuto-rabbit-path','Small grey granite rabbit crouching on a stone post with white pebbles around it, looking up a blurred path toward a torii in the shade, with a pale rock wall on the right',
+ 'A second rabbit, crouched on its post and looking up a shaded path toward a torii. The Commons description gives only the shrine name, so I cannot say where along the grounds this post stands. Each rabbit has a different pose, which is part of the fun of walking round.',
+ f'tme181, 5 December 2010, {CCBY3}, via {cm("Hakuto Shrine Tottori rabbit")} (resized)')
+f_hr3=mf2('hakuto-rabbit-sea','Grey granite rabbit sitting upright in profile on a stone post, looking left past a blurred torii and car park toward a pale sea and sky, with a few white pebbles at its feet',
+ 'A rabbit sitting up and looking out toward the sea, with a blurred torii and the car park behind it. Facing the water suits a story in which the hare crossed the sea, but that is my reading of the pose, not something the shrine says.',
+ f'tme181, 5 December 2010, {CCBY3}, via {cm("Hakuto Shrine Tottori rabbit")} (resized)')
+f_hc1=mf2('hakuto-coast-2012','Long sandy beach with waves rolling in under a clear blue sky, a small dark rock standing out in the surf in the distance and a strip of dry grass in the foreground',
+ 'The Hakuto Coast in winter, looking northwest according to the Commons description. This stretch of sand is what the page above means when it says Cape Keta is now identified with the Hakuto Coast. The photo is from 2012 and only 800 pixels wide, so I have not enlarged it.',
+ f'荒川鯉師, 27 December 2012, {CCBY21JP}, via {cm("Hakuto Coast Tottori")} (resized)',mw=800)
+f_hc2=mf2('hakuto-coast-sunrise','Wide view of a curving beach with turquoise waves and white surf, heavy dark clouds above and a band of golden light at the horizon, pine branches in the lower left and a few buildings on the far shore',
+ 'The Hakuto Coast in the morning light, from the FIND/47 project in Tottori (Commons description, January 2020). The clouds are dark and the light is low, so this is a good picture of how the coast looks in winter, when the Japan Sea is at its roughest.',
+ f'rikky_photography (uploaded by Bioika0201), 25 January 2020, {CCBY4}, via {cm("Hakuto Coast morning Tottori")} (resized)',mw=900)
 f_hyz=mf2('hakuto-yazu','Small wooden shrine on a stone platform in the middle of rice fields, with two grey stone rabbits on pedestals at the steps, one standing on its hind legs, and bare trees and a village behind',
  'A small shrine with stone rabbits at its steps. The Commons title places it in Yazu Town, Tottori, so this appears to be a different, much smaller white-hare shrine inland, not the coastal Hakuto Shrine above. I include it because Tottori has more than one place that claims the hare, and I could not confirm which tradition this one follows.',
  f'Msht05, 25 December 2024, {CC0L}, via {cm("Tottori Yazu Hakuto Shrine rabbit")} (resized)')
@@ -319,10 +336,15 @@ main=f"""<main>
       <li><strong>Takachiho Shrine (Miyazaki), Fujisan Hongu Sengen Taisha (Shizuoka), Udo Shrine (Miyazaki):</strong> Ninigi, Konohanasakuya and Toyotama, as above.</li>
     </ul>
     <h3>A Closer Look at Hakuto Shrine</h3>
-    <p>Hakuto Shrine is on the Tottori coast, and it is the place most people connect with the white hare. Here are the hall, the approach and the signboard, and one small rabbit shrine inland.</p>
+    <p>Hakuto Shrine is on the Tottori coast, and it is the place most people connect with the white hare. Here are the hall, the approach, the signboard, the stone rabbits and the coast, and one small rabbit shrine inland.</p>
     {f_hh}
     {f_hap}
     {f_hsg}
+    {f_hr1}
+    {f_hr2}
+    {f_hr3}
+    {f_hc1}
+    {f_hc2}
     {f_hyz}
     <h3>A Closer Look at Udo Shrine</h3>
     <p>Udo Shrine is on the Miyazaki coast, with its hall built inside a sea cave. I keep it to what the photographs show: red railings, steps, the cave hall and the tower gate.</p>
@@ -403,5 +425,5 @@ tail=tail.replace('What Happens, What to Do as a Guest, and Where to Try It','Ko
 tail=tail.replace('Tea Ceremony Guide','Japanese Mythology Guide')
 tail=tail.replace('guide_tea','guide_mythology').replace('viator_guide_tea_sticky','viator_guide_mythology_sticky').replace('japanese+tea+ceremony','takachiho')
 tail=re.sub(r'(<meta name="keywords" content=")[^"]*(")',r'\1Japanese mythology, Kojiki, Nihon Shoki, Izanagi and Izanami, Amaterasu, Susanoo, Okuninushi, white hare of Inaba, Kamiarizuki, Amano Iwato, Takachiho, Izumo Taisha\2',tail)
-tail=tail.replace('"datePublished":"2026-11-08","dateModified":"2026-11-08"','"datePublished":"2026-11-16","dateModified":"2026-11-16"')
+tail=tail.replace('"datePublished":"2026-11-08","dateModified":"2026-11-08"','"datePublished":"2026-11-16","dateModified":"2026-11-17"')
 exec(tail)
