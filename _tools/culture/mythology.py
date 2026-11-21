@@ -117,6 +117,10 @@ f_yasu=mfig('yasukawara-torii','Dark cave mouth framing a small wooden torii wit
  'Amano Yasukawara, the riverside cave in Takachiho where, in the story, the gods gathered to plan how to bring Amaterasu out. The small stacks of stones across the slope are placed by visitors; I could not confirm how or when that custom began. The cave of the myth itself is not open to visitors (see the FAQ).',
  f'beauty-box, via {PHAC} (&ldquo;Takachiho mysterious cave, Amano Yasukawara&rdquo;). Used under Photo AC&rsquo;s terms',mw=900)
 
+f_astat=mfig('amaterasu-statue','Bronze-coloured statue of a woman with long hair in layered robes and a bead necklace, holding a bundle of grain ears in one hand and a small bowl in the other, on a rough stone base with a metal plaque, in front of a dark green building and trees',
+ 'A statue of Amaterasu Omikami, listed by the photo site as standing at Amano Iwato Shrine in Miyazaki. The plaque at the base is headed, as I read it, <em>Himuka Shinwa Kaido</em> (&ldquo;Himuka Myth Road&rdquo;) and names the goddess; I cannot read the rest. She holds what looks like a bundle of grain ears in one hand and a small bowl in the other, which fits her role as the sun goddess behind the rice harvest, but I could not confirm what the sculptor meant. A good photo stop before you walk to the hall.',
+ f'みかん888, via {PHAC} (&ldquo;Miyazaki Amano Iwato Shrine, Amaterasu Omikami statue&rdquo;). Used under Photo AC&rsquo;s terms',mw=420)
+
 CCBYSA3=lk("CC BY-SA 3.0","https://creativecommons.org/licenses/by-sa/3.0/")
 CCBYSA2=lk("CC BY-SA 2.0","https://creativecommons.org/licenses/by-sa/2.0/")
 CCBY3=lk("CC BY 3.0","https://creativecommons.org/licenses/by/3.0/")
@@ -330,6 +334,7 @@ main=f"""<main>
     {f_aw12}
     {f_akag}
     {f_aam}
+    {f_astat}
     {f_yasu}
     {f_y95}
     <h3>Okuninushi and the descent</h3>
@@ -429,5 +434,5 @@ tail=tail.replace('What Happens, What to Do as a Guest, and Where to Try It','Ko
 tail=tail.replace('Tea Ceremony Guide','Japanese Mythology Guide')
 tail=tail.replace('guide_tea','guide_mythology').replace('viator_guide_tea_sticky','viator_guide_mythology_sticky').replace('japanese+tea+ceremony','takachiho')
 tail=re.sub(r'(<meta name="keywords" content=")[^"]*(")',r'\1Japanese mythology, Kojiki, Nihon Shoki, Izanagi and Izanami, Amaterasu, Susanoo, Okuninushi, white hare of Inaba, Kamiarizuki, Amano Iwato, Takachiho, Izumo Taisha\2',tail)
-tail=tail.replace('"datePublished":"2026-11-08","dateModified":"2026-11-08"','"datePublished":"2026-11-16","dateModified":"2026-11-17"')
+tail=tail.replace('"datePublished":"2026-11-08","dateModified":"2026-11-08"','"datePublished":"2026-11-16","dateModified":"2026-11-21"')
 exec(tail)
