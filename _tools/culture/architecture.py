@@ -35,6 +35,36 @@ SMITH='https://www.smithsonianmag.com/smart-news/this-japanese-shrine-has-been-t
 PH={}
 def ph(k): return PH.get(k,'')
 
+CAPST='font-size:13px;color:var(--enshu);margin-top:10px;text-align:center;line-height:1.6;'
+LA='style="color:var(--enshu);"'
+def lk(t,u): return f'<a href="{u}" target="_blank" rel="noopener" {LA}>{t}</a>'
+def cfile(n): return lk("Wikimedia Commons","https://commons.wikimedia.org/wiki/File:"+n)
+def csearch(q): return lk("Wikimedia Commons",'https://commons.wikimedia.org/w/index.php?search='+q+'&title=Special:MediaSearch&type=image')
+def pfig(src,alt,desc,cred,mw=760):
+    return (f'<figure style="margin:36px auto;max-width:{mw}px;">\n      <picture><source srcset="/culture/shrine-architecture/images/{src}.webp" type="image/webp"><img src="/culture/shrine-architecture/images/{src}.jpg" alt="{alt}" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;"></picture>\n      <figcaption style="{CAPST}">{desc}<br>{cred}</figcaption>\n    </figure>')
+L_BYSA3=lk("CC BY-SA 3.0","https://creativecommons.org/licenses/by-sa/3.0/")
+L_BYSA4=lk("CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0/")
+L_BY2=lk("CC BY 2.0","https://creativecommons.org/licenses/by/2.0/")
+
+PH['roof']=pfig('ise-naiku-roof','Roof of a main sanctuary seen over a plank fence in a forest: a thick thatched roof with forked chigi at both ends and a row of round katsuogi logs laid across the ridge, with gold-colored metal fittings, and part of a second roof at the left',
+ 'The roof of the main sanctuary of the Inner Shrine at Ise, as Commons labels it, seen over its plank fence. You can see all three features from this section: thick thatch, the forked chigi at each end of the ridge, and a row of katsuogi laid across it, with gold-colored metal fittings. World History Encyclopedia gives 10 katsuogi for the Inner Shrine, and the row here looks like about ten to me, though I would not swear to my count from a photo. Notice that the fence hides everything below the roof, which is how most visitors see this building.',
+ f'Photo: N yotarou, August 2006, {L_BYSA3} (the file is also offered under GFDL and CC BY 2.5), via {cfile("Naiku_01.jpeg")} (resized)',mw=760)
+PH['roof']+='\n\n    '+pfig('ise-tsukiyomi-miya','Two small separate shrine buildings with thatched roofs, forked chigi and a row of katsuogi on each ridge, standing in a court of white gravel behind a plain wooden fence, with a stone lantern in the foreground and tall trees behind',
+ 'Two small buildings at Tsukiyomi-no-miya, a subsidiary shrine of the Inner Shrine, with the same thatch, chigi and katsuogi as the main sanctuary. The Japanese description on Commons says the shrines of Izanagi and Izanami here follow the Inner Shrine\'s pattern whatever the sex of the deity, with inward-cut chigi and six katsuogi. That is worth knowing: it suggests the rule of thumb above is a tendency and not a law, since a male deity appears with the pattern the rule would link to a female one. That is my reading of the description, not a statement from the shrine.',
+ f'Photo: N yotarou, September 2006, {L_BYSA3} (also offered under GFDL), via {cfile("Tsukiyomi-no-miyaNaiku_05.jpeg")} (resized)',mw=760)
+PH['roof']+='\n\n    '+pfig('roof-closeup-copper','Close view from below of the corner of a shrine roof: dark weathered copper sheathing, a forked chigi with gold-colored rectangular openings, a round katsuogi end with a small crest, and a row of short round rafter ends under the eave, against green leaves',
+ 'A close look at a roof corner at a smaller shrine. Commons gives no location, and I cannot tell which shrine it is. The chigi and the roof edge are sheathed in dark, weathered copper, the chigi have gold-colored framed openings, and the end of a katsuogi carries a round crest that looks like a swirling design to me. It is a useful picture of how much metal sits on a roof that people describe as pure wood, and of how the forked chigi cross at the ridge. Commons titles the file only with the word 鞭掛.',
+ f'Photo: 粟山 (name as shown on Commons), 16 October 2022, {L_BYSA4}, via {csearch("%E9%9E%AD%E6%8E%9B+shrine+chigi+katsuogi")} (resized)',mw=760)
+PH['origins']=pfig('ise-mishine-mikura','A small raised-floor building in a forest: pale wood walls, a thatched roof with forked chigi and a row of katsuogi, stout posts holding the floor off the ground, a rope fence in front and a stone lantern at the right',
+ 'A raised-floor building at the Inner Shrine, titled on Commons as Mishine-no-mikura at the Ise grand sanctuary. As I read the name, it is a storehouse for the sacred rice, which would fit the granary model: stout posts lift the floor off the ground, the walls are plain wood and the roof is thatch. The part of the Commons page I could see does not say what the building holds, so take the storehouse reading as mine.',
+ f'Photo: Jean-Pierre Dalbéra, 13 May 2018, {L_BY2} (reviewed on Commons as licensed on Flickr), via {cfile("Le_sanctuaire_shinto_Mishine-no-mikura_grand_sanctuaire_dIse_Japon_42387575474.jpg")} (resized)',mw=760)
+PH['styles']=pfig('shinmei-drawing','Line drawing of a shinmei-zukuri shrine building: a heavy gabled roof with forked chigi and a row of katsuogi logs, a veranda with a railing on posts all around, and a flight of steps up to the entrance on the long side',
+ 'A line drawing of shinmei-zukuri (Commons: \"Japanese shrine type Shimmei\"). It shows the points from the list above in one picture: the gabled roof with chigi and katsuogi, a raised floor on posts with a railed veranda, and the stair up to an entrance on the long side of the building.',
+ f'Drawing: Fraxinus2, 14 May 2014, {L_BYSA3}, via {cfile("Shimmei_Stil.jpg")} (resized)',mw=520)
+PH['ise']=pfig('ise-izawa-miya','Two new-looking buildings made of pale unpainted wood in a forest clearing: a thatched hall with forked chigi and katsuogi behind a tall plank fence, and a smaller gabled hall with a ribbed roof and a simple gate frame in front, standing on a bed of white stones',
+ 'Izawa-no-miya, which the Japanese description on Commons gives as a subsidiary shrine of the Inner Shrine in Shima, Mie Prefecture. The wood is pale and unweathered and the thatch looks fresh, which is what a shinmei building looks like when it is new. The photo is from May 2015, but the Commons page does not say when this building was put up, so I do not tie it to the 2013 rebuilding. The bed of white stones around the buildings is a common sight at the Ise shrines.',
+ f'Photo: N yotarou, May 2015, {L_BYSA4}, via {cfile("Izawa-no-miya_07.jpg")} (resized)',mw=760)
+
 faqs=[
 ("What is the difference between a honden and a haiden?","The honden is the main hall where the kami is enshrined; it sits at the back and is normally closed to the public. The haiden is the worship hall in front of it, and it is the building most visitors actually stand before. The {WIKIH_L} and the {WIKI_L} both describe this order, with a heiden (offering hall) sometimes joining the two."),
 ("Why do some shrines have no main hall?","Some kami are a mountain, a tree or a rock, so the shrine needs a place to pray toward but not a building to house the god. {NIP_L} gives Omiwa Shrine (Mount Miwa) as an example and also names Suwa Taisha. At such shrines the haiden is the most important building. Our {SUWA_L} explains how Suwa works."),
