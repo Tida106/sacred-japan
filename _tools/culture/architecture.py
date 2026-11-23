@@ -98,6 +98,25 @@ DESC="A licensed guide's English introduction to Shinto shrine architecture: the
 URL=f"https://sacred-japan.net/culture/{S}/"
 OG="https://sacred-japan.net/images/og/og-culture-shrine-architecture.jpg"
 
+L_CC0=lk("CC0","https://creativecommons.org/publicdomain/zero/1.0/")
+L_BYSA4b=L_BYSA4
+L_BY3=lk("CC BY 3.0","https://creativecommons.org/licenses/by/3.0/")
+PH['izumo']=pfig('izumo-honden-wide','The main sanctuary of Izumo Taisha seen from the side under a blue-grey sky: a tall steeply swept roof with crossed chigi and a row of round katsuogi on the ridge, two smaller buildings with their own crossed chigi on the left, and a long fence in the foreground with a mossy roof of its own',
+ 'The main sanctuary at Izumo, which Commons titles as the main hall of Izumo Taisha, seen from outside the fence. Compare it with the Ise roofs above: the roof is a deep, steeply swept mass of bark, the chigi cross at the ridge and the katsuogi are round logs laid along it, but the whole building is a tall, almost square block, not a long low hall. The two smaller roofs at the left carry the same crossed chigi. The long fence in front has a mossy roof of its own, which is why you only ever see the top of the hall.',
+ f'Photo: Naokijp, 4 January 2022, {L_BYSA4}, via {cfile("Izumo_Taisha_Main_Sanctuary_001.jpg")} (resized)',mw=760)
+PH['izumo']+='\n\n    '+pfig('izumo-honden-hills','Izumo Taisha seen across a gravel court under low cloud: a tall dark roof with large crossed chigi and round katsuogi rises behind lower bark-roofed halls and gates with gold crests, with wooded hills behind and a stone stair and a few signboards in front',
+ 'Commons titles this one simply as the main hall of Izumo Taisha. What I can see is the tall gable of the main hall with its crossed chigi rising behind lower bark-roofed halls and gates, with gold crests on the gable ends and the wooded hill behind. I cannot tell which of the lower structures in front is which, so I will not name them. It is a good picture of how the hall sits deep in the compound, with several layers of roofs between you and it.',
+ f'Photo: Saigen Jiro, 8 March 2016, {L_CC0} (public domain dedication, credited anyway), via {cfile("Honden_of_Izumo-taisha-1.jpeg")} (resized)',mw=760)
+PH['izumo']+='\n\n    '+pfig('izumo-roofs-fence','Several dark thatched roofs of the Izumo Taisha sanctuary rising over a long fence with a mossy roof: crossed chigi and round katsuogi on each ridge, steep curved eaves, and a stone-edged path in the foreground under a clear sky',
+ 'A 2006 view of the same group of roofs from the path outside the fence. The chigi cross at the ridge of each building, and the katsuogi sit along it, a little more spread out than on a thatched Ise roof. With a clear sky behind them, the swept lines of the eaves are easy to read. The Commons description just says it is the Izumo-taisha.',
+ f'Photo: Blue Lotus (Amy, Flickr user), 20 March 2006, {L_BY2} (reviewed on Commons as licensed on Flickr), via {cfile("Izumo-taisha_121538651_f69f257ed0_o.jpg")} (resized)',mw=760)
+PH['izumo']+='\n\n    '+pfig('izumo-roofs-flag','Dark roofs of the Izumo Taisha sanctuary against a clear blue sky: a large steep roof with crossed chigi and round katsuogi, a smaller roof beside it, and a Japanese flag on a pole between them, with a dark fence in the foreground',
+ 'The same group from a lower angle, in silhouette. The crossed chigi and the round katsuogi stand out clearly against the sky, and the Japanese flag between the roofs gives a sense of scale. The Commons description is again only the Izumo-taisha, so I cannot say which building is in front.',
+ f'Photo: Blue Lotus (Amy, Flickr user), 20 March 2006, {L_BY2} (reviewed on Commons as licensed on Flickr), via {cfile("Izumo-taisha_121539276_b25e49382d_o.jpg")} (resized)',mw=760)
+PH['izumo']+='\n\n    '+pfig('izumo-karidono','Wide view of a large hall at Izumo Taisha under a cloudy sky: a broad dark gabled roof with a smaller roof over the entrance, a thick rope hanging across the front, visitors standing on the stone court, a signboard reading Karidono, and grey hoarding at the right',
+ 'A reminder that Izumo was being worked on in the years of the last big renovation. The Commons description says the building shown is the temporary hall (the sign reads 御仮殿, Karidono, as I read it) and that the main sanctuary was under reconstruction in May 2012, due for completion in May 2013. That fits the schedule above. The rope across the front and the grey screen at the right are part of what a visitor saw at the time, and the scene will look different now.',
+ f'Photo: z tanuki, 2 May 2012, {L_BY3} (originally posted to Panoramio, reviewed on Commons), via {csearch("Izumo+Grand+Shrine+panoramio+z+tanuki")} (resized)',mw=760)
+
 main=f"""<main>
 
   <!-- TABLE OF CONTENTS -->
