@@ -79,6 +79,7 @@ main=f'''<main>
       <li><a href="#what-sells">What Sells to Visitors</a></li>
       <li><a href="#picks">The 10 Picks</a></li>
       <li><a href="#locals">What Japanese People Snack On</a></li>
+      <li><a href="#sukajan">Beyond Sweets: The Sukajan Souvenir Jacket</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#final">Final Thoughts</a></li>
     </ol>
@@ -128,6 +129,28 @@ main=f'''<main>
     <div style="background:var(--washi-dark);border-left:4px solid var(--kin);padding:16px 20px;margin:24px 0;border-radius:2px;">
       <p style="margin:0;">&#127856; <strong>Plan your trip:</strong> Want a local to show you the food stalls? <a href="{VI}" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_sweets_local')">Browse Japan food tours on Viator &rarr;</a></p>
     </div>
+
+    <h2 id="sukajan">Beyond Sweets: The Sukajan Souvenir Jacket<span class="h2-jp">スカジャン</span></h2>
+    <p>Sweets are the small gift. If a guest wants something to keep for years, I point them to a jacket whose very name means &ldquo;souvenir.&rdquo; The <em>sukajan</em>, or souvenir jacket, is a satin blouson with embroidered Japanese motifs, and it began as a souvenir.</p>
+    <h3>Where It Came From</h3>
+    <p>Wikipedia dates the jacket to the post-war occupation (1945 to 1952) around the US naval base at Yokosuka, and Nippon.com calls Yokosuka its birthplace as a souvenir for American servicemen. Nippon.com adds that a custom culture of sewing patches onto flight and varsity jackets came first, and the step to taking a jacket to a tailor for traditional Japanese embroidery followed. Over time, ready-made jackets with designs that soldiers liked were sold in souvenir shops.</p>
+    <p>The shape is American, like a baseball or varsity jacket, and the decoration is Japanese: eagles, tigers and dragons, according to a Yokosuka Museum of Art exhibition summary (Fashion Press, in Japanese), which also names a Japanese sideways-swing embroidery technique used on the vintage pieces. That mix is the whole appeal.</p>
+    <h3>Why &ldquo;Suka&rdquo;?</h3>
+    <p>Tokyo Weekender explains the name as <em>suka</em> from Yokosuka plus <em>jan</em> from &ldquo;jumper.&rdquo; Fashion Press tells a slightly different order of events: the jackets were first called souvenir jackets, and the Yokosuka name came later, after they returned to Japan during the American-casual vintage boom. I read both as the same name told from two angles, so please treat the exact origin as a story with versions.</p>
+    <h3>From Souvenir to Fashion</h3>
+    <p>Nippon.com (Japanese edition) says the jacket moved from souvenir to fashion item in the 1960s, when Japanese young people who admired American casual style began to wear it. Today it is sold worldwide as a fashion piece. The maker most associated with the style is Tailor Toyo, a brand of Toyo Enterprise. According to Fashion Press, its predecessor Kosho Shokai supplied clothing to US military facilities, and the company has made souvenir jackets for more than half a century.</p>
+    <h3>What to Look For</h3>
+    <ul class="practical-list">
+      <li><strong>Reversible:</strong> a retailer's description of Tailor Toyo's standard type says both sides are acetate and that it has no padding, so it suits any season. Check the product page of whatever you buy.</li>
+      <li><strong>Price:</strong> current Tailor Toyo models I saw at Japanese retailers were around 70,000 yen or more (for example 74,800 yen on one Rakuten listing). Prices change, so use this only as a sense of scale.</li>
+      <li><strong>Custom order:</strong> Time Out Tokyo says some of the original Yokosuka shops still let you choose fabric colors, a pattern and the embroidery, and names First Shokai as one such shop.</li>
+      <li><strong>Where:</strong> Dobuita-dori in Yokosuka is the street Nippon.com associates with the jacket. Opening hours and stock vary, so check ahead.</li>
+    </ul>
+    <p>My own advice, not a sourced rule: if you cannot visit Yokosuka, a jacket from a specialist maker will usually be better made than the cheapest ones sold at tourist stalls, and the embroidery is the part worth inspecting.</p>
+    <div style="background:var(--washi-dark);border-left:4px solid var(--kin);padding:16px 20px;margin:24px 0;border-radius:2px;">
+      <p style="margin:0;">&#129509; <strong>Browse before you go:</strong> See what sukajan look like and what they cost. <a href="https://www.amazon.com/s?k=sukajan+souvenir+jacket&amp;tag=sacredjapan-20" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','amazon_sukajan')">Search sukajan on Amazon &rarr;</a> <a href="https://www.amazon.com/s?k=tailor+toyo+souvenir+jacket&amp;tag=sacredjapan-20" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','amazon_tailor_toyo')">Search Tailor Toyo &rarr;</a></p>
+    </div>
+    <p style="font-size:14px;color:var(--enshu);">Sources for this section: <a href="https://en.wikipedia.org/wiki/Sukajan" style="color:var(--beni);text-decoration:underline;" target="_blank" rel="noopener">Wikipedia</a>, <a href="https://www.nippon.com/en/guide-to-japan/gu900245/" style="color:var(--beni);text-decoration:underline;" target="_blank" rel="noopener">Nippon.com</a>, <a href="https://www.nippon.com/ja/guide-to-japan/gu900245/" style="color:var(--beni);text-decoration:underline;" target="_blank" rel="noopener">Nippon.com (Japanese)</a>, <a href="https://www.fashion-press.net/news/93859" style="color:var(--beni);text-decoration:underline;" target="_blank" rel="noopener">Fashion Press</a>, <a href="https://www.tokyoweekender.com/?p=242398" style="color:var(--beni);text-decoration:underline;" target="_blank" rel="noopener">Tokyo Weekender</a>, <a href="https://timeout.com/tokyo/shopping/souvenir-jacket-a-brief-history-and-where-to-shop-for-sukajan-in-tokyo" style="color:var(--beni);text-decoration:underline;" target="_blank" rel="noopener">Time Out Tokyo</a>, <a href="https://toyo-enterprise.co.jp/aboutus" style="color:var(--beni);text-decoration:underline;" target="_blank" rel="noopener">Toyo Enterprise</a>.</p>
 
     <h2 id="faq">Frequently Asked Questions<span class="h2-jp">よくあるご質問</span></h2>
 
