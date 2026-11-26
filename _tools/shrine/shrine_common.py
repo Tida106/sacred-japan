@@ -54,7 +54,7 @@ def build(c):
     src='Sources verified at time of writing: '+', '.join(L(u,l,t) for u,l,t in c['sources'])+'. Hours, prices and availability change'
     tail,n=re.subn(r'Sources verified at time of writing:.*?Hours, prices and availability change',lambda m:src,tail,flags=re.S); assert n==1
     out=head+main+tail
-    assert not re.search('Gifu|Nobunaga|Kinka',re.sub(r'"mainEntity": \[.*','',out,flags=re.S))
+    assert not re.search('Gifu|Nobunaga|Kinka',re.sub(r'"mainEntity": \[.*','',head+tail,flags=re.S))
     open(D+'index.html','w',encoding='utf-8').write(out)
     for tg in ['div','figure','picture','p','a','ul','li','details','section','h2']:
         assert len(re.findall(f'<{tg}[ >]',out))==len(re.findall(f'</{tg}>',out)),tg
