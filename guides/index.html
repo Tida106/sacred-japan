@@ -677,6 +677,7 @@ main { max-width: 1100px; }
 #gf .lab{font:12px 'EB Garamond',serif;letter-spacing:.15em;text-transform:uppercase;color:var(--kin);width:70px;}
 #gf .chip{border:1px solid var(--border-strong);background:#fff;border-radius:20px;padding:6px 16px;font:15px 'Shippori Mincho',serif;cursor:pointer;color:var(--sumi);}
 #gf .chip.on{background:linear-gradient(135deg,#7d1228,#d9485a);color:#fff;border-color:#7d1228;}
+#gf .cnt:empty{display:none;}
 #gf .cnt{margin-top:10px;font:14px 'EB Garamond',serif;color:var(--enshu);}
 @media(min-width:900px){#gf{position:sticky;top:64px;}}
 #gf .chip{margin:0 2px 2px 0}
@@ -1808,7 +1809,7 @@ var tm;qi.oninput=function(){S.q=this.value.toLowerCase().trim();run();clearTime
 function run(){var n=0;cards.forEach(function(c){var ok=(S.cat==='All'||c.dataset.cat===S.cat)&&(S.reg==='All'||c.dataset.reg===S.reg)&&(!S.q||c.dataset.txt.indexOf(S.q)>-1);c.classList.toggle('hide',!ok);if(ok)n++;});
  [].forEach.call(document.querySelectorAll('.region-label'),function(l){var x=l.nextElementSibling,any=false;while(x&&!x.classList.contains('region-label')){if(x.classList.contains('hub-card')&&!x.classList.contains('hide'))any=true;x=x.nextElementSibling;}l.classList.toggle('hide',!any);});
  [].forEach.call(document.querySelectorAll('.group-head'),function(h){var g=h.nextElementSibling;h.classList.toggle('hide',!(g&&g.querySelector('.hub-card:not(.hide)')));});
- document.getElementById('cnt').textContent='Showing '+n+' of '+cards.length+' guides'+(n===0?' \u2014 try clearing a filter':'');}
+ document.getElementById('cnt').textContent=(n===0?'No guides found \u2014 try clearing a filter':'');}
 run();
 })();
 </script>
