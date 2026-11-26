@@ -1800,7 +1800,7 @@ var CATS=['All','Shrines','Temples','Castles','Culture & Food','Travel Tips'];
 var REG=['All','Kanto','Kansai','Chubu','Chugoku','Shikoku','Kyushu','Tohoku','Hokkaido'];
 cards.forEach(function(c){c.dataset.txt=c.textContent.toLowerCase();});
 var S={cat:'All',reg:'All',q:''},qi=document.getElementById('q');
-qi.placeholder='Search '+cards.length+' guides \u2014 try \u201ccastle\u201d, \u201cKyoto\u201d, \u201crabbit\u201d, \u201cramen\u201d\u2026';
+qi.placeholder='Search '+cards.length+' guides \u2014 try \u201ccastle\u201d, \u201cKyoto\u201d, \u201cramen\u201d\u2026';
 function ev(l){try{trackEvent('click','guides_filter',l);}catch(e){}}
 function mk(id,arr,key){var el=document.getElementById(id);arr.forEach(function(a){var b=document.createElement('button');b.type='button';b.className='chip'+(a==='All'?' on':'');b.textContent=a;b.onclick=function(){S[key]=a;[].forEach.call(el.children,function(x){x.classList.toggle('on',x===b)});ev(key+'_'+a);run();};el.appendChild(b);});}
 mk('cats',CATS,'cat');mk('regs',REG,'reg');
