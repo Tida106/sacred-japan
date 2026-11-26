@@ -5,6 +5,7 @@ LIC={'by2':('CC BY 2.0','https://creativecommons.org/licenses/by/2.0/'),
  'by3':('CC BY 3.0','https://creativecommons.org/licenses/by/3.0/'),
  'cc0':('CC0 1.0','https://creativecommons.org/publicdomain/zero/1.0/'),
  'bysa2':('CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/'),
+ 'bysa3':('CC BY-SA 3.0','https://creativecommons.org/licenses/by-sa/3.0/'),
  'bysa4':('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/')}
 def esc_json(t):
     t=re.sub('<[^>]+>','',t)
@@ -14,7 +15,7 @@ def build(c):
     SL=c['slug']; D=R+f'guides/{SL}/'; os.makedirs(D+'images',exist_ok=True)
     P=c['photos']; SIZE={}
     for k,v in P.items():
-        im=Image.open(glob.glob(UP+v[0]+'-image.*')[0]).convert('RGB')
+        im=Image.open(v[0] if v[0].startswith('/') else glob.glob(UP+v[0]+'-image.*')[0]).convert('RGB')
         if im.width>1200: im=im.resize((1200,round(im.height*1200/im.width)),Image.LANCZOS)
         im.save(D+f'images/{k}.jpg',quality=84); im.save(D+f'images/{k}.webp',quality=80); SIZE[k]=im.size
     def fig(k,alt,cap,hero=False):

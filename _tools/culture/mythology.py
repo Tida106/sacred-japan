@@ -356,7 +356,7 @@ main=f"""<main>
     {f_hc3}
     {f_hyz}
     <h3>A Closer Look at Udo Shrine</h3>
-    <p>Udo Shrine is on the Miyazaki coast, with its hall built inside a sea cave. I keep it to what the photographs show: red railings, steps, the cave hall and the tower gate.</p>
+    <p>Udo Shrine is on the Miyazaki coast, with its hall built inside a sea cave. I keep it to what the photographs show: red railings, steps, the cave hall and the tower gate. For the walk, the undama toss and how to get there, see our <a href="/guides/udo-jingu/" class="inline-link" onclick="trackEvent('click','internal','mythology_to_udo_jingu')">Udo Shrine guide</a>.</p>
     {f_upn}
     {f_utb}
     {f_ust}
