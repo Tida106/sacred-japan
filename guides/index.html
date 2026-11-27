@@ -1807,6 +1807,7 @@ function run(){var n=0;cards.forEach(function(c){var ok=(S.cat==='All'||c.datase
  [].forEach.call(document.querySelectorAll('.region-label'),function(l){var x=l.nextElementSibling,any=false;while(x&&!x.classList.contains('region-label')){if(x.classList.contains('hub-card')&&!x.classList.contains('hide'))any=true;x=x.nextElementSibling;}l.classList.toggle('hide',!any);});
  [].forEach.call(document.querySelectorAll('.group-head'),function(h){var g=h.nextElementSibling;h.classList.toggle('hide',!(g&&g.querySelector('.hub-card:not(.hide)')));});
  document.getElementById('cnt').textContent=(n===0?'No guides found \u2014 try clearing a filter':'');}
+var hh=(location.hash||'').slice(1).toLowerCase();if(hh){[].forEach.call(document.querySelectorAll('#regs .chip'),function(b){if(b.textContent.toLowerCase()===hh){b.click();var g=document.getElementById('gf');if(g)setTimeout(function(){g.scrollIntoView({behavior:'smooth',block:'start'});},60);}});}
 run();
 })();
 </script>

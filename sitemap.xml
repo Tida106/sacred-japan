@@ -3,14 +3,14 @@
   <!-- Home -->
   <url>
     <loc>https://sacred-japan.net/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Hubs -->
   <url>
     <loc>https://sacred-japan.net/guides/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
