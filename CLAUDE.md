@@ -524,3 +524,4 @@
 - 2026-11-27 ホーム「Sacred Offerings」6カード（お守り・絵馬・おみくじ・お札・土鈴・神水）：AI背景画像を外し、右上に実写真（images/offerings/*.webp、132px）＋出典を表示。CSSは .etiquette-card:has(>.oc-ph)／.oc-ph。写真＝お守り：富士山本宮浅間大社（jetalone CC BY 3.0）／絵馬 Wicki CC0／おみくじ ココナナ（写真AC・【要確認】規約）／お札 Pat457 CC BY-SA 4.0／土鈴 Batholith PD／神水 貴船（mariemon CC BY 3.0）。PHOTO-CREDITS.csv追記済み。旧AI背景（images/omamori.webp等）は未削除
 - 2026-11-27 ホーム「Japan Travel Tips」セクション（#tips）を削除（ユーザー指示）。ホームのクイックリンク・フッター・JSON-LDの該当項目も削除、他162ページの「/#tips」リンクは /guides/japan-travel-planning/ に変更。旅行の実用情報は japan-travel-planning ガイドが担当
 - 2026-11-27 ホームの「SACRED JAPAN GUIDES／Long-form guides…」9枚カードのブロック（#sacred places to visit）を削除（/guides/ と紅の帯「Browse All 133 Guides」と重複のため・ユーザー指示）。クイックリンク等の他箇所は元々無し。div開閉は従来どおり3ずれ（新規の崩れなし）、1280/390pxで横はみ出しなし
+- 2026-11-27 ホーム Sacred Offerings：カード背景が半透明でグリッドの区切り線（gap）が見えにくかったため、不透明（#fcf5f7）に変更し、このグリッドのみ gap を2pxに（.etiquette-grid:has(.oc-ph)）
