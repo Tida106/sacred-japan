@@ -2752,7 +2752,6 @@ transition: background 0.15s, color 0.15s;
       <a onclick="smoothTo('planning')" href="#planning" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🗺️ Travel Planning</a>
       <a onclick="smoothTo('stay')" href="#stay" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🛕 Temple Stay</a>
       <a onclick="smoothTo('emergency')" href="#emergency" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🚨 Emergency Guide</a>
-      <a onclick="smoothTo('book-trip')" href="#book-trip" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🎒 Book Tours</a>
     </div>
   </div>
         
@@ -2768,12 +2767,6 @@ transition: background 0.15s, color 0.15s;
 #spots .rg-btn:hover{filter:brightness(1.08);transform:translateY(-1px);}
 #spots .rg-btn b{font-weight:500;display:block;}#spots .rg-btn i{font-style:normal;font-size:13px;opacity:.9;}
 #spots .rg-note{text-align:center;color:var(--enshu);font-family:'EB Garamond',serif;font-size:16px;margin:0 0 6px;}
-#book-trip{max-width:1000px;margin:34px auto 44px;padding:30px 24px;background:#fff;border:1px solid #e8d8c4;border-top:3px solid var(--kin);border-radius:4px;text-align:center;}
-#book-trip h2{font-family:'Shippori Mincho',serif;font-weight:400;font-size:26px;margin:0 0 4px;color:var(--sumi);}
-#book-trip p{font-family:'EB Garamond',serif;font-size:17px;color:var(--enshu);margin:0 0 18px;}
-#book-trip .bk-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:12px;}
-#book-trip .bk-btn{display:inline-block;padding:10px 18px;color:#fff;text-decoration:none;font-family:'EB Garamond',serif;font-size:16px;letter-spacing:.5px;border-radius:2px;}
-#book-trip .bk-v{background:var(--beni);}#book-trip .bk-e{background:var(--kon);}
 @media(max-width:700px){#spots .rg-grid{grid-template-columns:repeat(2,1fr);}}
 </style>
 <section id="spots" class="region-sec">
@@ -2781,13 +2774,6 @@ transition: background 0.15s, color 0.15s;
 <div class="map-wrap"><picture><source srcset="images/japan-map.webp" type="image/webp"><img src="images/japan-map.png" alt="Japan regions map — color coded by area" style="max-width:650px;width:100%;height:auto;" loading="lazy"></picture></div>
 <p class="rg-note">Tap a region to see its shrine, temple and castle guides</p>
 <div class="rg-grid"><a class="rg-btn" href="/guides/#kanto" onclick="trackEvent('click','internal','home_map_region_kanto')" style="background:#e8928a;"><b>Kanto 関東</b><i>East</i></a><a class="rg-btn" href="/guides/#kansai" onclick="trackEvent('click','internal','home_map_region_kansai')" style="background:#8b5fa8;"><b>Kansai 関西</b><i>West</i></a><a class="rg-btn" href="/guides/#chubu" onclick="trackEvent('click','internal','home_map_region_chubu')" style="background:#c9a84c;"><b>Chubu 中部</b><i>Central</i></a><a class="rg-btn" href="/guides/#chugoku" onclick="trackEvent('click','internal','home_map_region_chugoku')" style="background:#6a9e6a;"><b>Chugoku 中国</b><i>W. Honshu</i></a><a class="rg-btn" href="/guides/#shikoku" onclick="trackEvent('click','internal','home_map_region_shikoku')" style="background:#a393c8;"><b>Shikoku 四国</b><i>S. Island</i></a><a class="rg-btn" href="/guides/#kyushu" onclick="trackEvent('click','internal','home_map_region_kyushu')" style="background:#e07840;"><b>Kyushu 九州</b><i>SW Island</i></a><a class="rg-btn" href="/guides/#tohoku" onclick="trackEvent('click','internal','home_map_region_tohoku')" style="background:#3a9e7e;"><b>Tohoku 東北</b><i>Northeast</i></a><a class="rg-btn" href="/guides/#hokkaido" onclick="trackEvent('click','internal','home_map_region_hokkaido')" style="background:#5bacd4;"><b>Hokkaido 北海道</b><i>North</i></a></div>
-</section>
-<!-- BOOK YOUR TRIP -->
-<section id="book-trip">
-<h2>Book Your Trip</h2>
-<p>Guided tours and hotels near Japan's most sacred places</p>
-<div class="bk-row"><a class="bk-btn bk-v" href="https://www.viator.com/search/Tokyo?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','home_book_viator_tokyo')">Tours in Tokyo</a><a class="bk-btn bk-v" href="https://www.viator.com/search/Kyoto?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','home_book_viator_kyoto')">Tours in Kyoto</a><a class="bk-btn bk-v" href="https://www.viator.com/search/Osaka?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','home_book_viator_osaka')">Tours in Osaka</a><a class="bk-btn bk-v" href="https://www.viator.com/search/Nara?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','home_book_viator_nara')">Tours in Nara</a><a class="bk-btn bk-v" href="https://www.viator.com/search/Hiroshima?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','home_book_viator_hiroshima')">Tours in Hiroshima</a><a class="bk-btn bk-v" href="https://www.viator.com/search/Nikko?pid=P00298374&mcid=42383&medium=api" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','home_book_viator_nikko')">Tours in Nikko</a></div>
-<div class="bk-row"><a class="bk-btn bk-e" href="https://expedia.com/affiliate?siteid=1&amp;landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DTokyo&amp;camref=1101l5JmFa&amp;creativeref=1011l87782&amp;adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','home_book_expedia_tokyo')">Hotels in Tokyo</a><a class="bk-btn bk-e" href="https://expedia.com/affiliate?siteid=1&amp;landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DKyoto&amp;camref=1101l5JmFa&amp;creativeref=1011l87782&amp;adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','home_book_expedia_kyoto')">Hotels in Kyoto</a><a class="bk-btn bk-e" href="https://expedia.com/affiliate?siteid=1&amp;landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DOsaka&amp;camref=1101l5JmFa&amp;creativeref=1011l87782&amp;adref=PZf6lQ77e8" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','home_book_expedia_osaka')">Hotels in Osaka</a></div>
 </section>
 
 <main>
@@ -3622,7 +3608,6 @@ transition: background 0.15s, color 0.15s;
     <li><a href="/anime/">Anime</a></li>
     <li><a href="/culture/goshuin-guide/">Goshuin</a></li>
     <li><a href="#omamori" onclick="smoothTo('omamori')">Omamori</a></li>
-    <li><a href="#" onclick="smoothTo('book-trip');return false;">Book Tours</a></li>
     <li><a href="#about" onclick="smoothTo('about')">About</a></li>
     <li style="flex-basis:100%;padding-top:8px;font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:3px;color:var(--beni);text-transform:uppercase;">Sacred Places to Visit ／ 聖地を訪ねる</li>
     <li><a href="/guides/ise-grand-shrine/">Ise Grand Shrine</a></li>
