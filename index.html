@@ -1294,6 +1294,10 @@ line-height: 1.7;
 .kamidana-daily-num { font-size: 28px; margin-bottom: 8px; }
 .kamidana-daily-title { font-size: 15px; color: var(--sumi); }
 .kamidana-daily-jp { font-size: 10px; margin-bottom: 10px; }
+@media (min-width: 1025px) {
+.kamidana-rules-grid, .kamidana-daily, .kamidana-offerings-grid { gap: 0; }
+.kamidana-rule-card + .kamidana-rule-card, .kamidana-daily-card + .kamidana-daily-card, .kamidana-offering + .kamidana-offering { border-left: 1px solid rgba(60,40,20,0.35); }
+}
 .kamidana-daily-body { font-size: 17px; line-height: 1.75; color: var(--sumi-light); }
 .goshuin-section { margin-bottom: 72px; }
 .goshuin-intro {
