@@ -48,6 +48,20 @@ faqs = [
 ]
 faq_html, faq_ld = faq_blocks(faqs)
 
+copy_photos(S, {'kano-statue':'/mnt/user-data/uploads/c54c24a0-image.jpg',
+                'kodokan-building':'/mnt/user-data/uploads/7c666f3a-image.jpg',
+                'judo-throw':'/mnt/user-data/uploads/a2de8a84-image.jpg'})
+fig = make_fig(S)
+F_STATUE = fig('kano-statue','Bronze statue of Kano Jigoro on a stone base in front of a lattice wall',
+  'Statue of Kano Jigoro, founder of judo.',
+  f'Photo: 三人日, {BYSA3}, 2011-08-06. {VIA}', maxw=420)
+F_BUILD = fig('kodokan-building','The Kodokan building in Tokyo seen from the street',
+  'The Kodokan building in Bunkyo ward, Tokyo.',
+  f'Photo: Miyuki Meinaka, {BYSA4}, 2019-06-17. {VIA}', maxw=560)
+F_THROW = fig('judo-throw','Two judoka during a throw at the Kodokan',
+  'A judo throw demonstrated at the Kodokan.',
+  f'Photo: Presidential Press and Information Office (Kremlin.ru), {BY4}, 2000-09-05. {VIA}', maxw=500)
+
 main = f'''<main>
 
   <aside class="toc" aria-label="Table of contents">
@@ -88,6 +102,8 @@ main = f'''<main>
     <p>The Meiji Restoration of 1868 ended samurai rule and Western culture spread. {KIDS} says jujutsu declined and nearly disappeared, until a young man named Kano Jigoro began training at 17 to build his strength. In May 1882, at 21, he combined the best elements of several jujutsu styles into one new school, with nine students in a 12-mat dojo at a temple. {WIKI_KD} identifies the temple as Eishoji in Ueno.</p>
     <p>{JUDOINFO} says Kano was born on October 28, 1860 in Mikage near Kobe, studied Tenjin Shinyo-ryu and then Kito-ryu, and called his new method judo. I rely on that page for those details, which I have not checked elsewhere.</p>
     <p>The result spread fast. According to {KIDS}, Kano visited Europe in 1889, later served on the International Olympic Committee, and judo became an official Olympic event for men in Tokyo in 1964, with women's judo official in 1992. The Olympic format uses weight classes. As {JG} describes it, the art covers throwing, grappling and, in kata, striking, and learning to fall is an important part of training.</p>
+    {F_THROW}
+    <p>The photo above shows a throw demonstrated at the Kodokan, as described on Commons; it was taken during an official visit in 2000, not at a regular practice. Even so, it shows the heart of judo clearly: one player's balance is broken and the other uses it, rather than force, to bring the partner to the mat.</p>
     <p>{WIKI_JJ} also lists Brazilian jiu-jitsu and sambo among arts descended from jujutsu through judo, which is a useful thing to know if you meet a traveler on the same trip who trains in either.</p>
 
     <h2 id="others">Kendo, Kyudo, Karate and Aikido<span class="h2-jp">剣道・弓道・空手・合気道</span></h2>
@@ -110,6 +126,10 @@ main = f'''<main>
       <li><strong>Training:</strong> {KDK2} says randori classes accept trainees with a certain amount of judo experience, and beginners can study from the basics in the judo school.</li>
       <li><strong>Manners:</strong> {TT} reports that foreign visitors who train there bow to the statue of Kano before stepping on the tatami, and are not excused from roll call or the group warm-up.</li>
     </ul>
+    {F_BUILD}
+    <p>This is the building you are looking for: a pale block with a grid of windows, easy to pick out among the street trees. The lettering on the windows reads, as I read it, 講道館ビル along with the names of clinics on other floors. Spectators head for the 8th floor, as {JG} describes.</p>
+    {F_STATUE}
+    <p>The bronze figure in hakama and a long jacket, standing on a stone base, is catalogued on Commons as Kano Jigoro. The wall behind it carries a signboard that reads 講道館, right to left. I cannot say from the photo whether this is the statue that visitors bow to in the {TT} report, since I have not confirmed which statue that article means.</p>
     <p>Hours and class details change, so please check the Kodokan's website for the current schedule before you plan your day around it.</p>
 
     <h2 id="butokuden">The Butokuden in Kyoto<span class="h2-jp">武徳殿</span></h2>
