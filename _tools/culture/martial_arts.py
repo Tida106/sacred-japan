@@ -50,8 +50,16 @@ faq_html, faq_ld = faq_blocks(faqs)
 
 copy_photos(S, {'kano-statue':'/mnt/user-data/uploads/c54c24a0-image.jpg',
                 'kodokan-building':'/mnt/user-data/uploads/7c666f3a-image.jpg',
-                'judo-throw':'/mnt/user-data/uploads/a2de8a84-image.jpg'})
+                'judo-throw':'/mnt/user-data/uploads/a2de8a84-image.jpg',
+                'kendo-noma':'/mnt/user-data/uploads/a6076ed7-image.jpg',
+                'kyudo-paris':'/mnt/user-data/uploads/15afe94f-image.jpg'})
 fig = make_fig(S)
+F_KENDO = fig('kendo-noma','Kendo practitioners in armor practicing in a wooden-floored dojo',
+  'Kendo practice at the Noma Dojo in Tokyo.',
+  f'Photo: Wang Ming, {BYSA3}, 2007-08-06. {VIA}')
+F_KYUDO = fig('kyudo-paris','Kyudo archers at full draw on a gym floor in white tops and black hakama',
+  'Team competition at the Second Kyudo World Cup, Paris.',
+  f'Photo: Pierre-Yves Beaudouin, {BYSA4}, 2014-07-20. {VIA}')
 F_STATUE = fig('kano-statue','Bronze statue of Kano Jigoro on a stone base in front of a lattice wall',
   'Statue of Kano Jigoro, founder of judo.',
   f'Photo: 三人日, {BYSA3}, 2011-08-06. {VIA}', maxw=420)
@@ -114,8 +122,11 @@ main = f'''<main>
       <li><strong>Aikido (<span class="jp">合気道</span>):</strong> a self-defense art that avoids harming the attacker, using joint holds and throws that redirect the attacker's energy. {JZ} says its founder had developed his own techniques, which he called aiki bujutsu, by 1922, and later renamed them aikido; its source is a single page, so please treat the date as approximate.</li>
       <li><strong>Iaido (<span class="jp">居合道</span>):</strong> drawing the sword from the scabbard and cutting in one motion at an imagined opponent, practiced largely solo, sometimes from a seated position ({JT}).</li>
     </ul>
-
-    <h2 id="modern">How Budo Was Rebuilt After 1868<span class="h2-jp">武道の再建</span></h2>
+    {F_KENDO}
+    <p>This is kendo practice at the Noma Dojo in Tokyo, as described on Commons. The players wear the full armor, a mask, a padded jacket and gloves over a dark hakama, and hold bamboo swords. Spare armor hangs in a row along the wall, and the long wooden floor is bright with skylights and tall windows. It is a useful picture of what a visitor will see: a large hall, a lot of footwork, and no one standing still.</p>
+    {F_KYUDO}
+    <p>Kyudo looks very different. The photo shows a team competition at the Second Kyudo World Cup, held in Paris in July 2014 according to Commons, and the poster on the left wall appears to say the same. The archers wear white tops and black hakama, and the bows are very long and held asymmetrically, with the grip well below the middle. Several are at full draw at once, while a seated official in a grey jacket watches from the front. It is also a reminder that kyudo is practiced far beyond Japan.</p>
+How Budo Was Rebuilt After 1868<span class="h2-jp">武道の再建</span></h2>
     <p>The arts did not simply survive the end of the samurai class. {EMB} says that after the Sino-Japanese War, in 1895, a national organization called the Dai Nippon Butokukai (Great Japan Martial Virtue Association) centralized martial arts and oversaw their introduction into education. The same fact sheet says the occupation authorities banned the arts for five years after the Second World War, until 1950, because the prewar revival was seen as feeding militarism; the arts were then promoted as sports. {RYU} adds that the Butokukai was dissolved in 1946 by an Occupation directive, and that the All Japan Kendo Federation, established in 1952, became its de facto successor.</p>
 
     <h2 id="kodokan">Visiting the Kodokan, Tokyo<span class="h2-jp">講道館</span></h2>
