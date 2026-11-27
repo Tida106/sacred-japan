@@ -2740,7 +2740,7 @@ transition: background 0.15s, color 0.15s;
       <a onclick="smoothTo('planning')" href="#planning" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🗺️ Travel Planning</a>
       <a onclick="smoothTo('stay')" href="#stay" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🛕 Temple Stay</a>
       <a onclick="smoothTo('emergency')" href="#emergency" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🚨 Emergency Guide</a>
-      <a onclick="smoothTo('viator')" href="#viator" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🎒 Book Tours</a>
+      <a onclick="smoothTo('book-trip')" href="#book-trip" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🎒 Book Tours</a>
       <a onclick="smoothTo('goshuin')" href="#goshuin" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">📖 Goshuin Guide</a>
     </div>
   </div>
@@ -3393,70 +3393,6 @@ transition: background 0.15s, color 0.15s;
     <p style="font-family:'Noto Serif JP',serif;font-size:10px;color:var(--enshu);letter-spacing:1px;margin-bottom:72px;">Sacred Japan participates in the Booking.com affiliate program. Bookings made through these links may earn us a small commission at no extra cost to you.</p>
   </div>
 
-  <!-- VIATOR TOURS -->
-  <div id="viator"></div>
-  <div class="wa-divider">
-    <div class="wa-divider-line"></div>
-    <div class="wa-divider-mark">体験予約 — BOOK JAPAN EXPERIENCES</div>
-    <div class="wa-divider-line"></div>
-  </div>
-
-  <div class="section-head">
-    <div class="section-head-left">
-      <h2 class="section-h2">Guided Tours & Experiences</h2>
-      <span class="section-h2-jp">ガイドツアー・体験予約</span>
-    </div>
-  </div>
-
-  <!-- REPLACE: P00298374 → 正式Viator PID（partners.viator.comで取得）全7箇所 -->
-  <div class="viator-section">
-    <div class="viator-grid">
-
-      <div class="viator-card">
-        <div class="viator-card-icon">⛩</div>
-        <div class="viator-card-title">Fushimi Inari Night Walk</div>
-        <p class="viator-card-body">Experience the thousand torii gates of Fushimi Inari after dark, when crowds fade and lanterns cast a golden glow through the sacred forest. Guided tours include shrine etiquette, history, and hidden viewpoints unknown to most visitors.</p>
-        <a class="viator-btn" href="https://www.viator.com/search/Kyoto?pid=P00298374&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_fushimi')">Book in Kyoto →</a>
-      </div>
-
-      <div class="viator-card">
-        <div class="viator-card-icon">🦌</div>
-        <div class="viator-card-title">Nara Sacred Deer & Temples</div>
-        <p class="viator-card-body">Walk among Japan's sacred deer to Todai-ji's Great Buddha and Kasuga Taisha's lantern-lined pathways. Expert guides bring the myths and history of Japan's ancient capital to life in a full-day Nara experience.</p>
-        <a class="viator-btn" href="https://www.viator.com/search/Nara?pid=P00298374&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_nara')">Book in Nara →</a>
-      </div>
-
-      <div class="viator-card">
-        <div class="viator-card-icon">🏔</div>
-        <div class="viator-card-title">Koyasan Temple Stay</div>
-        <p class="viator-card-body">Spend a night at a shukubo temple lodging on sacred Mount Koya. Wake before dawn for morning prayers with Buddhist monks, enjoy shojin-ryori vegetarian cuisine, and walk the mystical Okunoin cemetery at night.</p>
-        <a class="viator-btn" href="https://www.viator.com/search/Koyasan?pid=P00298374&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_koyasan')">Book Koyasan →</a>
-      </div>
-
-      <div class="viator-card">
-        <div class="viator-card-icon">📖</div>
-        <div class="viator-card-title">Goshuin Stamp Tour</div>
-        <p class="viator-card-body">Join a guided goshuin-collecting tour of Kyoto's most beautiful shrines and temples. Your guide will explain the significance of each seal, help you communicate with priests, and ensure you collect the most beautiful and unique goshuin.</p>
-        <a class="viator-btn" href="https://www.viator.com/search/Kyoto?pid=P00298374&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_goshuin')">Book in Kyoto →</a>
-      </div>
-
-      <div class="viator-card">
-        <div class="viator-card-icon">🌸</div>
-        <div class="viator-card-title">Cherry Blossom Shrine Walk</div>
-        <p class="viator-card-body">Time your visit to experience Japan's sacred sites at their most breathtaking — framed by clouds of pink cherry blossoms. Guided spring tours visit the best hanami spots at Meiji Jingu, Tsurugaoka Hachimangu, and Kyoto's hidden shrines.</p>
-        <a class="viator-btn" href="https://www.viator.com/Tokyo/d334-ttd?pid=P00298374&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_sakura')">Book in Tokyo →</a>
-      </div>
-
-      <div class="viator-card">
-        <div class="viator-card-icon">🏯</div>
-        <div class="viator-card-title">Nikko UNESCO Day Trip</div>
-        <p class="viator-card-body">Take a guided day trip from Tokyo to the spectacular mountain shrines of Nikko — Tosho-gu, Futarasan, and Rinnoji. Expert guides decode the symbolism of the elaborate carvings and lacquerwork that make Nikko Japan's most ornate sacred site.</p>
-        <a class="viator-btn" href="https://www.viator.com/search/Nikko?pid=P00298374&mcid=42383&medium=link&campaign=sacred-japan" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','viator_nikko')">Book Nikko →</a>
-      </div>
-
-    </div>
-    <p class="viator-note">Sacred Japan participates in the Viator affiliate program. Booking through these links supports the site at no extra cost to you. Tour availability and prices vary by season.</p>
-  </div>
 
   <!-- EMERGENCY GUIDE -->
   <div class="wa-divider">
@@ -3752,7 +3688,7 @@ transition: background 0.15s, color 0.15s;
     <li><a href="/anime/">Anime</a></li>
     <li><a href="#goshuin" onclick="smoothTo('goshuin')">Goshuin</a></li>
     <li><a href="#omamori" onclick="smoothTo('omamori')">Omamori</a></li>
-    <li><a href="#" onclick="smoothTo('viator');return false;">Book Tours</a></li>
+    <li><a href="#" onclick="smoothTo('book-trip');return false;">Book Tours</a></li>
     <li><a href="#about" onclick="smoothTo('about')">About</a></li>
     <li style="flex-basis:100%;padding-top:8px;font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:3px;color:var(--beni);text-transform:uppercase;">Sacred Places to Visit ／ 聖地を訪ねる</li>
     <li><a href="/guides/ise-grand-shrine/">Ise Grand Shrine</a></li>
