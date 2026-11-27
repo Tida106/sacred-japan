@@ -1022,6 +1022,14 @@ pointer-events: none;
 }
 .etiquette-card > * { position: relative; z-index: 1; }
 .etiquette-card:hover { background: var(--washi-dark); }
+.etiquette-card:has(>.oc-ph)::before{display:none}
+.etiquette-card:has(>.oc-ph){background:rgba(255,255,255,.55)}
+.oc-ph{float:right;width:132px;margin:0 0 12px 16px}
+.oc-ph img{display:block;width:132px;height:99px;object-fit:cover;border-radius:3px;border:1px solid rgba(60,40,20,.2)}
+.oc-ph figcaption{font:10px/1.3 sans-serif;color:var(--enshu);margin-top:3px}
+.oc-ph figcaption a{color:inherit}
+.etiquette-card:has(>.oc-ph) .etiquette-body{clear:both}
+
 .etiquette-num {
 font-family: 'EB Garamond', serif;
 font-size: 13px;
@@ -3145,37 +3153,43 @@ transition: background 0.15s, color 0.15s;
   <!-- What are the items -->
   <div class="etiquette-section" style="margin-bottom:48px;">
     <div class="etiquette-grid">
-      <div class="etiquette-card" style="--card-bg: url('/images/omamori.webp');">
+      <div class="etiquette-card">
+        <figure class="oc-ph"><img src="/images/offerings/omamori.webp" alt="Omamori at Fujisan Hongu Sengen Taisha" width="132" height="99" loading="lazy" decoding="async"><figcaption>jetalone · <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener">CC BY 3.0</a></figcaption></figure>
         <div class="etiquette-num">お守り — Omamori</div>
         <div class="etiquette-title">Protective Charms</div>
         <span class="etiquette-title-jp">お守り</span>
         <p class="etiquette-body">Omamori are fabric pouches containing sacred paper or wood inscribed with prayers, sealed and never to be opened. Each shrine and temple produces its own unique omamori for specific blessings — love, health, safe travel, academic success, business prosperity, or traffic safety. They are typically worn on a bag or kept in a wallet. Replace your omamori annually by returning the old one to the shrine or temple where it was purchased, to be ceremonially burned.</p>
       </div>
-      <div class="etiquette-card" style="--card-bg: url('/images/ema.webp');">
+      <div class="etiquette-card">
+        <figure class="oc-ph"><img src="/images/offerings/ema.webp" alt="Ema" width="132" height="99" loading="lazy" decoding="async"><figcaption>Wicki · <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener">CC0</a></figcaption></figure>
         <div class="etiquette-num">絵馬 — Ema</div>
         <div class="etiquette-title">Wish Plaques</div>
         <span class="etiquette-title-jp">絵馬</span>
         <p class="etiquette-body">Ema are small wooden plaques on which visitors write their wishes and prayers, then hang at the shrine or temple for the gods to receive. The word ema means "picture horse" — historically, horses were donated to shrines as offerings, but wooden plaques replaced live horses over time. Each shrine designs its own unique ema, often featuring the shrine's deity, seasonal imagery, or the Chinese zodiac animal of the current year. Collecting ema from different shrines is a popular tradition.</p>
       </div>
-      <div class="etiquette-card" style="--card-bg: url('/images/omikuji.webp');">
+      <div class="etiquette-card">
+        <figure class="oc-ph"><img src="/images/offerings/omikuji.webp" alt="Omikuji" width="132" height="99" loading="lazy" decoding="async"><figcaption>ココナナ · 写真AC</figcaption></figure>
         <div class="etiquette-num">おみくじ — Omikuji</div>
         <div class="etiquette-title">Fortune Slips</div>
         <span class="etiquette-title-jp">おみくじ</span>
         <p class="etiquette-body">Omikuji are paper fortune slips drawn randomly at shrines and temples. They predict your luck across categories including health, love, business, and travel — ranging from daikichi (great blessing) to daikyo (great curse). If you draw a bad fortune, tie it to a designated tree or rack at the shrine to leave the bad luck behind. Good fortunes can be kept and carried with you. Many shrines now offer English omikuji, and some feature beautifully illustrated seasonal designs.</p>
       </div>
-      <div class="etiquette-card" style="--card-bg: url('/images/ofuda.webp');">
+      <div class="etiquette-card">
+        <figure class="oc-ph"><img src="/images/offerings/ofuda.webp" alt="Ofuda" width="132" height="99" loading="lazy" decoding="async"><figcaption>Pat457 · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a></figcaption></figure>
         <div class="etiquette-num">お札 — Ofuda</div>
         <div class="etiquette-title">Sacred Tablets</div>
         <span class="etiquette-title-jp">お札・神札</span>
         <p class="etiquette-body">Ofuda are flat wooden or paper tablets bearing the name of a deity or temple, inscribed and stamped by priests. Unlike omamori, ofuda are meant to be enshrined at home — placed in a kamidana (home shrine) or above a doorway to protect the household. Major shrines like Ise Jingu, Izumo Taisha, and Meiji Jingu issue highly revered ofuda that many Japanese families keep in their homes. They should be renewed annually, with old ofuda returned to the shrine for disposal.</p>
       </div>
-      <div class="etiquette-card" style="--card-bg: url('/images/dorei.webp');">
+      <div class="etiquette-card">
+        <figure class="oc-ph"><img src="/images/offerings/dorei.webp" alt="Dorei" width="132" height="99" loading="lazy" decoding="async"><figcaption>Batholith · Public domain</figcaption></figure>
         <div class="etiquette-num">土鈴・置物 — Dorei</div>
         <div class="etiquette-title">Clay Bells & Figurines</div>
         <span class="etiquette-title-jp">土鈴・縁起物</span>
         <p class="etiquette-body">Many shrines and temples produce unique hand-crafted ceramic bells (dorei), fox figurines, lucky cats, daruma dolls, and other ornamental lucky items specific to their deity or regional tradition. Fushimi Inari is famous for its ceramic fox figurines. Nara's Kasuga Taisha produces exquisite deer-shaped items. These make beautiful and meaningful gifts — each one unique to the sacred site where it was made, connecting the recipient to that specific place of worship.</p>
       </div>
-      <div class="etiquette-card" style="--card-bg: url('/images/shinsui.webp');">
+      <div class="etiquette-card">
+        <figure class="oc-ph"><img src="/images/offerings/shinsui.webp" alt="Sacred spring at Kibune Shrine" width="132" height="99" loading="lazy" decoding="async"><figcaption>mariemon · <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener">CC BY 3.0</a></figcaption></figure>
         <div class="etiquette-num">神水・霊水 — Sacred Water</div>
         <div class="etiquette-title">Holy Water & Sacred Salt</div>
         <span class="etiquette-title-jp">神水・清め塩</span>
