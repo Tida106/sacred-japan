@@ -534,3 +534,4 @@
 - 2026-11-27 ホーム：最下部の「Related Resources（YouTube 2チャンネル）」を削除（ユーザー指示）。div開閉は従来どおり3ずれ
 - 2026-11-27 ホーム：「Goshuin Guide」セクション（#goshuin、導入＋Amazon御朱印帳CTA）を削除（ユーザー指示）。フッターのGoshuinは /culture/goshuin-guide/ へ、JSON-LDのパンくず項目も同URLへ。クイックリンク・スクロールスパイの項目は削除。※Amazon sacredjapan-20 の御朱印帳リンク（home）は消えた。div開閉は従来どおり3ずれ
 - 2026-11-27 ホーム：Amazonグッズのカード群（.amazon-section、御朱印帳ほか）を、下部のEmergency後から「Sacred Essentials」見出し直下（Sacred Offeringsの前）へ移動（ユーザー指示）。div開閉は従来どおり3ずれ、1280/390px横はみ出しなし
+- 2026-11-27 ホーム神棚セクション：小さい補助文字（Mizu — Water等の英語ラベル、日本語小ラベル）を濃い青（#1f3a7a）に。3段目（毎日のお参り4カード）を上の2段（.kamidana-rule-card）と同じ余白・文字サイズ（見出し15px・本文17px）・黒系の説明文に統一。区切り線は現行のまま
