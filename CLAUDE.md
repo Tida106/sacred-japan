@@ -525,3 +525,4 @@
 - 2026-11-27 ホーム「Japan Travel Tips」セクション（#tips）を削除（ユーザー指示）。ホームのクイックリンク・フッター・JSON-LDの該当項目も削除、他162ページの「/#tips」リンクは /guides/japan-travel-planning/ に変更。旅行の実用情報は japan-travel-planning ガイドが担当
 - 2026-11-27 ホームの「SACRED JAPAN GUIDES／Long-form guides…」9枚カードのブロック（#sacred places to visit）を削除（/guides/ と紅の帯「Browse All 133 Guides」と重複のため・ユーザー指示）。クイックリンク等の他箇所は元々無し。div開閉は従来どおり3ずれ（新規の崩れなし）、1280/390pxで横はみ出しなし
 - 2026-11-27 ホーム Sacred Offerings：カード背景が半透明でグリッドの区切り線（gap）が見えにくかったため、不透明（#fcf5f7）に変更し、このグリッドのみ gap を2pxに（.etiquette-grid:has(.oc-ph)）
+- 2026-11-27 ホーム：「What to Eat Near Japan's Sacred Sites」（#food、AI画像3枚＋Google Mapsリンクのカード、旧food-ctaボタン2つ）を削除（食ガイド群・「Festivals & Culture」の郷土料理カードと重複のため・ユーザー指示）。クイックリンクとスクロールスパイの food 項目も削除。div開閉は従来どおり3ずれ（新規の崩れなし）。AI画像ファイル自体はリポジトリに残存
