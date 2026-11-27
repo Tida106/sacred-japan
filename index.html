@@ -250,7 +250,7 @@
     {"@type":"ListItem","position":6,"name":"Anime Pilgrimage","item":"https://sacred-japan.net/anime/"},
     {"@type":"ListItem","position":7,"name":"Seasonal Guide","item":"https://sacred-japan.net/#seasons"},
     {"@type":"ListItem","position":8,"name":"Visitor Etiquette","item":"https://sacred-japan.net/#etiquette"},
-    {"@type":"ListItem","position":9,"name":"Goshuin Guide","item":"https://sacred-japan.net/#goshuin"},
+    {"@type":"ListItem","position":9,"name":"Goshuin Guide","item":"https://sacred-japan.net/culture/goshuin-guide/"},
     {"@type":"ListItem","position":10,"name":"About","item":"https://sacred-japan.net/#about"}
   ]
 }
@@ -2741,7 +2741,6 @@ transition: background 0.15s, color 0.15s;
       <a onclick="smoothTo('stay')" href="#stay" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🛕 Temple Stay</a>
       <a onclick="smoothTo('emergency')" href="#emergency" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🚨 Emergency Guide</a>
       <a onclick="smoothTo('book-trip')" href="#book-trip" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">🎒 Book Tours</a>
-      <a onclick="smoothTo('goshuin')" href="#goshuin" style="display:flex;align-items:center;gap:8px;padding:12px 18px;background:white;border:1px solid #e8d8c4;border-radius:4px;text-decoration:none;color:var(--kon);font-family:'EB Garamond',serif;font-size:16px;transition:background .2s;" onmouseover="this.style.background='#f5e8d0'" onmouseout="this.style.background='white'">📖 Goshuin Guide</a>
     </div>
   </div>
         
@@ -3551,47 +3550,6 @@ transition: background 0.15s, color 0.15s;
     <p class="amazon-note">当サイトはAmazonアソシエイト・プログラムの参加者です。上記リンクからご購入いただいた場合、当サイトは紹介料を受け取ることがあります（お客様のご負担は一切ありません）。<br>Sacred Japan is a participant in the Amazon Services LLC Associates Program. Purchases made through these links may earn us a small referral fee at no extra cost to you.</p>
   </div>
 
-  <!-- GOSHUIN -->
-  <div class="section-head" id="goshuin">
-    <div class="section-head-left">
-      <h2 class="section-h2">Goshuin Guide</h2>
-      <span class="section-h2-jp">御朱印帳のすべて</span>
-    </div>
-  </div>
-
-  <div class="goshuin-section">
-
-    <!-- Teaser intro -->
-    <div style="background:var(--washi-dark);padding:36px 40px;border-left:4px solid var(--beni);margin-bottom:32px;border-radius:2px;">
-      <p style="font-size:17px;color:var(--sumi-light);line-height:1.85;margin:0 0 24px;">
-        A <em>goshuin-cho</em> is a small folding accordion book in which monks and priests hand-brush the red stamp and ink calligraphy of every shrine and temple you visit — a uniquely personal record of pilgrimage, and one of Japan's most beautiful souvenirs. Our long-form guide walks through the etiquette, the kanji to recognise, the four-step process for receiving one, and the troubleshooting tips a first-time collector needs.
-      </p>
-      <a href="/culture/goshuin-guide/" onclick="trackEvent('click','internal','home_teaser_to_goshuin')" style="display:inline-block;padding:12px 26px;background:var(--beni);color:#fff;text-decoration:none;font-family:'EB Garamond',serif;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;">Read the full Goshuin Guide →</a>
-    </div>
-            
-		        
-		        
-		
-        
-        
-
-    <!-- GOSHUIN AMAZON CTA (preserved revenue link) -->
-    <div style="margin:0 0 32px;padding:24px 28px;background:rgba(155,35,53,0.05);border:1px solid rgba(155,35,53,0.2);border-radius:2px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
-      <div>
-        <div style="font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:3px;color:var(--beni);margin-bottom:6px;">御朱印帳を手に入れよう</div>
-        <div style="font-family:'Shippori Mincho',serif;font-size:18px;color:var(--sumi);">Ready to start your goshuin collection?</div>
-        <div style="font-size:14px;color:var(--enshu);margin-top:4px;">Purchase a goshuin-cho before your first shrine visit.</div>
-      </div>
-      <a href="https://www.amazon.com/s?k=goshuin+stamp+book&tag=sacredjapan-20" target="_blank" rel="noopener sponsored" onclick="trackEvent('click','affiliate','amazon_goshuin_inline')" style="padding:12px 24px;background:var(--beni);color:#fff;text-decoration:none;font-family:'EB Garamond',serif;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;white-space:nowrap;">View on Amazon →</a>
-    </div>
-
-        
-        
-        
-
-  </div>
-        
-
   <!-- ABOUT -->
   <div class="section-head" id="about">
     <div class="section-head-left">
@@ -3649,7 +3607,7 @@ transition: background 0.15s, color 0.15s;
     <li><a href="/regional-food/">Regional Food</a></li>
     <li><a href="/crafts/">Crafts</a></li>
     <li><a href="/anime/">Anime</a></li>
-    <li><a href="#goshuin" onclick="smoothTo('goshuin')">Goshuin</a></li>
+    <li><a href="/culture/goshuin-guide/">Goshuin</a></li>
     <li><a href="#omamori" onclick="smoothTo('omamori')">Omamori</a></li>
     <li><a href="#" onclick="smoothTo('book-trip');return false;">Book Tours</a></li>
     <li><a href="#about" onclick="smoothTo('about')">About</a></li>
@@ -4119,7 +4077,7 @@ window.addEventListener('DOMContentLoaded', function() {
 </div>
 <script>
 (function(){
-  var S=[['spots','Must-Visit Spots'],['festivals','Festivals'],['seasons','Seasonal Guide'],['etiquette','Etiquette'],['tips','Travel Tips'],['omamori','Sacred Offerings'],['planning','Travel Planning'],['itinerary','Itineraries'],['stay','Temple Stays'],['emergency','Emergency Guide'],['goshuin','Goshuin'],['culture','Culture'],['about','About']];
+  var S=[['spots','Must-Visit Spots'],['festivals','Festivals'],['seasons','Seasonal Guide'],['etiquette','Etiquette'],['tips','Travel Tips'],['omamori','Sacred Offerings'],['planning','Travel Planning'],['itinerary','Itineraries'],['stay','Temple Stays'],['emergency','Emergency Guide'],['culture','Culture'],['about','About']];
   var pill=document.getElementById('secnavPill'),label=document.getElementById('secnavLabel'),count=document.getElementById('secnavCount'),sheet=document.getElementById('secnavSheet'),panel=document.getElementById('secnavPanel');
   if(!pill)return;
   S=S.filter(function(s){return document.getElementById(s[0]);});
