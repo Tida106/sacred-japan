@@ -48,6 +48,15 @@ f_meal=pfig('temple-stay-shukubo-meal','A vegetarian shojin ryori dinner tray wi
 f_stage=pfig('kiyomizu-dera-stage','The wooden stage of Kiyomizu-dera and its pagoda framed by autumn maples','Kiyomizu-dera in autumn: a main hall, a pagoda and a hillside, the kind of layout this guide teaches you to read.',f'Photo: Martin Falbisoner, {L_BYSA4}, {VIA}')
 f_hero=pfig('todaiji-daibutsuden','The huge wooden Daibutsuden hall of Todaiji in Nara','The Daibutsuden at Todaiji in Nara, which Wikipedia describes as the head temple of the state temple network completed in 752.',f'Photo: 663highland, {L_BYSA3}, {VIA}',hero=True)
 
+
+f_kannon1=pfig('bud-kannon-zaikaji','A thousand-armed gilded Kannon statue with a haloed crown of small heads','A thousand-armed Kannon, shown at Toyokawa Shinkin Bank headquarters during Zaikaji temple\'s 1,300th-anniversary project (Commons description). The many arms each hold a tool or symbol.',f'Photo: Lombroso, {L_BYSA4}, 2018-11-30, {VIA}',mw=420)
+f_kannon2=pfig('bud-kannon-inazumi','A tall golden Kannon statue on a lotus base with green guardian figures among spring trees','A tall gilded Kannon on a lotus base near Inazumi Underwater Cave in Bungo-Ono, Oita (Commons description). Two green guardian figures flank it, and rows of small statues line the path (as I read the photo).',f'Photo: Bpcon98, {L_CC0}, 2025-04-12, {VIA}',mw=420)
+f_jizo=pfig('bud-jizo-garden','A row of five smiling stone monk-like statues in a garden with azaleas','A row of small stone figures in a temple garden, each with a different gesture. Commons titles the photo as Jizo statues; I read them as Jizo-style, the bodhisattva who looks after travelers and children.',f'Photo: Savannah Rivka, {L_BYSA4}, 2012-06-03, {VIA}')
+f_fudo1=pfig('bud-fudo-okunoin','A seated bronze Fudo Myoo with a sword, rope and flame halo among cedar trees','Fudo Myoo at Okunoin, Koya (Commons description): a sword in the right hand, a rope in the left, and a flame halo behind, the usual signs of a wisdom king.','Photo: jpatokal, '+lk("CC BY-SA 3.0","https://creativecommons.org/licenses/by-sa/3.0/")+', 2006-07, '+VIA,mw=420)
+f_fudo2=pfig('bud-fudo-group','An outdoor Fudo Myoo statue with orange flames, two attendants and red banners','An outdoor Fudo Myoo with two attendants and red banners. Commons says only that Fudo Myoo is in the foreground of a group of statues; the location is not given. The banners read as Namu Fudo Myoo (as I read them).',f'Photo: Hyppolyte de Saint-Rambert, {L_BYSA4}, 2020-02-13, {VIA}')
+f_nio1=pfig('bud-nio-open','A wooden guardian king statue with an open mouth and a raised fist in a museum','An open-mouthed guardian king, the \"ah\" of the pair, made of chestnut and cypress in the 1200s and now in the Cleveland Museum of Art (Commons description).',f'Photo: Tim Evanson, {L_BY2.replace("2.0","2.0").replace("by/2.0","by-sa/2.0").replace("CC BY 2.0","CC BY-SA 2.0")}, 2016-09-23, {VIA}',mw=420)
+f_nio2=pfig('bud-nio-closed','A wooden guardian king statue with a closed mouth and a raised open hand in a museum','The closed-mouth partner, the \"un\": together the two say the beginning and the end, and stood on either side of a temple entrance (Commons description).',f'Photo: Tim Evanson, {L_BY2.replace("by/2.0","by-sa/2.0").replace("CC BY 2.0","CC BY-SA 2.0")}, 2016-09-23, {VIA}',mw=420)
+
 faqs=[
 ("Is Buddhism or Shinto the main religion of Japan?","Neither one replaces the other, and that is the honest answer. Japan Guide says that after early conflicts the two coexisted and complemented each other, and that roughly two-thirds of Japanese people consider themselves Buddhist, while Buddhism has little direct effect on daily life. Wikipedia notes that estimates of adherence vary widely by survey, from under 20% to about 46%, depending on how the question is asked. In practice, many families use shrines for festivals and good-luck prayers and temples for funerals and ancestors."),
 ("When did Buddhism come to Japan?","Traditionally in the 6th century. Wikipedia says the Nihon Shoki dates the official introduction to 552, when King Seong of Baekje sent Emperor Kinmei an image of the Buddha, ritual banners and sutras, and that other sources give 538; both dates are considered unreliable. Japan Guide says it came via Korea and China in the 6th century."),
@@ -140,6 +149,19 @@ main=f"""<main>
 
     {f_nio}
     {f_byodo}
+
+    <h3>Bodhisattvas Up Close: Kannon and Jizo</h3>
+    <p>Kannon is the figure you will meet most often. Nippon.com lists it with Jizo and Miroku among the bosatsu. Kannon appears in many forms, from a single calm figure to a thousand-armed one whose arms each hold a different tool, shown below. Jizo is the gentle one at roadsides and in temple gardens.</p>
+    {f_kannon1}
+    {f_kannon2}
+    {f_jizo}
+
+    <h3>Wisdom Kings and Guardians: Fudo and the Nio</h3>
+    <p>Wisdom kings look fierce on purpose. Fudo Myoo, the Immovable, holds a sword and a rope and sits before flames. The paired Nio guardians at temple gates are another fierce type; the two below stood at a temple entrance, one with an open mouth and one closed, which Commons reads as the beginning and the end. The pair are normally seen at a gate like the one at {link('/guides/zenko-ji/','Zenko-ji','buddhism_to_zenkoji2')}.</p>
+    {f_fudo1}
+    {f_fudo2}
+    {f_nio1}
+    {f_nio2}
 
     <h2 id="temple">How to Read a Temple<span class="h2-jp">お寺の見方</span></h2>
     <p>Most temples follow a loose pattern. {ext(WHE,'World History Encyclopedia','buddhism_src_whe')} lists the principal buildings of most complexes: the main hall (<em>hondo</em> or <em>butsudo</em>) where the most sacred images are kept, a pagoda built to house relics, a meditation hall, a sutra repository, a founder's hall and a bell tower. {ext(COLL,'The Collector','buddhism_src_collector')} describes a traditional layout with a main gate (<em>sanmon</em>), a main hall, a lecture hall and a monks' hall, with bigger complexes adding a dining hall, a bell tower and a sutra repository.</p>
