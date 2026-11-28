@@ -2436,7 +2436,7 @@ transition: background 0.15s, color 0.15s;
 .hero-label,.hero-h1-en,.hero-stat-label{color:var(--sumi)!important}
 .hero-collage{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%;grid-column:1/3;margin:0 auto 14px;border-radius:6px;overflow:hidden;box-shadow:0 8px 30px rgba(120,80,40,.18)}
 .hero-collage .hc-cell{position:relative;aspect-ratio:560/408;overflow:hidden;background:#e9dcd8}
-.hero-collage img{display:block;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s ease}
+.hero-collage img{display:block;width:100%;height:100%;object-fit:cover;transition:opacity .8s ease}
 .hero-collage .hc-cell>img{position:absolute;inset:0}
 .hero-collage-credit{grid-column:1/3;margin:0 0 22px;font-size:11.5px;color:var(--enshu);opacity:.8}
 @media(min-width:769px){
@@ -2582,7 +2582,7 @@ transition: background 0.15s, color 0.15s;
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-collage" id="heroCollage" data-pool="kiyomizu,himeji,itsukushima,nikko,fushimi,kinkakuji,matsumoto,kasuga,izumo,tofukuji,todaiji,meiji" data-alts="Kiyomizu-dera in autumn|Himeji Castle behind cherry blossoms|Itsukushima Shrine torii at low tide|Yomeimon gate at Nikko Toshogu|Torii gate at Fushimi Inari under autumn maples|Kinkaku-ji Golden Pavilion in autumn|Matsumoto Castle and its moat|Kasuga Taisha vermilion corridor|Izumo Taisha shimenawa rope|Tofuku-ji autumn leaves|Todai-ji Great Buddha Hall|Meiji Jingu torii"><img src="images/hero-collage/kiyomizu.webp" width="560" height="408" alt="Kiyomizu-dera in autumn" fetchpriority="high" loading="eager" decoding="async"><img src="images/hero-collage/himeji.webp" width="560" height="408" alt="Himeji Castle behind cherry blossoms" loading="eager" decoding="async"><img src="images/hero-collage/itsukushima.webp" width="560" height="408" alt="Itsukushima Shrine torii at low tide" loading="eager" decoding="async"><img src="images/hero-collage/nikko.webp" width="560" height="408" alt="Yomeimon gate at Nikko Toshogu" loading="eager" decoding="async"><img src="images/hero-collage/fushimi.webp" width="560" height="408" alt="Torii gate at Fushimi Inari under autumn maples" loading="eager" decoding="async"><img src="images/hero-collage/kinkakuji.webp" width="560" height="408" alt="Kinkaku-ji Golden Pavilion in autumn" loading="eager" decoding="async"></div>
+<div class="hero-collage" id="heroCollage"><img src="images/hero-collage/kiyomizu.webp" width="560" height="408" alt="Kiyomizu-dera in autumn" fetchpriority="high" loading="eager" decoding="async"><img src="images/hero-collage/himeji.webp" width="560" height="408" alt="Himeji Castle behind cherry blossoms" loading="eager" decoding="async"><img src="images/hero-collage/itsukushima.webp" width="560" height="408" alt="Itsukushima Shrine torii at low tide" loading="eager" decoding="async"><img src="images/hero-collage/nikko.webp" width="560" height="408" alt="Yomeimon gate at Nikko Toshogu" loading="eager" decoding="async"><img src="images/hero-collage/fushimi.webp" width="560" height="408" alt="Torii gate at Fushimi Inari under autumn maples" loading="eager" decoding="async"><img src="images/hero-collage/kinkakuji.webp" width="560" height="408" alt="Kinkaku-ji Golden Pavilion in autumn" loading="eager" decoding="async"></div>
 <p class="hero-collage-credit">Photos: Wikimedia Commons contributors, CC BY / CC BY-SA / CC0 — credits on each guide page.</p>
 <div class="hero-light-sweep"></div>
 <div class="hero-petals" id="heroPetals"></div>
@@ -2714,32 +2714,35 @@ transition: background 0.15s, color 0.15s;
         
 </section>
 <script>
-/* Hero collage: wrap tiles, then rotate one random cell to an unused photo every few seconds. */
+/* Hero collage: 3 sets of 6 photos; the whole grid cross-fades to the next set every 3s (sets 2-3 preload after window load) */
 (function(){
-  var box=document.getElementById('heroCollage');if(!box)return;
-  var imgs=[].slice.call(box.querySelectorAll('img'));
-  imgs.forEach(function(im){var c=document.createElement('div');c.className='hc-cell';box.replaceChild(c,im);c.appendChild(im);});
-  var names=box.dataset.pool.split(','),alts=box.dataset.alts.split('|');
-  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var cells=[].slice.call(box.querySelectorAll('.hc-cell')),
-      shown=cells.map(function(c){return c.querySelector('img').getAttribute('src').replace(/^.*\/|\.webp$/g,'').replace('.webp','');}),
-      last=-1,timer=null;
-  function pick(){
-    var free=names.filter(function(n){return shown.indexOf(n)<0;});
-    var cell;do{cell=Math.floor(Math.random()*cells.length);}while(cell===last&&cells.length>1);
-    last=cell;var n=free[Math.floor(Math.random()*free.length)];
-    var im=new Image();im.width=560;im.height=408;im.alt=alts[names.indexOf(n)];im.src='images/hero-collage/'+n+'.webp';im.style.cssText='position:absolute;inset:0;opacity:0';
-    im.onload=function(){
-      var c=cells[cell],old=c.querySelector('img');c.appendChild(im);
-      requestAnimationFrame(function(){requestAnimationFrame(function(){im.style.opacity=1;old.style.opacity=0;});});
-      setTimeout(function(){if(old.parentNode)old.parentNode.removeChild(old);},1400);
-      shown[cell]=n;
-    };
-  }
-  function start(){if(!timer)timer=setInterval(pick,3500);}
-  document.addEventListener('visibilitychange',function(){if(document.hidden){clearInterval(timer);timer=null;}else start();});
-  if(document.readyState==='complete')setTimeout(start,1500);else addEventListener('load',function(){setTimeout(start,1500);});
-})();
+   var box=document.getElementById('heroCollage');if(!box)return;
+   var imgs=[].slice.call(box.querySelectorAll('img'));
+   imgs.forEach(function(im){var c=document.createElement('div');c.className='hc-cell';box.replaceChild(c,im);c.appendChild(im);});
+   if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+   var ALT={kiyomizu:'Kiyomizu-dera in autumn',himeji:'Himeji Castle behind cherry blossoms',itsukushima:'Itsukushima Shrine torii at low tide',nikko:'Yomeimon gate at Nikko Toshogu',fushimi:'Torii gate at Fushimi Inari under autumn maples',kinkakuji:'Kinkaku-ji Golden Pavilion in autumn',tofukuji:'Tofuku-ji autumn leaves',kasuga:'Kasuga Taisha vermilion corridor',izumo:'Izumo Taisha shimenawa rope',todaiji:'Todai-ji Great Buddha Hall',meiji:'Meiji Jingu torii',matsumoto:'Matsumoto Castle and its moat',inuyama:'Inuyama Castle among cherry blossoms',hikone:'Hikone Castle in autumn colour',osaka:'Osaka Castle keep',okayama:'Okayama Castle, the black Crow Castle',hirosaki:'Hirosaki Castle at dusk with cherry blossoms',kanazawa:'Kanazawa Castle stone wall and cherry trees'};
+   var SETS=[['kiyomizu','himeji','itsukushima','nikko','fushimi','kinkakuji'],
+             ['tofukuji','kasuga','izumo','todaiji','meiji','matsumoto'],
+             ['inuyama','hikone','osaka','okayama','hirosaki','kanazawa']];
+   var cells=[].slice.call(box.querySelectorAll('.hc-cell')),cur=0,timer=null,ready=[true,false,false];
+   function load(k){SETS[k].forEach(function(n,i){var p=new Image();p.src='images/hero-collage/'+n+'.webp';});
+     var left=SETS[k].length;SETS[k].forEach(function(n){var p=new Image();p.onload=p.onerror=function(){if(--left===0)ready[k]=true;};p.src='images/hero-collage/'+n+'.webp';});}
+   function swap(){
+     var nx=(cur+1)%SETS.length;if(!ready[nx])return;
+     cells.forEach(function(c,i){
+       var n=SETS[nx][i],old=c.querySelector('img');
+       var im=new Image();im.width=560;im.height=408;im.alt=ALT[n];im.src='images/hero-collage/'+n+'.webp';im.style.cssText='position:absolute;inset:0;opacity:0';
+       c.appendChild(im);
+       requestAnimationFrame(function(){requestAnimationFrame(function(){im.style.opacity=1;if(old)old.style.opacity=0;});});
+       setTimeout(function(){if(old&&old.parentNode)old.parentNode.removeChild(old);},1000);
+     });
+     cur=nx;
+   }
+   function start(){if(!timer)timer=setInterval(swap,3000);}
+   document.addEventListener('visibilitychange',function(){if(document.hidden){clearInterval(timer);timer=null;}else start();});
+   function go(){load(1);load(2);setTimeout(start,2500);}
+   if(document.readyState==='complete')setTimeout(go,800);else addEventListener('load',function(){setTimeout(go,800);});
+ })();
 </script>
 
 
