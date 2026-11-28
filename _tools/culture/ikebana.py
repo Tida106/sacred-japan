@@ -59,7 +59,7 @@ f_hands=fig('home-hands','Two hands pressing the stem of a cream-and-peach rose 
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 def ext(href,txt,lab): return f'<a href="{href}" target="_blank" rel="noopener" onclick="trackEvent(\'click\',\'external\',\'{lab}\')">{txt}</a>'
 VI='https://www.viator.com/search/ikebana?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
-EX='https://expedia.com/affiliate?siteid=1&amp;landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DKyoto&amp;camref=1101l5JmFa&amp;creativeref=1011l87782&amp;adref=PZf6lQ77e8'
+EX='https://expedia.com/affiliate?siteid=1&amp;landingPage=https%3A%2F%2Fwww.expedia.com%2FHotel-Search%3Fdestination%3DKyoto&amp;camref=1101l5JmFa&amp;creativeref=1011l87782&amp;adref=PZf6lQ77e8'
 
 faqs=[
 ("What is ikebana?","Ikebana (生け花) is the Japanese art of arranging flowers, branches, leaves and berries. It is also called kado (華道), the way of flowers. It grew out of flower offerings made at Buddhist altars and is now taught by many schools."),

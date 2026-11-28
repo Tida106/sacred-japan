@@ -43,7 +43,7 @@ f_noji=fig('nijiriguchi','The inside of a small tea room with a low opening to a
 
 def link(href,txt,lab): return f'<a href="{href}" class="inline-link" onclick="trackEvent(\'click\',\'internal\',\'{lab}\')">{txt}</a>'
 VI='https://www.viator.com/search/japanese+tea+ceremony?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan'
-EX='https://expedia.com/affiliate?siteid=1&amp;landingPage=https%3A%2F%2Fwww.expedia.co.jp%2FHotel-Search%3Fdestination%3DKyoto&amp;camref=1101l5JmFa&amp;creativeref=1011l87782&amp;adref=PZf6lQ77e8'
+EX='https://expedia.com/affiliate?siteid=1&amp;landingPage=https%3A%2F%2Fwww.expedia.com%2FHotel-Search%3Fdestination%3DKyoto&amp;camref=1101l5JmFa&amp;creativeref=1011l87782&amp;adref=PZf6lQ77e8'
 
 faqs=[
 ("Do I need to know the rules before I go?","No. At a visitor-oriented session the host will tell you what to do, step by step, and nobody expects a first-timer to be fluent. Following the host's lead is the whole etiquette."),

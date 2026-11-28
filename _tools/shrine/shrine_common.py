@@ -66,8 +66,10 @@ def build(c):
     l1,l2=c['og']; assert d.textlength(l2,font=f1)<1090 and d.textlength(l1,font=f1)<1090
     d.text((66,170),l1,font=f1,fill=(26,15,15)); d.text((66,238),l2,font=f1,fill=(26,15,15)); d.text((66,332),c['jp'],font=f2,fill=(138,125,120))
     im.save(R+f'images/og/og-guides-{SL}.jpg',quality=88)
-    b=Image.open(D+f'images/{c["thumb"]}.jpg'); w,h=b.size; ch=round(w*400/640); t=max(0,(h-ch)//2)
-    th=b.crop((0,t,w,t+ch)).resize((640,400),Image.LANCZOS); th.save(R+f'images/hub/{SL}.jpg',quality=84); th.save(R+f'images/hub/{SL}.webp',quality=80)
+    if c.get('thumb'):
+     b=Image.open(D+f'images/{c["thumb"]}.jpg'); w,h=b.size; ch=round(w*400/640); t=max(0,(h-ch)//2)
+     th=b.crop((0,t,w,t+ch)).resize((640,400),Image.LANCZOS)
+     th.save(R+f'images/hub/{SL}.jpg',quality=84); th.save(R+f'images/hub/{SL}.webp',quality=80)
     # PHOTO-CREDITS
     rows=''
     for k,v in P.items():
