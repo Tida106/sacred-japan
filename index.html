@@ -2428,7 +2428,30 @@ transition: background 0.15s, color 0.15s;
 .hero-stat{text-align:left!important}
 }
 @media(max-width:768px){.hero>picture{height:auto!important;aspect-ratio:2576/1408}.hero>picture img{animation:none!important}.hero-petals{display:none!important}}
-</style><style id="nav-prominent">
+</style><style id="hero-collage-css">
+/* Hero: real-photo collage (PC 3x2 / mobile 2x3), random rotation via script (2026-11-28) */
+.hero{background:var(--washi)!important}
+.hero>div[style*="rgba(253,240,243"],.hero-light-sweep,.hero-wa-pattern,.hero-petals,.hero-bg-kanji{display:none!important}
+.hero-content{text-shadow:none!important}
+.hero-label,.hero-h1-en,.hero-stat-label{color:var(--sumi)!important}
+.hero-collage{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%;grid-column:1/3;margin:0 auto 14px;border-radius:6px;overflow:hidden;box-shadow:0 8px 30px rgba(120,80,40,.18)}
+.hero-collage .hc-cell{position:relative;aspect-ratio:560/408;overflow:hidden;background:#e9dcd8}
+.hero-collage img{display:block;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s ease}
+.hero-collage .hc-cell>img{position:absolute;inset:0}
+.hero-collage-credit{grid-column:1/3;margin:0 0 22px;font-size:11.5px;color:var(--enshu);opacity:.8}
+@media(min-width:769px){
+.hero{display:grid!important;grid-template-columns:minmax(0,1fr) auto;column-gap:48px;max-width:1312px;margin:0 auto;align-items:center;min-height:0!important;padding:28px 56px 40px!important;overflow:visible!important}
+.hero-stats{position:relative!important;right:auto!important;bottom:auto!important;flex-direction:column!important;gap:28px;margin:0!important;text-shadow:none!important}
+.hero-stat{text-align:left!important}
+}
+@media(max-width:768px){
+.hero{display:block!important;padding:12px 14px 20px!important}
+.hero-collage{grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:10px}
+.hero-collage-credit{margin-bottom:16px}
+.hero-stats{position:relative!important;right:auto!important;bottom:auto!important;margin-top:18px!important}
+}
+</style>
+<style id="nav-prominent">
 /* Nav: darker, larger links; gold underline for current page; beni on hover (2026-11-28) */
 @media(min-width:769px){
 .nav-links{gap:clamp(16px,2.2vw,28px)!important}
@@ -2559,12 +2582,8 @@ transition: background 0.15s, color 0.15s;
 
 <!-- HERO -->
 <section class="hero">
-<picture style="position:absolute;inset:0;overflow:hidden;">
-  <source media="(max-width:768px)" srcset="images/hero-dragons-sm.webp" type="image/webp">
-  <source srcset="images/hero-dragons.webp" type="image/webp">
-  <img src="images/hero-dragons.webp" width="1600" height="875" alt="Illustration: an ink-wash phoenix and dragon over a pixel-art Tokyo skyline, framed by gold-leaf flowers" class="hero-bg-kenburns" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" fetchpriority="high" loading="eager">
-</picture>
-<div style="position:absolute;inset:0;background:rgba(253,240,243,0.15);z-index:0;"></div>
+<div class="hero-collage" id="heroCollage" data-pool="kiyomizu,himeji,itsukushima,nikko,fushimi,kinkakuji,matsumoto,kasuga,izumo,tofukuji,todaiji,meiji" data-alts="Kiyomizu-dera in autumn|Himeji Castle behind cherry blossoms|Itsukushima Shrine torii at low tide|Yomeimon gate at Nikko Toshogu|Torii gate at Fushimi Inari under autumn maples|Kinkaku-ji Golden Pavilion in autumn|Matsumoto Castle and its moat|Kasuga Taisha vermilion corridor|Izumo Taisha shimenawa rope|Tofuku-ji autumn leaves|Todai-ji Great Buddha Hall|Meiji Jingu torii"><img src="images/hero-collage/kiyomizu.webp" width="560" height="408" alt="Kiyomizu-dera in autumn" fetchpriority="high" loading="eager" decoding="async"><img src="images/hero-collage/himeji.webp" width="560" height="408" alt="Himeji Castle behind cherry blossoms" loading="eager" decoding="async"><img src="images/hero-collage/itsukushima.webp" width="560" height="408" alt="Itsukushima Shrine torii at low tide" loading="eager" decoding="async"><img src="images/hero-collage/nikko.webp" width="560" height="408" alt="Yomeimon gate at Nikko Toshogu" loading="eager" decoding="async"><img src="images/hero-collage/fushimi.webp" width="560" height="408" alt="Torii gate at Fushimi Inari under autumn maples" loading="eager" decoding="async"><img src="images/hero-collage/kinkakuji.webp" width="560" height="408" alt="Kinkaku-ji Golden Pavilion in autumn" loading="eager" decoding="async"></div>
+<p class="hero-collage-credit">Photos: Wikimedia Commons contributors, CC BY / CC BY-SA / CC0 — credits on each guide page.</p>
 <div class="hero-light-sweep"></div>
 <div class="hero-petals" id="heroPetals"></div>
 
@@ -2694,6 +2713,35 @@ transition: background 0.15s, color 0.15s;
         
         
 </section>
+<script>
+/* Hero collage: wrap tiles, then rotate one random cell to an unused photo every few seconds. */
+(function(){
+  var box=document.getElementById('heroCollage');if(!box)return;
+  var imgs=[].slice.call(box.querySelectorAll('img'));
+  imgs.forEach(function(im){var c=document.createElement('div');c.className='hc-cell';box.replaceChild(c,im);c.appendChild(im);});
+  var names=box.dataset.pool.split(','),alts=box.dataset.alts.split('|');
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var cells=[].slice.call(box.querySelectorAll('.hc-cell')),
+      shown=cells.map(function(c){return c.querySelector('img').getAttribute('src').replace(/^.*\/|\.webp$/g,'').replace('.webp','');}),
+      last=-1,timer=null;
+  function pick(){
+    var free=names.filter(function(n){return shown.indexOf(n)<0;});
+    var cell;do{cell=Math.floor(Math.random()*cells.length);}while(cell===last&&cells.length>1);
+    last=cell;var n=free[Math.floor(Math.random()*free.length)];
+    var im=new Image();im.width=560;im.height=408;im.alt=alts[names.indexOf(n)];im.src='images/hero-collage/'+n+'.webp';im.style.cssText='position:absolute;inset:0;opacity:0';
+    im.onload=function(){
+      var c=cells[cell],old=c.querySelector('img');c.appendChild(im);
+      requestAnimationFrame(function(){requestAnimationFrame(function(){im.style.opacity=1;old.style.opacity=0;});});
+      setTimeout(function(){if(old.parentNode)old.parentNode.removeChild(old);},1400);
+      shown[cell]=n;
+    };
+  }
+  function start(){if(!timer)timer=setInterval(pick,3500);}
+  document.addEventListener('visibilitychange',function(){if(document.hidden){clearInterval(timer);timer=null;}else start();});
+  if(document.readyState==='complete')setTimeout(start,1500);else addEventListener('load',function(){setTimeout(start,1500);});
+})();
+</script>
+
 
 <!-- START HERE -->
 <style>
