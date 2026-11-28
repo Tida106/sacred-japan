@@ -7,7 +7,8 @@ LIC={'by2':('CC BY 2.0','https://creativecommons.org/licenses/by/2.0/'),
  'cc0':('CC0 1.0','https://creativecommons.org/publicdomain/zero/1.0/'),
  'bysa2':('CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/'),
  'bysa3':('CC BY-SA 3.0','https://creativecommons.org/licenses/by-sa/3.0/'),
- 'bysa4':('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/')}
+ 'bysa4':('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/'),
+ 'photoac':('photo AC terms of use','https://www.photo-ac.com/')}
 def esc_json(t):
     t=re.sub('<[^>]+>','',t)
     for a,b in [('&rsquo;','’'),('&ldquo;','"'),('&rdquo;','"'),('&ndash;','-'),('&#333;','ō'),('&amp;','&')]: t=t.replace(a,b)
@@ -21,10 +22,11 @@ def build(c):
         im.save(D+f'images/{k}.jpg',quality=84); im.save(D+f'images/{k}.webp',quality=80); SIZE[k]=im.size
     def fig(k,alt,cap,hero=False):
         u,a,l,cl=P[k]; ln,lu=LIC[l]; w,h=SIZE[k]
+        CR=(f'Photo: {a}, via <a href="{lu}" target="_blank" rel="noopener">photo AC</a>, used under photo AC\'s terms of use. Resized.' if l=='photoac' else f'Photo: <a href="{cl}" target="_blank" rel="noopener">{a}</a>, <a href="{lu}" target="_blank" rel="noopener">{ln}</a>, via Wikimedia Commons (resized)')
         if hero: st='margin:0 0 48px;'; ld='eager'; ims='style="width:100%;max-height:420px;object-fit:cover;border-radius:4px;display:block;"'
         else:
             mw=min(420 if h>w else 760,w); st='margin:28px auto;max-width:%dpx;'%mw; ld='lazy'; ims='style="width:100%;height:auto;border-radius:4px;display:block;"'
-        return f'<figure style="{st}"><picture><source srcset="/guides/{SL}/images/{k}.webp" type="image/webp"><img src="/guides/{SL}/images/{k}.jpg" alt="{alt}" width="{w}" height="{h}" loading="{ld}" {ims}></picture><figcaption style="font-size:13px;color:var(--enshu);margin-top:10px;text-align:center;line-height:1.6;">{cap}.<br>Photo: <a href="{cl}" target="_blank" rel="noopener">{a}</a>, <a href="{lu}" target="_blank" rel="noopener">{ln}</a>, via Wikimedia Commons (resized)</figcaption></figure>\n'
+        return f'<figure style="{st}"><picture><source srcset="/guides/{SL}/images/{k}.webp" type="image/webp"><img src="/guides/{SL}/images/{k}.jpg" alt="{alt}" width="{w}" height="{h}" loading="{ld}" {ims}></picture><figcaption style="font-size:13px;color:var(--enshu);margin-top:10px;text-align:center;line-height:1.6;">{cap}.<br>{CR}</figcaption></figure>\n'
     s=open(R+'guides/gifu-castle/index.html',encoding='utf-8').read()
     i=s.index('<main>'); j=s.index('</main>'); head,tail=s[:i],s[j:]
     T,DESC=c['title'],c['desc']
@@ -75,7 +77,7 @@ def build(c):
     rows=''
     for k,v in P.items():
         ln,lu=LIC[v[2]]
-        rows+=f'guides/{SL},/guides/{SL}/images/{k}.jpg,{ln},{lu},{v[3]},"{k}: Photo: {v[1]}, {ln}, via Wikimedia Commons (resized)"\r\n'
+        rows+=f'guides/{SL},/guides/{SL}/images/{k}.jpg,{ln},{lu},{v[3]},"{k}: Photo: {v[1]}, {ln}, via '+('photo AC (terms unverified)' if v[2]=='photoac' else 'Wikimedia Commons (resized)')+'"\r\n'
     old=open(R+'PHOTO-CREDITS.csv',encoding='utf-8',newline='').read()
     keep=''.join(l for l in old.splitlines(True) if not l.startswith(f'guides/{SL},'))
     open(R+'PHOTO-CREDITS.csv','w',encoding='utf-8',newline='').write(keep+rows)
