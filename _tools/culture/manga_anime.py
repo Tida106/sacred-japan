@@ -41,6 +41,24 @@ faqs = [
 ]
 faq_html, faq_ld = faq_blocks(faqs)
 
+fig = make_fig(S)
+PD = 'Public domain (old work), via Wikimedia Commons (resized)'
+_PH = {
+    'kozanji': '/mnt/user-data/uploads/a4f6fec4-image.jpg',
+    'choju-sumo': '/mnt/user-data/uploads/a7255900-image.jpg',
+    'choju-sumo-close': '/mnt/user-data/uploads/384823c4-image.jpg',
+    'choju-archery': '/mnt/user-data/uploads/85503c37-image.jpg',
+    'choju-water': '/mnt/user-data/uploads/25b63b94-image.jpg',
+    'choju-procession': '/mnt/user-data/uploads/f606d248-image.jpg',
+    'hokusai-v8': '/mnt/user-data/uploads/dfd70b27-image.jpg',
+    'hokusai-faces': '/mnt/user-data/uploads/81558a6d-image.jpg',
+    'hokusai-swim': '/mnt/user-data/uploads/1f749ce3-image.jpg',
+    'museum-building': '/mnt/user-data/uploads/5f5bd7eb-image.jpg',
+    'museum-shelf': '/mnt/user-data/uploads/bde0bdcb-image.jpg',
+    'yokai-space': '/mnt/user-data/uploads/08903e41-image.jpg',
+}
+copy_photos(S, {k: v for k, v in _PH.items() if os.path.exists(v) and not os.path.exists(f'{R}/culture/{S}/images/{k}.jpg')})
+
 main = f'''<main>
 
   <aside class="toc" aria-label="Table of contents">
@@ -64,15 +82,35 @@ main = f'''<main>
 
     <section id="opening">
       <p class="opening">Some of the oldest comic art in Japan is kept in a mountain temple in Kyoto, and it stars a rabbit and a frog.</p>
-      <p>As a licensed guide, I like to start manga and anime history at a temple, because it shows how long the habit of telling stories in pictures has lasted here. This page follows that thread from medieval scrolls to Pokemon in a few steps. It uses text and links rather than pictures of modern characters, which are protected by copyright, and it points you to official sites and museums instead.</p>
+      <p>As a licensed guide, I like to start manga and anime history at a temple, because it shows how long the habit of telling stories in pictures has lasted here. This page follows that thread from medieval scrolls to Pokemon in a few steps. The pictures here are old scrolls and prints in the public domain and photos of places; modern characters are protected by copyright, so for them I point you to official sites and museums.</p>
     </section>
 
     <h2 id="scrolls">The Scrolls at Kozan-ji<span class="h2-jp">鳥獣戯画</span></h2>
     <p>The <em>Choju-jinbutsu-giga</em>, usually called Choju-giga, is a set of four ink scrolls in which rabbits, frogs, monkeys and other animals wrestle, swim, race and parody monks. {W_CJ} dates the scrolls to the 12th and 13th centuries and notes that the usual attribution to the priest Toba Sojo is uncertain. They belong to Kozan-ji, a temple at Toganoo in the hills north-west of Kyoto ({KOZ}), and are designated National Treasures.</p>
+    {fig('kozanji', 'The Kaizando hall at Kozan-ji with a gray roof among autumn maples', 'The Kaizando at Kozan-ji, Kyoto', f'Photo: KimonBerlin, {BYSA2}, {VIA}', maxw=760)}
+    <p>This is a hall at Kozan-ji in autumn. The sign in front reads <em>Kaizando</em> and <em>Myoe Shonin</em> (as I read it), which points to the priest the temple regards as its founder. Notice how plain the building is: a low gray roof, white plaster, and maples behind it. The scrolls were not made for tourists; they have been kept in a quiet mountain temple like this one.</p>
+    {fig('choju-sumo', 'Frogs and rabbits wrestling in a Choju-giga scroll', 'A wrestling scene from the Choju-giga scrolls', PD, maxw=760)}
+    <p>This is the scene most people picture first: frogs and rabbits in a wrestling match. On the left a frog has thrown a rabbit onto its back, and on the right two rabbits seem to cheer or flinch while another is held in a frog's embrace. The vertical red-and-black stamps on the paper are marks of Kozan-ji. This image is a scan from a printed reproduction, so it is gray-toned and not a photo of the original ink.</p>
+    {fig('choju-sumo-close', 'Close view of a frog throwing a rabbit in Choju-giga', 'Close-up of the same wrestling scene', PD, maxw=563)}
+    <p>A closer view of the left half. The frog on the right raises a hand with a look of triumph, while the rabbit is flipped over with its legs in the air. The fun is in the expressions and the movement: animals behaving like people, drawn with a few quick brush lines.</p>
     <p>Dates for the designation differ between sources (1905 in one, 1952 in another), so I will leave the year out. What matters for this story is the style: lively lines, humor, and a sequence that you read as you unroll it. Many people call it the ancestor of manga, which is a fair way to see it, though it is a claim of influence and not a family tree.</p>
+
+    {fig('choju-archery', 'Rabbits and frogs with bows and a fox holding a torch in a Choju-giga scroll', 'Archery and a torch-bearing fox in a Choju-giga scroll', PD, maxw=760)}
+    <p>In this long strip, rabbits and frogs hold bows and a round leaf stands as a target on a stick. At right, a fox carries what looks like a blazing torch next to a rabbit. I read it as a game or contest, but I cannot name the exact episode, so I only describe what the drawing shows.</p>
+    {fig('choju-water', 'Rabbits and monkeys playing in a stream in a Choju-giga scroll', 'Rabbits and monkeys by a stream in a Choju-giga scroll', PD, maxw=760)}
+    <p>Here the animals are in and around a stream drawn with fine wavy lines. Rabbits and monkeys swim, sit on rocks and seem to play, and the landscape of bare trees and rocks fills the left side. It shows that the artist could handle water and scenery as well as comic action.</p>
+    {fig('choju-procession', 'Rabbits and frogs carrying boxes and a litter in a Choju-giga scroll', 'A procession of rabbits and frogs in a Choju-giga scroll', PD, maxw=760)}
+    <p>A parade of rabbits and frogs carries a box on a head, a covered chest and a flat litter, while a rabbit at the far end waves a fan. The thin seams in the image are joins between sheets of the scroll or the scan. I describe it as a procession, but the scene's meaning is not something I can confirm from the picture.</p>
 
     <h2 id="edo">Hokusai and the Word Manga<span class="h2-jp">北斎漫画</span></h2>
     <p>Picture scrolls (<em>emaki</em>) became woodblock-printed books in the Edo period. Katsushika Hokusai's sketchbooks, called <em>Hokusai Manga</em>, began appearing in 1814 and filled many volumes with people, animals, spirits and everyday scenes ({W_HM}). They were drawing manuals, not comics in the modern sense, but they helped make the word <span class="jp">漫画</span> familiar. For more on the prints of this era, see the <a class="inline-link" href="/culture/ukiyo-e/">ukiyo-e guide</a>.</p>
+
+    {fig('hokusai-v8', 'Cover and a page of Hokusai Manga volume 8 with butterflies and small figure scenes', 'Hokusai Manga, volume 8: the cover and a page of small scenes', PD, maxw=620)}
+    <p>On the right is the cover of a volume of <em>Hokusai Manga</em>, with the title in large characters over diagonal stripes and a few leaves and butterflies. On the left, a page is divided into small boxes, each with a figure or a pair of figures. This is the sketchbook format: one subject after another, to be copied or enjoyed.</p>
+    {fig('hokusai-faces', 'Two pages of Hokusai Manga with rows of faces in a grid', 'Two pages of faces from Hokusai Manga', PD, maxw=760)}
+    <p>Two pages made of faces in a grid. Each box shows a different person, young, old, smiling, frowning, with different hair and clothes. The page is a scan from a printed edition, and a printed page label can be seen at the bottom edge. For me it is the clearest sign that these books were about observing expression, which later manga artists made central.</p>
+    {fig('hokusai-swim', 'Two pages of Hokusai Manga with people swimming underwater and a horse', 'Swimmers and a horse in Hokusai Manga', PD, maxw=700)}
+    <p>People swim under a pattern of waves, some with floats, with fish and a horse among them. A title on the right page appears to read <em>Ukihara</em> (as I read it), but I will not claim more. What stands out is the range of poses: bodies seen from above, upside down and twisting, which shows why artists still study these pages.</p>
 
     <h2 id="meiji">Satire, Magazines and Paper Theater<span class="h2-jp">風刺漫画と紙芝居</span></h2>
     <p>After 1868, Western-style newspapers and humor magazines arrived. Kitazawa Rakuten drew satirical cartoons and is linked with the magazine <em>Tokyo Puck</em>, launched in 1905 ({W_KR}). In the 1930s, street storytellers used <em>kamishibai</em>, picture cards slid in a small wooden stage, to sell sweets and tell serial stories to children ({W_KS}). After the war, cheap rental comics (<em>kashihon</em>) carried on the habit of reading serial stories on paper.</p>
@@ -96,6 +134,12 @@ main = f'''<main>
       <li><strong>Mizuki Shigeru Road, Sakaiminato, Tottori.</strong> A street of about 800 meters lined with bronze yokai statues from GeGeGe no Kitaro; the count varies from about 150 to 178 by source ({MZK}, {MZ2}).</li>
     </ul>
     <p>For a guided option in Kyoto, you can browse <a class="inline-link" href="{VI}" target="_blank" rel="noopener sponsored">manga and anime tours on Viator</a>. I have not tried them, so check each page.</p>
+    {fig('museum-building', 'The Kyoto International Manga Museum seen across a lawn', 'The Kyoto International Manga Museum from the lawn', f'Photo: 珈琲ルンバ, {BYSA3}, {VIA}', maxw=760)}
+    <p>The museum occupies a former elementary school in central Kyoto. A banner on the right says it is open, so the picture was probably taken around its opening period, and the building or grounds may look different now. The wide lawn is a good place to sit and read, which is part of the idea.</p>
+    {fig('museum-shelf', 'Visitors reading manga in front of a wall of shelves at the Kyoto International Manga Museum', 'Visitors at the manga wall of the Kyoto International Manga Museum', f'Photo: Peat Bakke, {BY2}, {VIA}', maxw=760)}
+    <p>A long wall of shelves with the museum's name above it, and visitors standing and reading. This photo is from 2007, so I would not use it to describe the current layout, but it shows what makes the place different from a normal gallery: you are allowed to pick up manga and read.</p>
+    {fig('yokai-space', 'Yokai Square in Sakaiminato with eyeball lamp posts and a thatched umbrella-shaped roof', 'Yokai Square on Mizuki Shigeru Road, Sakaiminato', f'Photo: Motokoka, {BYSA4}, {VIA}', maxw=760)}
+    <p>A small plaza with lamp posts topped by round white globes, one of them with an orange eye, and a green thatched roof shaped like a giant umbrella. The signboard to the right is not readable here, and I cannot say which yokai the roof refers to, but the whole street is built around this kind of playful folklore imagery.</p>
 
     <h2 id="faq">Frequently Asked Questions<span class="h2-jp">よくある質問</span></h2>
     <div class="faq-stack">{faq_html}</div>
