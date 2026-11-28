@@ -48,11 +48,11 @@ faqs = [
 ]
 faq_html, faq_ld = faq_blocks(faqs)
 
-copy_photos(S, {'kano-statue':'/mnt/user-data/uploads/c54c24a0-image.jpg',
-                'kodokan-building':'/mnt/user-data/uploads/7c666f3a-image.jpg',
-                'judo-throw':'/mnt/user-data/uploads/a2de8a84-image.jpg',
-                'kendo-noma':'/mnt/user-data/uploads/a6076ed7-image.jpg',
-                'kyudo-paris':'/mnt/user-data/uploads/15afe94f-image.jpg'})
+import os
+_new = {'karate-indonesia':'/mnt/user-data/uploads/6d9cfebf-image.jpg','aikido-shihonage':'/mnt/user-data/uploads/d15f1e21-image.jpg',
+        'iaido-bolivia':'/mnt/user-data/uploads/cc9b25ad-image.jpg','yabusame-meiji':'/mnt/user-data/uploads/359085d2-image.jpg',
+        'butokuden-kyoto':'/mnt/user-data/uploads/4d810836-image.jpg','judo-denton':'/mnt/user-data/uploads/c9745b72-image.jpg'}
+copy_photos(S, {k: v for k, v in _new.items() if os.path.exists(v) and not os.path.exists(f'{R}/culture/{S}/images/{k}.jpg')})
 fig = make_fig(S)
 F_KENDO = fig('kendo-noma','Kendo practitioners in armor practicing in a wooden-floored dojo',
   'Kendo practice at the Noma Dojo in Tokyo.',
@@ -69,6 +69,26 @@ F_BUILD = fig('kodokan-building','The Kodokan building in Tokyo seen from the st
 F_THROW = fig('judo-throw','Two judoka during a throw at the Kodokan',
   'A judo throw demonstrated at the Kodokan.',
   f'Photo: Presidential Press and Information Office (Kremlin.ru), {BY4}, 2000-09-05. {VIA}', maxw=500)
+
+CF = 'https://commons.wikimedia.org/wiki/File:'
+F_KARATE = fig('karate-indonesia','Two karate competitors in white uniforms, one mid-kick, on a blue and red mat in front of a crowd, with a referee at right',
+  'A karate match: a high kick on a blue and red competition mat.',
+  f'Photo: Myeyes.picture, {BYSA4}, uploaded 2021-04-30. {VIA}')
+F_AIKIDO = fig('aikido-shihonage','An aikido throw in a bright dojo: one practitioner in white flips over another kneeling in a black hakama, under a hanging calligraphy scroll',
+  'A shihonage throw at an aikido dojo in Esztergom, Hungary.',
+  f'Photo: Magyar Balázs, {BYSA3}, 2008. {VIA}', maxw=420)
+F_IAIDO = fig('iaido-bolivia','A swordsman in a black kimono has just cut a bundle of green stalks, with the cut piece flying through the air, in a dojo with a black banner',
+  'A cutting demonstration at an iaido dojo in La Paz, Bolivia.',
+  f'Photo: VSgio, {BYSA4}, 2026-05-09. {VIA}')
+F_YABUSAME = fig('yabusame-meiji','A rider in light blue draws a bow at full gallop toward a white board with a diamond crest and a black board with a white round target',
+  'Yabusame, horseback archery, offered at Meiji Jingu.',
+  f'Photo: 江戸村のとくぞう, {BYSA4}, 2011-11-03. {VIA}')
+F_BUTOKUDEN = fig('butokuden-kyoto','The old Butokuden in Kyoto: a long hall with white plaster walls, dark timber and tiled roofs among pine and maple trees',
+  'The old Butokuden in Sakyo ward, Kyoto.',
+  f'Photo: Mariemon (Japanese Wikipedia), {BY3}, uploaded 2010-06-04. {VIA}')
+F_DENTON = fig('judo-denton','A judo throw on a red mat during a tournament, with one player in the air over the other and spectators behind',
+  'A seoi-nage for ippon at a judo tournament in Denton, Texas.',
+  f'Photo: Kurt Nordstrom (via Flickr), {BY2}, 2009-05-02. {VIA}', maxw=500)
 
 main = f'''<main>
 
@@ -112,6 +132,8 @@ main = f'''<main>
     <p>The result spread fast. According to {KIDS}, Kano visited Europe in 1889, later served on the International Olympic Committee, and judo became an official Olympic event for men in Tokyo in 1964, with women's judo official in 1992. The Olympic format uses weight classes. As {JG} describes it, the art covers throwing, grappling and, in kata, striking, and learning to fall is an important part of training.</p>
     {F_THROW}
     <p>The photo above shows a throw demonstrated at the Kodokan, as described on Commons; it was taken during an official visit in 2000, not at a regular practice. Even so, it shows the heart of judo clearly: one player's balance is broken and the other uses it, rather than force, to bring the partner to the mat.</p>
+    {F_DENTON}
+    <p>Judo is also a worldwide sport, and this photo shows it far from Japan. Commons describes it as a seoi-nage (a shoulder throw) that won the match by ippon, the full point, at the Mose Woodson Classic tournament in Denton, Texas, in 2009. The thrower, wearing the white marker, has the partner over the back, and the red competition mat is clear in the frame. The Commons file notes that its colors were adjusted after upload. Compare it with the Kodokan photo above: the same idea of using the partner's balance, in a very different hall.</p>
     <p>{WIKI_JJ} also lists Brazilian jiu-jitsu and sambo among arts descended from jujutsu through judo, which is a useful thing to know if you meet a traveler on the same trip who trains in either.</p>
 
     <h2 id="others">Kendo, Kyudo, Karate and Aikido<span class="h2-jp">剣道・弓道・空手・合気道</span></h2>
@@ -126,7 +148,16 @@ main = f'''<main>
     <p>This is kendo practice at the Noma Dojo in Tokyo, as described on Commons. The players wear the full armor, a mask, a padded jacket and gloves over a dark hakama, and hold bamboo swords. Spare armor hangs in a row along the wall, and the long wooden floor is bright with skylights and tall windows. It is a useful picture of what a visitor will see: a large hall, a lot of footwork, and no one standing still.</p>
     {F_KYUDO}
     <p>Kyudo looks very different. The photo shows a team competition at the Second Kyudo World Cup, held in Paris in July 2014 according to Commons, and the poster on the left wall appears to say the same. The archers wear white tops and black hakama, and the bows are very long and held asymmetrically, with the grip well below the middle. Several are at full draw at once, while a seated official in a grey jacket watches from the front. It is also a reminder that kyudo is practiced far beyond Japan.</p>
-How Budo Was Rebuilt After 1868<span class="h2-jp">武道の再建</span></h2>
+    {F_KARATE}
+    <p>Karate is shown here at a competition outside Japan: the Commons file name calls it a fighting championship, and the photo was entered in a Wikimedia Indonesia photo contest, so I take it to be in Indonesia, though the page does not say where. One competitor in a white uniform lands a high kick while the other blocks with a raised knee, a referee in a dark shirt stands at the right, and a full crowd watches from the blue seats. It makes the point from the list above: karate began in Okinawa, and today it is practiced in gyms all over the world.</p>
+    {F_AIKIDO}
+    <p>This shihonage throw was photographed in 2008 at an aikido dojo in Esztergom, Hungary, according to Commons, which describes it as a technique performed from a half-seated position, with the person being thrown taking a forward fall to land safely. The scroll behind them reads 合氣道 in the older character form, as I read it, with a teacher's name below. On the shelf beside it stands a small suit of armor on a stand. It shows the aikido idea well: no punch, just a joint hold that turns the partner's own movement into a fall.</p>
+    {F_IAIDO}
+    <p>Iaido is the sword drawn and cut in one motion, usually against an imagined opponent, as described above. This photo is of a cutting demonstration at a dojo in La Paz, Bolivia, according to Commons. The swordsman has just cut a bundle of green stalks, which look like sugar cane to me, and the cut piece is still in the air. The black banner at the right reads 翔鷹会, as I read it, and wooden practice swords hang on a rack at the left. It is a small reminder of how far the Japanese sword arts have traveled.</p>
+    {F_YABUSAME}
+    <p>One more art deserves a mention, because it is both a martial art and a shrine ritual: <em>yabusame</em>, archery from a galloping horse. Commons describes this photo as a yabusame offering at Meiji Jingu, taken in November 2011. The rider, in a light blue robe, draws the bow at full speed while the horse's hooves throw up dirt, and the targets are a white board marked with a diamond crest and a black board with a white round disc. Behind the rope, officials in brown robes kneel and watch. If you want to see it in person, check the shrine's own schedule, since I have not confirmed current dates.</p>
+
+    <h2 id="modern">How Budo Was Rebuilt After 1868<span class="h2-jp">武道の再建</span></h2>
     <p>The arts did not simply survive the end of the samurai class. {EMB} says that after the Sino-Japanese War, in 1895, a national organization called the Dai Nippon Butokukai (Great Japan Martial Virtue Association) centralized martial arts and oversaw their introduction into education. The same fact sheet says the occupation authorities banned the arts for five years after the Second World War, until 1950, because the prewar revival was seen as feeding militarism; the arts were then promoted as sports. {RYU} adds that the Butokukai was dissolved in 1946 by an Occupation directive, and that the All Japan Kendo Federation, established in 1952, became its de facto successor.</p>
 
     <h2 id="kodokan">Visiting the Kodokan, Tokyo<span class="h2-jp">講道館</span></h2>
@@ -146,6 +177,9 @@ How Budo Was Rebuilt After 1868<span class="h2-jp">武道の再建</span></h2>
     <h2 id="butokuden">The Butokuden in Kyoto<span class="h2-jp">武徳殿</span></h2>
     <p>Beside Heian Jingu (see our {link('/guides/best-shrines-kyoto/', 'Kyoto shrines guide', 'martial_to_heian')}) stands the Butokuden, the main hall of Kyoto's Budo Center. {K247} says it was completed in 1899 on the north-west side of the Heian Jingu grounds as a demonstration hall for the Butokukai, and that every May 2 to 5 it hosts the Kyoto Taikai (the All Japan Kendo Enbu Taikai); {BJ} says the event was first held in 1895. {KANPAI} says kendo is the main discipline there, with an archery range for kyudo and a sumo hall, and calls it a must-see for martial arts enthusiasts.</p>
     <p>{KANPAI} gives 1895 as the year the hall was built, which does not match the 1899 completion given by {K247}, so I use 1899 for the building and 1895 for the first taikai. Whether you can watch practice on a given day depends on the schedule, so I would treat the grounds as a pleasant stop beside Heian Jingu and check ahead if you want to see a session.</p>
+
+    {F_BUTOKUDEN}
+    <p>This is the old Butokuden in Sakyo ward, Kyoto, as Commons describes it, uploaded in June 2010. The long hall has white plaster walls between dark timbers, a lattice of wooden screens along the side, and layers of gray tiled roofs with a decorated gable at the center. The pine at the left and the maple at the right frame it well. A small sign for bicycle parking reminds you that this is still a working place, so please respect any events or practice in progress.</p>
 
     <h2 id="try">Where to Try a Class<span class="h2-jp">体験できる場所</span></h2>
     <p>Koryu schools (the old, pre-Meiji lineages) are small and traditional, but several teach visitors in English. These are listings I found; I have not tried them, so please check each page for the current program, price and reviews.</p>
