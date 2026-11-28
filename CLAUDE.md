@@ -543,3 +543,4 @@
 
 - 2026-11-27 culture/martial-arts：剣道（野間道場 Wang Ming CC BY-SA 3.0・2007-08-06、GFDL併記でBY-SA採用）と弓道（第2回弓道ワールドカップ・パリ Pierre-Yves Beaudouin CC BY-SA 4.0・2014-07-20）の写真2枚＋解説を#others末に追加。ポスターは『appears to say』表記。計5枚。PHOTO-CREDITS.csv追記済み。【写真待ち】空手・合気道・京都の武徳殿・流鏑馬。
 - 2026-11-28 ホーム：ヒーロー画像を新イラスト（墨絵の龍と鳳凰×ドット絵の東京×金箔の花、Gemini生成＋空・道路の色をPythonで調整）に差し替え。images/hero-dragons.webp（1600px）／hero-dragons-sm.webp（800px）、元は2576×1408にトリミング。PCは画像を切らずに全体表示（max幅1200px）＋文字は下の帯（左に見出し・説明・ボタン、右に統計）、スマホも同じ型。桜の花びら・光のスイープ・Ken Burns・「美しき日本」文字はヒーローでは非表示。CSSは<head>末尾の<style>（Hero: full illustration as a banner）。OGP画像（ogp.png）は未変更。【未対応】Cloudflareパージ、藤のドット感の修正、og:imageの差し替え検討
+- 2026-11-28 全170ページのメニュー（.nav-links）を目立たせる変更：各ページの</head>直前に <style id="nav-prominent"> を追加（769px以上のみ。墨色・15.5px・太字、現在ページ=a.currentに金の下線、hoverで紅色＋下線、「神社と寺院」も墨色、769〜1000pxは13.5px）。新規ページを作るときは同じブロックを入れること（ビルダーのhead/tailに含める）。1440/1024/800/390pxで横はみ出しなし

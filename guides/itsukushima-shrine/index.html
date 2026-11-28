@@ -816,7 +816,18 @@ article ul li, article ol li { font-size: 19px; }
 .site-card p { font-size: 16.5px; }
 }
 </style>
-</head>
+<style id="nav-prominent">
+/* Nav: darker, larger links; gold underline for current page; beni on hover (2026-11-28) */
+@media(min-width:769px){
+.nav-links{gap:clamp(16px,2.2vw,28px)!important}
+.nav-links>li>a{color:var(--sumi)!important;font-size:15.5px!important;font-weight:600!important;letter-spacing:1.4px!important;padding:6px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav-links>li>a:hover{color:var(--beni)!important;border-bottom-color:var(--beni)}
+.nav-links>li>a.current{color:var(--sumi)!important;border-bottom-color:var(--kin)}
+.nav-logo-jp{color:var(--sumi)!important;font-weight:400!important}
+.nav-logo-text{white-space:nowrap}
+}
+@media(min-width:769px) and (max-width:1000px){.nav-links>li>a{font-size:13.5px!important;letter-spacing:.8px!important}.nav-links{gap:14px!important}}
+</style></head>
 <body>
 
 <!-- ── NAV ── -->
