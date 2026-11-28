@@ -2,6 +2,7 @@ import re,json,os,glob
 from PIL import Image,ImageDraw,ImageFont
 R='/home/claude/sacred-japan/'; UP='/mnt/user-data/uploads/'
 LIC={'by2':('CC BY 2.0','https://creativecommons.org/licenses/by/2.0/'),
+ 'by4':('CC BY 4.0','https://creativecommons.org/licenses/by/4.0/'),
  'by3':('CC BY 3.0','https://creativecommons.org/licenses/by/3.0/'),
  'cc0':('CC0 1.0','https://creativecommons.org/publicdomain/zero/1.0/'),
  'bysa2':('CC BY-SA 2.0','https://creativecommons.org/licenses/by-sa/2.0/'),
