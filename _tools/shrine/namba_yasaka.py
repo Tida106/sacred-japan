@@ -8,6 +8,7 @@ P={
 'lion-angle':('d9aa1e1b','Hyppolyte de Saint-Rambert','by4',HY),
 'lion-side':('/tmp/immanuelle.jpg','Immanuelle','by4','https://commons.wikimedia.org/wiki/User:Immanuelle'),
 'lion-straight':('/mnt/user-data/uploads/cd3c2b82-image.jpg','サトミー','photoac','https://www.photo-ac.com/'),
+'ema-wall':('f7a52b2b','Ethan Doyle White','bysa4','https://commons.wikimedia.org/wiki/User:Doyle_of_London'),
 'haiden':('8557f811','KENPEI','bysa3','https://commons.wikimedia.org/wiki/User:KENPEI'),
 'ema':('0524e38a','Ethan Doyle White','bysa4','https://commons.wikimedia.org/wiki/User:Doyle_of_London'),
 }
@@ -81,6 +82,8 @@ def body(fig,a): return """<main>
     </ul>
 """+fig('ema','A wooden ema plaque with a printed pair of lion faces, one on a green ground and one on a red ground, and the shrine name written down the left side','An ema plaque with the two lions')+"""
     <p>The plaque in the photo carries two lion faces, the name 難波八阪神社 in vertical writing, and a space for the name at the bottom. It is a 2019 photo, so the design may have changed.</p>
+"""+fig('ema-wall','A dense wall of wooden ema plaques hanging on racks, many printed with a pair of red and orange lion faces and others filled with handwritten wishes, tied with red cords','A wall of ema, November 2019')+"""
+    <p>This photo from November 2019 shows where the plaques end up: hung in layers on racks, so densely that they overlap. Many carry the printed pair of lions, and others are filled with handwritten wishes in Japanese and English. The red cords and the small lion-head charms tied among them add to the colour. I have not tried to read the wishes, which are private. Commons describes the photo only as ema at Namba Yasaka Shrine.</p>
     <div class="key-callout">
       <p>&#127890; <strong>Plan your trip:</strong> Browse guided tours in Osaka. <a href="https://www.viator.com/search/Osaka?pid=P00298374&amp;mcid=42383&amp;medium=link&amp;campaign=sacred-japan" target="_blank" rel="noopener" onclick="trackEvent('click','affiliate','viator_namba_yasaka')">Find Osaka tours &rarr;</a></p>
     </div>
