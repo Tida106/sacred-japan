@@ -921,6 +921,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sacred-japan.net/culture/manga-anime-history/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sacred-japan.net/culture/japanese-mythology/</loc>
     <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
